@@ -1,4 +1,3 @@
-import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 
 const Query = ({ children, query, slug }: any) => {
@@ -7,16 +6,13 @@ const Query = ({ children, query, slug }: any) => {
   const { data, loading, error } = useQuery(query, {
     variables: { slug },
   });
+  console.log(data, loading, error);
 
   if (loading) return null;
+
   if (error) {
-    return (
-      <p>
-        Error:
-        {' '}
-        {JSON.stringify(error)}
-      </p>
-    );
+    console.log(error.message);
+    return false;
   }
   return children({ data });
 };

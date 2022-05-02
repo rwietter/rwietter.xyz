@@ -24,9 +24,7 @@ interface WeatherConditionsProps {
 }
 
 export const WeatherConditions: FC<WeatherConditionsProps> = ({ weather }) => {
-  if (weather) return <div> </div>;
-
-  const [data]: [WeatherProps] = weather;
+  const data = weather[0];
 
   return (
     <div>
