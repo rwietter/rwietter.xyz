@@ -4,7 +4,16 @@ import { SocialContainer } from './styles';
 const SidebarSocialIcons = () => (
   <SocialContainer>
     {SOCIAL_LINKS.map((link) => (
-      <a key={link.url} href={link.url} target="_blank" rel="noreferrer">{ link.icon }</a>
+      <a
+        key={link.url}
+        href={link.url}
+        target="_blank"
+        rel="noreferrer"
+        title={link.name}
+        aria-label={link.name}
+      >
+        {link.icon}
+      </a>
     ))}
   </SocialContainer>
 );

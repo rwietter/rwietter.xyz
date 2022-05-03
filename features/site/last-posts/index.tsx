@@ -1,8 +1,6 @@
-// import { useQuery } from '@apollo/react-hooks';
 import Image from 'next/image';
 import Link from 'next/link';
 import { LastArticles } from 'queries/article/article';
-// import { LAST_ARTICLES_QUERY } from 'queries/articles/articles';
 import { FC } from 'react';
 import {
   LastPostContainer,
@@ -19,7 +17,6 @@ interface LastPostsProps {
 }
 
 const LastPosts: FC<LastPostsProps> = ({ lastArticles }) => {
-  // const { data } = useQuery(LAST_ARTICLES_QUERY);
   const posts = lastArticles?.data;
 
   if (!posts) return null;
@@ -43,13 +40,14 @@ const LastPosts: FC<LastPostsProps> = ({ lastArticles }) => {
             <LastPostContainerImage>
               <Image
                 src={post.attributes.image.data.attributes.url}
-                alt={post.attributes.image.url}
+                alt={`Image from article "${post.attributes.title}"`}
                 layout="fixed"
                 width={80}
                 height={80}
                 loading="lazy"
                 blurDataURL="https://cdn.pixabay.com/photo/2015/06/24/02/12/the-blurred-819388_1280.jpg"
                 placeholder="blur"
+                objectFit="cover"
               />
             </LastPostContainerImage>
             <LastPostContainerContent>

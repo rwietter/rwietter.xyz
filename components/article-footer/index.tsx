@@ -42,7 +42,15 @@ const ArticleFooter: FC<ArticleFooterProps> = ({
         <SocialContainer>
           <span>
             {SOCIAL_LINKS?.map((link) => (
-              <a key={link.url} href={link.url} target="_blank" rel="noreferrer">{ link.icon }</a>
+              <a
+                key={link.url}
+                href={link.url}
+                target="_blank"
+                rel="noreferrer"
+                title={link.name}
+                aria-label={link.name}
+              >{link.icon}
+              </a>
             ))}
           </span>
           {author && <h4>Written by <strong>{ author }</strong></h4>}

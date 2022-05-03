@@ -49,7 +49,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const lastFm = await fetcherLastFm();
   const weather = await fetcherWeather();
-  console.log('Oi');
+
   return {
     props: {
       lastArticles: data.data.articles,

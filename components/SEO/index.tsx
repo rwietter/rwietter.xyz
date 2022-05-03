@@ -69,18 +69,6 @@ export const NextSEO: FC<SEOProps> = (props) => {
       }}
       additionalLinkTags={[
         {
-          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap',
-          rel: 'stylesheet',
-        },
-        {
-          href: 'https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap',
-          rel: 'stylesheet',
-        },
-        {
-          href: 'https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;600;800&display=swap',
-          rel: 'stylesheet',
-        },
-        {
           href: '/manifest.json',
           rel: 'manifest',
         },

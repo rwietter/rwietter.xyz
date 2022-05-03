@@ -1,4 +1,7 @@
 import { styled } from 'styles/theme';
+import {
+  violet, blueA, green, crimsonA,
+} from '@radix-ui/colors';
 
 export const LastPostContainerLink = styled('div', {
   width: '100%',
@@ -73,7 +76,7 @@ export const LastPostToBlog = styled('button', {
   width: '8rem',
   height: '2.5rem',
   borderRadius: '4px',
-  background: '$secondary',
+  background: violet.violet10,
   transition: 'background 0.3s ease',
   fontWeight: '600',
 
@@ -118,31 +121,36 @@ export const LastPostContainerContent = styled('div', {
 });
 
 export const LastPostContainerContentCategory = styled('div', {
-  fontSize: '$1',
+  fontSize: '$2',
   marginTop: '$3',
   maxWidth: 'min-content',
   color: '$white',
   padding: '0.2rem 0.6rem',
   borderRadius: '4px',
   transition: '$transitonTheme',
-  fontWeight: 700,
+  fontWeight: 400,
+  textTransform: 'capitalize',
 
   variants: {
     category: {
       news: {
-        background: '$primary',
+        background: '$gray50',
+        color: '$gray400',
       },
       tech: {
-        background: '$secondary',
+        background: blueA.blueA11,
       },
       food: {
-        background: '$tertiary',
+        background: violet.violet10,
       },
       nature: {
-        background: '$danger',
+        background: green.green11,
       },
       story: {
-        background: '$google',
+        background: crimsonA.crimsonA11,
+      },
+      default: {
+        background: '$primary',
       },
     },
   },

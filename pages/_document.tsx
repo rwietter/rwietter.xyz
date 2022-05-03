@@ -16,6 +16,9 @@ export default class extends Document {
     return (
       <Html lang="en" dir="ltr">
         <Head>
+          <link rel="stylesheet dns-prefetch preconnect" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&display=swap" />
+          <link rel="stylesheet dns-prefetch preconnect" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap" />
+          <link rel="stylesheet dns-prefetch preconnect" href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;600&display=swap" />
           <meta name="application-name" content={APP_NAME} />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-status-bar-style" content="default" />

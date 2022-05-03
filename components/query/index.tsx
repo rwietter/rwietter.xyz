@@ -6,12 +6,10 @@ const Query = ({ children, query, slug }: any) => {
   const { data, loading, error } = useQuery(query, {
     variables: { slug },
   });
-  console.log(data, loading, error);
 
   if (loading) return null;
 
   if (error) {
-    console.log(error.message);
     return false;
   }
   return children({ data });

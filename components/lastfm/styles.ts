@@ -36,16 +36,42 @@ export const PlayingArtist = styled('div', {
     wordBreak: 'break-word',
   },
 
-  '@bp1': {
-    p: {
-      paddingTop: '0',
-      paddingLeft: '$1',
+  'div p': {
+    paddingTop: '0',
+    paddingLeft: '$1',
+  },
+
+  '.play a': {
+    display: 'flex',
+    alignItems: 'center',
+    position: 'relative',
+    textDecoration: 'none',
+    color: '$gray50',
+    transition: '$transitonTheme',
+    svg: {
+      position: 'relative',
+      left: '-3px',
     },
-    flexDirection: 'row',
+    strong: {
+      position: 'relative',
+      left: '-3px',
+    },
+    '&:hover': {
+      color: '$primary',
+    },
+  },
+
+  div: {
+    display: 'flex',
+  },
+
+  '@bp1': {
     maxWidth: '100%',
   },
 });
 
 export const PlayingImage = styled('div', {
-  height: 'fit-content',
+  width: '60px',
+  alignSelf: 'flex-end',
+  padding: '$2 $1',
 });

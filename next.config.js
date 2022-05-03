@@ -1,12 +1,12 @@
 // @type {import('next').NextConfig}
 const withImages = require('next-images');
-// const withOffline = require('next-offline');
 const withPwa = require('next-pwa');
 
 const runtimeCaching = require('next-pwa/cache');
 
 const nextConfig = withImages({
   reactStrictMode: true,
+  productionBrowserSourceMaps: true,
   env: {
     REACT_APP_BACKEND_URL: process.env.REACT_APP_BACKEND_URL,
     SPOTIFY_OAUTH_TOKEN: process.env.SPOTIFY_OAUTH_TOKEN,
@@ -16,7 +16,10 @@ const nextConfig = withImages({
     LASTFM_API_KEY: process.env.LASTFM_API_KEY,
     LASTFM_USERNAME: process.env.LASTFM_USERNAME,
   },
-  images: { domains: ['localhost', 'strapi-cms-rw.herokuapp.com', 'i.scdn.co', 'rwietter-strapi-cms.herokuapp.com', 'res.cloudinary.com'] },
+  images: {
+    domains: ['localhost', 'strapi-cms-rw.herokuapp.com', 'i.scdn.co', 'rwietter-strapi-cms.herokuapp.com', 'res.cloudinary.com'],
+    formats: ['image/webp'],
+  },
 });
 
 module.exports = withPwa(nextConfig, {
