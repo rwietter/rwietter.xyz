@@ -4,7 +4,6 @@ import ARTICLE_QUERY from 'queries/article/article';
 import { useThemeStore } from 'store/switch-theme';
 import markdownLight from 'styles/github-markdown-css-light.module.css';
 import markdownDark from 'styles/github-markdown-css-dark.module.css';
-import { Layout } from 'layouts/content';
 import Link from 'next/link';
 import { AiOutlineArrowLeft, AiOutlineCalendar } from 'react-icons/ai';
 import { RiTimer2Line } from 'react-icons/ri';
@@ -17,6 +16,9 @@ import apolloClient from 'utils/apollo-client';
 import { getReadingTime } from 'utils/getTimeReading';
 import { NextSEO } from 'components/SEO/index';
 import { getLocaleDate } from 'utils/get-locale-date';
+import loadable from '@loadable/component';
+
+const Layout = loadable(() => import('layouts/content'));
 
 interface ArticleItemProps {
   articles: any

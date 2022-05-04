@@ -5,6 +5,7 @@ import apolloClient from 'utils/apollo-client';
 import { useThemeStore, ThemeStore } from 'store/switch-theme';
 import { applyTheme } from 'utils/apply-theme';
 import '../styles/dracula-prism.css';
+import '../styles/global.css';
 import Prism from 'prismjs';
 import Head from 'next/head';
 
