@@ -1,5 +1,4 @@
 /* eslint-disable no-unsafe-optional-chaining */
-import React from 'react';
 import { Card } from '../article-card';
 import { ArticlesContainer } from './styles';
 

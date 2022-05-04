@@ -2,7 +2,7 @@
 import { SOCIAL_LINKS } from 'data/social-links';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { FiTwitter, FiCoffee } from 'react-icons/fi';
 import { GoCommentDiscussion } from 'react-icons/go';
 import {

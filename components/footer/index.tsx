@@ -1,4 +1,4 @@
-import { SOCIAL_LINKS } from '../../data/social-links';
+import { SOCIAL_LINKS } from 'data/social-links';
 
 import { Footer } from './styles';
 

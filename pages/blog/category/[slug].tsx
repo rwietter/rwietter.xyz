@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import CATEGORY_ARTICLES_QUERY from 'queries/category/articles';
 import apolloClient from 'utils/apollo-client';
 import { GetStaticPaths, GetStaticProps } from 'next';

@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { AuthorContainer, AuthorImage, AuthorLink } from './styles';
 
-const Author: React.FC = () => {
+const Author = () => {
   const [offsetWidth, setOffsetWidth] = useState(50);
 
   useEffect(() => {

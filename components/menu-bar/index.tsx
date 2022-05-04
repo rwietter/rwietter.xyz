@@ -1,4 +1,3 @@
-import React from 'react';
 import { AiFillHome, AiFillRead } from 'react-icons/ai';
 import { SiArchlinux } from 'react-icons/si';
 import { TiLightbulb } from 'react-icons/ti';

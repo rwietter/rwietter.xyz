@@ -2,7 +2,6 @@
 import Document, {
   Html, Head, Main, NextScript,
 } from 'next/document';
-import React from 'react';
 
 const APP_NAME = 'next-pwa example';
 const APP_DESCRIPTION = 'This is an example of using next-pwa plugin';

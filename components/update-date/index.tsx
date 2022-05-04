@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { IoIosTimer } from 'react-icons/io';
 import { getDate } from '../../utils/get-date';
 
 const date = new Date();
-const UpdatedDate: React.FC = () => {
+const UpdatedDate = () => {
   const [currentDate, setCurrentDate] = useState(getDate(date));
 
   useEffect(() => {
