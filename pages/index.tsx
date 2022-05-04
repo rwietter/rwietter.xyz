@@ -1,14 +1,15 @@
 import { FooterComponent } from 'components/footer';
 import { NextSEO } from 'components/SEO';
-import { AuthorContent } from 'features/site/author-content';
-import { AuthorHeader } from 'features/site/author-header';
-import { LastPosts } from 'features/site/last-posts';
 import type { GetStaticProps, NextPage } from 'next';
-import { Layout } from 'layouts/content';
 import { LAST_ARTICLES_QUERY } from 'queries/articles/articles';
 import apolloClient from 'utils/apollo-client';
 import { LastArticles } from 'queries/article/article';
-import React from 'react';
+import loadable from '@loadable/component';
+
+const Layout = loadable(() => import('layouts/content'));
+const LastPosts = loadable(() => import('features/site/last-posts'));
+const AuthorContent = loadable(() => import('features/site/author-content'));
+const AuthorHeader = loadable(() => import('features/site/author-header'));
 
 interface HomeProps {
   lastArticles: LastArticles;

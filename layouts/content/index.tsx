@@ -18,4 +18,4 @@ const Layout: withTypes<ContainerProps> = ({ children }) => (
   </ContainerCSS>
 );
 
-export { Layout };
+export default Layout;

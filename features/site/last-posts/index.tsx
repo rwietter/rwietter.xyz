@@ -73,4 +73,4 @@ const LastPosts: FC<LastPostsProps> = ({ lastArticles }) => {
   );
 };
 
-export { LastPosts };
+export default LastPosts;

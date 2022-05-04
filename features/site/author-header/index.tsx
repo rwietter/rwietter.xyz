@@ -23,4 +23,4 @@ const AuthorHeader: React.FC = () => (
   </Container>
 );
 
-export { AuthorHeader };
+export default AuthorHeader;
