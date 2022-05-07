@@ -27,6 +27,7 @@ const ArticleItem: FC<ArticleItemProps> = ({ articles }) => {
 
   const router = useRouter() as unknown as { asPath: string };
   if (!articles) return null;
+
   const [article] = articles;
   const { readTime } = getReadingTime(article.attributes.content);
   const { localeDate: publishedAt } = getLocaleDate(article.attributes.publishedAt, 'pt-BR');

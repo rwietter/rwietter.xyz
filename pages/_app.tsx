@@ -7,6 +7,7 @@ import { applyTheme } from 'utils/apply-theme';
 import '../styles/dracula-prism.css';
 import Prism from 'prismjs';
 import Head from 'next/head';
+import { LoadingIndicator } from 'components/loading';
 
 require('prismjs/components/prism-typescript');
 require('prismjs/components/prism-javascript');
@@ -24,18 +25,16 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     applyTheme(theme);
     setIsLoading(false);
+    Prism.highlightAll();
   }, [theme]);
 
   useEffect(() => {
     Prism.highlightAll();
   });
 
-  useEffect(() => {
-    Prism.highlightAll();
-  }, [theme]);
-
   return (
     <div>
+      <LoadingIndicator />
       {!isLoading && (
         <ApolloProvider client={apolloClient as any}>
           <Head>
