@@ -15,6 +15,7 @@ export const globalStyles = globalCss({
     background: 'var(--colors-background)',
     fontFamily: 'Inter, sans-serif',
     transition: '$transitonTheme',
+    scrollBehavior: 'smooth',
   },
   'h1, h2, h3': {
     lineHeight: '1.1',

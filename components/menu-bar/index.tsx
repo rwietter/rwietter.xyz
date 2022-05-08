@@ -41,7 +41,7 @@ const MenuBar = () => {
       </S.MenuBarGroup>
 
       <S.MenuBarGroup>
-        <S.MenuBarLink href="arch-linux">
+        <S.MenuBarLink href="/archlinux">
           <S.MenuBarItem>
             <SiArchlinux size={20} />
           </S.MenuBarItem>
