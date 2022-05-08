@@ -11,6 +11,7 @@
 - [ ] Arch Linux
 - [ ] About
 - [ ] i18n
-- [ ] Loading
+- [x] Loading
 - [ ] Pagination
 - [ ] Code splitting
+- [ ] Tags

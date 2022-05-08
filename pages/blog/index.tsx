@@ -14,7 +14,7 @@ import apolloClient from 'utils/apollo-client';
 const Blog: React.FC<any> = ({ articles }) => (
   <div>
     <NextSEO
-      title="@rwietter"
+      title="@rwietter blog"
       content="blog"
       url="https://dev.rwietter.xyz/blog"
       description="Blog about software development, design and software architecture"
