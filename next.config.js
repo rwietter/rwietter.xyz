@@ -1,8 +1,10 @@
 // @type {import('next').NextConfig}
 const withImages = require('next-images');
-const withPwa = require('next-pwa');
+const withPWA = require('next-pwa')({
+  dest: 'public',
+});
 
-const runtimeCaching = require('next-pwa/cache');
+// const runtimeCaching = require('next-pwa/cache');
 
 const nextConfig = withImages({
   reactStrictMode: true,
@@ -23,11 +25,4 @@ const nextConfig = withImages({
   },
 });
 
-module.exports = withPwa(nextConfig, {
-  pwa: {
-    dest: 'public',
-    register: true,
-    skipWaiting: true,
-    runtimeCaching,
-  },
-});
+module.exports = withPWA(nextConfig);

@@ -35,6 +35,7 @@ export const Nav = styled('nav', {
 		fontFamily: 'Roboto Flex, sans-serif',
 		fontWeight: 200,
 		position: 'relative',
+		transition: 'color 0.2s ease',
 	},
 });
 
