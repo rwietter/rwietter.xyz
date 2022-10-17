@@ -854,6 +854,7 @@
 	border-radius: 6px;
 	transition: var(--transitions-transitonTheme);
 	border-radius: 6px;
+  margin: 2rem 0;
 }
 
 .markdown-body pre code,
