@@ -1,22 +1,21 @@
-import { FooterComponent } from 'components/footer';
+// import { FooterComponent } from 'components/footer';
 import { NextSEO } from 'components/SEO';
 import { AuthorContent } from 'features/site/author-content';
 import { AuthorHeader } from 'features/site/author-header';
-import { LastPosts } from 'features/site/last-posts';
+// import { LastPosts } from 'features/site/last-posts';
 import type { GetStaticProps, NextPage } from 'next';
 import { Layout } from 'layouts/content';
 import { LAST_ARTICLES_QUERY } from 'queries/articles/articles';
 import apolloClient from 'utils/apollo-client';
 import { LastArticles } from 'queries/article/article';
-import React from 'react';
 
 interface HomeProps {
-  lastArticles: LastArticles;
+  lastArticles?: LastArticles;
   lastFm: any;
   weather: any;
 }
 
-const Home: NextPage<HomeProps> = ({ lastArticles, lastFm, weather }) => (
+const Home: NextPage<HomeProps> = ({ lastFm, weather }) => (
   <div>
     <NextSEO
       title="@rwietter"
@@ -28,8 +27,8 @@ const Home: NextPage<HomeProps> = ({ lastArticles, lastFm, weather }) => (
     <Layout>
       <AuthorHeader />
       <AuthorContent lastFm={lastFm} weather={weather} />
-      <LastPosts lastArticles={lastArticles} />
-      <FooterComponent />
+      {/* <LastPosts lastArticles={lastArticles} /> */}
+      {/* <FooterComponent /> */}
     </Layout>
   </div>
 );

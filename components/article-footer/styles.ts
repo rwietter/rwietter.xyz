@@ -51,27 +51,27 @@ export const Separator = s('div', {
 });
 
 export const SocialContainer = s('div', {
-  padding: '$4 0 $2 0',
-  display: 'flex',
-  justifyContent: 'space-between',
-  flexWrap: 'wrap',
-  a: {
-    color: '$gray50',
-    transition: '$transitonTheme',
-    '&:hover': {
-      color: '$primary',
-    },
-  },
-  'a + a': {
-    marginLeft: '$2',
-  },
+	padding: '$4 0 5rem 0',
+	display: 'flex',
+	justifyContent: 'space-between',
+	flexWrap: 'wrap',
+	a: {
+		color: '$gray50',
+		transition: '$transitonTheme',
+		'&:hover': {
+			color: '$primary',
+		},
+	},
+	'a + a': {
+		marginLeft: '$2',
+	},
 
-  h4: {
-    fontSize: '$2',
-    fontWeight: 400,
+	h4: {
+		fontSize: '$2',
+		fontWeight: 400,
 
-    strong: {
-      fontWeight: 600,
-    },
-  },
+		strong: {
+			fontWeight: 600,
+		},
+	},
 });

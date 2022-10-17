@@ -1,23 +1,24 @@
 import { styled } from 'styles/theme';
 
 export const Playing = styled('div', {
-  display: 'flex',
-  justifyContent: 'flex-start',
-  alignItems: 'center',
-  background: '$mediumBackground',
-  padding: '0 $1',
-  minHeight: '6rem',
-  marginTop: '$1',
-  width: '100%',
-  transition: '$transitonTheme, transform 0.3s ease',
-  willChange: 'scale',
-  '&:hover': {
-    transform: 'scale(1.02)',
-    cursor: 'pointer',
-  },
-  '@bp3': {
-    minWidth: '380px',
-  },
+	display: 'flex',
+	justifyContent: 'flex-start',
+	alignItems: 'center',
+	background: '$mediumBackground',
+	padding: '0 $1',
+	minHeight: '6rem',
+	maxWidth: '30rem',
+	marginTop: '$1',
+	width: '100%',
+	transition: '$transitonTheme, transform 0.3s ease',
+	willChange: 'scale',
+	'&:hover': {
+		transform: 'scale(1.02)',
+		cursor: 'pointer',
+	},
+	'@bp3': {
+		minWidth: '380px',
+	},
 });
 
 export const PlayingArtist = styled('div', {

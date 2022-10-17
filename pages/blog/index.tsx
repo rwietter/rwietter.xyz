@@ -1,7 +1,7 @@
 import React from 'react';
 import { BlogLayout } from 'layouts/blog';
 import { NextSEO } from 'components/SEO';
-import { Sidebar } from 'features/site/sidebar';
+// import { Sidebar } from 'features/site/sidebar';
 import { LayoutCSS } from 'layouts/blog/styles';
 import Navbar from 'components/blog-navbar';
 import { Articles } from 'components/articles';
@@ -10,6 +10,7 @@ import FadeIn from 'react-fade-in';
 import { GetStaticProps } from 'next';
 import { ARTICLES_QUERY } from 'queries/articles/articles';
 import apolloClient from 'utils/apollo-client';
+import { Header } from 'features/site/header';
 
 const Blog: React.FC<any> = ({ articles }) => (
   <div>
@@ -21,7 +22,8 @@ const Blog: React.FC<any> = ({ articles }) => (
       image="https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png"
     />
     <BlogLayout>
-      <Sidebar />
+      {/* <Sidebar /> */}
+      <Header />
       <LayoutCSS>
         <FadeIn>
           <Navbar />

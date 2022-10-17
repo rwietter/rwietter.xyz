@@ -1,4 +1,4 @@
-.container {
+/* .container {
   padding: 0 2rem;
 }
 
@@ -61,8 +61,8 @@
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-family: 'Fira Code', Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-variant-ligatures: common-ligatures;
 }
 
 .grid {
@@ -113,4 +113,4 @@
     width: 100%;
     flex-direction: column;
   }
-}
+} */

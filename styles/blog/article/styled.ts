@@ -3,10 +3,10 @@ import { styled as s } from 'styles/theme';
 import ReactMarkdown from 'react-markdown';
 
 export const ArticleContainer = s('div', {
-  padding: '0 $2 $7 $2',
-  '@media (min-width: 1100px) and (max-width: 1200px)': {
-    padding: '0 0 $7 $10',
-  },
+	width: '100%',
+	maxWidth: '57rem',
+	margin: '0 auto',
+	padding: '0 1rem',
 });
 
 export const ArticleImage = s(Image, {

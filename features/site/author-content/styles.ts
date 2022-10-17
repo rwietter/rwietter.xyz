@@ -14,19 +14,22 @@ export const Container = styled('section', {
 });
 
 export const CurrentlyInformations = styled('div', {
-  padding: '$2 0',
-  color: '$gray50',
-  transition: '$transitonTheme',
-  p: {
-    display: 'flex',
-    alignItems: 'center',
-    flexWrap: 'wrap',
-    lineHeight: 1.5,
-    svg: {
-      marginRight: '$1',
-    },
-  },
-  'p:first-child': {
-    paddingBottom: '$1',
-  },
+	padding: '$2 0',
+	color: '$gray50',
+	transition: '$transitonTheme',
+	p: {
+		display: 'flex',
+		alignItems: 'center',
+		flexWrap: 'wrap',
+		fontFamily: 'Inter var',
+		fontFeatureSettings: "'ss01', 'ss02', 'ss03', 'salt' 1",
+		fontVariantLigatures: 'common-ligatures',
+		lineHeight: 1.5,
+		svg: {
+			marginRight: '$1',
+		},
+	},
+	'p:first-child': {
+		paddingBottom: '$1',
+	},
 });

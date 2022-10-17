@@ -4,8 +4,8 @@ import { Router } from 'next/router';
 
 LoaderRouterIndicator.config({
   barColors: {
-    0: '#c1b',
-    '1.0': '#00FFA0',
+    0: '#2A78E5',
+    '1.0': '#3AD0E0',
   },
   barThickness: 4,
   shadowBlur: 5,

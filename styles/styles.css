@@ -1,0 +1,38 @@
+/* @font-face {
+	font-family: Source Sans Pro;
+	src: url('sourcesanspro-regular-webfont.eot');
+	src: url('sourcesanspro-regular-webfont.eot?#iefix')
+			format('embedded-opentype'),
+		url('sourcesanspro-regular-webfont.woff') format('woff'),
+		url('sourcesanspro-regular-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	-webkit-font-feature-settings: 'ordn';
+	-moz-font-feature-settings: 'ordn';
+	-o-font-feature-settings: 'ordn';
+	font-feature-settings: 'ordn';
+}
+.no-ordn {
+	-webkit-font-feature-settings: 'ordn' 0;
+	-moz-font-feature-settings: 'ordn' 0;
+	-o-font-feature-settings: 'ordn' 0;
+	font-feature-settings: 'ordn' 0;
+}
+.ordn {
+	-webkit-font-feature-settings: 'ordn';
+	-moz-font-feature-settings: 'ordn';
+	-o-font-feature-settings: 'ordn';
+	font-feature-settings: 'ordn';
+}
+p {
+	font-family: Source Sans Pro;
+} */
+
+:root {
+	font-family: 'Inter', sans-serif;
+}
+@supports (font-variation-settings: normal) {
+	:root {
+		font-family: 'Inter var', sans-serif;
+	}
+}

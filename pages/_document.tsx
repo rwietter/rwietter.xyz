@@ -2,7 +2,6 @@
 import Document, {
   Html, Head, Main, NextScript,
 } from 'next/document';
-import React from 'react';
 
 const APP_NAME = 'rwietter';
 const APP_DESCRIPTION = 'Software developer, passionate about technology, design and software engineering';
@@ -16,9 +15,14 @@ export default class extends Document {
     return (
       <Html lang="en" dir="ltr">
         <Head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+          <link rel="preconnect" href="https://rsms.me/" />
+          <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
           <link rel="stylesheet dns-prefetch preconnect" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&display=swap" />
           <link rel="stylesheet dns-prefetch preconnect" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap" />
           <link rel="stylesheet dns-prefetch preconnect" href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;600&display=swap" />
+          <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300&display=swap" rel="stylesheet" />
           <meta name="application-name" content={APP_NAME} />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-status-bar-style" content="default" />
