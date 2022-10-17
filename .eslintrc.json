@@ -20,8 +20,10 @@
     "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
     "import/prefer-default-export": "off",
     "react/function-component-definition": "off",
+    "no-tabs": "off",
     "react/jsx-props-no-spreading": "off",
     "import/no-extraneous-dependencies": "off",
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "indent": "off"
   }
 }

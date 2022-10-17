@@ -19,6 +19,7 @@ const nextConfig = withImages({
   images: {
     domains: ['localhost', 'strapi-cms-rw.herokuapp.com', 'i.scdn.co', 'rwietter-strapi-cms.herokuapp.com', 'res.cloudinary.com'],
     formats: ['image/webp'],
+    disableStaticImages: true,
   },
 });
 
