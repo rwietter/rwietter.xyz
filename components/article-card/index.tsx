@@ -25,9 +25,9 @@ const Card = ({ article }: any) => (
         <p id="description">
           {article.attributes.description}
         </p>
-        {/* <p id="category">
+        <p id="category">
           {article.attributes.category.data.attributes.name}
-        </p> */}
+        </p>
       </CardInformations>
     </CardContainer>
   </Link>

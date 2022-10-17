@@ -47,7 +47,8 @@ export const CardInformations = styled('div', {
 	'#title': {
 		justifySelf: 'flex-start',
 		fontWeight: '900',
-		fontFamily: 'Sora',
+		fontFamily: 'Sora, sans-serif',
+		fontFeatureSettings: '0',
 		fontSize: 'clamp(1.1rem, 3vw, 1.6rem)',
 	},
 
