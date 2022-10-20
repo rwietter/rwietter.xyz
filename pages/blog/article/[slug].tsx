@@ -8,7 +8,7 @@ import { Layout } from 'layouts/content';
 import Link from 'next/link';
 import { AiOutlineArrowLeft, AiOutlineCalendar } from 'react-icons/ai';
 import { RiTimer2Line } from 'react-icons/ri';
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import { ArticleFooter } from 'components/article-footer';
 import * as CSS from 'styles/blog/article/styled';
 import { GetStaticPaths, GetStaticProps } from 'next';
@@ -22,6 +22,8 @@ interface ArticleItemProps {
   articles: any
 }
 
+const makeElement = (lang: string) => `<button type="button" id="code-target">${lang}<span id="code-target-tooltip">Copy code</span></button>`;
+
 const ArticleItem: FC<ArticleItemProps> = ({ articles }) => {
   const { theme } = useThemeStore() as any;
 
@@ -32,13 +34,48 @@ const ArticleItem: FC<ArticleItemProps> = ({ articles }) => {
   const { readTime } = getReadingTime(article.attributes.content);
   const { localeDate: publishedAt } = getLocaleDate(article.attributes.publishedAt, 'pt-BR');
 
+  useEffect(() => {
+    const code = document.querySelectorAll('code');
+
+    code?.forEach((item: HTMLElement) => {
+      if (item.className.includes('language-')) {
+        const [, lang] = item.className.split('language-');
+        item.insertAdjacentHTML('beforebegin', makeElement(lang));
+      }
+    });
+    return () => {
+      const codeTarget = document.querySelectorAll('#code-target');
+      codeTarget.forEach((item: any) => { item.remove(); });
+    };
+  }, []);
+
+  useEffect(() => {
+    const codeTarget = document.querySelectorAll('#code-target');
+    let timeout: any = null;
+    codeTarget.forEach((item) => {
+      item.addEventListener('click', async () => {
+        if (item.nextSibling) {
+          const code = item.nextSibling.textContent as string;
+          await navigator.clipboard.writeText(code);
+          const [tooltip] = item.children;
+          tooltip.textContent = 'Copied!';
+          timeout = setTimeout(() => { tooltip.textContent = 'Copy code'; }, 2000);
+        }
+      });
+      return () => {
+        codeTarget.forEach((pre) => { pre.removeEventListener('click', () => { }); });
+        clearTimeout(timeout);
+      };
+    });
+  }, []);
+
   return (
     <Layout>
       <NextSEO
         title={article.attributes.title}
         description={article.attributes.description}
         image={article.attributes.image.data.attributes.url}
-        url={`https://dev.rwietter.xyz${router.asPath}`}
+        url={`https://rwietter.xyz${router.asPath}`}
         content="article"
       />
       <CSS.ArticleContainer>
@@ -53,7 +90,7 @@ const ArticleItem: FC<ArticleItemProps> = ({ articles }) => {
             <CSS.DateTimeRead>
               <AiOutlineCalendar size={17} />
               {publishedAt}
-							&nbsp;|&nbsp;
+              &nbsp;|&nbsp;
               <RiTimer2Line size={17} />
               {readTime}
             </CSS.DateTimeRead>
@@ -73,8 +110,8 @@ const ArticleItem: FC<ArticleItemProps> = ({ articles }) => {
 
           <CSS.ArticleMarkdown
             className={
-							theme === 'light' ? markdownDark['markdown-body'] : markdownLight['markdown-body']
-						}
+              theme === 'light' ? markdownDark['markdown-body'] : markdownLight['markdown-body']
+            }
           >
             {article.attributes.content}
           </CSS.ArticleMarkdown>
@@ -102,7 +139,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 };
 
