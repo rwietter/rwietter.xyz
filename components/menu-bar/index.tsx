@@ -1,10 +1,11 @@
-import React from 'react';
-import { AiFillHome, AiFillRead } from 'react-icons/ai';
-import { SiArchlinux } from 'react-icons/si';
-import { TiLightbulb } from 'react-icons/ti';
-import { RiArrowUpCircleFill } from 'react-icons/ri';
+// import { SiArchlinux } from 'react-icons/si';
+import { FiList } from 'react-icons/fi';
+import { VscHome } from 'react-icons/vsc';
+import { AiOutlineArrowUp } from 'react-icons/ai';
 
 import { ThemeStore, useThemeStore } from 'store/switch-theme';
+import { Dark } from 'components/icons/Dark';
+import { Light } from 'components/icons/Light';
 import * as S from './styles';
 
 const MenuBar = () => {
@@ -30,12 +31,12 @@ const MenuBar = () => {
       <S.MenuBarGroup>
         <S.MenuBarLink href="/">
           <S.MenuBarItem>
-            <AiFillHome size={20} />
+            <VscHome size={20} />
           </S.MenuBarItem>
         </S.MenuBarLink>
         <S.MenuBarLink href="/blog">
           <S.MenuBarItem>
-            <AiFillRead size={20} />
+            <FiList size={20} />
           </S.MenuBarItem>
         </S.MenuBarLink>
       </S.MenuBarGroup>
@@ -43,7 +44,7 @@ const MenuBar = () => {
       <S.MenuBarGroup>
         <S.MenuBarLink href="/archlinux">
           <S.MenuBarItem>
-            <SiArchlinux size={20} />
+            {/* <SiArchlinux size={20} /> */}
           </S.MenuBarItem>
         </S.MenuBarLink>
 
@@ -52,10 +53,10 @@ const MenuBar = () => {
           onClick={handleSwitchTheme}
           className="theme"
         >
-          <TiLightbulb size={20} />
+          {themeStore.theme === 'dark' ? <Dark /> : <Light />}
         </S.MenuBarItem>
         <S.MenuBarItem title="Go top">
-          <RiArrowUpCircleFill onClick={handleToTop} size={20} />
+          <AiOutlineArrowUp onClick={handleToTop} size={20} />
         </S.MenuBarItem>
       </S.MenuBarGroup>
     </S.ManuBarWrapper>
