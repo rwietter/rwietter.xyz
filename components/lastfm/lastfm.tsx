@@ -39,13 +39,18 @@ export interface LastFmTrackProps {
 
 export const LastFMTrack: FC<LastFmTrackProps> = ({ lastFm }) => {
   const track: TrackProps = lastFm?.recenttracks?.track[0];
+  const image = track?.image[1]['#text'] || track.image[2]['#text'] || track.image[3]['#text'];
 
   if (!track) return <span />;
 
   return (
     <Playing>
       <PlayingImage>
-        <Equalizer />
+        {image ? (
+          <img src={image} alt={track.name} width="100px" />
+        ) : (
+          <Equalizer />
+        )}
       </PlayingImage>
       <PlayingArtist>
         <div>
