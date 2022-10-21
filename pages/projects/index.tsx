@@ -7,6 +7,7 @@ import { NextSEO } from 'components/SEO';
 import * as S from 'features/projects/styles';
 import { projects } from 'features/projects/data';
 
+
 const Projects: React.FC = () => (
   <Layout>
     <NextSEO
