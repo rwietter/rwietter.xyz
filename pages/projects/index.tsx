@@ -4,8 +4,9 @@ import { Layout } from 'layouts/content';
 import { ProjectHeader } from 'components/project-header';
 import { Project } from 'components/project';
 import { NextSEO } from 'components/SEO';
-import * as S from './styles';
-import { projects } from './data';
+import * as S from 'features/projects/styles';
+import { projects } from 'features/projects/data';
+
 
 const Projects: React.FC = () => (
   <Layout>
