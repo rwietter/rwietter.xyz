@@ -17,10 +17,11 @@ export const Grid = styled('section', {
 	gridTemplateRows: 'repeat(auto-fit, minmax(250px, 1fr))',
 	gridTemplateColumns: '1fr',
 	position: 'relative',
-	gap: '4rem 0',
-	padding: '5rem .5rem',
+	gap: '2rem 0',
+	padding: '3rem .5rem',
+	paddingBottom: '5rem',
 
 	'@bp3': {
-		padding: '5rem 1rem',
+		padding: '3rem 1rem',
 	},
 });

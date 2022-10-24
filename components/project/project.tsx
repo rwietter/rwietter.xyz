@@ -35,7 +35,7 @@ export const Project: FC<IProject> = ({ project }) => (
 				))}
       </S.Tags>
       <S.Buttons>
-        <S.Button href={project.github}>
+        <S.Button href={project.github} target="_blank">
           <BsGithub size={22} />
         </S.Button>
         <S.Button href={project.link}>
