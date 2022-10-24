@@ -4,7 +4,6 @@ import { styled } from 'styles/theme';
 export const Wrapper = styled('section', {
 	display: 'flex',
 	flexDirection: 'column',
-	paddingBottom: '5rem',
 
 	textRendering: 'optimizeLegibility',
 	WebkitFontSmoothing: 'antialiased',
@@ -15,9 +14,13 @@ export const Wrapper = styled('section', {
 
 export const Grid = styled('section', {
 	display: 'grid',
-	gridTemplateRows: 'repeat(auto-fit, minmax(20rem, 1fr))',
+	gridTemplateRows: 'repeat(auto-fit, minmax(250px, 1fr))',
 	gridTemplateColumns: '1fr',
 	position: 'relative',
 	gap: '4rem 0',
-	padding: '5rem 1rem',
+	padding: '5rem .5rem',
+
+	'@bp3': {
+		padding: '5rem 1rem',
+	},
 });

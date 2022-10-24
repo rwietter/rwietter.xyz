@@ -50,7 +50,7 @@ export const Container = styled('section', {
 			transition: '$transitonTheme',
 
 			'&:hover': {
-				color: '$secondary',
+				color: '$primary',
 			},
 		},
 		'a + a': {

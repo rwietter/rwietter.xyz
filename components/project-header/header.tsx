@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import * as S from './styles';
 
-const title = 'projects';
+const title = 'Projects';
 const description = "Selected projects I've worked on in the past.";
 
 export const ProjectHeader = () => (

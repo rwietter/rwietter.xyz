@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import type { AppProps } from 'next/app';
 import { ApolloProvider } from '@apollo/react-hooks';
 import React, { useEffect, useState } from 'react';
@@ -9,6 +10,7 @@ import '../styles/styles.css';
 import Prism from 'prismjs';
 import Head from 'next/head';
 import { LoadingIndicator } from 'components/loading';
+import { getCssText } from 'styles/theme';
 
 require('prismjs/components/prism-typescript');
 require('prismjs/components/prism-javascript');
@@ -41,6 +43,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Head>
             <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover" />
             <link rel="manifest" href="manifest.json" />
+            <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
           </Head>
           <Component {...pageProps} />
         </ApolloProvider>

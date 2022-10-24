@@ -4,7 +4,6 @@ export const Container = styled('section', {
 	width: '100%',
 	height: '100%',
 	minHeight: '22rem',
-	maxHeight: '25rem',
 	position: 'relative',
 	background: '$mediumBackground',
 	display: 'grid',
@@ -39,12 +38,12 @@ export const Icon = styled('div', {
 });
 
 export const Description = styled('div', {
-	padding: '1rem 2rem',
 	display: 'flex',
 	flexDirection: 'column',
 	justifyContent: 'center',
 	color: '$gray50',
 	height: '100%',
+	padding: '1rem',
 	alignItems: 'flex-start',
 });
 
@@ -80,14 +79,26 @@ export const DescriptionProject = styled('div', {
 	paddingTop: '1.2rem',
 });
 
+export const Tags = styled('div', {
+	display: 'flex',
+	flexDirection: 'column',
+
+	'@bp3': {
+		flexDirection: 'row',
+	},
+});
+
 export const Tag = styled('span', {
 	fontSize: '1.2rem',
 	fontFamily: 'Roboto Flex',
 	letterSpacing: '-0.01em',
 	fontWeight: '200',
+	lineHeight: '1.5',
 
-	'& + &': {
-		paddingLeft: '1rem',
+	'@bp3': {
+		'& + &': {
+			paddingLeft: '1rem',
+		},
 	},
 });
 

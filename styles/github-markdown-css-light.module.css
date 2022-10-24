@@ -306,7 +306,7 @@
 	color: #57606a;
 	background: var(--colors-mediumBackground);
 	transition: var(--transitions-transitonTheme), border 0.3s ease;
-	border-left: 0.25em solid #d0d7de;
+	border-left: 0.25em solid #00BFA5;
 	padding: 1em;
 }
 
