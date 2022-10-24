@@ -24,7 +24,7 @@ export const Container = styled('section', {
 	},
 
 	p: {
-		fontSize: '$2',
+		fontSize: '$3',
 		color: '$weakColorText',
 		lineHeight: '1.5',
 		paddingTop: '$2',

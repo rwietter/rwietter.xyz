@@ -27,7 +27,7 @@ const {
 			gray100: '#27272B',
 			gray200: '#1B1B1E',
 			gray300: '#121214',
-			gray400: '#0C0C0E',
+			gray400: '#1B1B1E',
 			card: '#13141C',
 			weakColorText: '#FFFFFF',
 			primary: '#74ebd5',
