@@ -3,7 +3,6 @@ import { styled } from 'styles/theme';
 export const Container = styled('section', {
 	width: '100%',
 	height: '100%',
-	minHeight: '22rem',
 	position: 'relative',
 	background: '$mediumBackground',
 	display: 'grid',
@@ -40,43 +39,47 @@ export const Icon = styled('div', {
 export const Description = styled('div', {
 	display: 'flex',
 	flexDirection: 'column',
-	justifyContent: 'center',
+	justifyContent: 'flex-start',
 	color: '$gray50',
 	height: '100%',
-	padding: '1rem',
+	padding: '1rem 1rem 1.5rem 1rem',
 	alignItems: 'flex-start',
 });
 
 export const Featured = styled('span', {
-	fontSize: '1.2rem',
+	fontSize: '.9rem',
 	fontFamily: 'Roboto Flex',
-	letterSpacing: '-0.01em',
+	letterSpacing: '-0.02em',
 	fontWeight: '200',
 });
 
 export const TitleProject = styled('h1', {
+	all: 'unset',
 	fontSize: '1.6rem',
 	fontFamily: 'Inter var',
 	letterSpacing: '-0.01em',
 	fontWeight: '700',
-	paddingTop: '.6rem',
+	paddingTop: '.8rem',
 });
 
 export const DescriptionProject = styled('div', {
 	fontSize: '1.1rem',
-	fontFamily: 'Sora',
+	fontFamily: 'Inter var',
 	fontWeight: '400',
 	position: 'relative',
 	maxWidth: '40rem',
 	lineHeight: '1.5',
 	wordBreak: 'break-word',
 	wordWrap: 'break-word',
+	borderLeft: '4px solid $primary',
 
 	borderRadius: '4px',
 	marginTop: '.5rem',
 	color: '$gray50',
-	paddingBottom: '1.5rem',
-	paddingTop: '1.2rem',
+	paddingBottom: '.5rem',
+	paddingTop: '.5rem',
+	margin: '1rem 0',
+	paddingLeft: '.7rem',
 });
 
 export const Tags = styled('div', {
@@ -109,7 +112,7 @@ export const Buttons = styled('div', {
 });
 
 export const Button = styled('a', {
-	color: '#fff',
+	color: '$gray50',
 	cursor: 'pointer',
 	transition: 'all 0.5s ease',
 	textDecoration: 'none',
