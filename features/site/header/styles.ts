@@ -7,8 +7,9 @@ export const Header = styled('header', {
 	width: '100%',
 	maxWidth: '57.6rem',
 	margin: '0 auto',
-	padding: '2rem 1rem 0 0',
 	fontSize: '1.4rem',
+	padding: '0 .5rem',
+	paddingTop: '1.5rem',
 
 	'@bp5': {
 		padding: '6rem 0 0 0',
@@ -20,7 +21,7 @@ export const Nav = styled('nav', {
 	alignItems: 'center',
 	justifyContent: 'space-between',
 	color: '$gray50',
-
+	fontWeight: 200,
 	'div.active': {
 		a: {
 			color: '$textHighlight',
@@ -32,7 +33,6 @@ export const Nav = styled('nav', {
 		textDecoration: 'none',
 		padding: '0 1rem',
 		letterSpacing: '-0.06em',
-		fontFamily: 'Roboto Flex, sans-serif',
 		fontWeight: 200,
 		position: 'relative',
 		transition: 'color 0.2s ease',

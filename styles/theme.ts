@@ -7,6 +7,7 @@ const {
 	css,
 	globalCss,
 	reset,
+	getCssText,
 } = createStitches({
 	theme: {
 		colors: {
@@ -166,5 +167,12 @@ const { theme: lightTheme } = createStitches({
 });
 
 export {
-  darkTheme, lightTheme, styled, css, keyframes, globalCss, reset,
+	darkTheme,
+	lightTheme,
+	styled,
+	css,
+	keyframes,
+	globalCss,
+	reset,
+	getCssText,
 };

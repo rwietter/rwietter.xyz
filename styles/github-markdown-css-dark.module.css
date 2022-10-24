@@ -298,10 +298,10 @@
 .markdown-body blockquote {
   margin: 0;
   padding: 1em;
-  color: #8b949e;
+  color: #b2b7bb;
   background: var(--colors-mediumBackground);
   transition: var(--transitions-transitonTheme), border .3s ease;
-  border-left: .25em solid #30363d;
+  border-left: .25em solid #7D5BED;
 }
 
 .markdown-body ul,
