@@ -8,7 +8,7 @@ export const Header = styled('header', {
 	maxWidth: '57.6rem',
 	margin: '0 auto',
 	fontSize: '1.4rem',
-	padding: '0 .5rem',
+	paddingRight: '.5rem',
 	paddingTop: '1.5rem',
 
 	'@bp5': {
