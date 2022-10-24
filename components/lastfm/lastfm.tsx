@@ -2,8 +2,10 @@
 import { SpotifyIcon } from 'components/icons/Spotify';
 import { FC } from 'react';
 import { Equalizer } from 'components/equalizer';
-import { BsFillPlayFill } from 'react-icons/bs';
-import { Playing, PlayingImage, PlayingArtist } from './styles';
+import { CiPlay1 } from 'react-icons/ci';
+import {
+ Playing, PlayingImage, PlayingArtist, PlayingSpot,
+} from './styles';
 
 export interface RecentTrackProps {
 	recenttracks: {
@@ -47,24 +49,27 @@ export const LastFMTrack: FC<LastFmTrackProps> = ({ lastFm }) => {
     <Playing>
       <PlayingImage>
         {image ? (
-          <img src={image} alt={track.name} width="100px" />
+          <img src={image} alt={track.name} width="90px" />
         ) : (
           <Equalizer />
         )}
       </PlayingImage>
       <PlayingArtist>
-        <div>
+        <PlayingSpot>
+          <span>Playing</span>
           <SpotifyIcon />
-          <p>
+          <span>
             {track.artist['#text']}
-          </p>
-        </div>
+          </span>
+        </PlayingSpot>
+
         <p className="play">
           <a href={track.url} target="_blank" rel="noreferrer">
-            <BsFillPlayFill size={24} />
+            <CiPlay1 size={19} />
             <strong>{track.name}</strong>
           </a>
         </p>
+
       </PlayingArtist>
     </Playing>
   );

@@ -4,8 +4,8 @@ const SpotifyIcon = () => (
     focusable="false"
     data-prefix="fab"
     data-icon="spotify"
-    width={19}
-    height={19}
+    width={14}
+    height={14}
     role="img"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 496 512"
