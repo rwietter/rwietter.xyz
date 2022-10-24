@@ -29,11 +29,11 @@ export const Project: FC<IProject> = ({ project }) => (
       <S.Featured>Featured Project</S.Featured>
       <S.TitleProject>{project.title}</S.TitleProject>
       <S.DescriptionProject>{project.description}</S.DescriptionProject>
-      <div>
+      <S.Tags>
         {project.tags.map((tag) => (
           <S.Tag key={tag}>{tag}</S.Tag>
 				))}
-      </div>
+      </S.Tags>
       <S.Buttons>
         <S.Button href={project.github}>
           <BsGithub size={22} />

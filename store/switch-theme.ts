@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import create, { StoreApi, UseBoundStore } from 'zustand';
+import create from 'zustand';
 import { persist } from 'zustand/middleware';
 
 export interface ThemeStore {
@@ -7,10 +7,15 @@ export interface ThemeStore {
   setTheme?: (theme: 'dark' | 'light') => void;
 }
 
-export const useThemeStore = create(persist((set) => ({
-  theme: 'dark',
-  setTheme: (newTheme: ThemeStore) => set({ theme: newTheme }),
-}), {
-  name: 'theme',
-  getStorage: () => sessionStorage,
-}));
+export const useThemeStore = create(
+	persist(
+		(set) => ({
+			theme: 'dark',
+			setTheme: (newTheme: ThemeStore) => set({ theme: newTheme }),
+		}),
+		{
+			name: 'theme',
+			getStorage: () => localStorage,
+		},
+	),
+);

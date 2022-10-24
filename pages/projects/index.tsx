@@ -6,6 +6,7 @@ import { Project } from 'components/project';
 import { NextSEO } from 'components/SEO';
 import * as S from 'features/projects/styles';
 import { projects } from 'features/projects/data';
+import FadeIn from 'react-fade-in';
 
 const Projects: React.FC = () => (
   <Layout>
@@ -20,7 +21,9 @@ const Projects: React.FC = () => (
       <ProjectHeader />
       <S.Grid>
         {projects.map((project) => (
-          <Project key={project.link} project={project} />
+          <FadeIn transitionDuration={500}>
+            <Project key={project.link} project={project} />
+          </FadeIn>
 				))}
       </S.Grid>
     </S.Wrapper>
