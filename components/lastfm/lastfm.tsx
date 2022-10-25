@@ -1,8 +1,10 @@
 /* eslint-disable no-tabs */
 import { SpotifyIcon } from 'components/icons/Spotify';
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import { Equalizer } from 'components/equalizer';
 import { CiPlay1 } from 'react-icons/ci';
+import { prominent } from 'color.js';
+import { useColorStore } from 'store/track-color';
 import {
  Playing, PlayingImage, PlayingArtist, PlayingSpot,
 } from './styles';
@@ -40,10 +42,20 @@ export interface LastFmTrackProps {
 }
 
 export const LastFMTrack: FC<LastFmTrackProps> = ({ lastFm }) => {
+  const { setColors }: any = useColorStore();
   const track: TrackProps = lastFm?.recenttracks?.track[0];
   const image = track?.image[1]['#text'] || track.image[2]['#text'] || track.image[3]['#text'];
 
   if (!track) return <span />;
+
+  const getImageColors = async () => {
+    const colors = await prominent(image, { format: 'hex', amount: 3 });
+    setColors(colors);
+  };
+
+  useEffect(() => {
+    getImageColors();
+  }, [image]);
 
   return (
     <Playing>

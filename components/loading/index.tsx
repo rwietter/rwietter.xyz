@@ -1,32 +1,30 @@
 import { useState } from 'react';
 import LoaderRouterIndicator from 'react-topbar-progress-indicator';
 import { Router } from 'next/router';
-
-LoaderRouterIndicator.config({
-  barColors: {
-    0: '#2A78E5',
-    '1.0': '#3AD0E0',
-  },
-  barThickness: 4,
-  shadowBlur: 5,
-});
+import { useColorStore } from 'store/track-color';
 
 const LoadingIndicator = () => {
-  const [progress, setProgress] = useState(false);
+	const [progress, setProgress] = useState(false);
+  const { colors }: any = useColorStore();
 
-  Router.events.on('routeChangeStart', () => {
-    setProgress(true);
-  });
+	LoaderRouterIndicator.config({
+		barColors: {
+      0: colors[0] || '#2A78E5',
+			1.0: colors[2] || colors[1] || '#3AD0E0',
+		},
+		barThickness: 4,
+		shadowBlur: 5,
+	});
 
-  Router.events.on('routeChangeComplete', () => {
-    setProgress(false);
-  });
+	Router.events.on('routeChangeStart', () => {
+		setProgress(true);
+	});
 
-  return (
-    <div>
-      { progress && <LoaderRouterIndicator /> }
-    </div>
-  );
+	Router.events.on('routeChangeComplete', () => {
+		setProgress(false);
+	});
+
+	return <div>{progress && <LoaderRouterIndicator />}</div>;
 };
 
 export { LoadingIndicator };

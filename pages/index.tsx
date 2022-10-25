@@ -20,7 +20,7 @@ const Home: NextPage<HomeProps> = ({ lastFm, weather }) => (
     <NextSEO
       title="@rwietter"
       content="website"
-      url="https://dev.rwietter.xyz"
+      url="https://rwietter.xyz"
       description="Software developer, passionate about technology, design and software engineering"
       image="https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png"
     />

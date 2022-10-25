@@ -17,7 +17,7 @@ const Blog: React.FC<any> = ({ articles }) => (
     <NextSEO
       title="@rwietter blog"
       content="blog"
-      url="https://dev.rwietter.xyz/blog"
+      url="https://rwietter.xyz/blog"
       description="Blog about software development, design and software architecture"
       image="https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png"
     />
