@@ -104,7 +104,7 @@ export const NextSEO: FC<SEOProps> = (props) => {
       ]}
       twitter={{
         handle: '@rwietter',
-        site: 'https://dev.rwietter.xyz',
+        site: 'https://rwietter.xyz',
         cardType: 'summary_large_image',
       }}
     />
