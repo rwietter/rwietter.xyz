@@ -1,6 +1,6 @@
 import React from 'react';
 import { BlogLayout } from 'layouts/blog';
-import { NextSEO } from 'components/SEO';
+import SEO from 'components/SEO';
 // import { Sidebar } from 'features/site/sidebar';
 import { LayoutCSS } from 'layouts/blog/styles';
 import Navbar from 'components/blog-navbar';
@@ -14,7 +14,7 @@ import { Header } from 'features/site/header';
 
 const Blog: React.FC<any> = ({ articles }) => (
   <div>
-    <NextSEO
+    <SEO
       title="Blog | Maurício W. | Software Engineer"
       content="blog"
       url="https://rwietter.xyz/blog"
