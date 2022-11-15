@@ -88,7 +88,6 @@ const SEO: FC<SEOProps> = ({
     <meta name="msapplication-square310x310logo" content="/icons/mstile-310x310.png" />
     <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-    <meta httpEquiv="content-language" content="pt-br" />
     <meta name="keywords" content="Maurício Witter, rwietter, HTML, CSS, JavaScript, React, Typescript, Framework, Nextjs" />
     <meta name="author" content={author} />
     <meta name="robots" content="index, follow" />

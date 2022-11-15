@@ -15,7 +15,7 @@ export default class extends Document {
 
   render() {
     return (
-      <Html lang="pt-br">
+      <Html lang="pt-BR">
         <Head>
           <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -57,7 +57,6 @@ export default class extends Document {
           <meta name="msapplication-square150x150logo" content="/icons/mstile-150x150.png" />
           <meta name="msapplication-wide310x150logo" content="/icons/mstile-310x150.png" />
           <meta name="msapplication-square310x310logo" content="/icons/mstile-310x310.png" />
-
         </Head>
         <body>
           <Main />

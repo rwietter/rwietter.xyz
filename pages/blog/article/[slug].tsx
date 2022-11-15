@@ -71,13 +71,6 @@ const ArticleItem: FC<ArticleItemProps> = ({ articles }) => {
 
   return (
     <Layout>
-      <SEO
-        title={article.attributes.title}
-        description={article.attributes.description}
-        image={article.attributes.image.data.attributes.url}
-        url={`https://rwietter.xyz${router.asPath}`}
-        content="article"
-      />
       <CSS.ArticleContainer>
         <CSS.ArticleMarkdownContainer>
           <CSS.ArticleHeader>
@@ -109,16 +102,25 @@ const ArticleItem: FC<ArticleItemProps> = ({ articles }) => {
             blurDataURL="https://cdn.pixabay.com/photo/2015/06/24/02/12/the-blurred-819388_1280.jpg"
             placeholder="blur"
           />
-
-          <CSS.ArticleMarkdown
-            className={
-              theme === 'light'
-                ? markdownDark['markdown-body']
-                : markdownLight['markdown-body']
-            }
-          >
-            {article.attributes.content}
-          </CSS.ArticleMarkdown>
+          <article>
+            <SEO
+              title={article.attributes.title}
+              description={article.attributes.description}
+              image={article.attributes.image.data.attributes.url}
+              author={article.attributes.author}
+              url={`https://rwietter.xyz${router.asPath}`}
+              content="article"
+            />
+            <CSS.ArticleMarkdown
+              className={
+                theme === 'light'
+                  ? markdownDark['markdown-body']
+                  : markdownLight['markdown-body']
+              }
+            >
+              {article.attributes.content}
+            </CSS.ArticleMarkdown>
+          </article>
         </CSS.ArticleMarkdownContainer>
         <ArticleFooter
           author={article.attributes.author.data.attributes.name}

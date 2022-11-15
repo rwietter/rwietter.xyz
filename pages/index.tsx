@@ -1,5 +1,5 @@
 // import { FooterComponent } from 'components/footer';
-import { NextSEO } from 'components/SEO';
+import SEO from 'components/SEO';
 import { AuthorContent } from 'features/site/author-content';
 import { AuthorHeader } from 'features/site/author-header';
 // import { LastPosts } from 'features/site/last-posts';
@@ -17,7 +17,7 @@ interface HomeProps {
 
 const Home: NextPage<HomeProps> = ({ lastFm, weather }) => (
   <div>
-    <NextSEO
+    <SEO
       title="Maurício W. | Software Engineer"
       content="website"
       url="https://rwietter.xyz"
