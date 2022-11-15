@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-prop-types */
 /* eslint-disable react/require-default-props */
 import Head from 'next/head';
 import { FC } from 'react';
@@ -10,9 +11,10 @@ interface SEOProps {
   content: 'article' | 'website' | 'blog';
   image: string;
   author?: string;
+  ogtype?: 'article:section' | 'website' | 'article:author' | 'article:tag' | '';
 }
 const SEO: FC<SEOProps> = ({
-  title = '', description = '', url = '', content = 'website', image = '', author = '@rwietter',
+  title = '', description = '', url = '', content = 'website', image = '', author = '@rwietter', ogtype = 'article:section',
 }) => (
   <Head>
     <title>{title}</title>
@@ -27,6 +29,7 @@ const SEO: FC<SEOProps> = ({
     <meta property="og:type" content={content} />
     <link rel="icon" href="/android-chrome-512x512.png" />
     <meta property="og:image" content={image} key="ogimage" />
+    <meta property="og:type" content={ogtype} />
     <meta property="twitter:card" content="summary" key="twcard" />
     <meta property="twitter:image:source" content={image} />
     <meta property="twitter:creator" content={author} key="twhandle" />
