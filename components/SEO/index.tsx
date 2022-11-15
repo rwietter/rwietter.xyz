@@ -29,8 +29,11 @@ const SEO: FC<SEOProps> = ({
     <link rel="icon" href="/android-chrome-512x512.png" />
     <meta property="og:image" content={image} key="ogimage" />
     <meta property="og:type" content={ogtype} />
-    <meta property="twitter:card" content="summary" key="twcard" />
+    <meta property="twitter:card" content="summary_large_image" key="twcard" />
+    <meta property="twitter:domain" content="http://rwietter.xyz/" key="twdomain" />
+    <meta property="twitter:url" content="https://twitter.com/rwietter" key="twurl" />
     <meta property="twitter:image:source" content={image} />
+    <meta property="twitter:image" content={image} />
     <meta property="twitter:creator" content={author} key="twhandle" />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />

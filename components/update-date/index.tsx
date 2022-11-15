@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import { IoIosTimer } from 'react-icons/io';
 import { getDate } from '../../utils/get-date';
+import { DateTime } from './styled';
 
 const date = new Date();
 const UpdatedDate = () => {
@@ -19,7 +20,7 @@ const UpdatedDate = () => {
   return (
     <p>
       <IoIosTimer size={18} />
-      {currentDate}
+      <DateTime>{currentDate}</DateTime>
     </p>
   );
 };

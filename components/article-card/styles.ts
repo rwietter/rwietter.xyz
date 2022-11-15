@@ -46,17 +46,31 @@ export const CardInformations = styled('div', {
 
 	'#title': {
 		justifySelf: 'flex-start',
-		fontWeight: '900',
+		fontWeight: 900,
+		lineHeight: '1.3',
 		fontFamily: 'Sora, sans-serif',
 		fontFeatureSettings: '0',
-		fontSize: 'clamp(1.1rem, 3vw, 1.6rem)',
+		fontSize: 'clamp(1.2rem, 3vw, 1.6rem)',
 	},
 
 	'#description': {
-		fontSize: 'clamp(0.86rem, 2vw, 1.2rem)',
+		fontSize: 'clamp(1rem, 2vw, 1.2rem)',
 		paddingTop: '0.5rem',
+		lineHeight: '1.3',
 		letterSpacing: '-0.02em',
 		fontFamily: 'Roboto Flex, sans-serif',
 		fontWeight: 200,
+	},
+
+	'#category': {
+		fontSize: 'clamp(0.9rem, 2vw, 1rem)',
+		marginTop: '1rem',
+		padding: '.2rem .6rem',
+		letterSpacing: '-0.02em',
+		fontFamily: 'Sora, sans-serif',
+		fontWeight: 600,
+		background: '$gradientYellow',
+		color: '$dark',
+		borderRadius: '4px',
 	},
 });

@@ -5,7 +5,7 @@ import { Container } from './styles';
 const AuthorHeader: React.FC = () => (
   <Container>
     <h1>Maurício</h1>
-    <p>24-year-old software developer and student from the Brazil.</p>
+    <h2>24-year-old software developer and student from the Brazil.</h2>
     <nav>
       {SOCIAL_LINKS.map((link) => (
         <a

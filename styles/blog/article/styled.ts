@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { styled as s } from 'styles/theme';
 import ReactMarkdown from 'react-markdown';
 
-export const ArticleContainer = s('div', {
+export const ArticleContainer = s('section', {
 	width: '100%',
 	maxWidth: '57rem',
 	margin: '0 auto',
@@ -17,7 +17,7 @@ export const ArticleImage = s(Image, {
   backgroundPosition: 'center',
 });
 
-export const ArticleHeader = s('div', {
+export const ArticleHeader = s('section', {
 	color: '$gray50',
 	paddingBottom: '2rem',
 });
@@ -48,7 +48,7 @@ export const BackToOverview = s('span', {
 	},
 });
 
-export const DateTimeRead = s('span', {
+export const DateTimeRead = s('p', {
 	color: '$gray50',
 	paddingBottom: '$3',
 	display: 'flex',
@@ -65,14 +65,14 @@ export const ArticleTitle = s('h1', {
 	fontWeight: 900,
 });
 
-export const ArticleDescription = s('p', {
+export const ArticleDescription = s('h2', {
 	color: '$gray50',
 	fontSize: 'clamp(1rem, 3vw, 1.3rem)',
 	fontWeight: 400,
 	padding: '$2 0',
 });
 
-export const ArticleMarkdownContainer = s('div', {
+export const ArticleMarkdownContainer = s('section', {
 	margin: '0 auto',
 	width: '100%',
 	paddingTop: '$5',

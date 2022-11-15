@@ -18,15 +18,16 @@ const Card = ({ article }: any) => (
       </CardImageContainer>
 
       <CardInformations>
-        <p id="title">
+        <h1 id="title">
           {article.attributes.title}
-        </p>
-        <p id="description">
+        </h1>
+        <h2 id="description">
           {article.attributes.description}
-        </p>
-        <p id="category">
+        </h2>
+        <h3 id="category">
+          #
           {article.attributes.category.data.attributes.name}
-        </p>
+        </h3>
       </CardInformations>
     </CardContainer>
   </Link>

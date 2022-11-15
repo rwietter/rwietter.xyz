@@ -14,7 +14,7 @@ export const Container = styled('section', {
 	},
 });
 
-export const Icon = styled('div', {
+export const Icon = styled('section', {
 	width: '100%',
 	height: '100%',
 	borderRadius: '4px',
@@ -36,7 +36,7 @@ export const Icon = styled('div', {
 	},
 });
 
-export const Description = styled('div', {
+export const Description = styled('section', {
 	display: 'flex',
 	flexDirection: 'column',
 	justifyContent: 'flex-start',
@@ -62,7 +62,7 @@ export const TitleProject = styled('h1', {
 	paddingTop: '.8rem',
 });
 
-export const DescriptionProject = styled('div', {
+export const DescriptionProject = styled('section', {
 	fontSize: '1.1rem',
 	fontFamily: 'Inter var',
 	fontWeight: '400',
@@ -82,7 +82,7 @@ export const DescriptionProject = styled('div', {
 	paddingLeft: '.7rem',
 });
 
-export const Tags = styled('div', {
+export const Tags = styled('section', {
 	display: 'flex',
 	flexDirection: 'column',
 
@@ -105,7 +105,7 @@ export const Tag = styled('span', {
 	},
 });
 
-export const Buttons = styled('div', {
+export const Buttons = styled('section', {
 	display: 'flex',
 	alignItems: 'center',
 	paddingTop: '1.9rem',

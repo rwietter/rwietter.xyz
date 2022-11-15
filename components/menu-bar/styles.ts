@@ -26,7 +26,7 @@ export const ManuBarWrapper = styled('aside', {
   },
 });
 
-export const MenuBarGroup = styled('div', {
+export const MenuBarGroup = styled('section', {
   display: 'flex',
   flexDirection: 'row',
 

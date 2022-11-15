@@ -23,7 +23,7 @@ export const Container = styled('section', {
 		transition: '$transitonTheme',
 	},
 
-	p: {
+	h2: {
 		fontSize: '$3',
 		color: '$weakColorText',
 		lineHeight: '1.5',

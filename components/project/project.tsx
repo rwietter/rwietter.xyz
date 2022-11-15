@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-indent-props */
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import { FC } from 'react';
 import { BsGithub } from 'react-icons/bs';
 import { VscLinkExternal } from 'react-icons/vsc';
@@ -20,8 +22,8 @@ export const Project: FC<IProject> = ({ project }) => (
     {!project.inverse && (
     <S.Icon>
       <img
-        src={project.image}
-        alt=""
+          alt={`${project.description} image`}
+          src={project.image}
       />
     </S.Icon>
 		)}
