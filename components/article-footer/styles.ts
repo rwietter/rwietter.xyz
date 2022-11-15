@@ -43,14 +43,14 @@ export const NavHeader = s('nav', {
   },
 });
 
-export const Separator = s('div', {
+export const Separator = s('span', {
   width: '100%',
   height: '3px',
   background: '$mediumBackgroundHover',
   transition: '$transitonTheme',
 });
 
-export const SocialContainer = s('div', {
+export const SocialContainer = s('section', {
 	padding: '$4 0 5rem 0',
 	display: 'flex',
 	justifyContent: 'space-between',

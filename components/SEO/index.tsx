@@ -39,7 +39,7 @@ interface SEOProps {
   ogtype?: 'article:section' | 'website' | 'article:author' | 'article:tag' | '';
 }
 const SEO: FC<SEOProps> = ({
-  title = '', description = '', url = '', image = '', author = '@rwietter', ogtype = 'article:section',
+  title = '', description = '', url = '', image = '', author = 'Maurício Witter', ogtype = 'article:section',
 }) => (
   <Head>
     <title>{title}</title>
@@ -97,7 +97,7 @@ const SEO: FC<SEOProps> = ({
     <link href="https://gmpg.org/xfn/11" />
     <link rel="icon" href="/android-chrome-512x512.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:locale" content="pt-BR" />
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(JSONLD) }}

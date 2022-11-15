@@ -103,7 +103,7 @@ const ArticleItem: FC<ArticleItemProps> = ({ articles }) => {
             src={article.attributes.image.data.attributes.url}
             width={500}
             height={500}
-            quality={100}
+            quality={70}
             alt={`Image of the article ${article.attributes.title}`}
             loading="lazy"
             blurDataURL="https://cdn.pixabay.com/photo/2015/06/24/02/12/the-blurred-819388_1280.jpg"
