@@ -17,7 +17,7 @@ const nextConfig = withImages({
     LASTFM_USERNAME: process.env.LASTFM_USERNAME,
   },
   images: {
-    domains: ['localhost', 'i.imgur.com', 'strapi-cms-rw.herokuapp.com', 'i.scdn.co', 'rwietter-strapi-cms.herokuapp.com', 'res.cloudinary.com', 'picsum.photos'],
+    domains: ['localhost', 'i.imgur.com', 'lastfm.freetls.fastly.net', 'strapi-cms-rw.herokuapp.com', 'i.scdn.co', 'rwietter-strapi-cms.herokuapp.com', 'res.cloudinary.com', 'picsum.photos'],
     formats: ['image/webp'],
     disableStaticImages: true,
   },

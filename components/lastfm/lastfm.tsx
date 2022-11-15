@@ -5,8 +5,9 @@ import { Equalizer } from 'components/equalizer';
 import { CiPlay1 } from 'react-icons/ci';
 import { prominent } from 'color.js';
 import { useColorStore } from 'store/track-color';
+import Image from 'next/image';
 import {
- Playing, PlayingImage, PlayingArtist, PlayingSpot,
+  Playing, PlayingImage, PlayingArtist, PlayingSpot,
 } from './styles';
 
 export interface RecentTrackProps {
@@ -61,7 +62,7 @@ export const LastFMTrack: FC<LastFmTrackProps> = ({ lastFm }) => {
     <Playing>
       <PlayingImage>
         {image ? (
-          <img src={image} alt={track.name} width={90} height={90} />
+          <Image quality={100} src={image} alt={track.name} width={90} height={90} />
         ) : (
           <Equalizer />
         )}

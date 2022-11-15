@@ -29,12 +29,12 @@ const MenuBar = () => {
   return (
     <S.ManuBarWrapper role="navigation">
       <S.MenuBarGroup>
-        <S.MenuBarLink href="/" rel="canonical">
+        <S.MenuBarLink href="/" rel="canonical" title="home page" aria-label="home page">
           <S.MenuBarItem>
             <VscHome size={20} />
           </S.MenuBarItem>
         </S.MenuBarLink>
-        <S.MenuBarLink href="/blog" rel="canonical">
+        <S.MenuBarLink href="/blog" rel="canonical" title="Blog" aria-label="Blog">
           <S.MenuBarItem>
             <FiList size={20} />
           </S.MenuBarItem>
@@ -42,20 +42,21 @@ const MenuBar = () => {
       </S.MenuBarGroup>
 
       <S.MenuBarGroup>
-        <S.MenuBarLink href="/archlinux" rel="canonical">
+        <S.MenuBarLink href="/archlinux" rel="canonical" title="archlinux">
           <S.MenuBarItem>
             {/* <SiArchlinux size={20} /> */}
           </S.MenuBarItem>
         </S.MenuBarLink>
 
         <S.MenuBarItem
-          title="Dark Mode"
+          title="Toggle Dark Mode"
+          aria-label="Toggle Dark Mode"
           onClick={handleSwitchTheme}
           className="theme"
         >
           {themeStore.theme === 'dark' ? <Dark /> : <Light />}
         </S.MenuBarItem>
-        <S.MenuBarItem title="Go top">
+        <S.MenuBarItem title="go to top" aria-label="go to top">
           <AiOutlineArrowUp onClick={handleToTop} size={20} />
         </S.MenuBarItem>
       </S.MenuBarGroup>

@@ -1,5 +1,9 @@
 import { styled } from 'styles/theme';
 
+export const Img = styled('img', {
+	width: '100%',
+});
+
 export const Playing = styled('div', {
 	display: 'flex',
 	justifyContent: 'flex-start',
