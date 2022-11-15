@@ -61,7 +61,7 @@ export const LastFMTrack: FC<LastFmTrackProps> = ({ lastFm }) => {
     <Playing>
       <PlayingImage>
         {image ? (
-          <img src={image} alt={track.name} width="90px" />
+          <img src={image} alt={track.name} width={90} height={90} />
         ) : (
           <Equalizer />
         )}

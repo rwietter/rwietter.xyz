@@ -6,7 +6,7 @@ const withPWA = require('next-pwa')({
 
 const nextConfig = withImages({
   reactStrictMode: true,
-  productionBrowserSourceMaps: true,
+  productionBrowserSourceMaps: false,
   env: {
     REACT_APP_BACKEND_URL: process.env.REACT_APP_BACKEND_URL,
     SPOTIFY_OAUTH_TOKEN: process.env.SPOTIFY_OAUTH_TOKEN,

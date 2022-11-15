@@ -1,5 +1,5 @@
 const Light = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff">
+  <svg name="button enable light mode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff">
     <g id="Light">
       <g>
         <path d="M12,18.09A6.09,6.09,0,1,1,18.09,12,6.1,6.1,0,0,1,12,18.09ZM12,6.91A5.09,5.09,0,1,0,17.09,12,5.1,5.1,0,0,0,12,6.91Z" />

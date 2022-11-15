@@ -2,7 +2,6 @@ import { Dark } from 'components/icons/Dark';
 import { Light } from 'components/icons/Light';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React from 'react';
 import { ThemeStore, useThemeStore } from 'store/switch-theme';
 
 import * as St from './styles';
@@ -17,7 +16,7 @@ const activeLink = (pathname: string, href: string, article?: string) => {
   return isActive;
 };
 
-const Header: React.FC = () => {
+const Header = () => {
   const { theme, setTheme } = useThemeStore() as ThemeStore;
 
   const { pathname } = useRouter();
@@ -39,7 +38,7 @@ const Header: React.FC = () => {
           <Link href="/projects">projects</Link>
         </div>
       </St.Nav>
-      <St.DarkMode onClick={handleSwitchTheme}>
+      <St.DarkMode name="Enable dark mode" onClick={handleSwitchTheme}>
         {theme === 'dark' ? <Dark /> : <Light />}
       </St.DarkMode>
     </St.Header>
