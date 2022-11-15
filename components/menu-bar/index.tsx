@@ -63,4 +63,4 @@ const MenuBar = () => {
   );
 };
 
-export { MenuBar };
+export default MenuBar;

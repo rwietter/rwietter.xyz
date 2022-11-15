@@ -1,17 +1,22 @@
-// import { Sidebar } from 'features/site/sidebar';
-import { MenuBar } from 'components/menu-bar';
-import { Header } from 'features/site/header';
+import dynamic from 'next/dynamic';
 import React, { FC as withTypes, ReactNode } from 'react';
 import FadeIn from 'react-fade-in';
 import { ContainerCSS, LayoutCSS } from './styles';
 
 interface ContainerProps {
   children: ReactNode;
- }
+}
+
+const MenuBar = dynamic(() => import('components/menu-bar'), {
+  ssr: false,
+});
+
+const Header = dynamic(() => import('features/site/header'), {
+  ssr: false,
+});
 
 const Layout: withTypes<ContainerProps> = ({ children }) => (
   <ContainerCSS>
-    {/* <Sidebar /> */}
     <Header />
     <LayoutCSS>
       <FadeIn>{children}</FadeIn>

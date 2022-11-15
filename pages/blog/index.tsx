@@ -1,21 +1,29 @@
 import React from 'react';
 import { BlogLayout } from 'layouts/blog';
 import SEO from 'components/SEO';
-// import { Sidebar } from 'features/site/sidebar';
 import { LayoutCSS } from 'layouts/blog/styles';
-import Navbar from 'components/blog-navbar';
 import { Articles } from 'components/articles';
-import { MenuBar } from 'components/menu-bar';
 import FadeIn from 'react-fade-in';
-import { GetStaticProps } from 'next';
+import type { GetStaticProps } from 'next';
 import { ARTICLES_QUERY } from 'queries/articles/articles';
 import apolloClient from 'utils/apollo-client';
-import { Header } from 'features/site/header';
+import dynamic from 'next/dynamic';
+
+const MenuBar = dynamic(() => import('components/menu-bar'), {
+  ssr: false,
+});
+
+const Header = dynamic(() => import('features/site/header'), {
+  ssr: false,
+});
+
+const Navbar = dynamic(() => import('components/blog-navbar'), {
+  ssr: false,
+});
 
 const Blog: React.FC<any> = ({ articles }) => (
   <div>
     <BlogLayout>
-      {/* <Sidebar /> */}
       <SEO
         title="Blog | Maurício Witter | Software Engineer"
         content="blog"

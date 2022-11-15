@@ -4,7 +4,6 @@
 import Head from 'next/head';
 import { FC } from 'react';
 import { NextSeo } from 'next-seo';
-import Script from 'next/script';
 
 const JSONLD = {
   '@context': 'http://schema.org',
@@ -43,15 +42,6 @@ const SEO: FC<SEOProps> = ({
   title = '', description = '', url = '', image = '', author = 'Maurício Witter', ogtype = 'article:section',
 }) => (
   <Head>
-    <Script id="google-tag-manager" strategy="afterInteractive">
-      {`
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-5JBCGS5');
-      `}
-    </Script>
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover" />

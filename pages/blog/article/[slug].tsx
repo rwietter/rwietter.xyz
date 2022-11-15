@@ -9,14 +9,22 @@ import Link from 'next/link';
 import { AiOutlineArrowLeft, AiOutlineCalendar } from 'react-icons/ai';
 import { RiTimer2Line } from 'react-icons/ri';
 import { FC, useEffect } from 'react';
-import { ArticleFooter } from 'components/article-footer';
 import * as CSS from 'styles/blog/article/styled';
-import { GetStaticPaths, GetStaticProps } from 'next';
+import type { GetStaticPaths, GetStaticProps } from 'next';
 import { ARTICLES_QUERY } from 'queries/articles/articles';
 import apolloClient from 'utils/apollo-client';
 import { getReadingTime } from 'utils/getTimeReading';
-import SEO from 'components/SEO/index';
 import { getLocaleDate } from 'utils/get-locale-date';
+import dynamic from 'next/dynamic';
+
+const SEO = dynamic(() => import('components/SEO'), {
+  ssr: false,
+});
+
+const ArticleFooter = dynamic(() => import('components/article-footer'), {
+  ssr: true,
+  loading: () => <p>...</p>,
+});
 
 interface ArticleItemProps {
   articles: any

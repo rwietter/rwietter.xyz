@@ -45,4 +45,4 @@ const Header: React.FC = () => {
     </St.Header>
   );
 };
-export { Header };
+export default Header;

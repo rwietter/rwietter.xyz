@@ -1,13 +1,20 @@
 // import { FooterComponent } from 'components/footer';
 import SEO from 'components/SEO';
-import { AuthorContent } from 'features/site/author-content';
-import { AuthorHeader } from 'features/site/author-header';
 // import { LastPosts } from 'features/site/last-posts';
 import type { GetStaticProps, NextPage } from 'next';
 import { Layout } from 'layouts/content';
 import { LAST_ARTICLES_QUERY } from 'queries/articles/articles';
 import apolloClient from 'utils/apollo-client';
-import { LastArticles } from 'queries/article/article';
+import type { LastArticles } from 'queries/article/article';
+import dynamic from 'next/dynamic';
+
+const AuthorContent = dynamic(() => import('features/site/author-content'), {
+  ssr: false,
+});
+
+const AuthorHeader = dynamic(() => import('features/site/author-header'), {
+  ssr: false,
+});
 
 interface HomeProps {
   lastArticles?: LastArticles;

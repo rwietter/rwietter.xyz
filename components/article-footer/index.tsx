@@ -60,4 +60,4 @@ const ArticleFooter: FC<ArticleFooterProps> = ({
   );
 };
 
-export { ArticleFooter };
+export default ArticleFooter;
