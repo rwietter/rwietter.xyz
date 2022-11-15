@@ -17,10 +17,10 @@ const Blog: React.FC<any> = ({ articles }) => (
     <BlogLayout>
       {/* <Sidebar /> */}
       <SEO
-        title="Blog | Maurício W. | Software Engineer"
+        title="Blog | Maurício Witter | Software Engineer"
         content="blog"
         url="https://rwietter.xyz/blog"
-        description="Blog about software development, design and software architecture"
+        description="My blog, where I write about my experiences, my projects, and my life. :)"
         image="https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png"
       />
       <Header />
