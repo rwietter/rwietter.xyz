@@ -1,3 +1,5 @@
+/* eslint-disable react/style-prop-object */
+/* eslint-disable jsx-a11y/iframe-has-title */
 /* eslint-disable react/no-danger */
 /* eslint-disable no-return-await */
 import Document, {
@@ -57,6 +59,14 @@ export default class extends Document {
           <meta name="msapplication-square310x310logo" content="/icons/mstile-310x310.png" />
         </Head>
         <body>
+          <noscript>
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-5JBCGS5"
+              height="0"
+              width="0"
+              style={{ display: 'none', visibility: 'hidden' }}
+            />
+          </noscript>
           <Main />
           <NextScript />
         </body>

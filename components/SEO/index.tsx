@@ -42,6 +42,7 @@ const SEO: FC<SEOProps> = ({
   title = '', description = '', url = '', image = '', author = 'Maurício Witter', ogtype = 'article:section',
 }) => (
   <Head>
+    <script src="tag.js" type="text/js" />
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover" />
@@ -49,7 +50,6 @@ const SEO: FC<SEOProps> = ({
     <meta name="description" content={description} />
     <meta httpEquiv="content-language" content="pt-BR" />
     <meta property="og:title" content={title} key="ogtitle" />
-    <meta property="og:description" content={description} />
     <meta property="og:url" content={url} key="ogurl" />
     <link rel="icon" href="/android-chrome-512x512.png" />
     <meta property="og:image" content={image} key="ogimage" />
@@ -60,7 +60,6 @@ const SEO: FC<SEOProps> = ({
     <meta property="twitter:url" content="https://twitter.com/rwietter" key="twurl" />
     <meta property="twitter:image:source" content={image} />
     <meta property="twitter:image" content={image} />
-    <meta property="twitter:creator" content={author} key="twhandle" />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta name="twitter:site" content="@rwietter" />
