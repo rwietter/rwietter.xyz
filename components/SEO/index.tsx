@@ -1,8 +1,33 @@
+/* eslint-disable react/no-danger */
 /* eslint-disable react/no-unused-prop-types */
 /* eslint-disable react/require-default-props */
 import Head from 'next/head';
 import { FC } from 'react';
 import { NextSeo } from 'next-seo';
+
+const JSONLD = {
+  '@context': 'http://schema.org',
+  '@type': 'Person',
+  name: 'Maurício Witter Blog',
+  brand: 'rwietter',
+  description: 'This blog is about my journey as a software engineer. Here do you find my thoughts, ideas, and experiences. I hope you enjoy it.',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Constantina',
+    addressRegion: 'RS',
+    postalCode: '9968000',
+    streetAddress: 'Bulevar kralja Aleksandra 1',
+  },
+  social: [
+    'https://twitter.com/rwietter',
+    'https://rwietter.xyz',
+  ],
+  email: 'mailto:mauriciobw17@gmail.com',
+  image: 'https://avatars.githubusercontent.com/u/46854467?s=400&u=16a52bab3d6dbcbda716ed7d6bab84b3b307bd22&v=4',
+  jobTitle: 'Software Engineer',
+  telephone: '(54) 99671-1324',
+  url: 'https://rwietter.xyz/',
+};
 
 interface SEOProps {
   title: string;
@@ -61,19 +86,22 @@ const SEO: FC<SEOProps> = ({
     <meta name="msapplication-square150x150logo" content="/icons/mstile-150x150.png" />
     <meta name="msapplication-wide310x150logo" content="/icons/mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="/icons/mstile-310x310.png" />
-
     <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
     <meta httpEquiv="content-language" content="pt-br" />
     <meta name="keywords" content="Maurício Witter, rwietter, HTML, CSS, JavaScript, React, Typescript, Framework, Nextjs" />
     <meta name="author" content={author} />
     <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
     <meta name="google-site-verification" content="oQ_XpS8_c5DYamhVCpljtPUmV-CX7D8zVxHbTd_ExNc" />
     <link href="https://gmpg.org/xfn/11" />
     <link rel="icon" href="/android-chrome-512x512.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <meta property="og:locale" content="pt_BR" />
-
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(JSONLD) }}
+    />
   </Head>
 );
 
