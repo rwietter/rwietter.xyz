@@ -57,7 +57,8 @@ export const LastPostContainer = styled('section', {
 export const LastPostContainerImage = styled('div', {
   paddingRight: '$2',
   display: 'none',
-  'span img': {
+  width: '100%',
+  img: {
     borderRadius: '50%',
     width: 40,
     height: 40,

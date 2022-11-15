@@ -11,6 +11,10 @@ export const ArticleContainer = s('div', {
 
 export const ArticleImage = s(Image, {
   borderRadius: '4px',
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+  backgroundPosition: 'center',
 });
 
 export const ArticleHeader = s('div', {

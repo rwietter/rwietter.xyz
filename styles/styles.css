@@ -85,3 +85,8 @@ pre {
 span img {
 	object-fit: cover !important;
 }
+
+
+a {
+	text-decoration: none;
+}

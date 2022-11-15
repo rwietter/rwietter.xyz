@@ -11,10 +11,9 @@ const Card = ({ article }: any) => (
         <CardImage
           src={article.attributes.image.data.attributes.url}
           alt={article.attributes.image.url}
-          layout="responsive"
           width={70}
           height={70}
-          loading="eager"
+          loading="lazy"
         />
       </CardImageContainer>
 

@@ -1,7 +1,9 @@
+/* eslint-disable react/no-danger */
 /* eslint-disable no-return-await */
 import Document, {
   Html, Head, Main, NextScript,
 } from 'next/document';
+import { getCssText } from '../styles/theme';
 
 const APP_NAME = 'rwietter';
 const APP_DESCRIPTION = 'Software developer, passionate about technology, design and software engineering';
@@ -13,8 +15,9 @@ export default class extends Document {
 
   render() {
     return (
-      <Html lang="en" dir="ltr">
+      <Html lang="pt-br">
         <Head>
+          <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
           <link rel="preconnect" href="https://rsms.me/" />
@@ -54,6 +57,7 @@ export default class extends Document {
           <meta name="msapplication-square150x150logo" content="/icons/mstile-150x150.png" />
           <meta name="msapplication-wide310x150logo" content="/icons/mstile-310x150.png" />
           <meta name="msapplication-square310x310logo" content="/icons/mstile-310x310.png" />
+
         </Head>
         <body>
           <Main />

@@ -41,13 +41,9 @@ const LastPosts: FC<LastPostsProps> = ({ lastArticles }) => {
               <Image
                 src={post.attributes.image.data.attributes.url}
                 alt={`Image from article "${post.attributes.title}"`}
-                layout="fixed"
-                width={80}
-                height={80}
                 loading="lazy"
                 blurDataURL="https://cdn.pixabay.com/photo/2015/06/24/02/12/the-blurred-819388_1280.jpg"
                 placeholder="blur"
-                objectFit="cover"
               />
             </LastPostContainerImage>
             <LastPostContainerContent>
