@@ -55,6 +55,7 @@ const SEO: FC<SEOProps> = ({
     <meta property="og:image" content={image} key="ogimage" />
     <meta property="og:type" content={ogtype} />
     <meta property="twitter:card" content="summary_large_image" key="twcard" />
+    <meta property="twitter:creator" content="@rwietter" key="twcreator" />
     <meta property="twitter:domain" content="http://rwietter.xyz/" key="twdomain" />
     <meta property="twitter:url" content="https://twitter.com/rwietter" key="twurl" />
     <meta property="twitter:image:source" content={image} />

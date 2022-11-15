@@ -5,7 +5,12 @@ module.exports = {
     sitemapSize: 7000,
     robotsTxtOptions: {
         policies: [
-            { userAgent: '*', disallow: '/nocrawling' },
+            { userAgent: '*', allow: '/*' },
+            { userAgent: 'Twitterbot', allow: '/*' },
+            { userAgent: 'Googlebot', allow: '/*' },
+            { userAgent: 'Bingbot', allow: '/*' },
+            { userAgent: 'Slurp', allow: '/*' },
+            { userAgent: 'DuckDuckBot', allow: '/*' },
         ],
     },
 };
