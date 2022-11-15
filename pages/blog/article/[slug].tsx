@@ -71,6 +71,14 @@ const ArticleItem: FC<ArticleItemProps> = ({ articles }) => {
 
   return (
     <Layout>
+      <SEO
+        title={article.attributes.title}
+        description={article.attributes.description}
+        image={article.attributes.image.data.attributes.url}
+        author={article.attributes.author}
+        url={`https://rwietter.xyz${router.asPath}`}
+        content="article"
+      />
       <CSS.ArticleContainer>
         <CSS.ArticleMarkdownContainer>
           <CSS.ArticleHeader>
@@ -103,14 +111,6 @@ const ArticleItem: FC<ArticleItemProps> = ({ articles }) => {
             placeholder="blur"
           />
           <article>
-            <SEO
-              title={article.attributes.title}
-              description={article.attributes.description}
-              image={article.attributes.image.data.attributes.url}
-              author={article.attributes.author}
-              url={`https://rwietter.xyz${router.asPath}`}
-              content="article"
-            />
             <CSS.ArticleMarkdown
               className={
                 theme === 'light'

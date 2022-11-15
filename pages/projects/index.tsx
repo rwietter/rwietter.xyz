@@ -14,7 +14,7 @@ const Projects: React.FC = () => (
       title="Projects | Maurício W. | Software Engineer"
       content="website"
       url="https://rwietter.xyz"
-      description="Software developer, passionate about technology, design and software engineering"
+      description="Here, in this page, you can find some of my favorite projects. I hope you enjoy it. :)"
       image="https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png"
     />
     <S.Wrapper>

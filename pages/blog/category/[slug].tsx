@@ -19,7 +19,7 @@ const Category: FC<any> = ({ categories }) => {
             title="Blog | Maurício W. | Software Engineer"
             content="blog"
             url="https://rwietter.xyz/blog"
-            description="Blog about software development, design and software architecture"
+            description="The category page of the blog. Here, you can find all the articles of the category. :)"
             image="https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png"
           />
           <Articles articles={attributes.articles.data} />
