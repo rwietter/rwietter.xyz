@@ -61,6 +61,19 @@ const SEO: FC<SEOProps> = ({
     <meta name="msapplication-square150x150logo" content="/icons/mstile-150x150.png" />
     <meta name="msapplication-wide310x150logo" content="/icons/mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="/icons/mstile-310x310.png" />
+
+    <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta httpEquiv="content-language" content="pt-br" />
+    <meta name="keywords" content="Maurício Witter, rwietter, HTML, CSS, JavaScript, React, Typescript, Framework, Nextjs" />
+    <meta name="author" content={author} />
+    <meta name="robots" content="index, follow" />
+    <meta name="google-site-verification" content="oQ_XpS8_c5DYamhVCpljtPUmV-CX7D8zVxHbTd_ExNc" />
+    <link href="https://gmpg.org/xfn/11" />
+    <link rel="icon" href="/android-chrome-512x512.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <meta property="og:locale" content="pt_BR" />
+
   </Head>
 );
 
