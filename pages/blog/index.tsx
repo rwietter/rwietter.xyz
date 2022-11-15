@@ -1,5 +1,6 @@
 import React from 'react';
 import { BlogLayout } from 'layouts/blog';
+import SEO from 'components/SEO';
 // import { Sidebar } from 'features/site/sidebar';
 import { LayoutCSS } from 'layouts/blog/styles';
 import Navbar from 'components/blog-navbar';
@@ -15,6 +16,13 @@ const Blog: React.FC<any> = ({ articles }) => (
   <div>
     <BlogLayout>
       {/* <Sidebar /> */}
+      <SEO
+        title="Blog | Maurício W. | Software Engineer"
+        content="blog"
+        url="https://rwietter.xyz/blog"
+        description="Blog about software development, design and software architecture"
+        image="https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png"
+      />
       <Header />
       <LayoutCSS>
         <FadeIn>
