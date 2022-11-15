@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",
     "find:unused": "next-unused"
   },
@@ -23,6 +24,7 @@
     "next-images": "^1.8.4",
     "next-pwa": "5.6.0",
     "next-seo": "^5.11.1",
+    "next-sitemap": "^3.1.31",
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
     "react-apollo": "^3.1.5",
