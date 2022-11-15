@@ -6,6 +6,10 @@
 .pnp.js
 
 .env
+public/sw.js
+public/sw.js.map
+public/workbox-588899ac.js
+public/workbox-588899ac.js.map
 
 # testing
 /coverage
