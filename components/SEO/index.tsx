@@ -21,7 +21,7 @@ const SEO: FC<SEOProps> = ({
     <meta name="title" content={title} />
     <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover" />
     <link rel="manifest" href="manifest.json" />
-    <meta name="description" content={description} />
+    {/* <meta name="description" content={description} /> */}
     <meta httpEquiv="content-language" content="pt-BR" />
     <meta property="og:title" content={title} key="ogtitle" />
     <meta property="og:description" content={description} />
