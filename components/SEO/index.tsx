@@ -14,7 +14,7 @@ interface SEOProps {
   ogtype?: 'article:section' | 'website' | 'article:author' | 'article:tag' | '';
 }
 const SEO: FC<SEOProps> = ({
-  title = '', description = '', url = '', content = 'website', image = '', author = '@rwietter', ogtype = 'article:section',
+  title = '', description = '', url = '', image = '', author = '@rwietter', ogtype = 'article:section',
 }) => (
   <Head>
     <title>{title}</title>
@@ -26,7 +26,6 @@ const SEO: FC<SEOProps> = ({
     <meta property="og:title" content={title} key="ogtitle" />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={url} key="ogurl" />
-    <meta property="og:type" content={content} />
     <link rel="icon" href="/android-chrome-512x512.png" />
     <meta property="og:image" content={image} key="ogimage" />
     <meta property="og:type" content={ogtype} />
