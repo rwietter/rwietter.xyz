@@ -24,14 +24,14 @@ interface HomeProps {
 
 const Home: NextPage<HomeProps> = ({ lastFm, weather }) => (
   <div>
-    <SEO
-      title="Maurício W. | Software Engineer"
-      content="website"
-      url="https://rwietter.xyz"
-      description="This blog is about my journey as a Software Engineer. Here do you find my thoughts, ideas, and experiences. I hope you enjoy it."
-      image="https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png"
-    />
     <Layout>
+      <SEO
+        title="Mauricio Witter | Software Engineer"
+        content="website"
+        url="https://rwietter.xyz"
+        description="This blog is about my journey as a Software Engineer. Here do you find my thoughts, ideas, and experiences. I hope you enjoy it."
+        image="https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png"
+      />
       <AuthorHeader />
       <AuthorContent lastFm={lastFm} weather={weather} />
       {/* <LastPosts lastArticles={lastArticles} /> */}
