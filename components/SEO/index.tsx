@@ -17,20 +17,24 @@ const SEO: FC<SEOProps> = ({
   <Head>
     <title>{title}</title>
     <meta name="title" content={title} />
+    <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover" />
+    <link rel="manifest" href="manifest.json" />
     <meta name="description" content={description} />
     <meta httpEquiv="content-language" content="pt-BR" />
-    <meta property="og:title" content={title} />
+    <meta property="og:title" content={title} key="ogtitle" />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={url} />
+    <meta property="og:url" content={url} key="ogurl" />
     <meta property="og:type" content={content} />
     <link rel="icon" href="/android-chrome-512x512.png" />
-    <meta property="og:image" content={image} />
-    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="og:image" content={image} key="ogimage" />
+    <meta property="twitter:card" content="summary" key="twcard" />
     <meta property="twitter:image:source" content={image} />
-    <meta property="twitter:creator" content={author} />
+    <meta property="twitter:creator" content={author} key="twhandle" />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta name="twitter:site" content="@rwietter" />
+    <meta property="og:site_name" content={title} key="ogsitename" />
+    <meta property="og:description" content={description} key="ogdesc" />
     <link rel="icon" href="/icons/android-chrome-512x512.png" />
     <link sizes="57x57" href="/icons/apple-touch-icon-57x57.png" />
     <link sizes="114x114" href="/icons/apple-touch-icon-114x114.png" />

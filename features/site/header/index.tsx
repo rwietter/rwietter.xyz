@@ -30,13 +30,13 @@ const Header: React.FC = () => {
     <St.Header>
       <St.Nav>
         <div className={activeLink(pathname, '/')}>
-          <Link href="/" prefetch>home</Link>
+          <Link href="/">home</Link>
         </div>
         <div className={activeLink(pathname, '/blog', '/blog/article/')}>
-          <Link href="/blog" prefetch={false}>blog</Link>
+          <Link href="/blog">blog</Link>
         </div>
         <div className={activeLink(pathname, '/projects')}>
-          <Link href="/projects" prefetch={false}>projects</Link>
+          <Link href="/projects">projects</Link>
         </div>
       </St.Nav>
       <St.DarkMode onClick={handleSwitchTheme}>

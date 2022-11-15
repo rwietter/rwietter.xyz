@@ -4,8 +4,6 @@ const withPWA = require('next-pwa')({
   dest: 'public',
 });
 
-// const runtimeCaching = require('next-pwa/cache');
-
 const nextConfig = withImages({
   reactStrictMode: true,
   productionBrowserSourceMaps: true,

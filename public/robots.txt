@@ -1,4 +1,9 @@
+# *
 User-agent: *
-Allow: /
+Disallow: /nocrawling
 
-Sitemap: http://rwietter.dev/sitemap.xml
+# Host
+Host: https://rwietter.xyz/
+
+# Sitemaps
+Sitemap: https://rwietter.xyz/sitemap.xml

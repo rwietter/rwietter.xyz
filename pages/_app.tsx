@@ -1,16 +1,14 @@
 /* eslint-disable react/no-danger */
 import type { AppProps } from 'next/app';
 import { ApolloProvider } from '@apollo/react-hooks';
-import React, { useEffect, useState } from 'react';
 import apolloClient from 'utils/apollo-client';
-import { useThemeStore, ThemeStore } from 'store/switch-theme';
-import { applyTheme } from 'utils/apply-theme';
 import '../styles/dracula-prism.css';
 import '../styles/styles.css';
-import Prism from 'prismjs';
-import Head from 'next/head';
 import { LoadingIndicator } from 'components/loading';
-import { getCssText } from 'styles/theme';
+import { useEffect } from 'react';
+import { ThemeStore, useThemeStore } from 'store/switch-theme';
+import { applyTheme } from 'utils/apply-theme';
+import Prism from 'prismjs';
 
 require('prismjs/components/prism-typescript');
 require('prismjs/components/prism-javascript');
@@ -22,32 +20,22 @@ require('prismjs/components/prism-bash');
 require('prismjs/components/prism-json');
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [isLoading, setIsLoading] = useState(true);
   const { theme } = useThemeStore() as ThemeStore;
 
   useEffect(() => {
     applyTheme(theme);
-    setIsLoading(false);
     Prism.highlightAll();
   }, [theme]);
 
   useEffect(() => {
     Prism.highlightAll();
   });
-
   return (
     <div>
       <LoadingIndicator />
-      {!isLoading && (
-        <ApolloProvider client={apolloClient as any}>
-          <Head>
-            <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover" />
-            <link rel="manifest" href="manifest.json" />
-            <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
-          </Head>
-          <Component {...pageProps} />
-        </ApolloProvider>
-      )}
+      <ApolloProvider client={apolloClient as any}>
+        <Component {...pageProps} />
+      </ApolloProvider>
     </div>
   );
 }

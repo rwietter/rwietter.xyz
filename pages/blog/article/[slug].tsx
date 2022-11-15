@@ -15,7 +15,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { ARTICLES_QUERY } from 'queries/articles/articles';
 import apolloClient from 'utils/apollo-client';
 import { getReadingTime } from 'utils/getTimeReading';
-import { NextSEO } from 'components/SEO/index';
+import SEO from 'components/SEO/index';
 import { getLocaleDate } from 'utils/get-locale-date';
 
 interface ArticleItemProps {
@@ -71,7 +71,7 @@ const ArticleItem: FC<ArticleItemProps> = ({ articles }) => {
 
   return (
     <Layout>
-      <NextSEO
+      <SEO
         title={article.attributes.title}
         description={article.attributes.description}
         image={article.attributes.image.data.attributes.url}
@@ -101,16 +101,20 @@ const ArticleItem: FC<ArticleItemProps> = ({ articles }) => {
           </CSS.ArticleHeader>
           <CSS.ArticleImage
             src={article.attributes.image.data.attributes.url}
-            layout="responsive"
-            width={100}
-            height={50}
+            width={500}
+            height={500}
+            quality={100}
             alt={`Image of the article ${article.attributes.title}`}
             loading="lazy"
+            blurDataURL="https://cdn.pixabay.com/photo/2015/06/24/02/12/the-blurred-819388_1280.jpg"
+            placeholder="blur"
           />
 
           <CSS.ArticleMarkdown
             className={
-              theme === 'light' ? markdownDark['markdown-body'] : markdownLight['markdown-body']
+              theme === 'light'
+                ? markdownDark['markdown-body']
+                : markdownLight['markdown-body']
             }
           >
             {article.attributes.content}

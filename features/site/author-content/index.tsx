@@ -1,8 +1,10 @@
 import { LastFMTrack, RecentTrackProps } from 'components/lastfm/lastfm';
-import { UpdatedDate } from 'components/update-date';
 import { WeatherConditions } from 'components/weather/weather';
+import dynamic from 'next/dynamic';
 import { FC } from 'react';
 import { Container, CurrentlyInformations } from './styles';
+
+const UpdatedDate = dynamic(() => import('components/update-date'), { ssr: false });
 
 export interface AuthorContentProps {
   lastFm: RecentTrackProps;
