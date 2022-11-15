@@ -15,7 +15,7 @@ import { Header } from 'features/site/header';
 const Blog: React.FC<any> = ({ articles }) => (
   <div>
     <NextSEO
-      title="@rwietter blog"
+      title="Blog | Maurício W. | Software Engineer"
       content="blog"
       url="https://rwietter.xyz/blog"
       description="Blog about software development, design and software architecture"

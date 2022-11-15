@@ -3,15 +3,15 @@ import { Layout } from 'layouts/content';
 
 import { ProjectHeader } from 'components/project-header';
 import { Project } from 'components/project';
-import { NextSEO } from 'components/SEO';
+import SEO from 'components/SEO';
 import * as S from 'features/projects/styles';
 import { projects } from 'features/projects/data';
 import FadeIn from 'react-fade-in';
 
 const Projects: React.FC = () => (
   <Layout>
-    <NextSEO
-      title="@rwietter"
+    <SEO
+      title="Projects | Maurício W. | Software Engineer"
       content="website"
       url="https://rwietter.xyz"
       description="Software developer, passionate about technology, design and software engineering"

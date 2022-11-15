@@ -18,7 +18,7 @@ interface HomeProps {
 const Home: NextPage<HomeProps> = ({ lastFm, weather }) => (
   <div>
     <NextSEO
-      title="@rwietter"
+      title="Maurício W. | Software Engineer"
       content="website"
       url="https://rwietter.xyz"
       description="Software developer, passionate about technology, design and software engineering"

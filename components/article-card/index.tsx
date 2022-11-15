@@ -5,7 +5,7 @@ import {
 } from './styles';
 
 const Card = ({ article }: any) => (
-  <Link href={`/blog/article/${article.attributes.slug}`} passHref>
+  <Link href={`/blog/article/${article.attributes.slug}`} passHref rel="canonical">
     <CardContainer>
       <CardImageContainer>
         <CardImage

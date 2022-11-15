@@ -17,6 +17,7 @@ export default class extends Document {
     return (
       <Html lang="pt-br">
         <Head>
+          <title>Mauricio W. | Software Engineer</title>
           <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />

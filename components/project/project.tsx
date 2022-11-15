@@ -35,10 +35,10 @@ export const Project: FC<IProject> = ({ project }) => (
 				))}
       </S.Tags>
       <S.Buttons>
-        <S.Button href={project.github} target="_blank">
+        <S.Button href={project.github} target="_blank" rel="canonical">
           <BsGithub size={22} />
         </S.Button>
-        <S.Button href={project.link}>
+        <S.Button href={project.link} rel="canonical">
           <VscLinkExternal size={22} />
         </S.Button>
       </S.Buttons>

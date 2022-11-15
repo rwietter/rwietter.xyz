@@ -29,12 +29,12 @@ const MenuBar = () => {
   return (
     <S.ManuBarWrapper role="navigation">
       <S.MenuBarGroup>
-        <S.MenuBarLink href="/">
+        <S.MenuBarLink href="/" rel="canonical">
           <S.MenuBarItem>
             <VscHome size={20} />
           </S.MenuBarItem>
         </S.MenuBarLink>
-        <S.MenuBarLink href="/blog">
+        <S.MenuBarLink href="/blog" rel="canonical">
           <S.MenuBarItem>
             <FiList size={20} />
           </S.MenuBarItem>
@@ -42,7 +42,7 @@ const MenuBar = () => {
       </S.MenuBarGroup>
 
       <S.MenuBarGroup>
-        <S.MenuBarLink href="/archlinux">
+        <S.MenuBarLink href="/archlinux" rel="canonical">
           <S.MenuBarItem>
             {/* <SiArchlinux size={20} /> */}
           </S.MenuBarItem>

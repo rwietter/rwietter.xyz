@@ -13,6 +13,7 @@ const Navbar = () => (
           <li key={category.attributes.slug}>
             <Link
               href={`/blog/category/${category.attributes.slug}`}
+              rel="canonical"
             >
               {category.attributes.name}
             </Link>

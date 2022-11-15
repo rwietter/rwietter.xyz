@@ -81,7 +81,7 @@ const ArticleItem: FC<ArticleItemProps> = ({ articles }) => {
       <CSS.ArticleContainer>
         <CSS.ArticleMarkdownContainer>
           <CSS.ArticleHeader>
-            <Link href="/blog">
+            <Link href="/blog" rel="canonical">
               <CSS.BackToOverview>
                 <AiOutlineArrowLeft size={19} />
                 <p>Back to overview</p>

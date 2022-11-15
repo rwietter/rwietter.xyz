@@ -5,10 +5,10 @@ import React from 'react';
 const About = () => (
   <>
     <Head>
-      <title>next-pwa example</title>
+      <title>Mauricio W.</title>
     </Head>
     <h1>About</h1>
-    <Link href="/">Home</Link>
+    <Link href="/" rel="canonical">Home</Link>
   </>
 );
 

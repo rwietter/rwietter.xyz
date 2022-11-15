@@ -4,6 +4,7 @@ import apolloClient from 'utils/apollo-client';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { Articles } from 'components/articles';
 import CATEGORIES_QUERY from 'queries/category/categories';
+import SEO from 'components/SEO';
 
 const Category: FC<any> = ({ categories }) => {
   if (!categories) return <div />;
@@ -14,6 +15,13 @@ const Category: FC<any> = ({ categories }) => {
     <div>
       <div>
         <div>
+          <SEO
+            title="Blog | Maurício W. | Software Engineer"
+            content="blog"
+            url="https://rwietter.xyz/blog"
+            description="Blog about software development, design and software architecture"
+            image="https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png"
+          />
           <Articles articles={attributes.articles.data} />
         </div>
       </div>
