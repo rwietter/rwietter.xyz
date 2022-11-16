@@ -2,7 +2,6 @@
 module.exports = {
     siteUrl: process.env.SITE_URL || 'https://rwietter.xyz/',
     generateRobotsTxt: true,
-    sitemapSize: 7000,
     robotsTxtOptions: {
         policies: [
             { userAgent: '*', allow: '/*' },
@@ -11,6 +10,9 @@ module.exports = {
             { userAgent: 'Bingbot', allow: '/*' },
             { userAgent: 'Slurp', allow: '/*' },
             { userAgent: 'DuckDuckBot', allow: '/*' },
+        ],
+        additionalSitemaps: [
+            'https://www.rwietter.xyz/sitemap-0.xml',
         ],
     },
 };
