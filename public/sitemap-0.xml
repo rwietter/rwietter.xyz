@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://rwietter.xyz</loc><lastmod>2022-11-16T14:23:37.657Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://rwietter.xyz/about</loc><lastmod>2022-11-16T14:23:37.657Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://rwietter.xyz/blog</loc><lastmod>2022-11-16T14:23:37.657Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://rwietter.xyz/projects</loc><lastmod>2022-11-16T14:23:37.657Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://rwietter.xyz/blog/category/news</loc><lastmod>2022-11-16T14:23:37.657Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://rwietter.xyz/blog/category/food</loc><lastmod>2022-11-16T14:23:37.657Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://rwietter.xyz/blog/category/story</loc><lastmod>2022-11-16T14:23:37.657Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://rwietter.xyz/blog/category/tech</loc><lastmod>2022-11-16T14:23:37.657Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://rwietter.xyz/blog/category/nature</loc><lastmod>2022-11-16T14:23:37.657Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://rwietter.xyz/blog/article/fluxo-bidirecional-no-react-com-o-hook-use-imperative-handle</loc><lastmod>2022-11-16T14:23:37.657Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rwietter.xyz</loc><lastmod>2022-11-16T15:05:22.943Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rwietter.xyz/about</loc><lastmod>2022-11-16T15:05:22.943Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rwietter.xyz/blog</loc><lastmod>2022-11-16T15:05:22.943Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rwietter.xyz/projects</loc><lastmod>2022-11-16T15:05:22.943Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rwietter.xyz/blog/category/news</loc><lastmod>2022-11-16T15:05:22.943Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rwietter.xyz/blog/category/food</loc><lastmod>2022-11-16T15:05:22.943Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rwietter.xyz/blog/category/story</loc><lastmod>2022-11-16T15:05:22.943Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rwietter.xyz/blog/category/tech</loc><lastmod>2022-11-16T15:05:22.943Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rwietter.xyz/blog/category/nature</loc><lastmod>2022-11-16T15:05:22.943Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rwietter.xyz/blog/article/fluxo-bidirecional-no-react-com-o-hook-use-imperative-handle</loc><lastmod>2022-11-16T15:05:22.943Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>
