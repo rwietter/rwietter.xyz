@@ -27,4 +27,3 @@ Host: https://rwietter.xyz/
 
 # Sitemaps
 Sitemap: https://rwietter.xyz/sitemap.xml
-Sitemap: https://www.rwietter.xyz/sitemap-0.xml
