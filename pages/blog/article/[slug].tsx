@@ -16,8 +16,7 @@ import { getLocaleDate } from 'utils/get-locale-date';
 import dynamic from 'next/dynamic';
 
 const Link = dynamic(() => import('next/link'), {
-  ssr: true,
-  loading: () => <p>...</p>,
+  ssr: false,
 });
 
 const SEO = dynamic(() => import('components/SEO'), {
@@ -25,8 +24,7 @@ const SEO = dynamic(() => import('components/SEO'), {
 });
 
 const ArticleFooter = dynamic(() => import('components/article-footer'), {
-  ssr: true,
-  loading: () => <p>...</p>,
+  ssr: false,
 });
 
 interface ArticleItemProps {
