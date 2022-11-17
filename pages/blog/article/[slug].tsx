@@ -14,17 +14,26 @@ import apolloClient from 'utils/apollo-client';
 import { getReadingTime } from 'utils/getTimeReading';
 import { getLocaleDate } from 'utils/get-locale-date';
 import dynamic from 'next/dynamic';
+import { Suspense } from 'react';
 
 const Link = dynamic(() => import('next/link'), {
-  ssr: false,
+  ssr: true,
+  loading: () => <p>..</p>,
 });
 
 const SEO = dynamic(() => import('components/SEO'), {
-  ssr: false,
+  ssr: true,
+  loading: () => <p>..</p>,
 });
 
 const ArticleFooter = dynamic(() => import('components/article-footer'), {
-  ssr: false,
+  ssr: true,
+  loading: () => <p>..</p>,
+});
+
+const ArticleImage = dynamic(() => import('../../../styles/blog/article/styled')
+  .then((mod) => mod.ArticleImage), {
+  ssr: true,
 });
 
 interface ArticleItemProps {
@@ -73,16 +82,18 @@ const ArticleItem = ({ articles }: ArticleItemProps) => {
               {article.attributes.description}
             </CSS.ArticleDescription>
           </CSS.ArticleHeader>
-          <CSS.ArticleImage
-            src={article.attributes.image.data.attributes.url}
-            width={5000}
-            height={5000}
-            quality={100}
-            alt={`Image of the article: ${article.attributes.title}`}
-            loading="lazy"
-            blurDataURL="https://cdn.pixabay.com/photo/2015/06/24/02/12/the-blurred-819388_1280.jpg"
-            placeholder="blur"
-          />
+          <Suspense fallback="...">
+            <ArticleImage
+              src={article.attributes.image.data.attributes.url}
+              width={5000}
+              height={5000}
+              quality={100}
+              alt={`Image of the article: ${article.attributes.title}`}
+              loading="lazy"
+              blurDataURL="https://cdn.pixabay.com/photo/2015/06/24/02/12/the-blurred-819388_1280.jpg"
+              placeholder="blur"
+            />
+          </Suspense>
           <article>
             <CSS.ArticleMarkdown
               className={
