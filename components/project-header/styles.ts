@@ -11,7 +11,7 @@ export const Header = styled('section', {
 
 export const Title = styled('h1', {
 	fontSize: '3rem',
-	fontFamily: 'Inter var',
+	fontFamily: 'Roboto Flex, sans-serif',
 	letterSpacing: '-0.06em',
 	color: '$textHighlight',
 	fontFeatureSettings: '"ss02" on, "ss03" on, "ss04" on',
@@ -20,7 +20,7 @@ export const Title = styled('h1', {
 export const Subtitle = styled('p', {
 	fontSize: '1.2rem',
 	paddingTop: '1rem',
-	fontFamily: 'Roboto Flex',
+	fontFamily: 'Roboto Flex, sans-serif',
 	letterSpacing: '-0.02em',
 	textAlign: 'center',
 

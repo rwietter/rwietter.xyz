@@ -75,9 +75,9 @@ const ArticleItem = ({ articles }: ArticleItemProps) => {
           </CSS.ArticleHeader>
           <CSS.ArticleImage
             src={article.attributes.image.data.attributes.url}
-            width={500}
-            height={500}
-            quality={70}
+            width={5000}
+            height={5000}
+            quality={100}
             alt={`Image of the article: ${article.attributes.title}`}
             loading="lazy"
             blurDataURL="https://cdn.pixabay.com/photo/2015/06/24/02/12/the-blurred-819388_1280.jpg"

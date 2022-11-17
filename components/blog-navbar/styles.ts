@@ -30,7 +30,7 @@ export const NavItems = styled('nav', {
   'li a': {
     textDecoration: 'none',
     color: '$textHighlight',
-    fontFamily: 'Inter, sans-serif',
+    fontFamily: 'Roboto Flex, sans-serif',
     fontWeight: '600',
     transition: '$transitonTheme',
     padding: '0',

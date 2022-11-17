@@ -11,7 +11,7 @@ export const ArticleContainer = s('section', {
 
 export const ArticleImage = s(Image, {
   borderRadius: '4px',
-  width: '100%',
+	width: '100%',
   height: '100%',
   objectFit: 'cover',
   backgroundPosition: 'center',
@@ -66,7 +66,9 @@ export const DateTimeRead = s('p', {
 export const ArticleTitle = s('h1', {
 	color: '$gray50',
 	fontSize: 'clamp(1.5rem, 3vw, 3.5rem)',
-	fontWeight: 900,
+	fontWeight: 'bold',
+	lineHeight: '1.2',
+	fontFamily: 'Sora, sans-serif',
 });
 
 export const ArticleDescription = s('h2', {
@@ -74,6 +76,8 @@ export const ArticleDescription = s('h2', {
 	fontSize: 'clamp(1rem, 3vw, 1.3rem)',
 	fontWeight: 400,
 	padding: '$2 0',
+	marginTop: '.5rem',
+	fontFamily: 'Sora, sans-serif',
 });
 
 export const ArticleMarkdownContainer = s('section', {

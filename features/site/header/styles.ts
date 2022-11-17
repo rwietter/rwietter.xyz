@@ -47,5 +47,5 @@ export const DarkMode = styled('button', {
 	height: '2.3rem',
 	border: 'none',
 	cursor: 'pointer',
-	fontFamily: '$body',
+	fontFamily: 'Roboto Flex, sans-serif',
 });

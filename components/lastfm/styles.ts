@@ -75,7 +75,7 @@ export const PlayingSpot = styled('div', {
 	},
 
 	span: {
-		fontFamily: 'Roboto Flex',
+		fontFamily: 'Roboto Flex, sans-serif',
 		fontSize: '1.1rem',
 		letterSpacing: '0.02em',
 	},

@@ -1,12 +1,12 @@
 :root {
-	font-family: 'Inter', sans-serif;
+	font-family: 'Roboto Flex', sans-serif;
 	font-feature-settings: "'ss01', 'ss02', 'ss03', 'ss03', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'ss10', 'salt' 1";
 	font-variant-ligatures: 'common-ligatures';
 }
 
 @supports (font-variation-settings: normal) {
 	:root {
-		font-family: 'Inter var, Inter, sans-serif';
+		font-family: 'Roboto Flex', sans-serif;
 		font-feature-settings: "'ss01', 'ss02', 'ss03', 'ss03', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'ss10', 'salt' 1";
 		font-variant-ligatures: 'common-ligatures';
 	}

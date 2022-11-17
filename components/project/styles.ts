@@ -48,7 +48,7 @@ export const Description = styled('section', {
 
 export const Featured = styled('span', {
 	fontSize: '.9rem',
-	fontFamily: 'Roboto Flex',
+	fontFamily: 'Roboto Flex, sans-serif',
 	letterSpacing: '-0.02em',
 	fontWeight: '200',
 });
@@ -56,7 +56,7 @@ export const Featured = styled('span', {
 export const TitleProject = styled('h1', {
 	all: 'unset',
 	fontSize: '1.6rem',
-	fontFamily: 'Inter var',
+	fontFamily: 'Roboto Flex, sans-serif',
 	letterSpacing: '-0.01em',
 	fontWeight: '700',
 	paddingTop: '.8rem',
@@ -64,7 +64,7 @@ export const TitleProject = styled('h1', {
 
 export const DescriptionProject = styled('section', {
 	fontSize: '1.1rem',
-	fontFamily: 'Inter var',
+	fontFamily: 'Roboto Flex, sans-serif',
 	fontWeight: '400',
 	position: 'relative',
 	maxWidth: '40rem',
@@ -93,7 +93,7 @@ export const Tags = styled('section', {
 
 export const Tag = styled('span', {
 	fontSize: '1.2rem',
-	fontFamily: 'Roboto Flex',
+	fontFamily: 'Roboto Flex, sans-serif',
 	letterSpacing: '-0.01em',
 	fontWeight: '200',
 	lineHeight: '1.5',
