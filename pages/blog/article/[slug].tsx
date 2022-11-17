@@ -5,7 +5,6 @@ import { useThemeStore } from 'store/switch-theme';
 import markdownLight from 'styles/github-markdown-css-light.module.css';
 import markdownDark from 'styles/github-markdown-css-dark.module.css';
 import { Layout } from 'layouts/content';
-import Link from 'next/link';
 import { AiOutlineArrowLeft, AiOutlineCalendar } from 'react-icons/ai';
 import { RiTimer2Line } from 'react-icons/ri';
 import * as CSS from 'styles/blog/article/styled';
@@ -15,10 +14,19 @@ import apolloClient from 'utils/apollo-client';
 import { getReadingTime } from 'utils/getTimeReading';
 import { getLocaleDate } from 'utils/get-locale-date';
 import dynamic from 'next/dynamic';
-import SEO from 'components/SEO';
+
+const Link = dynamic(() => import('next/link'), {
+  ssr: true,
+  loading: () => <p>...</p>,
+});
+
+const SEO = dynamic(() => import('components/SEO'), {
+  ssr: false,
+});
 
 const ArticleFooter = dynamic(() => import('components/article-footer'), {
-  ssr: false,
+  ssr: true,
+  loading: () => <p>...</p>,
 });
 
 interface ArticleItemProps {
