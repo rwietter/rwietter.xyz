@@ -5,12 +5,12 @@ import {
 } from './styles';
 
 const Card = ({ article }: any) => (
-  <Link href={`/blog/article/${article.attributes.slug}`} passHref rel="canonical">
+  <Link href={`/blog/article/${article.attributes.slug}`} passHref>
     <CardContainer>
       <CardImageContainer>
         <CardImage
           src={article.attributes.image.data.attributes.url}
-          alt={article.attributes.image.url}
+          alt="Cover image of the article"
           width={70}
           height={70}
           loading="lazy"

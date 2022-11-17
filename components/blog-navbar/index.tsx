@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import Query from '../query';
 
@@ -13,7 +12,6 @@ const Navbar = () => (
           <li key={category.attributes.slug}>
             <Link
               href={`/blog/category/${category.attributes.slug}`}
-              rel="canonical"
             >
               {category.attributes.name}
             </Link>

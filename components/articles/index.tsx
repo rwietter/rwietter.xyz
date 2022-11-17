@@ -1,5 +1,4 @@
 /* eslint-disable no-unsafe-optional-chaining */
-import React from 'react';
 import { Card } from '../article-card';
 import { ArticlesContainer } from './styles';
 
@@ -12,24 +11,22 @@ const Articles = ({ articles }: any) => {
 
   return (
     <ArticlesContainer>
-      <div>
+      <section>
         {leftArticles?.map((article: any) => (
           <Card
             article={article}
             key={`article__${article.attributes.slug}`}
           />
         ))}
-      </div>
-      <div>
-        <div>
-          {rightArticles?.map((article: any) => (
-            <Card
-              article={article}
-              key={`article__${article.attributes.slug}`}
-            />
+      </section>
+      <section>
+        {rightArticles?.map((article: any) => (
+          <Card
+            article={article}
+            key={`article__${article.attributes.slug}`}
+          />
           ))}
-        </div>
-      </div>
+      </section>
     </ArticlesContainer>
   );
 };

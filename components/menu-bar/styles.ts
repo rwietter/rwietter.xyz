@@ -26,7 +26,7 @@ export const ManuBarWrapper = styled('aside', {
   },
 });
 
-export const MenuBarGroup = styled('section', {
+export const MenuBarGroup = styled('div', {
   display: 'flex',
   flexDirection: 'row',
 
@@ -41,24 +41,25 @@ export const MenuBarLink = styled(Link, {
   transition: 'color 0.35s ease',
 });
 
-export const MenuBarItem = styled('span', {
+export const MenuBarItem = styled('button', {
+  background: 'none',
+  border: 'none',
+  outline: 'none',
+  margin: '0',
   color: '$gray50',
   cursor: 'pointer',
-  height: '3.75rem',
   padding: '1.1rem',
   position: 'relative',
-  width: '3.75rem',
   transition: 'color 0.35s ease',
   display: 'flex',
   alignItems: 'center',
 
   '@bp5': {
-    height: '3rem',
     padding: '.9rem',
     position: 'relative',
-    width: '3rem',
     '&:hover': {
       color: '$primary',
     },
   },
+
 });

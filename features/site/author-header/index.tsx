@@ -1,8 +1,7 @@
-import React from 'react';
 import { SOCIAL_LINKS } from 'data/social-links';
 import { Container } from './styles';
 
-const AuthorHeader: React.FC = () => (
+const AuthorHeader = () => (
   <Container>
     <h1>Maurício</h1>
     <h2>24-year-old software developer and student from the Brazil.</h2>
@@ -14,7 +13,6 @@ const AuthorHeader: React.FC = () => (
           target="_blank"
           rel="noreferrer"
           title={link.name}
-          aria-label={link.name}
         >
           {link.icon}
         </a>

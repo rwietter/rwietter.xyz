@@ -17,7 +17,6 @@ const FooterComponent = () => (
           target="_blank"
           rel="noreferrer"
           title={link.name}
-          aria-label={link.name}
         >
           {link.icon}
         </a>

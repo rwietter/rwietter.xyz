@@ -8,7 +8,6 @@ import { Layout } from 'layouts/content';
 import Link from 'next/link';
 import { AiOutlineArrowLeft, AiOutlineCalendar } from 'react-icons/ai';
 import { RiTimer2Line } from 'react-icons/ri';
-import { FC, useEffect } from 'react';
 import * as CSS from 'styles/blog/article/styled';
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import { ARTICLES_QUERY } from 'queries/articles/articles';
@@ -16,66 +15,26 @@ import apolloClient from 'utils/apollo-client';
 import { getReadingTime } from 'utils/getTimeReading';
 import { getLocaleDate } from 'utils/get-locale-date';
 import dynamic from 'next/dynamic';
-
-const SEO = dynamic(() => import('components/SEO'), {
-  ssr: false,
-});
+import SEO from 'components/SEO';
 
 const ArticleFooter = dynamic(() => import('components/article-footer'), {
-  ssr: true,
-  loading: () => <p>...</p>,
+  ssr: false,
 });
 
 interface ArticleItemProps {
   articles: any
 }
 
-const makeElement = (lang: string) => `<button type="button" id="code-target">${lang}<span id="code-target-tooltip">Copy code</span></button>`;
+const ArticleItem = ({ articles }: ArticleItemProps) => {
+  if (!articles) return null;
 
-const ArticleItem: FC<ArticleItemProps> = ({ articles }) => {
   const { theme } = useThemeStore() as any;
 
   const router = useRouter() as unknown as { asPath: string };
-  if (!articles) return null;
 
   const [article] = articles;
   const { readTime } = getReadingTime(article.attributes.content);
   const { localeDate: publishedAt } = getLocaleDate(article.attributes.publishedAt, 'pt-BR');
-
-  useEffect(() => {
-    const code = document.querySelectorAll('code');
-
-    code?.forEach((item: HTMLElement) => {
-      if (item.className.includes('language-')) {
-        const [, lang] = item.className.split('language-');
-        item.insertAdjacentHTML('beforebegin', makeElement(lang));
-      }
-    });
-    return () => {
-      const codeTarget = document.querySelectorAll('#code-target');
-      codeTarget.forEach((item: any) => { item.remove(); });
-    };
-  }, []);
-
-  useEffect(() => {
-    const codeTarget = document.querySelectorAll('#code-target');
-    let timeout: any = null;
-    codeTarget.forEach((item) => {
-      item.addEventListener('click', async () => {
-        if (item.nextSibling) {
-          const code = item.nextSibling.textContent as string;
-          await navigator.clipboard.writeText(code);
-          const [tooltip] = item.children;
-          tooltip.textContent = 'Copied!';
-          timeout = setTimeout(() => { tooltip.textContent = 'Copy code'; }, 2000);
-        }
-      });
-      return () => {
-        codeTarget.forEach((pre) => { pre.removeEventListener('click', () => { }); });
-        clearTimeout(timeout);
-      };
-    });
-  }, []);
 
   return (
     <Layout>
@@ -83,16 +42,16 @@ const ArticleItem: FC<ArticleItemProps> = ({ articles }) => {
         title={article.attributes.title}
         description={article.attributes.description}
         image={article.attributes.image.data.attributes.url}
-        author={article.attributes.author}
+        author={article.attributes.author.data.attributes.name}
         url={`https://rwietter.xyz${router.asPath}`}
         content="article"
       />
       <CSS.ArticleContainer>
         <CSS.ArticleMarkdownContainer>
           <CSS.ArticleHeader>
-            <Link href="/blog" rel="canonical">
-              <CSS.BackToOverview>
-                <AiOutlineArrowLeft size={19} />
+            <Link href="/blog">
+              <CSS.BackToOverview type="button" aria-label="Back to overview">
+                <AiOutlineArrowLeft size={19} aria-hidden="true" />
                 <p>Back to overview</p>
               </CSS.BackToOverview>
             </Link>
@@ -113,7 +72,7 @@ const ArticleItem: FC<ArticleItemProps> = ({ articles }) => {
             width={500}
             height={500}
             quality={70}
-            alt={`Image of the article ${article.attributes.title}`}
+            alt={`Image of the article: ${article.attributes.title}`}
             loading="lazy"
             blurDataURL="https://cdn.pixabay.com/photo/2015/06/24/02/12/the-blurred-819388_1280.jpg"
             placeholder="blur"
@@ -153,7 +112,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 

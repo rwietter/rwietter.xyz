@@ -12,7 +12,7 @@ const About = () => (
       url="https://rwietter.xyz/"
     />
     <h1>About</h1>
-    <Link href="/" rel="canonical">Home</Link>
+    <Link href="/">Home</Link>
   </>
 );
 

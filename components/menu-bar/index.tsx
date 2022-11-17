@@ -27,36 +27,38 @@ const MenuBar = () => {
   };
 
   return (
-    <S.ManuBarWrapper role="navigation">
+    <S.ManuBarWrapper role="menubar">
       <S.MenuBarGroup>
-        <S.MenuBarLink href="/" rel="canonical" title="home page" aria-label="home page">
-          <S.MenuBarItem>
-            <VscHome size={20} />
+        <S.MenuBarLink href="/" title="home page" role="menuitem">
+          <S.MenuBarItem type="button" aria-label="up to home">
+            <VscHome size={20} aria-hidden="true" />
           </S.MenuBarItem>
         </S.MenuBarLink>
-        <S.MenuBarLink href="/blog" rel="canonical" title="Blog" aria-label="Blog">
-          <S.MenuBarItem>
-            <FiList size={20} />
+        <S.MenuBarLink href="/blog" title="Blog" role="menuitem">
+          <S.MenuBarItem type="button" aria-label="up to blog">
+            <FiList size={20} aria-hidden="true" />
           </S.MenuBarItem>
         </S.MenuBarLink>
       </S.MenuBarGroup>
 
       <S.MenuBarGroup>
-        <S.MenuBarLink href="/archlinux" rel="canonical" title="archlinux">
+        {/* <S.MenuBarLink href="/archlinux" title="archlinux">
           <S.MenuBarItem>
-            {/* <SiArchlinux size={20} /> */}
+            <SiArchlinux size={20} />
           </S.MenuBarItem>
-        </S.MenuBarLink>
+        </S.MenuBarLink> */}
 
         <S.MenuBarItem
           title="Toggle Dark Mode"
-          aria-label="Toggle Dark Mode"
+          role="menuitem"
           onClick={handleSwitchTheme}
           className="theme"
+          type="button"
+          aria-label="toggle change theme"
         >
-          {themeStore.theme === 'dark' ? <Dark /> : <Light />}
+          {themeStore.theme === 'dark' ? <Dark aria-hidden="true" /> : <Light aria-hidden="true" />}
         </S.MenuBarItem>
-        <S.MenuBarItem title="go to top" aria-label="go to top">
+        <S.MenuBarItem title="go to top" role="menuitem" type="button">
           <AiOutlineArrowUp onClick={handleToTop} size={20} />
         </S.MenuBarItem>
       </S.MenuBarGroup>

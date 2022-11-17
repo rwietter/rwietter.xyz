@@ -38,8 +38,8 @@ const Header = () => {
           <Link href="/projects">projects</Link>
         </div>
       </St.Nav>
-      <St.DarkMode name="Enable dark mode" onClick={handleSwitchTheme}>
-        {theme === 'dark' ? <Dark /> : <Light />}
+      <St.DarkMode type="button" aria-label="toggle change theme" name="Enable dark mode" onClick={handleSwitchTheme}>
+        {theme === 'dark' ? <Dark aria-hidden="true" /> : <Light aria-hidden="true" />}
       </St.DarkMode>
     </St.Header>
   );

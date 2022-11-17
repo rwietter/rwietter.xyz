@@ -1,11 +1,11 @@
 import { styled } from 'styles/theme';
 
-export const BlogContainerPosts = styled('div', {
+export const BlogContainerPosts = styled('section', {
 	display: 'flex',
 	flexDirection: 'column',
 });
 
-export const LayoutCSS = styled('div', {
+export const LayoutCSS = styled('main', {
 	background: '$background',
 	minHeight: '100vh',
 	transition: 'background 0.35s, color 0.35s ease',

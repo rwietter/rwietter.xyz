@@ -22,7 +22,11 @@ export const ArticleHeader = s('section', {
 	paddingBottom: '2rem',
 });
 
-export const BackToOverview = s('span', {
+export const BackToOverview = s('button', {
+	background: 'none',
+	border: 'none',
+	outline: 'none',
+	margin: 0,
 	color: '$gray50',
 	paddingBottom: '$5',
 	display: 'flex',
@@ -52,7 +56,7 @@ export const DateTimeRead = s('p', {
 	color: '$gray50',
 	paddingBottom: '$3',
 	display: 'flex',
-	fontSize: '0.9rem',
+	fontSize: '1rem',
 
 	svg: {
 		marginRight: '$1',

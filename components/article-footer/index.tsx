@@ -31,7 +31,7 @@ const ArticleFooter: FC<ArticleFooterProps> = ({
         <a href={linkToSearchOnTwietter} target="_blank" rel="noreferrer">
           <GoCommentDiscussion size={14} />&nbsp;Discuss on Twitter
         </a>
-        <Link href={`/blog/category/${category}`} rel="canonical">
+        <Link href={`/blog/category/${category}`}>
           <span>
             <FiCoffee size={14} />&nbsp;Learn more about {category}
           </span>

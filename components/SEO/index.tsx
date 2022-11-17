@@ -111,7 +111,6 @@ export const NextSEO: FC<SEOProps> = (props) => {
     <NextSeo
       title={title}
       description={description}
-      canonical={`${url}`}
       openGraph={{
         url: `${url}`,
         title,

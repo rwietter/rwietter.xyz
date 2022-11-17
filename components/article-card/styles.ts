@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { styled } from 'styles/theme';
 
-export const CardContainer = styled('div', {
+export const CardContainer = styled('section', {
 	display: 'flex',
 	flexDirection: 'row',
 	justifyContent: 'flex-start',
@@ -38,7 +38,7 @@ export const CardImage = styled(Image, {
 	width: '70px',
 });
 
-export const CardInformations = styled('div', {
+export const CardInformations = styled('section', {
 	display: 'flex',
 	flexFlow: 'column',
 	paddingLeft: '$3',

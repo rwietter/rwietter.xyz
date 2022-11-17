@@ -1,7 +1,6 @@
 /* eslint-disable no-tabs */
 import { SpotifyIcon } from 'components/icons/Spotify';
 import { FC, useEffect } from 'react';
-import { Equalizer } from 'components/equalizer';
 import { CiPlay1 } from 'react-icons/ci';
 import { prominent } from 'color.js';
 import { useColorStore } from 'store/track-color';
@@ -61,11 +60,7 @@ export const LastFMTrack: FC<LastFmTrackProps> = ({ lastFm }) => {
   return (
     <Playing>
       <PlayingImage>
-        {image ? (
-          <Image quality={100} src={image} alt={track.name} width={90} height={90} />
-        ) : (
-          <Equalizer />
-        )}
+        <Image quality={100} src={image} alt={track.name} width={90} height={90} />
       </PlayingImage>
       <PlayingArtist>
         <PlayingSpot>
