@@ -13,34 +13,12 @@ import { ARTICLES_QUERY } from 'queries/articles/articles';
 import apolloClient from 'utils/apollo-client';
 import { getReadingTime } from 'utils/getTimeReading';
 import { getLocaleDate } from 'utils/get-locale-date';
-import dynamic from 'next/dynamic';
-import { Suspense } from 'react';
+import SEO from 'components/SEO';
+import Link from 'next/link';
+import ArticleFooter from 'components/article-footer';
+import type { ArticleTS } from 'components/article/types';
 
-const Link = dynamic(() => import('next/link'), {
-  ssr: true,
-  loading: () => <p>..</p>,
-});
-
-const SEO = dynamic(() => import('components/SEO'), {
-  ssr: true,
-  loading: () => <p>..</p>,
-});
-
-const ArticleFooter = dynamic(() => import('components/article-footer'), {
-  ssr: true,
-  loading: () => <p>..</p>,
-});
-
-const ArticleImage = dynamic(() => import('../../../styles/blog/article/styled')
-  .then((mod) => mod.ArticleImage), {
-  ssr: true,
-});
-
-interface ArticleItemProps {
-  articles: any
-}
-
-const ArticleItem = ({ articles }: ArticleItemProps) => {
+const ArticleItem = ({ articles }: ArticleTS) => {
   if (!articles) return null;
 
   const { theme } = useThemeStore() as any;
@@ -82,18 +60,16 @@ const ArticleItem = ({ articles }: ArticleItemProps) => {
               {article.attributes.description}
             </CSS.ArticleDescription>
           </CSS.ArticleHeader>
-          <Suspense fallback="...">
-            <ArticleImage
-              src={article.attributes.image.data.attributes.url}
-              width={5000}
-              height={5000}
-              quality={100}
-              alt={`Image of the article: ${article.attributes.title}`}
-              loading="lazy"
-              blurDataURL="https://cdn.pixabay.com/photo/2015/06/24/02/12/the-blurred-819388_1280.jpg"
-              placeholder="blur"
-            />
-          </Suspense>
+          <CSS.ArticleImage
+            src={article.attributes.image.data.attributes.url}
+            width={5000}
+            height={5000}
+            quality={100}
+            alt={`Image of the article: ${article.attributes.title}`}
+            loading="lazy"
+            blurDataURL="https://cdn.pixabay.com/photo/2015/06/24/02/12/the-blurred-819388_1280.jpg"
+            placeholder="blur"
+          />
           <article>
             <CSS.ArticleMarkdown
               className={

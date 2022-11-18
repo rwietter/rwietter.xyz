@@ -32,9 +32,7 @@ const ArticleFooter: FC<ArticleFooterProps> = ({
           <GoCommentDiscussion size={14} />&nbsp;Discuss on Twitter
         </a>
         <Link href={`/blog/category/${category}`}>
-          <span>
-            <FiCoffee size={14} />&nbsp;Learn more about {category}
-          </span>
+          <FiCoffee size={14} />&nbsp;Learn more about {category}
         </Link>
       </NavHeader>
       <Separator />
@@ -48,7 +46,6 @@ const ArticleFooter: FC<ArticleFooterProps> = ({
                 target="_blank"
                 rel="noreferrer"
                 title={link.name}
-                aria-label={link.name}
               >{link.icon}
               </a>
             ))}

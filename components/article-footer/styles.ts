@@ -1,7 +1,7 @@
 import { styled as s } from 'styles/theme';
 
 export const ArticleFooterContainer = s('div', {
-  padding: '$9 0 $2 0',
+  padding: '$6 0 $2 0',
   color: '$gray50',
 });
 
@@ -43,10 +43,10 @@ export const NavHeader = s('nav', {
   },
 });
 
-export const Separator = s('span', {
+export const Separator = s('div', {
   width: '100%',
-  height: '3px',
-  background: '$mediumBackgroundHover',
+  height: '2px',
+  background: '$gray200',
   transition: '$transitonTheme',
 });
 
