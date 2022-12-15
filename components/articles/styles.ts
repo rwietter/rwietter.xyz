@@ -2,7 +2,7 @@ import { styled } from 'styles/theme';
 
 export const ArticlesContainer = styled('section', {
   display: 'grid',
-  justifyItems: 'center',
+  justifyItems: 'baseline',
   alignItems: 'flex-start',
   gridGap: '3rem 2rem',
   gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
