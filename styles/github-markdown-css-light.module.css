@@ -5,7 +5,6 @@
 	color: #24292f;
 	background-color: var(--colors-background);
 	font-family: 'Roboto Flex';
-	font-size: clamp(1rem, 3vw, 1.2rem);
 	line-height: 1.5;
 	word-wrap: break-word;
 	transition: color 150ms ease 0s, background 350ms ease 0s !important;
@@ -306,8 +305,9 @@
 	color: #57606a;
 	background: var(--colors-mediumBackground);
 	transition: var(--transitions-transitonTheme), border 0.3s ease;
-	border-left: 0.25em solid #00BFA5;
+	border-left: .45em solid #00BFA5;
 	padding: 1em;
+	border-radius: 8px;
 }
 
 .markdown-body ul,
@@ -336,18 +336,16 @@
 .markdown-body tt,
 .markdown-body code,
 .markdown-body samp {
-	/* font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
-		Liberation Mono, monospace; */
-	/* font-size: 12px; */
+	font-family: ui-monospace, monospace;
+		font-size: 12px;
 }
 
 .markdown-body pre {
 	margin-top: 0;
 	margin-bottom: 0;
-	/* font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
-		Liberation Mono, monospace; */
-	/* font-size: 12px; */
+	font-family: monospace;
 	word-wrap: normal;
+	font-size: 12px;
 }
 
 .markdown-body .octicon {
@@ -810,9 +808,9 @@
 
 .markdown-body code,
 .markdown-body tt {
-	padding: 0.2em 0.4em;
+	padding: 0.2em 0.2em;
 	margin: 0;
-	font-size: 85%;
+	font-size: inherit;
 	background-color: rgba(175, 184, 193, 0.2);
 	border-radius: 6px;
 }

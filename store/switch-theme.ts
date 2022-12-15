@@ -8,14 +8,14 @@ export interface ThemeStore {
 }
 
 export const useThemeStore = create(
-	persist(
-		(set) => ({
-			theme: 'light',
-			setTheme: (newTheme: ThemeStore) => set({ theme: newTheme }),
-		}),
-		{
-			name: 'theme',
-			getStorage: () => localStorage,
-		},
-	),
+  persist(
+    (set) => ({
+      theme: 'light',
+      setTheme: (newTheme: ThemeStore) => set({ theme: newTheme }),
+    }),
+    {
+      name: 'theme',
+      getStorage: () => localStorage,
+    },
+  ),
 );

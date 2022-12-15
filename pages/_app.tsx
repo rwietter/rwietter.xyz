@@ -19,7 +19,7 @@ require('prismjs/components/prism-rust');
 require('prismjs/components/prism-bash');
 require('prismjs/components/prism-json');
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   const { theme } = useThemeStore() as ThemeStore;
 
   useEffect(() => {
@@ -38,6 +38,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       </ApolloProvider>
     </div>
   );
-}
+};
 
 export default MyApp;

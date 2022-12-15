@@ -24,7 +24,7 @@ const Projects: React.FC = () => (
           <FadeIn transitionDuration={500}>
             <Project key={project.link} project={project} />
           </FadeIn>
-				))}
+        ))}
       </S.Grid>
     </S.Wrapper>
   </Layout>

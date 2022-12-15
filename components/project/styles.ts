@@ -1,123 +1,123 @@
 import { styled } from 'styles/theme';
 
 export const Container = styled('section', {
-	width: '100%',
-	height: '100%',
-	position: 'relative',
-	background: '$mediumBackground',
-	display: 'grid',
-	borderRadius: '4px',
-	gridTemplateColumns: '1fr',
+  width: '100%',
+  height: '100%',
+  position: 'relative',
+  background: '$mediumBackground',
+  display: 'grid',
+  borderRadius: '4px',
+  gridTemplateColumns: '1fr',
 
-	'@bp4': {
-		gridTemplateColumns: '1fr 1fr',
-	},
+  '@bp4': {
+    gridTemplateColumns: '1fr 1fr',
+  },
 });
 
 export const Icon = styled('section', {
-	width: '100%',
-	height: '100%',
-	borderRadius: '4px',
-	background: '$mediumBackground',
-	img: {
-		borderRadius: '4px',
-		maxWidth: '100%',
-		minHeight: '22rem',
-		maxHeight: '25rem',
-		minWidth: '498px',
-		objectFit: 'cover',
-		backgroundSize: 'cover',
-		backgroundPosition: 'center',
-	},
-	display: 'none',
+  width: '100%',
+  height: '100%',
+  borderRadius: '4px',
+  background: '$mediumBackground',
+  img: {
+    borderRadius: '4px',
+    maxWidth: '100%',
+    minHeight: '22rem',
+    maxHeight: '25rem',
+    minWidth: '498px',
+    objectFit: 'cover',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  },
+  display: 'none',
 
-	'@bp4': {
-		display: 'block',
-	},
+  '@bp4': {
+    display: 'block',
+  },
 });
 
 export const Description = styled('section', {
-	display: 'flex',
-	flexDirection: 'column',
-	justifyContent: 'flex-start',
-	color: '$gray50',
-	height: '100%',
-	padding: '1rem 1rem 1.5rem 1rem',
-	alignItems: 'flex-start',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'flex-start',
+  color: '$gray50',
+  height: '100%',
+  padding: '1rem 1rem 1.5rem 1rem',
+  alignItems: 'flex-start',
 });
 
 export const Featured = styled('span', {
-	fontSize: '.9rem',
-	fontFamily: 'Roboto Flex, sans-serif',
-	letterSpacing: '-0.02em',
-	fontWeight: '200',
+  fontSize: '.9rem',
+  fontFamily: 'Roboto Flex, sans-serif',
+  letterSpacing: '-0.02em',
+  fontWeight: '200',
 });
 
 export const TitleProject = styled('h1', {
-	all: 'unset',
-	fontSize: '1.6rem',
-	fontFamily: 'Roboto Flex, sans-serif',
-	letterSpacing: '-0.01em',
-	fontWeight: '700',
-	paddingTop: '.8rem',
+  all: 'unset',
+  fontSize: '1.6rem',
+  fontFamily: 'Roboto Flex, sans-serif',
+  letterSpacing: '-0.01em',
+  fontWeight: '700',
+  paddingTop: '.8rem',
 });
 
 export const DescriptionProject = styled('section', {
-	fontSize: '1.1rem',
-	fontFamily: 'Roboto Flex, sans-serif',
-	fontWeight: '400',
-	position: 'relative',
-	maxWidth: '40rem',
-	lineHeight: '1.5',
-	wordBreak: 'break-word',
-	wordWrap: 'break-word',
-	borderLeft: '4px solid $primary',
+  fontSize: '1.1rem',
+  fontFamily: 'Roboto Flex, sans-serif',
+  fontWeight: '400',
+  position: 'relative',
+  maxWidth: '40rem',
+  lineHeight: '1.5',
+  wordBreak: 'break-word',
+  wordWrap: 'break-word',
+  borderLeft: '4px solid $primary',
 
-	borderRadius: '4px',
-	marginTop: '.5rem',
-	color: '$gray50',
-	paddingBottom: '.5rem',
-	paddingTop: '.5rem',
-	margin: '1rem 0',
-	paddingLeft: '.7rem',
+  borderRadius: '4px',
+  marginTop: '.5rem',
+  color: '$gray50',
+  paddingBottom: '.5rem',
+  paddingTop: '.5rem',
+  margin: '1rem 0',
+  paddingLeft: '.7rem',
 });
 
 export const Tags = styled('section', {
-	display: 'flex',
-	flexDirection: 'column',
+  display: 'flex',
+  flexDirection: 'column',
 
-	'@bp3': {
-		flexDirection: 'row',
-	},
+  '@bp3': {
+    flexDirection: 'row',
+  },
 });
 
 export const Tag = styled('span', {
-	fontSize: '1.2rem',
-	fontFamily: 'Roboto Flex, sans-serif',
-	letterSpacing: '-0.01em',
-	fontWeight: '200',
-	lineHeight: '1.5',
+  fontSize: '1.2rem',
+  fontFamily: 'Roboto Flex, sans-serif',
+  letterSpacing: '-0.01em',
+  fontWeight: '200',
+  lineHeight: '1.5',
 
-	'@bp3': {
-		'& + &': {
-			paddingLeft: '1rem',
-		},
-	},
+  '@bp3': {
+    '& + &': {
+      paddingLeft: '1rem',
+    },
+  },
 });
 
 export const Buttons = styled('section', {
-	display: 'flex',
-	alignItems: 'center',
-	paddingTop: '1.9rem',
+  display: 'flex',
+  alignItems: 'center',
+  paddingTop: '1.9rem',
 });
 
 export const Button = styled('a', {
-	color: '$gray50',
-	cursor: 'pointer',
-	transition: 'all 0.5s ease',
-	textDecoration: 'none',
+  color: '$gray50',
+  cursor: 'pointer',
+  transition: 'all 0.5s ease',
+  textDecoration: 'none',
 
-	'& + &': {
-		marginLeft: '2rem',
-	},
+  '& + &': {
+    marginLeft: '2rem',
+  },
 });

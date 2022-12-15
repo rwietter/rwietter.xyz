@@ -26,16 +26,16 @@ const ArticleItem = ({ articles }: ArticleTS) => {
   const router = useRouter() as unknown as { asPath: string };
 
   const [article] = articles;
-  const { readTime } = getReadingTime(article.attributes.content);
-  const { localeDate: publishedAt } = getLocaleDate(article.attributes.publishedAt, 'pt-BR');
+  const { readTime } = getReadingTime(article?.attributes?.content);
+  const { localeDate: publishedAt } = getLocaleDate(article?.attributes?.publishedAt, 'pt-BR');
 
   return (
     <Layout>
       <SEO
-        title={article.attributes.title}
-        description={article.attributes.description}
-        image={article.attributes.image.data.attributes.url}
-        author={article.attributes.author.data.attributes.name}
+        title={article?.attributes?.title}
+        description={article?.attributes?.description}
+        image={article?.attributes?.image?.data?.attributes?.url}
+        author={article?.attributes?.author?.data?.attributes?.name}
         url={`https://rwietter.xyz${router.asPath}`}
         content="article"
       />
@@ -55,9 +55,9 @@ const ArticleItem = ({ articles }: ArticleTS) => {
               <RiTimer2Line size={17} />
               {readTime}
             </CSS.DateTimeRead>
-            <CSS.ArticleTitle>{article.attributes.title}</CSS.ArticleTitle>
+            <CSS.ArticleTitle>{article?.attributes?.title.toUpperCase()}</CSS.ArticleTitle>
             <CSS.ArticleDescription>
-              {article.attributes.description}
+              {article?.attributes?.description}
             </CSS.ArticleDescription>
           </CSS.ArticleHeader>
           <CSS.ArticleImage
@@ -70,7 +70,7 @@ const ArticleItem = ({ articles }: ArticleTS) => {
             blurDataURL="https://cdn.pixabay.com/photo/2015/06/24/02/12/the-blurred-819388_1280.jpg"
             placeholder="blur"
           />
-          <article>
+          <CSS.Article>
             <CSS.ArticleMarkdown
               className={
                 theme === 'light'
@@ -78,14 +78,14 @@ const ArticleItem = ({ articles }: ArticleTS) => {
                   : markdownLight['markdown-body']
               }
             >
-              {article.attributes.content}
+              {article?.attributes?.content}
             </CSS.ArticleMarkdown>
-          </article>
+          </CSS.Article>
         </CSS.ArticleMarkdownContainer>
         <ArticleFooter
-          author={article.attributes.author.data.attributes.name}
-          name={article.attributes.title}
-          category={article.attributes.category.data.attributes.name}
+          author={article?.attributes?.author?.data?.attributes?.name}
+          name={article?.attributes?.title}
+          category={article?.attributes?.category?.data?.attributes?.name}
         />
       </CSS.ArticleContainer>
     </Layout>
@@ -97,7 +97,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   if (!data) return { paths: [], fallback: true };
 
-  const paths = data.articles.data.map((article: any) => ({
+  const paths = data?.articles?.data?.map((article: any) => ({
     params: { slug: article.attributes.slug },
   }));
 

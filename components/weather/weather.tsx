@@ -1,5 +1,6 @@
 import { RiSunCloudyLine } from 'react-icons/ri';
 import { FC } from 'react';
+import * as S from './styled';
 
 export interface WeatherProps {
   HasPrecipitation: boolean;
@@ -29,20 +30,17 @@ export const WeatherConditions: FC<WeatherConditionsProps> = ({ weather }) => {
   return (
     <div>
       {data?.Temperature && (
-      <p>
-        <RiSunCloudyLine size={18} />
-        <span>Its currently &nbsp;</span>
-        <strong>
-          {data?.Temperature?.Metric?.Value}
-          {' '}
-          °C &nbsp;
-        </strong>
-        <span>
-          {data?.WeatherText && `( ${data.WeatherText} )`}
-          &nbsp;
-        </span>
-        <span>in Constantina.</span>
-      </p>
+        <S.Weather>
+          <RiSunCloudyLine size={18} />
+          <span> &nbsp; Its currently &nbsp;</span>
+          <strong>
+            {data?.Temperature?.Metric?.Value}
+            {' '}
+            °C &nbsp;
+          </strong>
+          <span>{data?.WeatherText && `( ${data.WeatherText} )`}</span>
+          <span> &nbsp; in Constantina.</span>
+        </S.Weather>
       )}
     </div>
   );

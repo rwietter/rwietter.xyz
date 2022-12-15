@@ -22,7 +22,7 @@ interface HomeProps {
   weather: any;
 }
 
-const Home: NextPage<HomeProps> = ({ lastFm, weather }) => (
+const Home: NextPage<HomeProps> = ({ lastFm, weather }: any) => (
   <div>
     <Layout>
       <SEO

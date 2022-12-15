@@ -6,13 +6,17 @@
   color: #c9d1d9;
   background-color: var(--colors-background);
   font-family: 'Roboto Flex';
-  font-size: clamp(1rem, 3vw, 1.2rem);
   line-height: 1.5;
   word-wrap: break-word;
   transition: color 150ms ease 0s, background 350ms ease 0s !important;
 }
 
-.markdown-body table, .markdown-body tr, .markdown-body th, .markdown-body td, .markdown-body tbody, .markdown-body thead {
+.markdown-body table,
+.markdown-body tr,
+.markdown-body th,
+.markdown-body td,
+.markdown-body tbody,
+.markdown-body thead {
   transition: border 150ms ease 0s, color 150ms ease 0s, background 200ms ease 0s;
 }
 
@@ -85,7 +89,7 @@
 }
 
 .markdown-body mark {
-  background-color: rgba(187,128,9,0.15);
+  background-color: rgba(187, 128, 9, 0.15);
   color: #c9d1d9;
 }
 
@@ -239,15 +243,15 @@
 .markdown-body kbd {
   display: inline-block;
   padding: 3px 5px;
-  font: 11px ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font: 11px monospace;
   line-height: 10px;
   color: #c9d1d9;
   vertical-align: middle;
   background-color: #1B1B1E;
-  border: solid 1px rgba(110,118,129,0.4);
-  border-bottom-color: rgba(110,118,129,0.4);
+  border: solid 1px rgba(110, 118, 129, 0.4);
+    border-bottom-color: rgba(110, 118, 129, 0.4);
   border-radius: 6px;
-  box-shadow: inset 0 -1px 0 rgba(110,118,129,0.4);
+  box-shadow: inset 0 -1px 0 rgba(110, 118, 129, 0.4);
 }
 
 .markdown-body h1,
@@ -301,7 +305,8 @@
   color: #b2b7bb;
   background: var(--colors-mediumBackground);
   transition: var(--transitions-transitonTheme), border .3s ease;
-  border-left: .25em solid #7D5BED;
+  border-radius: 8px;
+    border-left: .45em solid #3a86ff;
 }
 
 .markdown-body ul,
@@ -330,15 +335,15 @@
 .markdown-body tt,
 .markdown-body code,
 .markdown-body samp {
-  /* font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace; */
-  /* font-size: 12px; */
+  font-family: monospace;
+    font-size: 12px;
 }
 
 .markdown-body pre {
   margin-top: 0;
   margin-bottom: 0;
-  /* font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace; */
-  /* font-size: 12px; */
+  font-family: monospace;
+    font-size: 12px;
   word-wrap: normal;
 }
 
@@ -488,7 +493,7 @@
 .markdown-body g-emoji {
   display: inline-block;
   min-width: 1ch;
-  font-family: "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1em;
   font-style: normal !important;
   font-weight: 400;
@@ -802,10 +807,10 @@
 
 .markdown-body code,
 .markdown-body tt {
-  padding: .2em .4em;
+  padding: .2em .2em;
   margin: 0;
   font-size: 85%;
-  background-color: rgba(110,118,129,0.4);
+  background-color: rgba(110, 118, 129, 0.4);
   border-radius: 6px;
 }
 
@@ -824,7 +829,7 @@
 
 .markdown-body pre code {
   font-size: 100%;
-	padding: .5em;
+  padding: .5em;
 }
 
 .markdown-body pre>code {
@@ -847,28 +852,28 @@
 
 .markdown-body .highlight pre,
 .markdown-body pre {
-	padding: 16px;
-	overflow: auto;
-	font-size: 1em;
-	line-height: 1.45;
-	border-radius: 6px;
-	transition: var(--transitions-transitonTheme);
-	border-radius: 6px;
+  padding: 16px;
+    overflow: auto;
+    font-size: 1em;
+    line-height: 1.45;
+    border-radius: 6px;
+    transition: var(--transitions-transitonTheme);
+    border-radius: 6px;
   margin: 2rem 0;
 }
 
 .markdown-body pre code,
 .markdown-body pre tt {
-	display: inline;
-	max-width: auto;
-	padding: 0;
-	margin: 0;
-	overflow: visible;
-	line-height: inherit;
-	word-wrap: normal;
-	background-color: transparent;
-	display: block;
-	border: 0;
+  display: inline;
+    max-width: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    display: block;
+    border: 0;
 }
 
 .markdown-body .csv-data td,

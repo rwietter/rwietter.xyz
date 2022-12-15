@@ -6,15 +6,15 @@ import { VscLinkExternal } from 'react-icons/vsc';
 import * as S from './styles';
 
 interface IProject {
-	project: {
-		title: string;
-		description: string;
-		image: string;
-		github: string;
-		link: string;
-		tags: string[];
-		inverse: boolean;
-	};
+  project: {
+    title: string;
+    description: string;
+    image: string;
+    github: string;
+    link: string;
+    tags: string[];
+    inverse: boolean;
+  };
 }
 
 export const Project: FC<IProject> = ({ project }) => (
@@ -26,7 +26,7 @@ export const Project: FC<IProject> = ({ project }) => (
           src={project.image}
       />
     </S.Icon>
-		)}
+    )}
     <S.Description>
       <S.Featured>Featured Project</S.Featured>
       <S.TitleProject>{project.title}</S.TitleProject>
@@ -34,7 +34,7 @@ export const Project: FC<IProject> = ({ project }) => (
       <S.Tags>
         {project.tags.map((tag) => (
           <S.Tag key={tag}>{tag}</S.Tag>
-				))}
+        ))}
       </S.Tags>
       <S.Buttons>
         <S.Button href={project.github} target="_blank" rel="canonical">
@@ -52,6 +52,6 @@ export const Project: FC<IProject> = ({ project }) => (
         alt={project.description}
       />
     </S.Icon>
-		)}
+    )}
   </S.Container>
 );
