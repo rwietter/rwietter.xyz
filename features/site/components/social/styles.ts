@@ -6,7 +6,6 @@ export const SocialContainer = styled('div', {
   alignItems: 'center',
   flexDirection: 'row',
   cursor: 'pointer',
-  paddingTop: '$1',
 
   '@bp5': {
     display: 'flex',
@@ -16,7 +15,6 @@ export const SocialContainer = styled('div', {
 export const Link = styled('a', {
   color: '$gray50',
   display: 'inline-block',
-  paddingTop: '$2',
   textDecoration: 'none',
   fontSize: '$2',
   transition: 'color 0.3s ease',
@@ -25,10 +23,10 @@ export const Link = styled('a', {
     social: {
       github: {
         '&:hover': {
-          color: '333',
+          color: 'rgba(255, 255, 255, 0.6)',
         },
       },
-      linkedin: {
+      linkedIn: {
         '&:hover': {
           color: '#0077b5',
         },

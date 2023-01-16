@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-one-expression-per-line */
-import { SOCIAL_LINKS } from 'data/social-links';
+import { SidebarSocialIcons } from 'features/site/components/social/social';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { FC } from 'react';
@@ -38,18 +38,7 @@ const ArticleFooter: FC<ArticleFooterProps> = ({
       <Separator />
       <div>
         <SocialContainer>
-          <span>
-            {SOCIAL_LINKS?.map((link) => (
-              <a
-                key={link.url}
-                href={link.url}
-                target="_blank"
-                rel="noreferrer"
-                title={link.name}
-              >{link.icon}
-              </a>
-            ))}
-          </span>
+          <SidebarSocialIcons />
           {author && <h4>Written by <strong>{ author }</strong></h4>}
         </SocialContainer>
       </div>

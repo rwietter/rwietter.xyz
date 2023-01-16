@@ -1,4 +1,4 @@
-import { styled as s } from 'styles/theme';
+import { styled as s, styled } from 'styles/theme';
 
 export const ArticleFooterContainer = s('div', {
   padding: '$6 0 $2 0',
@@ -55,16 +55,6 @@ export const SocialContainer = s('section', {
   display: 'flex',
   justifyContent: 'space-between',
   flexWrap: 'wrap',
-  a: {
-    color: '$gray50',
-    transition: '$transitonTheme',
-    '&:hover': {
-      color: '$primary',
-    },
-  },
-  'a + a': {
-    marginLeft: '$2',
-  },
 
   h4: {
     fontSize: '$2',
@@ -73,5 +63,36 @@ export const SocialContainer = s('section', {
     strong: {
       fontWeight: 600,
     },
+  },
+});
+
+export const Link = styled('a', {
+  color: '$gray50',
+  display: 'inline-block',
+  textDecoration: 'none',
+  fontSize: '$2',
+  transition: 'color 0.3s ease',
+
+  variants: {
+    social: {
+      github: {
+        '&:hover': {
+          color: 'rgba(255, 255, 255, 0.6)',
+        },
+      },
+      linkedIn: {
+        '&:hover': {
+          color: '#0e76a8',
+        },
+      },
+      twitter: {
+        '&:hover': {
+          color: '#1da1f2',
+        },
+      },
+    },
+  },
+  '& + &': {
+    paddingLeft: '$2',
   },
 });

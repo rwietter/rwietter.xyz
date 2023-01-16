@@ -41,34 +41,6 @@ export const Container = styled('section', {
   },
 });
 
-export const Link = styled('a', {
-  color: '$gray50',
-  display: 'inline-block',
+export const SocialContainer = styled('div', {
   paddingTop: '$2',
-  textDecoration: 'none',
-  fontSize: '$2',
-  transition: 'color 0.3s ease',
-
-  variants: {
-    social: {
-      github: {
-        '&:hover': {
-          color: '333',
-        },
-      },
-      linkedIn: {
-        '&:hover': {
-          color: '#0e76a8',
-        },
-      },
-      twitter: {
-        '&:hover': {
-          color: '#1da1f2',
-        },
-      },
-    },
-  },
-  '& + &': {
-    paddingLeft: '$2',
-  },
 });
