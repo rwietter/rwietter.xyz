@@ -22,6 +22,8 @@ export const Project: FC<IProject> = ({ project }) => {
       onHoverStart={() => setIsBeingHovered(true)}
       onHoverEnd={() => setIsBeingHovered(false)}
       href={project.link}
+      target="_blank"
+      rel="noopener noreferrer"
     >
       {isBeingHovered && (
         <S.HoverBackground
