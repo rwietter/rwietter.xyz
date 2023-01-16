@@ -11,7 +11,7 @@ export const Container = styled(motion.section, {
   transition: '$transitonTheme',
   padding: '$3',
   position: 'relative',
-  zIndex: 2,
+  zIndex: 1,
   borderRadius: '8px',
   background: 'transparent',
 });

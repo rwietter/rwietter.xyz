@@ -7,6 +7,21 @@ export const globalStyles = globalCss({
     boxSizing: 'border-box',
     fontFamily: 'Futura Std, Roboto Flex, sans-serif',
     fontVariantLigatures: 'common-ligatures',
+    scrollbarWidth: 'auto',
+    scrollbarColor: '#ff80bf #151417',
+  },
+  '::-webkit-scrollbar': {
+    width: '0.5rem',
+  },
+  '::-webkit-scrollbar-track': {
+    background: '#151417',
+  },
+  '::-webkit-scrollbar-thumb': {
+    borderRadius: '50rem',
+    background: '#ff80bf',
+  },
+  '::-webkit-scrollbar-thumb:hover': {
+    background: '#ff80bf',
   },
   body: {
     background: 'var(--colors-background)',

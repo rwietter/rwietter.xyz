@@ -1,15 +1,19 @@
+/* eslint-disable no-return-assign */
 // import { SiArchlinux } from 'react-icons/si';
 import { FiList } from 'react-icons/fi';
 import { VscHome } from 'react-icons/vsc';
 import { AiOutlineArrowUp } from 'react-icons/ai';
+import { BsCommand } from 'react-icons/bs';
 
 import { ThemeStore, useThemeStore } from 'store/switch-theme';
 import { Dark } from 'components/icons/Dark';
 import { Light } from 'components/icons/Light';
+import { useKBar } from 'kbar';
 import * as S from './styles';
 
 const MenuBar = () => {
   const themeStore = useThemeStore() as ThemeStore;
+  const { query } = useKBar();
 
   const handleToTop = () => {
     const position = document.body.scrollTop || document.documentElement.scrollTop;
@@ -26,6 +30,8 @@ const MenuBar = () => {
     }
   };
 
+  const handleOpenCommandBar = () => query.toggle();
+
   return (
     <S.ManuBarWrapper role="menubar">
       <S.MenuBarGroup>
@@ -39,6 +45,9 @@ const MenuBar = () => {
             <FiList size={20} aria-hidden="true" />
           </S.MenuBarItem>
         </S.MenuBarLink>
+        <S.MenuBarItem>
+          <BsCommand size={20} onClick={handleOpenCommandBar} aria-hidden="true" role="button" />
+        </S.MenuBarItem>
       </S.MenuBarGroup>
 
       <S.MenuBarGroup>
