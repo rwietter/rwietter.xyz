@@ -20,6 +20,7 @@ const {
 				'linear-gradient(180deg,rgba(35,37,49,.5),rgba(15,15,24,.5));',
       gradient:
 				'linear-gradient(90deg, #ffbe0b, #fb5607, #ff006e, #8257e5, #3a86ff );',
+      highlight01: 'linear-gradient(135deg, #80ffea 0%, #8aff80 100%)',
       highlight145: 'linear-gradient(145deg, #8257e5, #c1b);',
       highlight30: 'linear-gradient(43deg, #74ebd5, #9face6);',
       gradientGreen: 'linear-gradient(135deg, #80ffea 0%, #8aff80 100%);',
@@ -30,12 +31,12 @@ const {
       gray300: '#121214',
       gray400: '#1B1B1E',
       card: '#13141C',
-      weakColorText: '#FFFFFF',
+      weakColorText: '#8f9ba8',
       primary: '#74ebd5',
       primaryHover: '#A6F2E4',
       secondary: '#8257e5',
       tertiary: '#eea3b4',
-      textHighlight: '#fb377f',
+      textHighlight: '#9580ff',
       separator: '#1B1B1E',
       tooltip: '#ff006e',
       buttonThumb: '#F4F4F6',
@@ -113,7 +114,8 @@ const { theme: lightTheme } = createStitches({
       linearBackground:
 				'linear-gradient(90deg,rgba(35,37,49,.5),rgba(15,15,24,.5));',
       gradient:
-				'linear-gradient(90deg, #ffbe0b, #fb5607, #ff006e, #8257e5, #3a86ff );',
+        'linear-gradient(90deg, #ffbe0b, #fb5607, #ff006e, #8257e5, #3a86ff );',
+      highlight01: 'linear-gradient(43deg, #8257e5, #2575fc)',
       highlight145: 'linear-gradient(145deg, #8257e5, #c1b);',
       highlight30: 'linear-gradient(43deg, #8257e5, #2575fc);',
       gray50: '#000000',

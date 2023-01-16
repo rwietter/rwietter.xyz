@@ -5,9 +5,12 @@ import { CiPlay1 } from 'react-icons/ci';
 import { prominent } from 'color.js';
 import { useColorStore } from 'store/track-color';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import {
   Playing, PlayingImage, PlayingArtist, PlayingSpot,
 } from './styles';
+
+const Equalizer = dynamic(() => import('components/equalizer'), { ssr: false });
 
 export interface RecentTrackProps {
 	recenttracks: {
@@ -60,7 +63,11 @@ export const LastFMTrack: FC<LastFmTrackProps> = ({ lastFm }) => {
   return (
     <Playing>
       <PlayingImage>
-        <Image quality={100} src={image} alt={track.name} width={90} height={90} />
+        {image ? (
+          <Image quality={100} src={image} alt={track.name} width={90} height={90} />
+        ) : (
+          <Equalizer />
+        )}
       </PlayingImage>
       <PlayingArtist>
         <PlayingSpot>

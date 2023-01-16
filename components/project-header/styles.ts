@@ -5,16 +5,20 @@ export const Header = styled('section', {
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  padding: '1rem',
+  padding: '0 0 3rem 0',
   color: '$gray50',
 });
 
 export const Title = styled('h1', {
-  fontSize: '3rem',
-  fontFamily: 'Roboto Flex, sans-serif',
+  fontSize: 'clamp(1.2rem, 5vw, 2rem)',
+  fontFamily: 'ABeeZee, sans-serif',
   letterSpacing: '-0.06em',
-  color: '$textHighlight',
-  fontFeatureSettings: '"ss02" on, "ss03" on, "ss04" on',
+  backgroundImage: '$highlight01',
+  backgroundSize: '100%',
+  backgroundClip: 'text',
+  WebkitTextFillColor: 'transparent',
+  WebkitBoxDecorationBreak: 'clone',
+  fontWeight: 400,
 });
 
 export const Subtitle = styled('p', {

@@ -1,123 +1,47 @@
+import { motion } from 'framer-motion';
 import { styled } from 'styles/theme';
 
-export const Container = styled('section', {
+export const Wrapper = styled(motion.a, {
+  position: 'relative',
+  display: 'flex',
+  height: '100%',
+});
+
+export const Container = styled(motion.section, {
+  transition: '$transitonTheme',
+  padding: '$3',
+  position: 'relative',
+  zIndex: 2,
+  borderRadius: '8px',
+  background: 'transparent',
+});
+
+export const Title = styled('h2', {
+  fontSize: 'clamp(1rem, 2vw, 1.2rem)',
+  color: '$gray50',
+  fontFamily: 'Sora, sans-serif',
+  fontWeight: 300,
+  paddingTop: '$2',
+});
+
+export const Description = styled('p', {
+  fontSize: 'clamp(.8rem, 1.5vw, .9rem)',
+  color: '$weakColorText',
+  fontFamily: 'Sora, sans-serif',
+  fontWeight: 300,
+  paddingTop: '$2',
+  lineHeight: '1.8',
+  textAlign: 'justify',
+});
+
+export const HoverBackground = styled(motion.div, {
+  background: '$mediumBackgroundHover',
+  position: 'absolute',
+  left: 0,
+  top: 0,
+  right: '0',
   width: '100%',
   height: '100%',
-  position: 'relative',
-  background: '$mediumBackground',
-  display: 'grid',
-  borderRadius: '4px',
-  gridTemplateColumns: '1fr',
-
-  '@bp4': {
-    gridTemplateColumns: '1fr 1fr',
-  },
-});
-
-export const Icon = styled('section', {
-  width: '100%',
-  height: '100%',
-  borderRadius: '4px',
-  background: '$mediumBackground',
-  img: {
-    borderRadius: '4px',
-    maxWidth: '100%',
-    minHeight: '22rem',
-    maxHeight: '25rem',
-    minWidth: '498px',
-    objectFit: 'cover',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  },
-  display: 'none',
-
-  '@bp4': {
-    display: 'block',
-  },
-});
-
-export const Description = styled('section', {
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'flex-start',
-  color: '$gray50',
-  height: '100%',
-  padding: '1rem 1rem 1.5rem 1rem',
-  alignItems: 'flex-start',
-});
-
-export const Featured = styled('span', {
-  fontSize: '.9rem',
-  fontFamily: 'Roboto Flex, sans-serif',
-  letterSpacing: '-0.02em',
-  fontWeight: '200',
-});
-
-export const TitleProject = styled('h1', {
-  all: 'unset',
-  fontSize: '1.6rem',
-  fontFamily: 'Roboto Flex, sans-serif',
-  letterSpacing: '-0.01em',
-  fontWeight: '700',
-  paddingTop: '.8rem',
-});
-
-export const DescriptionProject = styled('section', {
-  fontSize: '1.1rem',
-  fontFamily: 'Roboto Flex, sans-serif',
-  fontWeight: '400',
-  position: 'relative',
-  maxWidth: '40rem',
-  lineHeight: '1.5',
-  wordBreak: 'break-word',
-  wordWrap: 'break-word',
-  borderLeft: '4px solid $primary',
-
-  borderRadius: '4px',
-  marginTop: '.5rem',
-  color: '$gray50',
-  paddingBottom: '.5rem',
-  paddingTop: '.5rem',
-  margin: '1rem 0',
-  paddingLeft: '.7rem',
-});
-
-export const Tags = styled('section', {
-  display: 'flex',
-  flexDirection: 'column',
-
-  '@bp3': {
-    flexDirection: 'row',
-  },
-});
-
-export const Tag = styled('span', {
-  fontSize: '1.2rem',
-  fontFamily: 'Roboto Flex, sans-serif',
-  letterSpacing: '-0.01em',
-  fontWeight: '200',
-  lineHeight: '1.5',
-
-  '@bp3': {
-    '& + &': {
-      paddingLeft: '1rem',
-    },
-  },
-});
-
-export const Buttons = styled('section', {
-  display: 'flex',
-  alignItems: 'center',
-  paddingTop: '1.9rem',
-});
-
-export const Button = styled('a', {
-  color: '$gray50',
-  cursor: 'pointer',
-  transition: 'all 0.5s ease',
-  textDecoration: 'none',
-
-  '& + &': {
-    marginLeft: '2rem',
-  },
+  zIndex: 1,
+  borderRadius: '8px',
 });

@@ -4,24 +4,28 @@ import { styled } from 'styles/theme';
 export const Wrapper = styled('section', {
   display: 'flex',
   flexDirection: 'column',
+  alignContent: 'center',
+  justifyContent: 'center',
+  alignItems: 'center',
 
   textRendering: 'optimizeLegibility',
   WebkitFontSmoothing: 'antialiased',
   WebkitTextSizeAdjust: '100%',
   MozOsxFontSmoothing: 'grayscale',
   MozTextSizeAdjust: '100%',
+  padding: '$3 $2',
+  transition: '$transitonTheme',
+
+  paddingBottom: '8rem',
 });
 
 export const Grid = styled('section', {
   display: 'grid',
-  gridTemplateRows: 'repeat(auto-fit, minmax(250px, 1fr))',
-  gridTemplateColumns: '1fr',
-  position: 'relative',
-  gap: '2rem 0',
-  padding: '3rem .5rem',
-  paddingBottom: '5rem',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+  gridAutoFlow: 'row',
+  gridTemplateRows: 'repeat(2, 1fr)',
 
-  '@bp3': {
-    padding: '3rem 1rem',
+  'div > div': {
+    height: '100%',
   },
 });

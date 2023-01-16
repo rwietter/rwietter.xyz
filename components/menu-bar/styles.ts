@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { styled } from 'styles/theme';
 
-export const ManuBarWrapper = styled('aside', {
+export const ManuBarWrapper = styled('footer', {
   display: 'flex',
   alignItems: 'center',
   flexDirection: 'row',
@@ -13,6 +13,7 @@ export const ManuBarWrapper = styled('aside', {
   width: '100%',
   transition: '$transitonTheme, border 0.35s ease',
   background: '$mediumBackground',
+  zIndex: 10,
 
   '@bp5': {
     alignItems: 'center',

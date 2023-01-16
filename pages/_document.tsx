@@ -21,13 +21,13 @@ export default class extends Document {
           <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
           <link rel="preconnect" href="https://rsms.me/" />
           <link rel="stylesheet dns-prefetch preconnect" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" />
           <link rel="stylesheet dns-prefetch preconnect" href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap" />
           <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,700&display=swap" rel="stylesheet" />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
           <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet" />
           <meta name="application-name" content={APP_NAME} />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-status-bar-style" content="default" />

@@ -21,7 +21,7 @@ const Projects: React.FC = () => (
       <ProjectHeader />
       <S.Grid>
         {projects.map((project) => (
-          <FadeIn transitionDuration={500}>
+          <FadeIn key={project.title} transitionDuration={500}>
             <Project key={project.link} project={project} />
           </FadeIn>
         ))}
@@ -29,5 +29,4 @@ const Projects: React.FC = () => (
     </S.Wrapper>
   </Layout>
 );
-
 export default Projects;
