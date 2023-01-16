@@ -18,7 +18,7 @@ export const Container = styled('section', {
     fontWeight: '700',
     color: '$gray50',
     fontFamily: 'Roboto Flex, sans-serif',
-    fontFeatureSettings: "'ss02', 'ss03', 'salt' 1",
+    fontFeatureSettings: '\'ss02\', \'ss03\', \'salt\' 1',
     fontVariantLigatures: 'common-ligatures',
     transition: '$transitonTheme',
   },
@@ -30,7 +30,7 @@ export const Container = styled('section', {
     paddingTop: '$2',
     letterSpacing: '-0.02em',
     fontFamily: 'Roboto Flex, sans-serif',
-    fontFeatureSettings: "'ss01', 'ss02', 'ss03', 'salt', 'ss04' 1",
+    fontFeatureSettings: '\'ss01\', \'ss02\', \'ss03\', \'salt\', \'ss04\' 1',
     fontVariantLigatures: 'common-ligatures',
     fontWeight: 200,
     transition: '$transitonTheme',
@@ -39,22 +39,36 @@ export const Container = styled('section', {
       fontSize: '$5',
     },
   },
+});
 
-  nav: {
-    a: {
-      color: '$gray50',
-      display: 'inline-block',
-      paddingTop: '$2',
-      textDecoration: 'none',
-      fontSize: '$2',
-      transition: '$transitonTheme',
+export const Link = styled('a', {
+  color: '$gray50',
+  display: 'inline-block',
+  paddingTop: '$2',
+  textDecoration: 'none',
+  fontSize: '$2',
+  transition: 'color 0.3s ease',
 
-      '&:hover': {
-        color: '$primary',
+  variants: {
+    social: {
+      github: {
+        '&:hover': {
+          color: '333',
+        },
+      },
+      linkedIn: {
+        '&:hover': {
+          color: '#0e76a8',
+        },
+      },
+      twitter: {
+        '&:hover': {
+          color: '#1da1f2',
+        },
       },
     },
-    'a + a': {
-      paddingLeft: '$2',
-    },
+  },
+  '& + &': {
+    paddingLeft: '$2',
   },
 });

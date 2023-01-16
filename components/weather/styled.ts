@@ -7,10 +7,23 @@ export const Weather = styled('span', {
   fontFamily: 'Roboto Flex, sans-serif',
 
   display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
+  alignItems: 'flex-start',
+  justifyContent: 'flex-start',
+  flexFlow: 'column wrap',
+  lineHeight: '1.6',
+
+  '@bp3': {
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexFlow: 'row',
+  },
 
   'strong, span': {
-    fontFamily: 'Roboto Flex, sans-serif !important',
+    fontFamily: 'Roboto Flex, sans-serif',
+  },
+
+  div: {
+    display: 'flex',
+    alignItems: 'center',
   },
 });

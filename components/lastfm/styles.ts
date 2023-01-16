@@ -44,7 +44,7 @@ export const PlayingArtist = styled('div', {
     position: 'relative',
     textDecoration: 'none',
     color: '$gray50',
-    paddingTop: '.6rem',
+    paddingTop: '1rem',
     transition: '$transitonTheme',
     '&:hover': {
       color: '$primary',
@@ -70,13 +70,10 @@ export const PlayingSpot = styled('div', {
   display: 'flex',
   alignItems: 'center',
 
-  svg: {
-    margin: '0 .3rem',
-  },
-
   span: {
     fontFamily: 'Roboto Flex, sans-serif',
     fontSize: '1.1rem',
     letterSpacing: '0.02em',
+    marginLeft: '.5rem',
   },
 });

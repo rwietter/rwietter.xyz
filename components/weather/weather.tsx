@@ -31,15 +31,19 @@ export const WeatherConditions: FC<WeatherConditionsProps> = ({ weather }) => {
     <div>
       {data?.Temperature && (
         <S.Weather>
-          <RiSunCloudyLine size={18} />
-          <span> &nbsp; Its currently &nbsp;</span>
-          <strong>
-            {data?.Temperature?.Metric?.Value}
-            {' '}
-            °C &nbsp;
-          </strong>
-          <span>{data?.WeatherText && `( ${data.WeatherText} )`}</span>
-          <span> &nbsp; in Constantina.</span>
+          <div>
+            <RiSunCloudyLine size={18} />
+            <span> &nbsp; Its currently &nbsp;</span>
+            <strong>
+              {data?.Temperature?.Metric?.Value}
+              {' '}
+              °C &nbsp;
+            </strong>
+          </div>
+          <div>
+            <span>{data?.WeatherText && `( ${data.WeatherText} )`}</span>
+            <span> &nbsp; in Constantina.</span>
+          </div>
         </S.Weather>
       )}
     </div>

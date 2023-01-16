@@ -16,7 +16,7 @@ export const Wrapper = styled('section', {
   padding: '$3 $2',
   transition: '$transitonTheme',
 
-  paddingBottom: '8rem',
+  paddingBottom: '5rem',
 });
 
 export const Grid = styled('section', {

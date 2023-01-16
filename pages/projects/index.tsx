@@ -7,6 +7,7 @@ import SEO from 'components/SEO';
 import * as S from 'features/projects/styles';
 import { projects } from 'features/projects/data';
 import FadeIn from 'react-fade-in';
+import { YearProjects } from 'components/year-projects';
 
 const Projects: React.FC = () => (
   <Layout>
@@ -27,6 +28,7 @@ const Projects: React.FC = () => (
         ))}
       </S.Grid>
     </S.Wrapper>
+    <YearProjects />
   </Layout>
 );
 export default Projects;

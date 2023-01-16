@@ -1,19 +1,20 @@
-import { SOCIAL_LINKS } from 'data/social-links';
-import { SocialContainer } from './styles';
+import { links, SocialLink } from 'data/social-links';
+import { Link, SocialContainer } from './styles';
 
 const SidebarSocialIcons = () => (
   <SocialContainer>
-    {SOCIAL_LINKS.map((link) => (
-      <a
+    {links.map((link: SocialLink) => (
+      <Link
         key={link.url}
         href={link.url}
         target="_blank"
         rel="noreferrer"
         title={link.name}
         aria-label={link.name}
+        social={link.color as any}
       >
         {link.icon}
-      </a>
+      </Link>
     ))}
   </SocialContainer>
 );

@@ -1,7 +1,7 @@
 /* eslint-disable no-tabs */
-import { SpotifyIcon } from 'components/icons/Spotify';
+import { BsSpotify } from 'react-icons/bs';
 import { FC, useEffect } from 'react';
-import { CiPlay1 } from 'react-icons/ci';
+import { TbPlayerPause } from 'react-icons/tb';
 import { prominent } from 'color.js';
 import { useColorStore } from 'store/track-color';
 import Image from 'next/image';
@@ -71,8 +71,7 @@ export const LastFMTrack: FC<LastFmTrackProps> = ({ lastFm }) => {
       </PlayingImage>
       <PlayingArtist>
         <PlayingSpot>
-          <span>Playing</span>
-          <SpotifyIcon />
+          <BsSpotify size={19} color="#1DB954" />
           <span>
             {track.artist['#text']}
           </span>
@@ -80,11 +79,10 @@ export const LastFMTrack: FC<LastFmTrackProps> = ({ lastFm }) => {
 
         <p className="play">
           <a href={track.url} target="_blank" rel="noreferrer">
-            <CiPlay1 size={19} />
+            <TbPlayerPause size={19} />
             <strong>{track.name}</strong>
           </a>
         </p>
-
       </PlayingArtist>
     </Playing>
   );
