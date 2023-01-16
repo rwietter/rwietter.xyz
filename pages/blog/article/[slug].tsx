@@ -7,7 +7,7 @@ import markdownDark from 'styles/github-markdown-css-dark.module.css';
 import { Layout } from 'layouts/content';
 import { AiOutlineArrowLeft, AiOutlineCalendar } from 'react-icons/ai';
 import { RiTimer2Line } from 'react-icons/ri';
-import * as CSS from 'styles/blog/article/styled';
+import * as CSS from 'components/article/styled';
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import { ARTICLES_QUERY } from 'queries/articles/articles';
 import apolloClient from 'utils/apollo-client';
@@ -55,7 +55,7 @@ const ArticleItem = ({ articles }: ArticleTS) => {
               <RiTimer2Line size={17} />
               {readTime}
             </CSS.DateTimeRead>
-            <CSS.ArticleTitle>{article?.attributes?.title.toUpperCase()}</CSS.ArticleTitle>
+            <CSS.ArticleTitle>{article?.attributes?.title}</CSS.ArticleTitle>
             <CSS.ArticleDescription>
               {article?.attributes?.description}
             </CSS.ArticleDescription>

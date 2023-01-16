@@ -12,6 +12,7 @@ export const globalStyles = globalCss({
   },
   '::-webkit-scrollbar': {
     width: '0.5rem',
+    height: '0.5rem',
   },
   '::-webkit-scrollbar-track': {
     background: '#151417',
@@ -29,9 +30,10 @@ export const globalStyles = globalCss({
     scrollBehavior: 'smooth',
   },
   'code, code span': {
-    fontFamily: 'Fira Code, Consolas, Monaco !important',
-    fontVariantLigatures: 'common-ligatures',
-    fontFeatureSettings: '"ss01" 0',
+    fontFamily: '"Fira Code", monospace !important',
+    fontVariantLigatures: 'common-ligatures !important',
+    fontFeatureSettings: '"ss01" on, "ss02" on, "ss03" on, "salt" on, "ss04" on !important',
+    fontWeight: 400,
     fontSize: 'clamp(0.9rem, 2vw, 1.15rem) !important',
   },
 });

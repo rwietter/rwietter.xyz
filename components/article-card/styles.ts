@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { styled } from 'styles/theme';
 
 export const CardContainer = styled('section', {
-  maxWidth: '400px',
+  maxWidth: '380px',
   width: '100%',
 });
 
@@ -18,14 +18,15 @@ export const CardInformations = styled('section', {
   flexFlow: 'column',
   alignItems: 'flex-start',
   color: '$gray50',
+  overflowWrap: 'anywhere',
 
   '#title': {
     justifySelf: 'flex-start',
     fontWeight: 700,
     lineHeight: '1.1',
     paddingTop: '.5rem',
-    fontFamily: 'Roboto Flex, sans-serif',
-    fontFeatureSettings: '0',
+    fontFamily: 'Sora, sans-serif',
+    fontFeatureSettings: '"ss01" on, "ss02" on, "ss03" on, "salt" on, "ss04" on',
     fontSize: 'clamp(1.2rem, 3vw, 2rem)',
   },
 
@@ -43,9 +44,9 @@ export const CardInformations = styled('section', {
     padding: '.2rem .6rem',
     letterSpacing: '-0.02em',
     fontFamily: 'Sora, sans-serif',
-    fontWeight: 600,
-    background: '$gradientYellow',
-    color: '$dark',
+    fontWeight: 200,
+    background: '$gray50',
+    color: '$gray100',
     borderRadius: '4px',
   },
 });

@@ -48,16 +48,16 @@ export const Nav = styled('nav', {
     color: '$gray50',
     paddingLeft: '0.4rem',
     textDecoration: 'none',
-    letterSpacing: '-0.06em',
-    fontWeight: 300,
+    fontWeight: 400,
     position: 'relative',
     transition: 'color 0.2s ease',
-    fontSize: 'clamp(1rem, 2vw, 1.5rem)',
+    fontSize: 'clamp(1.2rem, 5vw, 1.5rem)',
   },
 });
 
 export const DarkMode = styled('button', {
   background: 'none',
+  display: 'none',
   color: '$gray50',
   outline: 'none',
   width: '2.3rem',
@@ -65,4 +65,8 @@ export const DarkMode = styled('button', {
   border: 'none',
   cursor: 'pointer',
   fontFamily: 'Roboto Flex, sans-serif',
+
+  '@bp1': {
+    display: 'flex',
+  },
 });

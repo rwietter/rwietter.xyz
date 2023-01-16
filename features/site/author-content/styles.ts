@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 import { styled } from '../../../styles/theme';
 
 export const Container = styled('section', {
@@ -22,7 +23,7 @@ export const CurrentlyInformations = styled('div', {
     alignItems: 'center',
     flexWrap: 'wrap',
     fontFamily: 'Roboto Flex, sans-serif',
-    fontFeatureSettings: "'ss01', 'ss02', 'ss03', 'salt' 1",
+    fontFeatureSettings: "'ss01' on, 'ss02' on, 'ss03' on, 'salt' on",
     fontVariantLigatures: 'common-ligatures',
     lineHeight: 1.5,
     svg: {

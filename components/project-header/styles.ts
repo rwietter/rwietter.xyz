@@ -10,7 +10,7 @@ export const Header = styled('section', {
 });
 
 export const Title = styled('h1', {
-  fontSize: 'clamp(1.2rem, 5vw, 2rem)',
+  fontSize: 'clamp(1.5rem, 5vw, 2.3rem)',
   fontFamily: 'ABeeZee, sans-serif',
   letterSpacing: '-0.06em',
   backgroundImage: '$highlight01',
