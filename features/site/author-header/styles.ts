@@ -10,7 +10,7 @@ export const Container = styled('section', {
   padding: '$3 $2',
   transition: '$transitonTheme',
   '@bp3': {
-    padding: '$5 $8 $2 $8',
+    padding: '$2 $8 $2 $8',
   },
 
   h1: {
@@ -27,7 +27,7 @@ export const Container = styled('section', {
     fontSize: '$4',
     color: '$weakColorText',
     lineHeight: '1.5',
-    paddingTop: '$2',
+    paddingTop: '$1',
     letterSpacing: '-0.02em',
     fontFamily: 'Roboto Flex, sans-serif',
     fontFeatureSettings: '"ss01" on, "ss02" on, "ss03" on, "salt" on, "ss04" on',
@@ -36,7 +36,7 @@ export const Container = styled('section', {
     transition: '$transitonTheme',
 
     '@bp2': {
-      fontSize: '$5',
+      fontSize: '$4',
     },
   },
 });

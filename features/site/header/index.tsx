@@ -3,8 +3,7 @@ import { Light } from 'components/icons/Light';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { ThemeStore, useThemeStore } from 'store/switch-theme';
-import { AiOutlineHome } from 'react-icons/ai';
-import { BiBookReader } from 'react-icons/bi';
+import { CiStar, CiHome } from 'react-icons/ci';
 import { BsCodeSlash } from 'react-icons/bs';
 
 import * as St from './styles';
@@ -32,11 +31,11 @@ const Header = () => {
     <St.Header>
       <St.Nav>
         <div className={activeLink(pathname, '/')}>
-          <AiOutlineHome aria-hidden="true" size={19} color="var(--colors-gray50)" />
+          <CiHome aria-hidden="true" size={19} color="var(--colors-gray50)" />
           <Link href="/">home</Link>
         </div>
         <div className={activeLink(pathname, '/blog', '/blog/article/')}>
-          <BiBookReader aria-hidden="true" size={19} color="var(--colors-gray50)" />
+          <CiStar aria-hidden="true" size={19} color="var(--colors-gray50)" />
           <Link href="/blog">blog</Link>
         </div>
         <div className={activeLink(pathname, '/projects')}>

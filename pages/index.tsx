@@ -35,7 +35,6 @@ const Home: NextPage<HomeProps> = ({ lastFm, weather }: any) => (
       <AuthorHeader />
       <AuthorContent lastFm={lastFm} weather={weather} />
       {/* <LastPosts lastArticles={lastArticles} /> */}
-      {/* <FooterComponent /> */}
     </Layout>
   </div>
 );

@@ -22,11 +22,14 @@ export const Nav = styled('nav', {
   color: '$gray50',
   fontWeight: 600,
   'div.active': {
-    a: {
-      color: '$textHighlight',
-    },
-    svg: {
-      fill: '$textHighlight',
+    'a::after': {
+      position: 'absolute',
+      content: '',
+      borderBottom: '1px solid $gray50',
+      width: '70%',
+      transform: 'translateX(-45%)',
+      bottom: '-8px',
+      left: '50%',
     },
   },
 
@@ -34,6 +37,7 @@ export const Nav = styled('nav', {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
+    position: 'relative',
   },
 
   'div + div': {
@@ -48,7 +52,7 @@ export const Nav = styled('nav', {
     color: '$gray50',
     paddingLeft: '0.4rem',
     textDecoration: 'none',
-    fontWeight: 400,
+    fontWeight: 200,
     position: 'relative',
     transition: 'color 0.2s ease',
     fontSize: 'clamp(1.2rem, 5vw, 1.5rem)',

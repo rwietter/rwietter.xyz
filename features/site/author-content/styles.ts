@@ -10,12 +10,12 @@ export const Container = styled('section', {
   alignItems: 'flex-start',
 
   '@bp3': {
-    padding: '$5 $8 $2 $8',
+    padding: '$4 $8 $2 $8',
   },
 });
 
 export const CurrentlyInformations = styled('div', {
-  padding: '$2 0',
+  padding: '$1 0',
   color: '$gray50',
   transition: '$transitonTheme',
   p: {
