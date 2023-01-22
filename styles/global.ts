@@ -11,7 +11,7 @@ export const globalStyles = globalCss({
     scrollbarColor: '#ff80bf #151417',
   },
   '::-webkit-scrollbar': {
-    width: '0.5rem',
+    width: '0.3rem',
     height: '0.5rem',
   },
   '::-webkit-scrollbar-track': {

@@ -48,6 +48,11 @@ const {
       bgMd: '#121214',
       twitter: '#1da1f2',
       google: '#ea4335',
+      kbarBackground: 'rgba(0, 0, 0, .8)',
+      kbarBoxHover: 'rgba(255, 255, 255, 0.1)',
+      kbarBoxActive: 'rgba(255,255,255,0.1)',
+      shortcut: '#ddd',
+      shortcutHover: '#fff',
     },
     space: {
       1: '0.4rem',
@@ -141,6 +146,11 @@ const { theme: lightTheme } = createStitches({
       bgMd: '#FFFFFF',
       twitter: '#1da1f2',
       google: '#ea4335',
+      kbarBackground: 'rgba(255, 255, 255, .8)',
+      kbarBoxHover: 'rgba(0, 0, 0, 0.1)',
+      kbarBoxActive: 'rgba(0,0,0,0.1)',
+      shortcut: '#8f9ba8',
+      shortcutHover: '#A3B0BF',
     },
     space: {
       1: '0.4rem',
