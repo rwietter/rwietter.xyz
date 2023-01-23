@@ -9,9 +9,8 @@ export const Header = styled('header', {
   margin: '0 auto',
   fontSize: '1.6rem',
   padding: '2rem 1rem 0 1rem',
-
   '@bp5': {
-    padding: '4rem 0 0 0',
+    padding: '4rem 0 2rem 0',
   },
 });
 
