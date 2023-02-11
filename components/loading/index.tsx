@@ -1,19 +1,16 @@
 import { useState } from 'react';
 import LoaderRouterIndicator from 'react-topbar-progress-indicator';
 import { Router } from 'next/router';
-import { useColorStore, type ColorStore } from 'store/track-color';
 
 const LoadingIndicator = () => {
   const [progress, setProgress] = useState(false);
-  const { colors } = useColorStore() as ColorStore;
 
   LoaderRouterIndicator.config({
     barColors: {
-      0: colors[0],
-      0.5: colors[1],
-      1.0: colors[2],
+      0: '#ffbe0b',
+      1.0: '#fb5607',
     },
-    barThickness: 2,
+    barThickness: 4,
     shadowBlur: 0,
   });
 
