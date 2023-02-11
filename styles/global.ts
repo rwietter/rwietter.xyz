@@ -33,7 +33,5 @@ export const globalStyles = globalCss({
     fontFamily: '"Fira Code", monospace !important',
     fontVariantLigatures: 'common-ligatures !important',
     fontFeatureSettings: '"ss01" on, "ss02" on, "ss03" on, "salt" on, "ss04" on !important',
-    fontWeight: 400,
-    fontSize: 'clamp(0.9rem, 2vw, 1.15rem) !important',
   },
 });

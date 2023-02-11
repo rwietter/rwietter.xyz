@@ -25,6 +25,9 @@ export interface Category {
 
 export interface ImageAttributes {
     url: string
+    name: string
+    caption: string
+    alternativeText: string
 }
 
 export interface TypeImage {

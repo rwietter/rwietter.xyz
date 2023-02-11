@@ -36,6 +36,8 @@ export const PlayingArtist = styled('div', {
 
   p: {
     wordBreak: 'break-word',
+    '--fluid-type-max': '1.05rem',
+    '--fluid-type-target': '0.8vw',
   },
 
   '.play a': {
@@ -72,8 +74,9 @@ export const PlayingSpot = styled('div', {
 
   span: {
     fontFamily: 'Roboto Flex, sans-serif',
-    fontSize: '1.1rem',
     letterSpacing: '0.02em',
     marginLeft: '.5rem',
+    '--fluid-type-max': '1.05rem',
+    '--fluid-type-target': '0.8vw',
   },
 });

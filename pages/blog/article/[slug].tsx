@@ -4,7 +4,6 @@ import ARTICLE_QUERY from 'queries/article/article';
 import { useThemeStore } from 'store/switch-theme';
 import markdownLight from 'styles/github-markdown-css-light.module.css';
 import markdownDark from 'styles/github-markdown-css-dark.module.css';
-import { Layout } from 'layouts/content';
 import { AiOutlineArrowLeft, AiOutlineCalendar } from 'react-icons/ai';
 import { RiTimer2Line } from 'react-icons/ri';
 import * as CSS from 'components/article/styled';
@@ -17,11 +16,14 @@ import SEO from 'components/SEO';
 import Link from 'next/link';
 import ArticleFooter from 'components/article-footer';
 import type { ArticleTS } from 'components/article/types';
+import { useState } from 'react';
+import { ArticleLayout } from 'layouts/article';
 
 const ArticleItem = ({ articles }: ArticleTS) => {
   if (!articles) return null;
 
   const { theme } = useThemeStore() as any;
+  const [loadingImage, setLoadingImage] = useState(true);
 
   const router = useRouter() as unknown as { asPath: string };
 
@@ -30,7 +32,7 @@ const ArticleItem = ({ articles }: ArticleTS) => {
   const { localeDate: publishedAt } = getLocaleDate(article?.attributes?.publishedAt, 'pt-BR');
 
   return (
-    <Layout>
+    <ArticleLayout>
       <SEO
         title={article?.attributes?.title}
         description={article?.attributes?.description}
@@ -60,16 +62,21 @@ const ArticleItem = ({ articles }: ArticleTS) => {
               {article?.attributes?.description}
             </CSS.ArticleDescription>
           </CSS.ArticleHeader>
-          <CSS.ArticleImage
-            src={article.attributes.image.data.attributes.url}
-            width={5000}
-            height={5000}
-            quality={100}
-            alt={`Image of the article: ${article.attributes.title}`}
-            loading="lazy"
-            blurDataURL="https://cdn.pixabay.com/photo/2015/06/24/02/12/the-blurred-819388_1280.jpg"
-            placeholder="blur"
-          />
+          <CSS.ImageContainer>
+            <CSS.ArticleImage
+              src={article.attributes.image.data.attributes.url}
+              width={5000}
+              height={5000}
+              quality={100}
+              alt={`Image of the article: ${article.attributes.title} | ${article.attributes.image.data.attributes.alternativeText}`}
+              loading="lazy"
+              blurDataURL={article.attributes.image.data.attributes.url}
+              placeholder="blur"
+              bluring={loadingImage}
+              onLoadingComplete={() => setLoadingImage(false)}
+            />
+            <CSS.ImageCredit>{article.attributes.image.data.attributes.caption}</CSS.ImageCredit>
+          </CSS.ImageContainer>
           <CSS.Article>
             <CSS.ArticleMarkdown
               className={
@@ -88,7 +95,7 @@ const ArticleItem = ({ articles }: ArticleTS) => {
           category={article?.attributes?.category?.data?.attributes?.name}
         />
       </CSS.ArticleContainer>
-    </Layout>
+    </ArticleLayout>
   );
 };
 
@@ -123,7 +130,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       slug: params.slug,
       articles: data.articles.data,
     },
-    revalidate: 60,
+    revalidate: 3600,
   };
 };
 

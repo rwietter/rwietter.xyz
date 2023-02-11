@@ -29,6 +29,9 @@ const ARTICLE_QUERY = gql`
             data {
               attributes {
                 url
+                name
+                caption
+                alternativeText
               }
             }
           }

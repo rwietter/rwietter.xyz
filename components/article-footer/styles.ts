@@ -3,6 +3,8 @@ import { styled as s, styled } from 'styles/theme';
 export const ArticleFooterContainer = s('div', {
   padding: '$6 0 $2 0',
   color: '$gray50',
+  maxWidth: '60rem',
+  margin: '0 auto',
 });
 
 export const NavHeader = s('nav', {
@@ -20,6 +22,7 @@ export const NavHeader = s('nav', {
     display: 'flex',
     alignItems: 'center',
     borderBottom: '3px solid transparent',
+    '--fluid-type-max': '1.3rem',
 
     '&:hover': {
       color: '$primary',
@@ -59,6 +62,8 @@ export const SocialContainer = s('section', {
   h4: {
     fontSize: '$2',
     fontWeight: 400,
+    '--fluid-type-max': '1.5rem',
+    '--fluid-type-target': '1vw',
 
     strong: {
       fontWeight: 600,

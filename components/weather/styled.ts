@@ -11,9 +11,8 @@ export const Weather = styled('span', {
   flexFlow: 'column wrap',
   lineHeight: '1.6',
 
-  '--fluid-type-min': '1rem',
-  '--fluid-type-max': '1.3rem',
-  '--fluid-type-target': '1vw',
+  '--fluid-type-max': '1.05rem',
+  '--fluid-type-target': '0.8vw',
 
   '@bp3': {
     alignItems: 'center',

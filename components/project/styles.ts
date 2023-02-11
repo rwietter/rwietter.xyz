@@ -21,21 +21,18 @@ export const Title = styled('h2', {
   fontWeight: 400,
   paddingTop: '$2',
 
-  '--fluid-type-min': '1.2rem',
-  '--fluid-type-max': '1.7rem',
-  '--fluid-type-target': '1.5vw',
+  '--fluid-type-min': '1.1rem',
+  '--fluid-type-max': '1.2rem',
 });
 
 export const Description = styled('p', {
   color: '$weakColorText',
   fontWeight: 400,
   paddingTop: '$2',
-  lineHeight: '1.8',
-  textAlign: 'justify',
+  lineHeight: '1.5',
+  textAlign: 'start',
 
-  '--fluid-type-min': '1rem',
-  '--fluid-type-max': '1.5rem',
-  '--fluid-type-target': '1vw',
+  '--fluid-type-max': '1.1rem',
 });
 
 export const HoverBackground = styled(motion.div, {

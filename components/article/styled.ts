@@ -1,58 +1,63 @@
 import Image from 'next/image';
-import { styled as s } from 'styles/theme';
+import { styled } from 'styles/theme';
 import ReactMarkdown from 'react-markdown';
 
-export const ArticleContainer = s('section', {
+export const ArticleContainer = styled('section', {
   padding: '0 1rem',
-  maxWidth: '57.6rem',
+
+  '@bp3': {
+    padding: '0',
+  },
 });
 
-export const ArticleImage = s(Image, {
-  borderRadius: '4px',
+export const ImageContainer = styled('div', {
+  position: 'relative',
+  backgroundPosition: 'center',
   width: '100%',
+});
+
+export const ArticleImage = styled(Image, {
+  borderRadius: '4px',
   height: '100%',
   position: 'relative',
   objectFit: 'cover',
   backgroundPosition: 'center',
+  maxHeight: '30rem',
+  width: '100%',
 
-  '@bp4': {
-    width: '90vw',
-    marginLeft: 'calc(-1 * (90vw - 54rem) / 2)',
-  },
-
-  '@bp5': {
-    width: '85vw',
-    marginLeft: 'calc(-1 * (85vw - 52rem) / 2)',
-  },
-
-  '@media (min-width: 1300px)': {
-    width: '70vw',
-    marginLeft: 'calc(-1 * (70vw - 50rem) / 2)',
-  },
-
-  '@media (min-width: 1400px)': {
-    width: '65vw',
-    marginLeft: 'calc(-1 * (65vw - 50rem) / 2)',
-  },
-
-  '@media (min-width: 1500px)': {
-    width: '65vw',
-    marginLeft: 'calc(-1 * (65vw - 55rem) / 2)',
+  variants: {
+    bluring: {
+      true: {
+        filter: 'blur(10px)',
+      },
+      false: {
+        filter: 'blur(0)',
+      },
+    },
   },
 });
 
-export const ArticleHeader = s('section', {
+export const ImageCredit = styled('p', {
+  color: '$weakColorText',
+  '--fluid-type-max': '1rem',
+  paddingLeft: '1rem',
+  position: 'relative',
+  top: '-3rem',
+});
+
+export const ArticleHeader = styled('section', {
   color: '$gray50',
   paddingBottom: '2rem',
+  maxWidth: '60rem',
+  margin: '0 auto',
 });
 
-export const BackToOverview = s('button', {
+export const BackToOverview = styled('button', {
   background: 'none',
   border: 'none',
   outline: 'none',
   margin: 0,
   color: '$gray50',
-  paddingBottom: '$5',
   display: 'flex',
   cursor: 'pointer',
   fontSize: '$3',
@@ -77,53 +82,58 @@ export const BackToOverview = s('button', {
   },
 });
 
-export const DateTimeRead = s('p', {
-  color: '$gray50',
-  paddingBottom: '$3',
+export const DateTimeRead = styled('p', {
+  color: '$weakColorText',
   display: 'flex',
   alignItems: 'center',
-  fontSize: '1.1rem',
-  fontFamily: 'Roboto Flex, sans-serif',
+  paddingTop: '$4',
+  '--fluid-type-max': '1.2rem',
 
   svg: {
     marginRight: '$1',
   },
 });
 
-export const ArticleTitle = s('h1', {
-  all: 'unset',
+export const ArticleTitle = styled('h1', {
+  padding: 0,
+  margin: 0,
   color: '$gray50',
-  fontSize: 'clamp(1.5rem, 3vw, 3.5rem)',
-  lineHeight: '1.2',
-  fontWeight: 'bold',
-  fontFamily: 'Sora, sans-serif',
+  fontWeight: 900,
+  paddingTop: '$2',
+  fontFamily: 'Roboto Flex, sans-serif',
+  '--fluid-type-min': '1.1rem',
+  '--fluid-type-max': '3rem',
+  '--fluid-type-target': '4vw',
 });
 
-export const ArticleDescription = s('h2', {
+export const ArticleDescription = styled('h2', {
   color: '$gray50',
-  fontSize: 'clamp(1rem, 3vw, 1.3rem)',
   fontWeight: 400,
   padding: '$2 0',
   marginTop: '.5rem',
   fontFamily: 'Futura Std, sans-serif',
+  '--fluid-type-max': '1.5rem',
+  '--fluid-type-target': '2vw',
 });
 
-export const ArticleMarkdownContainer = s('section', {
+export const ArticleMarkdownContainer = styled('section', {
   margin: '0 auto',
   width: '100%',
-  paddingTop: '$5',
+  paddingTop: '$3',
 });
 
-export const Article = s('article', {
+export const Article = styled('article', {
   fontFamily: 'Futura Std, sans-serif',
+  maxWidth: '60rem',
+  margin: '0 auto',
 });
 
-export const ArticleMarkdown = s(ReactMarkdown, {
+export const ArticleMarkdown = styled(ReactMarkdown, {
   paddingTop: '$6',
-  fontSize: 'clamp(1.1rem, 3vw, 1.5rem)',
   lineHeight: '1.8',
+  '--fluid-type-max': '1.5rem',
 
-  'pre code': {
+  'pre code span': {
     fontFamily: '"Fira Code", monospace !important',
     fontVariantLigatures: 'common-ligatures !important',
     fontFeatureSettings: '"ss01" on, "ss02" on, "ss03" on, "salt" on, "ss04" on !important',

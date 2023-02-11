@@ -107,6 +107,25 @@ h5,
 h6,
 span,
 a,
-p {
-	font-size: clamp(var(--fluid-type-min), var(--fluid-type-target), var(--fluid-type-max));
+p,
+time,
+pre,
+code,
+samp,
+blockquote,
+tt {
+	font-size: clamp(var(--fluid-type-min, 1rem),
+			calc(1rem + var(--fluid-type-target, 3vw)),
+			var(--fluid-type-max, 1.5rem)) !important;
+}
+
+code,
+code span {
+	font-family: "Fira Code", monospace !important;
+	font-variant-ligatures: common-ligatures !important;
+	font-feature-settings: '"ss01" on, "ss02" on, "ss03" on, "salt" on, "ss04" on !important';
+	font-weight: 400;
+	--fluid-type-min: 0.9rem;
+	--fluid-type-max: 1.2rem;
+	--fluid-type-target: 0.5vw;
 }

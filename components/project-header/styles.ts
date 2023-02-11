@@ -5,23 +5,20 @@ export const Header = styled('section', {
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  padding: '0 0 3rem 0',
   color: '$gray50',
 });
 
 export const Title = styled('h1', {
-  fontFamily: 'ABeeZee, sans-serif',
-  letterSpacing: '-0.06em',
-  backgroundImage: '$highlight01',
+  backgroundImage: '$gradientGreen',
   backgroundSize: '100%',
   backgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
   WebkitBoxDecorationBreak: 'clone',
-  fontWeight: 400,
+  fontWeight: 600,
   padding: '0 1rem',
 
-  '--fluid-type-min': '1.4rem',
-  '--fluid-type-max': '2rem',
+  '--fluid-type-min': '1.2rem',
+  '--fluid-type-max': '2.5rem',
   '--fluid-type-target': '5vw',
 });
 

@@ -32,8 +32,7 @@ export const Container = styled('section', {
     fontWeight: 200,
     transition: '$transitonTheme',
     '--fluid-type-min': '1.1rem',
-    '--fluid-type-max': '5rem',
-    '--fluid-type-target': '1.5vw',
+    '--fluid-type-max': '1.6rem',
 
     '@bp2': {
       fontSize: '$4',

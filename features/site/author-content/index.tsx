@@ -1,5 +1,6 @@
 import { KbarInit } from 'components/kbar-init-shortcut';
-import { LastFMTrack, RecentTrackProps } from 'components/lastfm/lastfm';
+import { LastFMTrack } from 'components/lastfm/lastfm';
+import type { RecentTrackProps } from 'components/lastfm/types';
 import { WeatherConditions } from 'components/weather/weather';
 import dynamic from 'next/dynamic';
 import { FC } from 'react';

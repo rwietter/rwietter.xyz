@@ -4,7 +4,7 @@ import { persist } from 'zustand/middleware';
 
 export interface ColorStore {
   colors: string[];
-  setColors?: (colors: string[]) => void;
+  setColors: (colors: string[]) => void;
 }
 
 export const useColorStore = create(

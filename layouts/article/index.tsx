@@ -1,9 +1,9 @@
 import dynamic from 'next/dynamic';
-import React, { FC, ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 import FadeIn from 'react-fade-in';
-import { ContainerCSS, LayoutCSS } from './styles';
+import * as S from './styles';
 
-interface LayoutProps {
+interface ArticleLayoutProps {
   children: ReactNode;
 }
 
@@ -15,14 +15,14 @@ const Header = dynamic(() => import('features/site/header'), {
   ssr: false,
 });
 
-const Layout: FC<LayoutProps> = ({ children }) => (
-  <ContainerCSS>
+const ArticleLayout: FC<ArticleLayoutProps> = ({ children }) => (
+  <S.BlogContainerPosts>
     <Header />
-    <LayoutCSS>
+    <S.ArticleLayout>
       <FadeIn>{children}</FadeIn>
-    </LayoutCSS>
+    </S.ArticleLayout>
     <MenuBar />
-  </ContainerCSS>
+  </S.BlogContainerPosts>
 );
 
-export { Layout };
+export { ArticleLayout };

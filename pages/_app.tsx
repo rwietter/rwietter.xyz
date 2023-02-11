@@ -2,11 +2,11 @@
 import type { AppProps } from 'next/app';
 import { ApolloProvider } from '@apollo/react-hooks';
 import apolloClient from 'utils/apollo-client';
-import '../styles/dracula-prism.css';
+import '../styles/prism-shades-of-purple.css';
 import '../styles/styles.css';
 import { LoadingIndicator } from 'components/loading';
 import { useEffect } from 'react';
-import { ThemeStore, useThemeStore } from 'store/switch-theme';
+import { type ThemeStore, useThemeStore } from 'store/switch-theme';
 import { applyTheme } from 'utils/apply-theme';
 import Prism from 'prismjs';
 import { CommandBar } from 'components/command-bar';

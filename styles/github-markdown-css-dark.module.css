@@ -239,7 +239,7 @@
   cursor: pointer;
 }
 
-.markdown-body details:not([open]) > *:not(summary) {
+.markdown-body details:not([open])>*:not(summary) {
   display: none !important;
 }
 
@@ -279,7 +279,9 @@
 
 .markdown-body h3 {
   font-weight: 600;
-  font-size: 1.25em;
+  --fluid-type-min: 1.2rem;
+  --fluid-type-max: 2rem;
+  --fluid-type-target: 4vw;
 }
 
 .markdown-body h4 {
@@ -521,11 +523,11 @@
   content: "";
 }
 
-.markdown-body > *:first-child {
+.markdown-body>*:first-child {
   margin-top: 0 !important;
 }
 
-.markdown-body > *:last-child {
+.markdown-body>*:last-child {
   margin-bottom: 0 !important;
 }
 
@@ -561,11 +563,11 @@
   margin-bottom: 16px;
 }
 
-.markdown-body blockquote > :first-child {
+.markdown-body blockquote> :first-child {
   margin-top: 0;
 }
 
-.markdown-body blockquote > :last-child {
+.markdown-body blockquote> :last-child {
   margin-bottom: 0;
 }
 
@@ -647,7 +649,7 @@
   list-style-type: lower-roman;
 }
 
-.markdown-body div > ol:not([type]) {
+.markdown-body div>ol:not([type]) {
   list-style-type: decimal;
 }
 
@@ -659,11 +661,11 @@
   margin-bottom: 0;
 }
 
-.markdown-body li > p {
+.markdown-body li>p {
   margin-top: 16px;
 }
 
-.markdown-body li + li {
+.markdown-body li+li {
   margin-top: 0.25em;
 }
 
@@ -726,7 +728,7 @@
   overflow: hidden;
 }
 
-.markdown-body span.frame > span {
+.markdown-body span.frame>span {
   display: block;
   float: left;
   width: auto;
@@ -754,7 +756,7 @@
   clear: both;
 }
 
-.markdown-body span.align-center > span {
+.markdown-body span.align-center>span {
   display: block;
   margin: 13px auto 0;
   overflow: hidden;
@@ -772,7 +774,7 @@
   clear: both;
 }
 
-.markdown-body span.align-right > span {
+.markdown-body span.align-right>span {
   display: block;
   margin: 13px 0 0;
   overflow: hidden;
@@ -802,7 +804,7 @@
   overflow: hidden;
 }
 
-.markdown-body span.float-right > span {
+.markdown-body span.float-right>span {
   display: block;
   margin: 13px auto 0;
   overflow: hidden;
@@ -817,8 +819,6 @@
   background-color: rgba(58, 61, 63, 0.4);
   border-radius: 6px;
   font-family: "Fira Code", monospace, sans-serif !important;
-  font-variant-ligatures: common-ligatures;
-  font-feature-settings: "ss01" 1;
   font-size: clamp(0.9rem, 2vw, 1.15rem);
   font-weight: 400 !important;
 }
@@ -841,7 +841,7 @@
   padding: 0.5em;
 }
 
-.markdown-body pre > code {
+.markdown-body pre>code {
   padding: 0 2rem;
   margin: 0;
   word-break: normal;
@@ -883,7 +883,13 @@
   background-color: transparent;
   display: block;
   border: 0;
+  --fluid-type-max: 1rem;
 }
+
+.markdown-body pre code span {
+  --fluid-type-max: 1rem;
+}
+
 
 .markdown-body .csv-data td,
 .markdown-body .csv-data th {
@@ -970,7 +976,7 @@
   cursor: pointer;
 }
 
-.markdown-body .task-list-item + .task-list-item {
+.markdown-body .task-list-item+.task-list-item {
   margin-top: 4px;
 }
 

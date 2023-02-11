@@ -20,7 +20,9 @@ const UpdatedDate = () => {
   return (
     <p>
       <IoIosTimer size={18} />
-      <DateTime>{currentDate}</DateTime>
+      <DateTime>
+        <span>{currentDate}</span>
+      </DateTime>
     </p>
   );
 };

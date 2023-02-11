@@ -1,15 +1,14 @@
-import { styled } from '../../styles/theme';
+import { styled } from 'styles/theme';
 
-export const ContainerCSS = styled('section', {
+export const BlogContainerPosts = styled('section', {
   display: 'flex',
   flexDirection: 'column',
 });
 
-export const LayoutCSS = styled('main', {
+export const ArticleLayout = styled('section', {
   background: 'var(--background)',
   transition: 'background 0.35s, color 0.35s ease',
   width: '100%',
-  maxWidth: '60rem',
   margin: '0 auto',
   paddingBottom: '4rem',
   paddingTop: '2rem',

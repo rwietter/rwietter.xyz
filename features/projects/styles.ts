@@ -8,9 +8,7 @@ export const Wrapper = styled('section', {
   justifyContent: 'center',
   alignItems: 'center',
   transition: '$transitonTheme',
-
-  paddingBottom: '5rem',
-  paddingTop: '$4',
+  paddingTop: '$3',
 });
 
 export const Grid = styled('section', {
@@ -18,6 +16,7 @@ export const Grid = styled('section', {
   gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
   gridAutoFlow: 'row',
   gridTemplateRows: 'repeat(2, 1fr)',
+  paddingTop: '$4',
 
   'div > div': {
     height: '100%',
