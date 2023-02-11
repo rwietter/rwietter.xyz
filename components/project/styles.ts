@@ -17,21 +17,25 @@ export const Container = styled(motion.section, {
 });
 
 export const Title = styled('h2', {
-  fontSize: 'clamp(1rem, 2vw, 1.2rem)',
   color: '$gray50',
-  fontFamily: 'Sora, sans-serif',
-  fontWeight: 300,
+  fontWeight: 400,
   paddingTop: '$2',
+
+  '--fluid-type-min': '1.2rem',
+  '--fluid-type-max': '1.7rem',
+  '--fluid-type-target': '1.5vw',
 });
 
 export const Description = styled('p', {
-  fontSize: 'clamp(.8rem, 1.5vw, .9rem)',
   color: '$weakColorText',
-  fontFamily: 'Sora, sans-serif',
-  fontWeight: 300,
+  fontWeight: 400,
   paddingTop: '$2',
   lineHeight: '1.8',
   textAlign: 'justify',
+
+  '--fluid-type-min': '1rem',
+  '--fluid-type-max': '1.5rem',
+  '--fluid-type-target': '1vw',
 });
 
 export const HoverBackground = styled(motion.div, {

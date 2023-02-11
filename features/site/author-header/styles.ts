@@ -6,7 +6,7 @@ export const Container = styled('section', {
   alignItems: 'flex-start',
   justifyContent: 'flex-start',
   color: '$gray50',
-  maxWidth: '35rem',
+  maxWidth: '45rem',
   padding: '$3 $2',
   transition: '$transitonTheme',
   '@bp3': {
@@ -14,26 +14,26 @@ export const Container = styled('section', {
   },
 
   h1: {
-    fontSize: '$9',
     fontWeight: '700',
     color: '$gray50',
     fontFamily: 'Roboto Flex, sans-serif',
-    fontFeatureSettings: '"ss02" on, "ss03" on, "salt" on, "ss04" on',
-    fontVariantLigatures: 'common-ligatures',
     transition: '$transitonTheme',
+    '--fluid-type-min': '1.5rem',
+    '--fluid-type-max': '3.5rem',
+    '--fluid-type-target': '10vw',
   },
 
   h2: {
-    fontSize: '$4',
     color: '$weakColorText',
     lineHeight: '1.5',
     paddingTop: '$1',
     letterSpacing: '-0.02em',
-    fontFamily: 'Roboto Flex, sans-serif',
-    fontFeatureSettings: '"ss01" on, "ss02" on, "ss03" on, "salt" on, "ss04" on',
-    fontVariantLigatures: 'common-ligatures',
+    fontFamily: 'Futura Std, sans-serif',
     fontWeight: 200,
     transition: '$transitonTheme',
+    '--fluid-type-min': '1.1rem',
+    '--fluid-type-max': '5rem',
+    '--fluid-type-target': '1.5vw',
 
     '@bp2': {
       fontSize: '$4',

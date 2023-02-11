@@ -22,7 +22,7 @@ const Projects: React.FC = () => (
       <ProjectHeader />
       <S.Grid>
         {projects.map((project) => (
-          <FadeIn key={project.title} transitionDuration={500}>
+          <FadeIn key={project.title} transitionDuration={2000}>
             <Project key={project.link} project={project} />
           </FadeIn>
         ))}

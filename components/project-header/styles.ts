@@ -10,7 +10,6 @@ export const Header = styled('section', {
 });
 
 export const Title = styled('h1', {
-  fontSize: 'clamp(1.5rem, 5vw, 2.3rem)',
   fontFamily: 'ABeeZee, sans-serif',
   letterSpacing: '-0.06em',
   backgroundImage: '$highlight01',
@@ -19,6 +18,11 @@ export const Title = styled('h1', {
   WebkitTextFillColor: 'transparent',
   WebkitBoxDecorationBreak: 'clone',
   fontWeight: 400,
+  padding: '0 1rem',
+
+  '--fluid-type-min': '1.4rem',
+  '--fluid-type-max': '2rem',
+  '--fluid-type-target': '5vw',
 });
 
 export const Subtitle = styled('p', {

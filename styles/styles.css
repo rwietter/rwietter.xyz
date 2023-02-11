@@ -10,6 +10,16 @@
 	}
 }
 
+* {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
 pre {
 	position: relative;
 	z-index: 0;
@@ -71,6 +81,7 @@ pre {
 	#code-target {
 		visibility: hidden;
 	}
+
 	#code-target:hover #code-target-tooltip {
 		visibility: hidden;
 	}
@@ -86,4 +97,16 @@ span img {
 
 a {
 	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+p {
+	font-size: clamp(var(--fluid-type-min), var(--fluid-type-target), var(--fluid-type-max));
 }

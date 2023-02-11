@@ -7,10 +7,9 @@ export const Header = styled('header', {
   width: '100%',
   maxWidth: '57.6rem',
   margin: '0 auto',
-  fontSize: '1.6rem',
   padding: '2rem 1rem 0 1rem',
   '@bp5': {
-    padding: '4rem 0 2rem 0',
+    padding: '4rem 0 0 0',
   },
 });
 
@@ -24,11 +23,13 @@ export const Nav = styled('nav', {
     'a::after': {
       position: 'absolute',
       content: '',
-      borderBottom: '1px solid $gray50',
-      width: '70%',
+      width: '8px',
+      height: '8px',
+      background: '$primary',
+      borderRadius: '50%',
       transform: 'translateX(-45%)',
-      bottom: '-8px',
-      left: '50%',
+      top: '-10px',
+      right: '-10px',
     },
   },
 
@@ -41,10 +42,6 @@ export const Nav = styled('nav', {
 
   'div + div': {
     paddingLeft: '1.3rem',
-
-    '@bp3': {
-      paddingLeft: '2.3rem',
-    },
   },
 
   a: {
@@ -54,7 +51,9 @@ export const Nav = styled('nav', {
     fontWeight: 200,
     position: 'relative',
     transition: 'color 0.2s ease',
-    fontSize: 'clamp(1.2rem, 5vw, 1.5rem)',
+    '--fluid-type-min': '1rem',
+    '--fluid-type-max': '1.3rem',
+    '--fluid-type-target': '2vw',
   },
 });
 

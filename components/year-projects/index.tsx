@@ -1,26 +1,53 @@
+/* eslint-disable no-use-before-define */
+import { useState } from 'react';
 import { ProjectItem, projects } from './data';
-import {
-  Container, List, ListItem, ListItemName, ProjectItemContainer, Title, Year,
-} from './styles';
+import * as S from './styles';
 
 export const YearProjects = () => (
-  <Container>
-    <Title>Todos Projetos</Title>
+  <S.Container>
+    <S.Title>Mais Projetos</S.Title>
     {Object.keys(projects).sort((a, b) => Number(b) - Number(a)).map((year) => (
-      <ProjectItemContainer key={year}>
-        <Year>{year}</Year>
-        <List>
+      <S.ProjectItemContainer
+        key={year}
+      >
+        <S.Year>{year}</S.Year>
+        <S.List>
           {projects[year].map((project: ProjectItem) => (
-            <ListItem key={project.title}>
-              <ListItemName href={project.github} target="_blank" rel="noopener noreferrer">
-                <strong>{project.title}</strong>
-                :
-                <span>{project.description}</span>
-              </ListItemName>
-            </ListItem>
+            <ProjectItemComponent
+              key={project.title}
+              project={project}
+            />
           ))}
-        </List>
-      </ProjectItemContainer>
+        </S.List>
+      </S.ProjectItemContainer>
     ))}
-  </Container>
+  </S.Container>
 );
+
+const ProjectItemComponent = ({ project }: any) => {
+  const [isBeingHovered, setIsBeingHovered] = useState(false);
+
+  return (
+    <S.ListItem
+      key={project.title}
+      onHoverStart={() => setIsBeingHovered(true)}
+      onHoverEnd={() => setIsBeingHovered(false)}
+    >
+      {isBeingHovered && (
+        <S.HoverBackground
+          layoutId="background"
+          layout
+        />
+      )}
+      <S.ListItemName
+        href={project.github}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <strong>{project.title}</strong>
+        :
+        <span>{project.description}</span>
+      </S.ListItemName>
+    </S.ListItem>
+  );
+};

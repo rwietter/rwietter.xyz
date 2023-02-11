@@ -23,7 +23,7 @@ User-agent: DuckDuckBot
 Allow: /*
 
 # Host
-Host: http://localhost:3000
+Host: https://rwietter.xyz/
 
 # Sitemaps
-Sitemap: http://localhost:3000/sitemap.xml
+Sitemap: https://rwietter.xyz/sitemap.xml

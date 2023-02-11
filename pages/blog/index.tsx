@@ -33,8 +33,8 @@ const Blog: React.FC<any> = ({ articles }) => (
       />
       <Header />
       <LayoutCSS>
-        <FadeIn>
-          <Navbar />
+        <Navbar />
+        <FadeIn transitionDuration={2000}>
           <Articles articles={articles} />
         </FadeIn>
       </LayoutCSS>

@@ -17,9 +17,9 @@ const {
       mediumBackgroundHover: '#202230',
       gradientBackground: '#10101a',
       linearBackground:
-				'linear-gradient(180deg,rgba(35,37,49,.5),rgba(15,15,24,.5));',
+        'linear-gradient(180deg,rgba(35,37,49,.5),rgba(15,15,24,.5));',
       gradient:
-				'linear-gradient(90deg, #ffbe0b, #fb5607, #ff006e, #8257e5, #3a86ff );',
+        'linear-gradient(90deg, #ffbe0b, #fb5607, #ff006e, #8257e5, #3a86ff );',
       highlight01: 'linear-gradient(135deg, #80ffea 0%, #8aff80 100%)',
       highlight145: 'linear-gradient(145deg, #8257e5, #c1b);',
       highlight30: 'linear-gradient(43deg, #74ebd5, #9face6);',
@@ -69,7 +69,7 @@ const {
     transitions: {
       transitonTheme: 'color 350ms ease 0s, background 350ms ease 0s',
       transitonThemeWidth:
-				'width 350ms ease 0s, color 350ms ease 0s, background 350ms ease 0s',
+        'width 350ms ease 0s, color 350ms ease 0s, background 350ms ease 0s',
     },
     fonts: {
       primary: `'Roboto', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -117,7 +117,7 @@ const { theme: lightTheme } = createStitches({
       mediumBackgroundHover: '#F9F9FB',
       gradientBackground: '#10101a',
       linearBackground:
-				'linear-gradient(90deg,rgba(35,37,49,.5),rgba(15,15,24,.5));',
+        'linear-gradient(90deg,rgba(35,37,49,.5),rgba(15,15,24,.5));',
       gradient:
         'linear-gradient(90deg, #ffbe0b, #fb5607, #ff006e, #8257e5, #3a86ff );',
       highlight01: 'linear-gradient(43deg, #8257e5, #2575fc)',

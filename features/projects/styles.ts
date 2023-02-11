@@ -7,16 +7,10 @@ export const Wrapper = styled('section', {
   alignContent: 'center',
   justifyContent: 'center',
   alignItems: 'center',
-
-  textRendering: 'optimizeLegibility',
-  WebkitFontSmoothing: 'antialiased',
-  WebkitTextSizeAdjust: '100%',
-  MozOsxFontSmoothing: 'grayscale',
-  MozTextSizeAdjust: '100%',
-  padding: '$3 $2',
   transition: '$transitonTheme',
 
   paddingBottom: '5rem',
+  paddingTop: '$4',
 });
 
 export const Grid = styled('section', {

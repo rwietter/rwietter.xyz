@@ -11,7 +11,7 @@ export const LayoutCSS = styled('main', {
   transition: 'background 0.35s, color 0.35s ease',
   width: '100%',
   margin: '0 auto',
-  paddingBottom: '6rem',
+  paddingBottom: '4rem',
 
   '@media (min-width: 900px)': {
     width: '100%',
