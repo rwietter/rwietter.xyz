@@ -1,3 +1,5 @@
+
+
 ## Features
 
 - [x] Homepage
@@ -5,13 +7,13 @@
 - [x] Blog list
 - [x] Blog Post
 - [x] ISR
-- [ ] Portfolio
+- [x] Portfolio
 - [x] SEO
 - [x] PWA
-- [ ] Arch Linux
 - [ ] About
 - [ ] i18n
 - [x] Loading
 - [ ] Pagination
-- [ ] Code splitting
-- [ ] Tags
+- [x] Code splitting
+- [ ] Search by tags
+- [ ] Match theme with OS
