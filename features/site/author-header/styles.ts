@@ -7,10 +7,10 @@ export const Container = styled('section', {
   justifyContent: 'flex-start',
   color: '$gray50',
   maxWidth: '45rem',
-  padding: '$3 $2',
+  padding: '$3 0',
   transition: '$transitonTheme',
   '@bp3': {
-    padding: '$2 $8 $2 $8',
+    padding: '$2 0 $2 0',
   },
 
   h1: {
@@ -18,9 +18,9 @@ export const Container = styled('section', {
     color: '$gray50',
     fontFamily: 'Roboto Flex, sans-serif',
     transition: '$transitonTheme',
-    '--fluid-type-min': '1.5rem',
+    '--fluid-type-min': '1.2rem',
     '--fluid-type-max': '3.5rem',
-    '--fluid-type-target': '10vw',
+    '--fluid-type-target': '8vw',
   },
 
   h2: {
@@ -31,8 +31,8 @@ export const Container = styled('section', {
     fontFamily: 'Futura Std, sans-serif',
     fontWeight: 200,
     transition: '$transitonTheme',
-    '--fluid-type-min': '1.1rem',
-    '--fluid-type-max': '1.6rem',
+    '--fluid-type-min': '1rem',
+    '--fluid-type-max': '1.3rem',
 
     '@bp2': {
       fontSize: '$4',

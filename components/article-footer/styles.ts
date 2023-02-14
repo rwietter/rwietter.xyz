@@ -1,7 +1,7 @@
 import { styled as s, styled } from 'styles/theme';
 
 export const ArticleFooterContainer = s('div', {
-  padding: '$6 0 $2 0',
+  padding: '$6 1rem $2 1rem',
   color: '$gray50',
   maxWidth: '60rem',
   margin: '0 auto',

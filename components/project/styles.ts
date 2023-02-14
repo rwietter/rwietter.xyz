@@ -23,6 +23,7 @@ export const Title = styled('h2', {
 
   '--fluid-type-min': '1.1rem',
   '--fluid-type-max': '1.2rem',
+  '--fluid-type-target': '2vw',
 });
 
 export const Description = styled('p', {
@@ -32,7 +33,7 @@ export const Description = styled('p', {
   lineHeight: '1.5',
   textAlign: 'start',
 
-  '--fluid-type-max': '1.1rem',
+  '--fluid-type-max': '1rem',
 });
 
 export const HoverBackground = styled(motion.div, {

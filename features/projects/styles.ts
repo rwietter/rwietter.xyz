@@ -8,7 +8,7 @@ export const Wrapper = styled('section', {
   justifyContent: 'center',
   alignItems: 'center',
   transition: '$transitonTheme',
-  paddingTop: '$3',
+  padding: '$3 1rem 0 1rem',
 });
 
 export const Grid = styled('section', {

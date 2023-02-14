@@ -5,7 +5,7 @@
 import Document, {
   Html, Head, Main, NextScript,
 } from 'next/document';
-import { getCssText } from '../styles/theme';
+// import { getCssText } from '../styles/theme';
 
 const APP_NAME = 'rwietter';
 
@@ -18,12 +18,12 @@ export default class extends Document {
     return (
       <Html lang="pt-BR">
         <Head>
-          <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
           <link rel="preconnect" href="https://rsms.me/" />
-          <link rel="stylesheet dns-prefetch preconnect" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" />
+          <link rel="stylesheet dns-prefetch preconnect" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@200;400;500&display=swap" />
+          <link rel="stylesheet dns-prefetch preconnect" href="https://fonts.cdnfonts.com/css/fantasque-sans-mono" />
           <link rel="stylesheet dns-prefetch preconnect" href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap" />
           <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,700&display=swap" rel="stylesheet" />
           <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet" />
@@ -58,6 +58,7 @@ export default class extends Document {
           <meta name="msapplication-square150x150logo" content="/icons/mstile-150x150.png" />
           <meta name="msapplication-wide310x150logo" content="/icons/mstile-310x150.png" />
           <meta name="msapplication-square310x310logo" content="/icons/mstile-310x310.png" />
+          {/* <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} /> */}
         </Head>
         <body>
           <Main />

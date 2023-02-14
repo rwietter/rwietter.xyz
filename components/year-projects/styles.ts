@@ -27,7 +27,8 @@ export const ProjectItemContainer = styled('div', {
 
 export const Year = styled('h2', {
   fontWeight: 400,
-  fontSize: 'clamp(1.1rem, 1.5vw, 1.3rem)',
+  '--fluid-type-min': '1.3rem',
+  '--fluid-type-max': '2rem',
 });
 
 export const List = styled('ul', {
@@ -44,7 +45,7 @@ export const ListItem = styled(motion.li, {
 
 export const ListItemName = styled(motion.a, {
   color: '$gray50',
-  '--fluid-type-max': '1.2rem',
+  '--fluid-type-max': '1.05rem',
 
   strong: {
     fontWeight: 500,
@@ -62,10 +63,10 @@ export const ListItemName = styled(motion.a, {
 export const HoverBackground = styled(motion.div, {
   background: '$mediumBackgroundHover',
   position: 'absolute',
-  right: '30px',
   top: '2px',
+  right: '5px',
   width: '100%',
-  height: '100%',
+  height: '90%',
   zIndex: -1,
   borderRadius: '0.5rem',
 });

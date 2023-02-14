@@ -6,15 +6,10 @@ import { Layout } from 'layouts/content';
 import { LAST_ARTICLES_QUERY } from 'queries/articles/articles';
 import apolloClient from 'utils/apollo-client';
 import type { LastArticles } from 'queries/article/article';
-import dynamic from 'next/dynamic';
-
-const AuthorContent = dynamic(() => import('features/site/author-content'), {
-  ssr: false,
-});
-
-const AuthorHeader = dynamic(() => import('features/site/author-header'), {
-  ssr: false,
-});
+import AuthorContent from 'features/site/author-content';
+import AuthorHeader from 'features/site/author-header';
+import { Padding } from 'components/padding';
+// import NonSSRWrapper from 'components/lazy';
 
 interface HomeProps {
   lastArticles?: LastArticles;
@@ -23,20 +18,22 @@ interface HomeProps {
 }
 
 const Home: NextPage<HomeProps> = ({ lastFm, weather }: any) => (
-  <div>
+  <>
+    <SEO
+      title="Mauricio Witter | Software Engineer"
+      content="website"
+      url="https://rwietter.xyz"
+      description="This blog is about my journey as a Software Engineer. Here do you find my thoughts, ideas, and experiences. I hope you enjoy it."
+      image="https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png"
+    />
     <Layout>
-      <SEO
-        title="Mauricio Witter | Software Engineer"
-        content="website"
-        url="https://rwietter.xyz"
-        description="This blog is about my journey as a Software Engineer. Here do you find my thoughts, ideas, and experiences. I hope you enjoy it."
-        image="https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png"
-      />
-      <AuthorHeader />
-      <AuthorContent lastFm={lastFm} weather={weather} />
-      {/* <LastPosts lastArticles={lastArticles} /> */}
+      <Padding>
+        <AuthorHeader />
+        <AuthorContent lastFm={lastFm} weather={weather} />
+        {/* <LastPosts lastArticles={lastArticles} /> */}
+      </Padding>
     </Layout>
-  </div>
+  </>
 );
 
 const USERNAME = process.env.LASTFM_USERNAME!;

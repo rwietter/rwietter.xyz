@@ -12,5 +12,5 @@ export const LayoutCSS = styled('main', {
   maxWidth: '60rem',
   margin: '0 auto',
   paddingBottom: '4rem',
-  paddingTop: '2rem',
+  paddingTop: '1rem',
 });

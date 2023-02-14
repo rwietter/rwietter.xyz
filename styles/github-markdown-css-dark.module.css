@@ -818,9 +818,22 @@
   font-size: 85%;
   background-color: rgba(58, 61, 63, 0.4);
   border-radius: 6px;
-  font-family: "Fira Code", monospace, sans-serif !important;
-  font-size: clamp(0.9rem, 2vw, 1.15rem);
-  font-weight: 400 !important;
+  font-family: "Fantasque Sans Mono", monospace, sans-serif !important;
+  font-weight: 200 !important;
+  font-variant-ligatures: common-ligatures !important;
+  font-feature-settings: "ss01" on,
+    "ss02" on,
+    "ss03" on !important;
+  --fluid-type-max: 1.1rem;
+}
+
+.markdown-body pre code span {
+  font-family: "Fantasque Sans Mono", monospace, sans-serif !important;
+  font-weight: 200 !important;
+  font-variant-ligatures: common-ligatures !important;
+  font-feature-settings: "ss01" on,
+    "ss02" on,
+    "ss03" on !important;
 }
 
 .markdown-body code br,

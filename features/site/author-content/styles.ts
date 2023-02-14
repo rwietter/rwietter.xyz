@@ -2,7 +2,7 @@
 import { styled } from '../../../styles/theme';
 
 export const Container = styled('section', {
-  padding: '$3 $2 0 $2',
+  padding: '$3 0 0 0',
   color: '$gray50',
   display: 'flex',
   flexFlow: 'column',
@@ -10,7 +10,7 @@ export const Container = styled('section', {
   alignItems: 'flex-start',
 
   '@bp3': {
-    padding: '$4 $8 $2 $8',
+    padding: '$4 0 $2 0',
   },
 });
 

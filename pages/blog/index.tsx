@@ -1,4 +1,4 @@
-import React from 'react';
+import type { FC } from 'react';
 import SEO from 'components/SEO';
 import { Layout } from 'layouts/content';
 import { Articles } from 'components/articles';
@@ -6,7 +6,7 @@ import type { GetStaticProps } from 'next';
 import { ARTICLES_QUERY } from 'queries/articles/articles';
 import apolloClient from 'utils/apollo-client';
 
-const Blog: React.FC<any> = ({ articles }) => (
+const Blog: FC<any> = ({ articles }) => (
   <>
     <SEO
       title="Blog | Maurício Witter | Software Engineer"

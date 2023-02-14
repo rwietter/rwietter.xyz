@@ -29,9 +29,4 @@ export const globalStyles = globalCss({
     transition: '$transitonTheme',
     scrollBehavior: 'smooth',
   },
-  'code, code span': {
-    fontFamily: '"Fira Code", monospace !important',
-    fontVariantLigatures: 'common-ligatures !important',
-    fontFeatureSettings: '"ss01" on, "ss02" on, "ss03" on, "salt" on, "ss04" on !important',
-  },
 });

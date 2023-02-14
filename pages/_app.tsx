@@ -10,6 +10,7 @@ import { type ThemeStore, useThemeStore } from 'store/switch-theme';
 import { applyTheme } from 'utils/apply-theme';
 import Prism from 'prismjs';
 import { CommandBar } from 'components/command-bar';
+// import NonSSRWrapper from 'components/lazy';
 
 require('prismjs/components/prism-typescript');
 require('prismjs/components/prism-javascript');
@@ -31,6 +32,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
     Prism.highlightAll();
   });
+
   return (
     <CommandBar>
       <LoadingIndicator />

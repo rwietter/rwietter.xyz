@@ -21,7 +21,7 @@ export interface WeatherProps {
 }
 
 interface WeatherConditionsProps {
-  weather: any;
+  weather: WeatherProps[];
 }
 
 export const WeatherConditions: FC<WeatherConditionsProps> = ({ weather }) => {

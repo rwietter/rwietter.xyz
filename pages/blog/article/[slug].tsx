@@ -16,8 +16,8 @@ import SEO from 'components/SEO';
 import Link from 'next/link';
 import ArticleFooter from 'components/article-footer';
 import type { ArticleTS } from 'components/article/types';
-import { useState } from 'react';
 import { ArticleLayout } from 'layouts/article';
+import { useState } from 'react';
 
 const ArticleItem = ({ articles }: ArticleTS) => {
   if (!articles) return null;
@@ -32,7 +32,7 @@ const ArticleItem = ({ articles }: ArticleTS) => {
   const { localeDate: publishedAt } = getLocaleDate(article?.attributes?.publishedAt, 'pt-BR');
 
   return (
-    <ArticleLayout>
+    <>
       <SEO
         title={article?.attributes?.title}
         description={article?.attributes?.description}
@@ -41,61 +41,65 @@ const ArticleItem = ({ articles }: ArticleTS) => {
         url={`https://rwietter.xyz${router.asPath}`}
         content="article"
       />
-      <CSS.ArticleContainer>
-        <CSS.ArticleMarkdownContainer>
-          <CSS.ArticleHeader>
-            <Link href="/blog">
-              <CSS.BackToOverview type="button" aria-label="Back to overview">
-                <AiOutlineArrowLeft size={19} aria-hidden="true" />
-                <p>Back to overview</p>
-              </CSS.BackToOverview>
-            </Link>
-            <CSS.DateTimeRead>
-              <AiOutlineCalendar size={17} />
-              {publishedAt}
-              &nbsp;|&nbsp;
-              <RiTimer2Line size={17} />
-              {readTime}
-            </CSS.DateTimeRead>
-            <CSS.ArticleTitle>{article?.attributes?.title}</CSS.ArticleTitle>
-            <CSS.ArticleDescription>
-              {article?.attributes?.description}
-            </CSS.ArticleDescription>
-          </CSS.ArticleHeader>
-          <CSS.ImageContainer>
-            <CSS.ArticleImage
-              src={article.attributes.image.data.attributes.url}
-              width={5000}
-              height={5000}
-              quality={100}
-              alt={`Image of the article: ${article.attributes.title} | ${article.attributes.image.data.attributes.alternativeText}`}
-              loading="lazy"
-              blurDataURL={article.attributes.image.data.attributes.url}
-              placeholder="blur"
-              bluring={loadingImage}
-              onLoadingComplete={() => setLoadingImage(false)}
-            />
-            <CSS.ImageCredit>{article.attributes.image.data.attributes.caption}</CSS.ImageCredit>
-          </CSS.ImageContainer>
-          <CSS.Article>
-            <CSS.ArticleMarkdown
-              className={
-                theme === 'light'
-                  ? markdownDark['markdown-body']
-                  : markdownLight['markdown-body']
-              }
-            >
-              {article?.attributes?.content}
-            </CSS.ArticleMarkdown>
-          </CSS.Article>
-        </CSS.ArticleMarkdownContainer>
-        <ArticleFooter
-          author={article?.attributes?.author?.data?.attributes?.name}
-          name={article?.attributes?.title}
-          category={article?.attributes?.category?.data?.attributes?.name}
-        />
-      </CSS.ArticleContainer>
-    </ArticleLayout>
+      <ArticleLayout>
+        <CSS.ArticleContainer>
+          <CSS.ArticleMarkdownContainer>
+            <CSS.ArticleHeader>
+              <Link href="/blog">
+                <CSS.BackToOverview type="button" aria-label="Back to overview">
+                  <AiOutlineArrowLeft size={19} aria-hidden="true" />
+                  <p>Back to overview</p>
+                </CSS.BackToOverview>
+              </Link>
+              <CSS.DateTimeRead>
+                <AiOutlineCalendar size={17} />
+                {publishedAt}
+                &nbsp;|&nbsp;
+                <RiTimer2Line size={17} />
+                {readTime}
+              </CSS.DateTimeRead>
+              <CSS.ArticleTitle>{article?.attributes?.title}</CSS.ArticleTitle>
+              <CSS.ArticleDescription>
+                {article?.attributes?.description}
+              </CSS.ArticleDescription>
+            </CSS.ArticleHeader>
+            <CSS.ImageContainer>
+              <CSS.ArticleImage
+                src={article.attributes.image.data.attributes.url}
+                width={5000}
+                height={5000}
+                quality={100}
+                alt={`Image of the article: ${article.attributes.title} | ${article.attributes.image.data.attributes.alternativeText}`}
+                loading="lazy"
+                blurDataURL={article.attributes.image.data.attributes.url}
+                placeholder="blur"
+                bluring={loadingImage}
+                onLoadingComplete={() => setLoadingImage(false)}
+              />
+              <CSS.ImageCredit>
+                {article.attributes.image.data.attributes.caption}
+              </CSS.ImageCredit>
+            </CSS.ImageContainer>
+            <CSS.Article>
+              <CSS.ArticleMarkdown
+                className={
+                  theme === 'light'
+                    ? markdownDark['markdown-body']
+                    : markdownLight['markdown-body']
+                }
+              >
+                {article?.attributes?.content}
+              </CSS.ArticleMarkdown>
+            </CSS.Article>
+          </CSS.ArticleMarkdownContainer>
+          <ArticleFooter
+            author={article?.attributes?.author?.data?.attributes?.name}
+            name={article?.attributes?.title}
+            category={article?.attributes?.category?.data?.attributes?.name}
+          />
+        </CSS.ArticleContainer>
+      </ArticleLayout>
+    </>
   );
 };
 

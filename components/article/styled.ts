@@ -3,11 +3,7 @@ import { styled } from 'styles/theme';
 import ReactMarkdown from 'react-markdown';
 
 export const ArticleContainer = styled('section', {
-  padding: '0 1rem',
 
-  '@bp3': {
-    padding: '0',
-  },
 });
 
 export const ImageContainer = styled('div', {
@@ -17,7 +13,6 @@ export const ImageContainer = styled('div', {
 });
 
 export const ArticleImage = styled(Image, {
-  borderRadius: '4px',
   height: '100%',
   position: 'relative',
   objectFit: 'cover',
@@ -47,9 +42,16 @@ export const ImageCredit = styled('p', {
 
 export const ArticleHeader = styled('section', {
   color: '$gray50',
-  paddingBottom: '2rem',
   maxWidth: '60rem',
   margin: '0 auto',
+
+  padding: '0 1rem',
+  paddingBottom: '2rem',
+
+  '@bp3': {
+    padding: '0',
+    paddingBottom: '2rem',
+  },
 });
 
 export const BackToOverview = styled('button', {
@@ -63,10 +65,11 @@ export const BackToOverview = styled('button', {
   fontSize: '$3',
   alignItems: 'center',
   justifyContent: 'flex-start',
-  fontFamily: 'Roboto Flex, sans-serif',
+  fontFamily: 'Futura Std, sans-serif',
+  '--fluid-type-max': '1.2rem',
 
   svg: {
-    marginRight: '$1',
+    marginRight: '$2',
     transition: '$transitonTheme, transform 0.4s ease',
     willChange: 'transform',
   },
@@ -87,7 +90,7 @@ export const DateTimeRead = styled('p', {
   display: 'flex',
   alignItems: 'center',
   paddingTop: '$4',
-  '--fluid-type-max': '1.2rem',
+  '--fluid-type-max': '1rem',
 
   svg: {
     marginRight: '$1',
@@ -112,7 +115,7 @@ export const ArticleDescription = styled('h2', {
   padding: '$2 0',
   marginTop: '.5rem',
   fontFamily: 'Futura Std, sans-serif',
-  '--fluid-type-max': '1.5rem',
+  '--fluid-type-max': '1.3rem',
   '--fluid-type-target': '2vw',
 });
 
@@ -126,16 +129,16 @@ export const Article = styled('article', {
   fontFamily: 'Futura Std, sans-serif',
   maxWidth: '60rem',
   margin: '0 auto',
+  padding: '0 1rem',
+
+  '@bp3': {
+    padding: '0',
+  },
 });
 
 export const ArticleMarkdown = styled(ReactMarkdown, {
   paddingTop: '$6',
   lineHeight: '1.8',
-  '--fluid-type-max': '1.5rem',
-
-  'pre code span': {
-    fontFamily: '"Fira Code", monospace !important',
-    fontVariantLigatures: 'common-ligatures !important',
-    fontFeatureSettings: '"ss01" on, "ss02" on, "ss03" on, "salt" on, "ss04" on !important',
-  },
+  '--fluid-type-max': '1.2rem',
+  '--fluid-type-min': '1.2vw',
 });

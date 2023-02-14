@@ -32,8 +32,7 @@ export const PostTitle = styled('p', {
   fontWeight: 600,
   fontFamily: 'Futura Std, sans-serif',
   '--fluid-type-min': '1.1rem',
-  '--fluid-type-max': '1.8rem',
-  '--fluid-type-target': '5vw',
+  '--fluid-type-max': '1.6rem',
 });
 
 export const CardInformations = styled('section', {
@@ -48,15 +47,15 @@ export const CardInformations = styled('section', {
     lineHeight: '1.3',
     fontFamily: 'Futura Std, sans-serif',
     fontWeight: 200,
-    '--fluid-type-max': '1.3rem',
+    '--fluid-type-max': '1.2rem',
   },
 
   '#category': {
     fontSize: 'clamp(0.9rem, 2vw, 1rem)',
-    padding: '.2rem .6rem',
+    padding: '.1rem .4rem',
     letterSpacing: '-0.02em',
-    fontFamily: 'Sora, sans-serif',
-    fontWeight: 200,
+    fontFamily: 'Futura Std, sans-serif',
+    fontWeight: 400,
     background: '$gray50',
     color: '$gray100',
     borderRadius: '4px',
