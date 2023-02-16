@@ -17,3 +17,4 @@
 - [x] Code splitting
 - [ ] Search by tags
 - [ ] Match theme with OS
+- [ ] Font loading https://web.dev/i18n/pt/optimize-webfont-loading/
