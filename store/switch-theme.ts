@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
-import create from 'zustand';
-import { persist } from 'zustand/middleware';
+import { create } from 'zustand';
+import { createJSONStorage, persist } from 'zustand/middleware';
 
 export interface ThemeStore {
   theme: 'dark' | 'light';
@@ -15,7 +15,7 @@ export const useThemeStore = create(
     }),
     {
       name: 'theme',
-      getStorage: () => localStorage,
+      storage: createJSONStorage(() => localStorage),
     },
   ),
 );

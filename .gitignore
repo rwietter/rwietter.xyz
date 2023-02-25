@@ -8,10 +8,9 @@
 .env
 public/sw.js
 public/sw.js.map
-public/workbox-588899ac.js
-public/workbox-588899ac.js.map
-public/workbox-327c579b.js
-public/workbox-327c579b.js.map
+public/*.js
+public/*.js.map
+pnpm-lock.yaml
 
 # testing
 /coverage
