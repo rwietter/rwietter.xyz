@@ -5,8 +5,8 @@ import { ArticlesContainer } from './styles';
 
 const Articles = ({ articles }: any) => {
   const leftArticlesCount = Math.ceil(articles?.length / 5);
-  const leftArticles = articles?.slice(0, leftArticlesCount);
-  const rightArticles = articles?.slice(leftArticlesCount, articles.length);
+  // const leftArticles = articles?.slice(0, leftArticlesCount);
+  // const rightArticles = articles?.slice(leftArticlesCount, articles.length);
 
   return (
     <ArticlesContainer>

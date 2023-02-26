@@ -1,7 +1,7 @@
 import { Dark } from 'components/icons/Dark';
 import { Light } from 'components/icons/Light';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 import { ThemeStore, useThemeStore } from 'store/switch-theme';
 import { CiStar, CiHome } from 'react-icons/ci';
 import { BsCodeSlash } from 'react-icons/bs';
@@ -21,7 +21,7 @@ const activeLink = (pathname: string, href: string, article?: string) => {
 const Header = () => {
   const { theme, setTheme } = useThemeStore() as ThemeStore;
 
-  const { pathname } = useRouter();
+  const pathname = usePathname() as string;
 
   const handleSwitchTheme = () => {
     if (setTheme) { setTheme(theme === 'dark' ? 'light' : 'dark'); }

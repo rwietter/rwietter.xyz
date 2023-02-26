@@ -17,13 +17,12 @@ import Link from 'next/link';
 import ArticleFooter from 'components/article-footer';
 import type { ArticleTS } from 'components/article/types';
 import { ArticleLayout } from 'layouts/article';
-import { useState } from 'react';
+import { blurImage } from 'utils/blur-image';
 
-const ArticleItem = ({ articles }: ArticleTS) => {
+const ArticleItem = ({ articles, blurDataURL }: ArticleTS) => {
   if (!articles) return null;
 
   const { theme } = useThemeStore() as any;
-  const [loadingImage, setLoadingImage] = useState(true);
 
   const router = useRouter() as unknown as { asPath: string };
 
@@ -65,16 +64,13 @@ const ArticleItem = ({ articles }: ArticleTS) => {
             </CSS.ArticleHeader>
             <CSS.ImageContainer>
               <CSS.ArticleImage
-                src={article.attributes.image.data.attributes.url}
                 width={5000}
                 height={5000}
                 quality={100}
                 alt={`Image of the article: ${article.attributes.title} | ${article.attributes.image.data.attributes.alternativeText}`}
                 loading="lazy"
-                blurDataURL={article.attributes.image.data.attributes.url}
                 placeholder="blur"
-                bluring={loadingImage}
-                onLoadingComplete={() => setLoadingImage(false)}
+                {...blurDataURL}
               />
               <CSS.ImageCredit>
                 {article.attributes.image.data.attributes.caption}
@@ -133,6 +129,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     props: {
       slug: params.slug,
       articles: data.articles.data,
+      blurDataURL: await blurImage(data.articles.data[0].attributes.image.data.attributes.url),
     },
     revalidate: 3600,
   };

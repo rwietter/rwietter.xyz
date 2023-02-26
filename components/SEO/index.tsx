@@ -1,7 +1,6 @@
 /* eslint-disable react/no-danger */
 /* eslint-disable react/no-unused-prop-types */
 /* eslint-disable react/require-default-props */
-import Head from 'next/head';
 import { FC } from 'react';
 import { NextSeo } from 'next-seo';
 
@@ -41,7 +40,7 @@ interface SEOProps {
 const SEO: FC<SEOProps> = ({
   title = '', description = '', url = '', image = '', author = 'Maurício Witter', ogtype = 'article:section',
 }) => (
-  <Head>
+  <>
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover" />
@@ -100,7 +99,7 @@ const SEO: FC<SEOProps> = ({
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(JSONLD) }}
     />
-  </Head>
+  </>
 );
 
 export const NextSEO: FC<SEOProps> = (props) => {

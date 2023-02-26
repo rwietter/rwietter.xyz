@@ -53,6 +53,13 @@ export interface Attributes {
     attributes: Properties
 }
 
+type ImageBlurData = {
+    src: string
+    type: string
+    blurDataURL: string
+}
+
 export type ArticleTS = {
     articles: Attributes[]
+    blurDataURL: ImageBlurData
 }

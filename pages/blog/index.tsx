@@ -5,6 +5,7 @@ import { Articles } from 'components/articles';
 import type { GetStaticProps } from 'next';
 import { ARTICLES_QUERY } from 'queries/articles/articles';
 import apolloClient from 'utils/apollo-client';
+import { blurImage } from 'utils/blur-image';
 
 const Blog: FC<any> = ({ articles }) => (
   <>
@@ -29,9 +30,21 @@ export const getStaticProps: GetStaticProps = async () => {
   if (loading) return { props: { articles: null } };
   if (errors) return { props: { articles: null } };
 
+  const articles = data.articles.data.map(async (article: any) => {
+    const image = await blurImage(article?.attributes?.image?.data?.attributes?.url);
+
+    return {
+      ...article,
+      attributes: {
+        ...article.attributes,
+      },
+      blurDataURL: image,
+    };
+  });
+
   return {
     props: {
-      articles: data.articles.data,
+      articles: await Promise.all(articles),
     },
     revalidate: 60,
   };

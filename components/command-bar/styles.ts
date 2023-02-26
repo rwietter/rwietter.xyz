@@ -12,6 +12,9 @@ const Positioner = styled(KBarPositioner, {
   background: '$kbarBackground',
   boxSizing: 'border-box',
   zIndex: 4,
+  '--fluid-type-min': '1rem',
+  '--fluid-type-max': '1.2rem',
+  '--fluid-type-target': '3vw',
 });
 
 const Search = styled(KBarSearch, {

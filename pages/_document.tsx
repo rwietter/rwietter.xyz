@@ -5,6 +5,7 @@
 import Document, {
   Html, Head, Main, NextScript,
 } from 'next/document';
+import { getCssText } from 'styles/theme';
 // import { getCssText } from '../styles/theme';
 
 const APP_NAME = 'rwietter';
@@ -58,7 +59,7 @@ export default class extends Document {
           <meta name="msapplication-square150x150logo" content="/icons/mstile-150x150.png" />
           <meta name="msapplication-wide310x150logo" content="/icons/mstile-310x150.png" />
           <meta name="msapplication-square310x310logo" content="/icons/mstile-310x310.png" />
-          {/* <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} /> */}
+          <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
         </Head>
         <body>
           <Main />
