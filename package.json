@@ -44,7 +44,7 @@
     "react-topbar-progress-indicator": "^4.1.1",
     "reading-time": "^1.5.0",
     "sharp": "^0.31.3",
-    "zustand": "^4.1.5"
+    "zustand": "^4.3.3"
   },
   "devDependencies": {
     "@types/prismjs": "^1.26.0",

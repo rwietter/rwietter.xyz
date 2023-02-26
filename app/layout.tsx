@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 /* eslint-disable no-use-before-define */
 /* eslint-disable react/function-component-definition */
 
