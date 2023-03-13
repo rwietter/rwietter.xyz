@@ -5,7 +5,6 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { Articles } from 'components/articles';
 import CATEGORIES_QUERY from 'queries/category/categories';
 import SEO from 'components/SEO';
-import NonSSRWrapper from 'components/lazy';
 
 const Category: FC<any> = ({ categories }) => {
   if (!categories) return <div />;
@@ -21,9 +20,7 @@ const Category: FC<any> = ({ categories }) => {
         description="The category page of the blog. Here, you can find all the articles of the category. :)"
         image="https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png"
       />
-      <NonSSRWrapper>
-        <Articles articles={attributes?.articles?.data} />
-      </NonSSRWrapper>
+      <Articles articles={attributes?.articles?.data} />
     </>
   );
 };

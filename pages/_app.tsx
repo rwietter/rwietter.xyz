@@ -6,7 +6,7 @@ import '../styles/prism-shades-of-purple.css';
 import '../styles/styles.css';
 import { LoadingIndicator } from 'components/loading';
 import { useEffect } from 'react';
-import { type ThemeStore, useThemeStore } from 'store/switch-theme';
+import { useTheme } from 'store/switch-theme';
 import { applyTheme } from 'utils/apply-theme';
 import Prism from 'prismjs';
 import { CommandBar } from 'components/command-bar';
@@ -22,7 +22,7 @@ require('prismjs/components/prism-bash');
 require('prismjs/components/prism-json');
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-  const { theme } = useThemeStore() as ThemeStore;
+  const { theme } = useTheme();
 
   useEffect(() => {
     applyTheme(theme);

@@ -19,25 +19,15 @@ export const ArticleImage = styled(Image, {
   backgroundPosition: 'center',
   maxHeight: '30rem',
   width: '100%',
-
-  variants: {
-    bluring: {
-      true: {
-        filter: 'blur(10px)',
-      },
-      false: {
-        filter: 'blur(0)',
-      },
-    },
-  },
 });
 
 export const ImageCredit = styled('p', {
   color: '$weakColorText',
-  '--fluid-type-max': '1rem',
-  paddingLeft: '1rem',
+  filter: 'brightness(0.7)',
   position: 'relative',
-  top: '-3rem',
+  paddingTop: '.5rem',
+  textAlign: 'center',
+  '--fluid-type-max': '1rem',
 });
 
 export const ArticleHeader = styled('section', {
@@ -49,8 +39,33 @@ export const ArticleHeader = styled('section', {
   paddingBottom: '2rem',
 
   '@bp3': {
-    padding: '0',
+    padding: '0 1rem',
     paddingBottom: '2rem',
+  },
+});
+
+export const InfoHeader = styled('div', {
+  width: '100%',
+  color: '$gray50',
+  display: 'flex',
+  alignItems: 'flex-start',
+  flexDirection: 'column',
+  justifyContent: 'flex-start',
+  fontFamily: 'Futura Std, sans-serif',
+  '--fluid-type-max': '1.2rem',
+
+  '& > div': {
+    paddingTop: '$2',
+  },
+
+  '@bp2': {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+
+    '& > div': {
+      paddingTop: 0,
+    },
   },
 });
 
@@ -59,20 +74,18 @@ export const BackToOverview = styled('button', {
   border: 'none',
   outline: 'none',
   margin: 0,
-  color: '$gray50',
+  width: 'fit-content',
   display: 'flex',
   cursor: 'pointer',
-  fontSize: '$3',
-  alignItems: 'center',
-  justifyContent: 'flex-start',
+  color: '$gray50',
   fontFamily: 'Futura Std, sans-serif',
-  '--fluid-type-max': '1.2rem',
 
   svg: {
     marginRight: '$2',
     transition: '$transitonTheme, transform 0.4s ease',
     willChange: 'transform',
   },
+
   '&:hover': {
     svg: {
       transform: 'translateX(-5px)',
@@ -87,10 +100,11 @@ export const BackToOverview = styled('button', {
 
 export const DateTimeRead = styled('p', {
   color: '$weakColorText',
-  display: 'flex',
+  display: 'inline-flex',
   alignItems: 'center',
-  paddingTop: '$4',
+  fontFamily: 'Futura Std, sans-serif',
   '--fluid-type-max': '1rem',
+  cursor: 'default',
 
   svg: {
     marginRight: '$1',
@@ -101,9 +115,10 @@ export const ArticleTitle = styled('h1', {
   padding: 0,
   margin: 0,
   color: '$gray50',
-  fontWeight: 900,
+  fontWeight: 800,
   paddingTop: '$2',
-  fontFamily: 'Roboto Flex, sans-serif',
+  letterSpacing: '-0.02em',
+  fontFamily: 'Raleway, sans-serif',
   '--fluid-type-min': '1.1rem',
   '--fluid-type-max': '3rem',
   '--fluid-type-target': '4vw',
@@ -112,6 +127,7 @@ export const ArticleTitle = styled('h1', {
 export const ArticleDescription = styled('h2', {
   color: '$gray50',
   fontWeight: 400,
+  lineHeight: '1.6em',
   padding: '$2 0',
   marginTop: '.5rem',
   fontFamily: 'Futura Std, sans-serif',
@@ -127,7 +143,7 @@ export const ArticleMarkdownContainer = styled('section', {
 
 export const Article = styled('article', {
   fontFamily: 'Futura Std, sans-serif',
-  maxWidth: '60rem',
+  maxWidth: '50rem',
   margin: '0 auto',
   padding: '0 1rem',
 
@@ -139,6 +155,6 @@ export const Article = styled('article', {
 export const ArticleMarkdown = styled(ReactMarkdown, {
   paddingTop: '$6',
   lineHeight: '1.8',
-  '--fluid-type-max': '1.2rem',
-  '--fluid-type-min': '1.2vw',
+  '--fluid-type-max': '1.25rem',
+  '--fluid-type-min': '1rem',
 });

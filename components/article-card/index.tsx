@@ -22,10 +22,10 @@ const Card = ({ article }: any) => (
           {article?.attributes?.description}
         </h2>
         {article?.attributes?.category?.data?.attributes?.name && (
-        <h3 id="category">
-          #
-          {article?.attributes?.category?.data?.attributes?.name}
-        </h3>
+          <h3 id="category">
+            #
+            {article?.attributes?.category?.data?.attributes?.name}
+          </h3>
         )}
       </CardInformations>
     </Link>

@@ -8,6 +8,7 @@ export const Container = styled('div', {
   padding: '0 1rem',
   paddingTop: '2rem',
   margin: '0 auto',
+  fontFamily: 'Futura Std, sans-serif',
 });
 
 export const Title = styled('h1', {

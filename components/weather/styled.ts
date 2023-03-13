@@ -3,7 +3,6 @@ import { styled } from 'styles/theme';
 
 export const Weather = styled('span', {
   all: 'unset',
-  fontFamily: 'Roboto Flex, sans-serif',
 
   display: 'flex',
   alignItems: 'flex-start',
@@ -21,7 +20,7 @@ export const Weather = styled('span', {
   },
 
   'strong, span': {
-    fontFamily: 'Roboto Flex, sans-serif',
+    fontFamily: 'Futura Std, sans-serif',
   },
 
   div: {

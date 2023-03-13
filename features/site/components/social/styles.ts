@@ -23,7 +23,12 @@ export const Link = styled('a', {
     social: {
       github: {
         '&:hover': {
-          color: 'rgba(255, 255, 255, 0.6)',
+          color: '#999',
+        },
+      },
+      substack: {
+        '&:hover': {
+          color: '#FF6719',
         },
       },
       linkedIn: {

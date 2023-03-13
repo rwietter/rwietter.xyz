@@ -59,7 +59,7 @@ type ImageBlurData = {
     blurDataURL: string
 }
 
-export type ArticleTS = {
+export type ArticleData = {
     articles: Attributes[]
     blurDataURL: ImageBlurData
 }

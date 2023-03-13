@@ -7,7 +7,7 @@
 import { ReactNode, useEffect } from 'react';
 import '../styles/styles.css';
 import { applyTheme } from 'utils/apply-theme';
-import { type ThemeStore, useThemeStore } from 'store/switch-theme';
+import { useTheme } from 'store/switch-theme';
 import { Layout } from 'layouts/content';
 import { getCssText } from 'styles/theme';
 
@@ -16,7 +16,7 @@ export default function RootLayout({
 }: {
   children: ReactNode
 }) {
-  const { theme } = useThemeStore() as ThemeStore;
+  const { theme } = useTheme();
 
   useEffect(() => {
     applyTheme(theme);

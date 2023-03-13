@@ -12,17 +12,6 @@ export const CardImage = styled(Image, {
   width: '100%',
   height: '100%',
   maxHeight: '12rem',
-
-  variants: {
-    bluring: {
-      true: {
-        filter: 'blur(10px)',
-      },
-      false: {
-        filter: 'blur(0)',
-      },
-    },
-  },
 });
 
 export const PostTitle = styled('p', {

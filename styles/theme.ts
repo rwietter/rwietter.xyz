@@ -149,8 +149,8 @@ const { theme: lightTheme } = createStitches({
       kbarBackground: 'rgba(255, 255, 255, .8)',
       kbarBoxHover: 'rgba(0, 0, 0, 0.1)',
       kbarBoxActive: 'rgba(0,0,0,0.1)',
-      shortcut: '#8f9ba8',
-      shortcutHover: '#A3B0BF',
+      shortcut: '#eee',
+      shortcutHover: '#bbb',
     },
     space: {
       1: '0.4rem',

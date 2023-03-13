@@ -5,7 +5,6 @@ export const globalStyles = globalCss({
     margin: 0,
     padding: 0,
     boxSizing: 'border-box',
-    fontFamily: 'Futura Std, Roboto Flex, sans-serif',
     fontVariantLigatures: 'common-ligatures',
     scrollbarWidth: 'auto',
     scrollbarColor: '#ff80bf #151417',

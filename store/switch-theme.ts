@@ -1,21 +1,17 @@
-/* eslint-disable no-unused-vars */
-import { create } from 'zustand';
-import { createJSONStorage, persist } from 'zustand/middleware';
+import { create, type StoreApi, type UseBoundStore } from 'zustand';
+import { persist, createJSONStorage } from 'zustand/middleware';
 
-export interface ThemeStore {
-  theme: 'dark' | 'light';
-  setTheme?: (theme: 'dark' | 'light') => void;
+interface Theme {
+  theme: 'light' | 'dark'
+  setTheme: (theme: 'light' | 'dark') => void
 }
 
-export const useThemeStore = create(
-  persist(
-    (set) => ({
-      theme: 'light',
-      setTheme: (newTheme: ThemeStore) => set({ theme: newTheme }),
-    }),
-    {
-      name: 'theme',
-      storage: createJSONStorage(() => localStorage),
-    },
-  ),
-);
+const useTheme: UseBoundStore<StoreApi<Theme>> = create(persist((set) => ({
+  theme: 'light',
+  setTheme: (theme) => { set({ theme }); }
+}), {
+  name: 'theme',
+  storage: createJSONStorage(() => sessionStorage)
+}));
+
+export { useTheme };

@@ -5,6 +5,7 @@ export const ArticleFooterContainer = s('div', {
   color: '$gray50',
   maxWidth: '60rem',
   margin: '0 auto',
+  fontFamily: 'Futura Std, sans-serif',
 });
 
 export const NavHeader = s('nav', {
@@ -21,23 +22,19 @@ export const NavHeader = s('nav', {
     transition: '$transitonTheme',
     display: 'flex',
     alignItems: 'center',
-    borderBottom: '3px solid transparent',
-    '--fluid-type-max': '1.3rem',
+    '--fluid-type-max': '1.2rem',
 
     '&:hover': {
       color: '$primary',
-      borderBottom: '3px solid $primary',
     },
   },
   span: {
     display: 'flex',
     alignItems: 'center',
     cursor: 'pointer',
-    borderBottom: '3px solid transparent',
     transition: '$transitonTheme',
     '&:hover': {
       color: '$primary',
-      borderBottom: '3px solid $primary',
     },
   },
 
@@ -48,7 +45,7 @@ export const NavHeader = s('nav', {
 
 export const Separator = s('div', {
   width: '100%',
-  height: '2px',
+  height: '1px',
   background: '$gray200',
   transition: '$transitonTheme',
 });
@@ -62,7 +59,7 @@ export const SocialContainer = s('section', {
   h4: {
     fontSize: '$2',
     fontWeight: 400,
-    '--fluid-type-max': '1.5rem',
+    '--fluid-type-max': '1.3rem',
     '--fluid-type-target': '1vw',
 
     strong: {
@@ -82,12 +79,17 @@ export const Link = styled('a', {
     social: {
       github: {
         '&:hover': {
-          color: 'rgba(255, 255, 255, 0.6)',
+          color: '#999',
+        },
+      },
+      substack: {
+        '&:hover': {
+          color: '#FF6719',
         },
       },
       linkedIn: {
         '&:hover': {
-          color: '#0e76a8',
+          color: '#0077b5',
         },
       },
       twitter: {

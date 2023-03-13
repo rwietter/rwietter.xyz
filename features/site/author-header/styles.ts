@@ -24,10 +24,9 @@ export const Container = styled('section', {
   },
 
   h2: {
-    color: '$weakColorText',
+    color: '$gray50',
     lineHeight: '1.5',
     paddingTop: '$1',
-    letterSpacing: '-0.02em',
     fontFamily: 'Futura Std, sans-serif',
     fontWeight: 200,
     transition: '$transitonTheme',

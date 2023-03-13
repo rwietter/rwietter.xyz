@@ -1,7 +1,7 @@
 /* eslint-disable no-tabs */
 import { useRouter } from 'next/router';
 import ARTICLE_QUERY from 'queries/article/article';
-import { useThemeStore } from 'store/switch-theme';
+import { useTheme } from 'store/switch-theme';
 import markdownLight from 'styles/github-markdown-css-light.module.css';
 import markdownDark from 'styles/github-markdown-css-dark.module.css';
 import { AiOutlineArrowLeft, AiOutlineCalendar } from 'react-icons/ai';
@@ -15,14 +15,14 @@ import { getLocaleDate } from 'utils/get-locale-date';
 import SEO from 'components/SEO';
 import Link from 'next/link';
 import ArticleFooter from 'components/article-footer';
-import type { ArticleTS } from 'components/article/types';
+import type { ArticleData } from 'components/article/types';
 import { ArticleLayout } from 'layouts/article';
 import { blurImage } from 'utils/blur-image';
 
-const ArticleItem = ({ articles, blurDataURL }: ArticleTS) => {
+const ArticleItem = ({ articles, blurDataURL }: ArticleData) => {
   if (!articles) return null;
 
-  const { theme } = useThemeStore() as any;
+  const { theme } = useTheme();
 
   const router = useRouter() as unknown as { asPath: string };
 
@@ -44,19 +44,26 @@ const ArticleItem = ({ articles, blurDataURL }: ArticleTS) => {
         <CSS.ArticleContainer>
           <CSS.ArticleMarkdownContainer>
             <CSS.ArticleHeader>
-              <Link href="/blog">
-                <CSS.BackToOverview type="button" aria-label="Back to overview">
-                  <AiOutlineArrowLeft size={19} aria-hidden="true" />
-                  <p>Back to overview</p>
-                </CSS.BackToOverview>
-              </Link>
-              <CSS.DateTimeRead>
-                <AiOutlineCalendar size={17} />
-                {publishedAt}
-                &nbsp;|&nbsp;
-                <RiTimer2Line size={17} />
-                {readTime}
-              </CSS.DateTimeRead>
+              <div>
+                <CSS.InfoHeader>
+                  <Link href="/blog">
+                    <CSS.BackToOverview type="button" aria-label="Back to overview">
+                      <AiOutlineArrowLeft size={19} aria-hidden="true" />
+                      <p>Back to overview</p>
+                    </CSS.BackToOverview>
+                  </Link>
+                  <div>
+                    <CSS.DateTimeRead>
+                      <AiOutlineCalendar size={17} />
+                      {publishedAt}
+                      &nbsp;|&nbsp;
+                      <RiTimer2Line size={17} />
+                      {readTime}
+                    </CSS.DateTimeRead>
+                  </div>
+                </CSS.InfoHeader>
+              </div>
+
               <CSS.ArticleTitle>{article?.attributes?.title}</CSS.ArticleTitle>
               <CSS.ArticleDescription>
                 {article?.attributes?.description}

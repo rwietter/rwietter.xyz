@@ -16,18 +16,19 @@ import { RiHome3Line } from 'react-icons/ri';
 import { RxPerson } from 'react-icons/rx';
 import { BiCodeCurly } from 'react-icons/bi';
 import { SlHeart, SlSocialGithub, SlSocialTwitter } from 'react-icons/sl';
+import { SiSubstack } from 'react-icons/si';
 import { TbBrandTelegram } from 'react-icons/tb';
 import {
   Positioner, Action, Animator, GroupName, Kbd, Search, Shortcut, Box,
 } from './styles';
 
 type ResultItemProps = {
-    action: {
-      name: string;
-      shortcut: string[] | undefined;
-      icon: ReactNode;
-    };
-    active: boolean;
+  action: {
+    name: string;
+    shortcut: string[] | undefined;
+    icon: ReactNode;
+  };
+  active: boolean;
 };
 
 const ResultItem = ({ action }: ResultItemProps) => (
@@ -64,7 +65,7 @@ const RenderResults = () => {
 };
 
 type Props = {
-    children: ReactNode;
+  children: ReactNode;
 };
 
 export const CommandBar = ({ children }: Props) => {
@@ -76,7 +77,7 @@ export const CommandBar = ({ children }: Props) => {
 
   const actions: KBarAction[] = [
     {
-      id: 'copy',
+      id: 'Copy',
       name: 'Copy Link',
       shortcut: ['l'],
       keywords: 'copy-link',
@@ -94,7 +95,7 @@ export const CommandBar = ({ children }: Props) => {
       icon: <MdOutlineAlternateEmail size={18} color="var(--colors-gray50)" />,
     },
     {
-      id: 'home',
+      id: 'Home',
       name: 'Home',
       shortcut: ['h'],
       keywords: 'go-home',
@@ -112,7 +113,7 @@ export const CommandBar = ({ children }: Props) => {
       icon: <SlHeart size={18} color="var(--colors-gray50)" />,
     },
     {
-      id: 'about',
+      id: 'About',
       name: 'About',
       shortcut: ['a'],
       keywords: 'go-about',
@@ -121,7 +122,7 @@ export const CommandBar = ({ children }: Props) => {
       icon: <RxPerson size={18} color="var(--colors-gray50)" />,
     },
     {
-      id: 'projects',
+      id: 'Projects',
       name: 'Projects',
       shortcut: ['p'],
       keywords: 'go-projects',
@@ -137,6 +138,15 @@ export const CommandBar = ({ children }: Props) => {
       section: 'Social',
       perform: () => window.open('https://github.com/rwietter', '_blank'),
       icon: <SlSocialGithub size={18} color="var(--colors-gray50)" />,
+    },
+    {
+      id: 'Substack',
+      name: 'Substack',
+      shortcut: ['s'],
+      keywords: 'substack',
+      section: 'Social',
+      perform: () => window.open('https://rwietter.substack.com/', '_blank'),
+      icon: <SiSubstack size={18} color="var(--colors-gray50)" />,
     },
     {
       id: 'Twitter',

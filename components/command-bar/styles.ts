@@ -12,6 +12,7 @@ const Positioner = styled(KBarPositioner, {
   background: '$kbarBackground',
   boxSizing: 'border-box',
   zIndex: 4,
+  fontFamily: 'Futura Std, sans-serif',
   '--fluid-type-min': '1rem',
   '--fluid-type-max': '1.2rem',
   '--fluid-type-target': '3vw',
@@ -54,6 +55,8 @@ const Action = styled('div', {
   display: 'flex',
   gap: '8px',
   alignItems: 'center',
+  '--fluid-type-min': '1rem',
+  '--fluid-type-max': '1.15rem',
 
   svg: {
     color: '$gray50',

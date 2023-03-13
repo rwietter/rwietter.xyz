@@ -1,5 +1,7 @@
 // @type {import('next').NextConfig}
 const withImages = require('next-images');
+const { withPlaiceholder } = require('@plaiceholder/next');
+
 const withPWA = require('next-pwa')({
   dest: 'public',
 });
@@ -23,8 +25,8 @@ const nextConfig = withImages({
   },
 
   experimental: {
-    appDir: true,
+    appDir: false,
   },
 });
 
-module.exports = withPWA(nextConfig);
+module.exports = withPWA(withPlaiceholder(nextConfig));

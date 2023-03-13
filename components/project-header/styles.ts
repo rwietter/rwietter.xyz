@@ -6,6 +6,7 @@ export const Header = styled('section', {
   justifyContent: 'center',
   alignItems: 'center',
   color: '$gray50',
+  fontFamily: 'Futura Std, sans-serif',
 });
 
 export const Title = styled('h1', {

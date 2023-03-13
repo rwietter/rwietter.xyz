@@ -4,7 +4,7 @@ const ellipsis = {
   textDecoration: 'none',
   textOverflow: 'ellipsis',
   width: '100%',
-  maxWidth: 'calc(100% - 60px)',
+  maxWidth: '350px',
   whiteSpace: 'nowrap',
   overflow: 'hidden',
 };
@@ -46,10 +46,6 @@ export const PlayingArtist = styled('div', {
   color: '$gray50',
   transition: '$transitonTheme',
 
-  p: {
-    wordBreak: 'break-word',
-  },
-
   '.play a': {
     display: 'flex',
     alignItems: 'center',
@@ -58,6 +54,7 @@ export const PlayingArtist = styled('div', {
     color: '$gray50',
     paddingTop: '1rem',
     transition: '$transitonTheme',
+    fontFamily: 'Futura Std, sans-serif',
     '--fluid-type-min': '0.9rem',
     '--fluid-type-max': '1rem',
     '--fluid-type-target': '0.8vw',
@@ -86,7 +83,7 @@ export const PlayingSpot = styled('div', {
   alignItems: 'center',
 
   span: {
-    fontFamily: 'Roboto Flex, sans-serif',
+    fontFamily: 'Futura Std, sans-serif',
     letterSpacing: '0.02em',
     marginLeft: '.5rem',
     ...ellipsis,

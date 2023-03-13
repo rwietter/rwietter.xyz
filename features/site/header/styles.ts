@@ -50,6 +50,7 @@ export const Nav = styled('nav', {
     textDecoration: 'none',
     fontWeight: 200,
     position: 'relative',
+    fontFamily: 'Futura Std, sans-serif',
     transition: 'color 0.2s ease',
     '--fluid-type-min': '1rem',
     '--fluid-type-max': '1.3rem',

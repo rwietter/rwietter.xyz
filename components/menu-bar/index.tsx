@@ -5,14 +5,14 @@ import { VscHome } from 'react-icons/vsc';
 import { AiOutlineArrowUp } from 'react-icons/ai';
 import { BsCommand } from 'react-icons/bs';
 
-import { ThemeStore, useThemeStore } from 'store/switch-theme';
+import { useTheme } from 'store/switch-theme';
 import { Dark } from 'components/icons/Dark';
 import { Light } from 'components/icons/Light';
 import { useKBar } from 'kbar';
 import * as S from './styles';
 
 const MenuBar = () => {
-  const themeStore = useThemeStore() as ThemeStore;
+  const themeStore = useTheme();
   const { query } = useKBar();
 
   const handleToTop = () => {
