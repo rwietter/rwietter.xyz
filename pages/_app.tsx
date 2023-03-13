@@ -2,7 +2,7 @@
 import type { AppProps } from 'next/app';
 import { ApolloProvider } from '@apollo/react-hooks';
 import apolloClient from 'utils/apollo-client';
-import '../styles/prism-shades-of-purple.css';
+import '../styles/prism-nord.css';
 import '../styles/styles.css';
 import { LoadingIndicator } from 'components/loading';
 import { useEffect } from 'react';

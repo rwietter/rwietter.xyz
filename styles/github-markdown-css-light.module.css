@@ -852,7 +852,6 @@
   padding: 0.01em 0.25em;
   margin: 0;
   font-size: 85%;
-  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   font-family: "Fantasque Sans Mono", monospace, sans-serif !important;
   font-weight: 200 !important;
@@ -860,7 +859,12 @@
   font-feature-settings: "ss01" on,
     "ss02" on,
     "ss03" on !important;
-  --fluid-type-max: 1.2rem;
+}
+
+.markdown-body p code {
+  font-style: italic;
+  transition: background-color 0.2s ease;
+  background-color: #eaeaea;
 }
 
 .markdown-body pre code span {
