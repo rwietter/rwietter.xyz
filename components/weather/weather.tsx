@@ -33,10 +33,9 @@ export const WeatherConditions: FC<WeatherConditionsProps> = ({ weather }) => {
         <S.Weather>
           <div>
             <RiSunCloudyLine size={18} />
-            <span> &nbsp; Its currently &nbsp;</span>
             <strong>
+              &nbsp;
               {data?.Temperature?.Metric?.Value}
-              {' '}
               °C &nbsp;
             </strong>
           </div>

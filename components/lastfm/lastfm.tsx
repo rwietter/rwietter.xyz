@@ -27,7 +27,7 @@ export const LastFMTrack: FC<LastFmTrackProps> = ({ lastFm }) => {
       <S.PlayingArtist>
         <S.PlayingSpot>
           <BsSpotify size={19} color="#1DB954" />
-          <span>
+          <span className="artist">
             {track.artist['#text']}
           </span>
         </S.PlayingSpot>
@@ -35,7 +35,7 @@ export const LastFMTrack: FC<LastFmTrackProps> = ({ lastFm }) => {
         <p className="play">
           <a href={track.url} target="_blank" rel="noreferrer">
             <TbPlayerPause size={19} />
-            <strong>{track.name}</strong>
+            <strong className="song">{track.name}</strong>
           </a>
         </p>
       </S.PlayingArtist>

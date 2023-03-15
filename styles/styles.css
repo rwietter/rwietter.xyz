@@ -1,5 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/futura-std-4');
 
+
+
 @supports (font-variation-settings: normal) {
 	:root {
 		font-variant-ligatures: 'common-ligatures';
@@ -114,5 +116,5 @@ li,
 tt {
 	font-size: clamp(var(--fluid-type-min, 1rem),
 			calc(1rem + var(--fluid-type-target, 3vw)),
-			var(--fluid-type-max, 1.5rem)) !important;
+			var(--fluid-type-max, 1.2rem)) !important;
 }

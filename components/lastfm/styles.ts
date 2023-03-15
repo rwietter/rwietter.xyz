@@ -4,7 +4,7 @@ const ellipsis = {
   textDecoration: 'none',
   textOverflow: 'ellipsis',
   width: '100%',
-  maxWidth: '350px',
+  maxWidth: '200px',
   whiteSpace: 'nowrap',
   overflow: 'hidden',
 };
@@ -61,11 +61,18 @@ export const PlayingArtist = styled('div', {
     '&:hover': {
       color: '$primary',
     },
-    strong: {
+    '.artist': {
       all: 'unset',
       paddingLeft: '.2rem',
       ...ellipsis,
     },
+  },
+
+  '.song': {
+    all: 'unset',
+    paddingLeft: '.2rem',
+    fontFamily: 'Futura Std, sans-serif',
+    ...ellipsis,
   },
 
   '@bp1': {

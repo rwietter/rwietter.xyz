@@ -31,10 +31,10 @@ export const Container = styled('section', {
     fontWeight: 200,
     transition: '$transitonTheme',
     '--fluid-type-min': '1rem',
-    '--fluid-type-max': '1.3rem',
+    '--fluid-type-max': '1.1rem',
 
-    '@bp2': {
-      fontSize: '$4',
+    '@bp3': {
+      '--fluid-type-max': '1.3rem',
     },
   },
 });

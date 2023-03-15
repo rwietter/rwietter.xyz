@@ -155,6 +155,10 @@ export const Article = styled('article', {
 export const ArticleMarkdown = styled(ReactMarkdown, {
   paddingTop: '$6',
   lineHeight: '1.8',
-  '--fluid-type-max': '1.25rem',
+  '--fluid-type-max': '1rem',
   '--fluid-type-min': '1rem',
+
+  '@bp4': {
+    '--fluid-type-max': '1.1rem',
+  },
 });
