@@ -2,6 +2,7 @@
 import type { AppProps } from 'next/app';
 import { ApolloProvider } from '@apollo/react-hooks';
 import apolloClient from 'utils/apollo-client';
+import { Analytics } from '@vercel/analytics/react';
 import '../styles/prism-nord.css';
 import '../styles/styles.css';
 import { LoadingIndicator } from 'components/loading';
@@ -38,6 +39,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <LoadingIndicator />
       <ApolloProvider client={apolloClient as any}>
         <Component {...pageProps} />
+        <Analytics />
       </ApolloProvider>
     </CommandBar>
   );

@@ -1,5 +1,5 @@
 {
-  "name": "next-pwa-example",
+  "name": "next-pwa-1",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -20,6 +20,7 @@
     "@plaiceholder/next": "^2.5.0",
     "@radix-ui/colors": "^0.1.8",
     "@stitches/react": "^1.2.8",
+    "@vercel/analytics": "^1.0.0",
     "apollo-boost": "^0.4.9",
     "apollo-cache-inmemory": "^1.6.6",
     "apollo-client": "^2.6.10",
