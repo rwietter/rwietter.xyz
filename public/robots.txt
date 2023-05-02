@@ -23,7 +23,7 @@ User-agent: DuckDuckBot
 Allow: /*
 
 # Host
-Host: https://rwietter.xyz/
+Host: https://rwietterc.xyz/
 
 # Sitemaps
-Sitemap: https://rwietter.xyz/sitemap.xml
+Sitemap: https://rwietterc.xyz/sitemap.xml
