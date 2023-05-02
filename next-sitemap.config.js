@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://rwietter.xyz/',
+  siteUrl: process.env.SITE_URL || 'https://rwietterc.xyz/',
   generateRobotsTxt: true,
   robotsTxtOptions: {
     policies: [
