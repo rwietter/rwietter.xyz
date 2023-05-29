@@ -3,15 +3,16 @@ import type { AppProps } from 'next/app';
 import { ApolloProvider } from '@apollo/react-hooks';
 import apolloClient from 'utils/apollo-client';
 import { Analytics } from '@vercel/analytics/react';
-import '../styles/prism-nord.css';
-import '../styles/styles.css';
 import { LoadingIndicator } from 'components/loading';
 import { useEffect } from 'react';
 import { useTheme } from 'store/switch-theme';
 import { applyTheme } from 'utils/apply-theme';
 import Prism from 'prismjs';
 import { CommandBar } from 'components/command-bar';
-// import NonSSRWrapper from 'components/lazy';
+
+import '../styles/prism-nord.css';
+import '../styles/styles.css';
+import '../styles/shadow-icon.css';
 
 require('prismjs/components/prism-typescript');
 require('prismjs/components/prism-javascript');

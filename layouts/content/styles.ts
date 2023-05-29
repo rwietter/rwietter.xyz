@@ -13,4 +13,24 @@ export const LayoutCSS = styled('main', {
   margin: '0 auto',
   paddingBottom: '4rem',
   paddingTop: '1rem',
+
+  variants: {
+    layout: {
+      small: {
+        maxWidth: '60rem',
+      },
+      medium: {
+        maxWidth: '70rem',
+      },
+      large: {
+        maxWidth: '80rem',
+      },
+      full: {
+        maxWidth: '100%',
+      },
+      default: {
+        maxWidth: '60rem',
+      },
+    },
+  },
 });

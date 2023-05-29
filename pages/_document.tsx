@@ -24,7 +24,7 @@ export default class extends Document {
 
           <link rel="stylesheet dns-prefetch preconnect" href="https://fonts.cdnfonts.com/css/fantasque-sans-mono" />
           <link rel="stylesheet dns-prefetch preconnect" href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap" />
-          <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;800&display=swap" rel="stylesheet" />
           <meta name="application-name" content={APP_NAME} />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-status-bar-style" content="default" />

@@ -1,7 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/futura-std-4');
 
-
-
 @supports (font-variation-settings: normal) {
 	:root {
 		font-variant-ligatures: 'common-ligatures';

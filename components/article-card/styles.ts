@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { styled } from 'styles/theme';
+import { styled } from '../../styles/theme';
 
 export const CardContainer = styled('section', {
   maxWidth: '350px',
@@ -19,7 +19,7 @@ export const PostTitle = styled('p', {
   lineHeight: '1.2',
   paddingTop: '.5rem',
   fontWeight: 600,
-  fontFamily: 'Futura Std, sans-serif',
+  fontFamily: 'Raleway, sans-serif',
   '--fluid-type-min': '1.1rem',
   '--fluid-type-max': '1.6rem',
 });
@@ -36,6 +36,12 @@ export const CardInformations = styled('section', {
     lineHeight: '1.3',
     fontFamily: 'Futura Std, sans-serif',
     fontWeight: 200,
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    maxWidth: 'max-content',
+    width: '100%',
+    display: 'block',
     '--fluid-type-max': '1.2rem',
   },
 

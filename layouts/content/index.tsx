@@ -5,12 +5,13 @@ import { ContainerCSS, LayoutCSS } from './styles';
 
 interface LayoutProps {
   children: ReactNode;
+  layout?: 'small' | 'medium' | 'large' | 'full';
 }
 
-const Layout: FC<LayoutProps> = ({ children }) => (
+const Layout: FC<LayoutProps> = ({ children, layout = 'small' }) => (
   <ContainerCSS>
     <Header />
-    <LayoutCSS>
+    <LayoutCSS layout={layout}>
       {children}
     </LayoutCSS>
     <MenuBar />

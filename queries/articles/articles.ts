@@ -8,6 +8,7 @@ const ARTICLES_QUERY = gql`
           slug
           title
           description
+          publishedAt
           category {
             data {
               attributes {

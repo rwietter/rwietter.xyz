@@ -6,6 +6,7 @@ import type { GetStaticProps } from 'next';
 import { ARTICLES_QUERY } from 'queries/articles/articles';
 import apolloClient from 'utils/apollo-client';
 import { blurImage } from 'utils/blur-image';
+import { IArticles } from 'types/articles';
 
 const Blog: FC<any> = ({ articles }) => (
   <>
@@ -16,7 +17,7 @@ const Blog: FC<any> = ({ articles }) => (
       description="My blog, where I write about my experiences, my projects, and my life. :)"
       image="https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png"
     />
-    <Layout>
+    <Layout layout="large">
       <Articles articles={articles} />
     </Layout>
   </>
@@ -30,7 +31,7 @@ export const getStaticProps: GetStaticProps = async () => {
   if (loading) return { props: { articles: null } };
   if (errors) return { props: { articles: null } };
 
-  const articles = data.articles.data.map(async (article: any) => {
+  const articles: IArticles[] = data.articles.data.map(async (article: any) => {
     const image = await blurImage(article?.attributes?.image?.data?.attributes?.url);
 
     return {
@@ -42,9 +43,17 @@ export const getStaticProps: GetStaticProps = async () => {
     };
   });
 
+  const articlesData: IArticles[] = await Promise.all(articles);
+
+  const reorderArticles = articlesData.sort((a, b) => {
+    const articleA: number = new Date(a.attributes.publishedAt).getTime();
+    const articleB: number = new Date(b.attributes.publishedAt).getTime();
+    return articleB - articleA;
+  });
+
   return {
     props: {
-      articles: await Promise.all(articles),
+      articles: reorderArticles,
     },
     revalidate: 60,
   };
