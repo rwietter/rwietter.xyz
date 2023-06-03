@@ -1,6 +1,6 @@
-import { darkTheme, lightTheme } from 'styles/theme';
-import { TypeTheme } from '../types/theme';
+import { darkTheme, lightTheme } from 'features/ui/theme';
+import { EnvTheme } from 'features/ui/theme/ts';
 
-const getThemeProps = (currentTheme: TypeTheme) => (currentTheme === 'light' ? darkTheme : lightTheme);
+const getThemeProps = (currentTheme: EnvTheme) => (currentTheme === 'light' ? darkTheme : lightTheme);
 
 export { getThemeProps };

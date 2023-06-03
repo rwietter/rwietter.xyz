@@ -1,10 +1,7 @@
-import { ProjectHeader } from 'components/project-header';
-import { Project } from 'components/project';
 import SEO from 'components/SEO';
-import { projects } from 'features/projects/data';
-import { YearProjects } from 'components/year-projects';
-import * as S from 'features/projects/styles';
-import { Layout } from 'layouts/content';
+import { Wrapper } from 'features/projects/styles';
+import { ContentLayout } from 'features/ui/layouts';
+import { YearProjects, TopProjects, ProjectHeader } from 'features/projects';
 
 const Page = () => (
   <>
@@ -15,17 +12,13 @@ const Page = () => (
       description="Here, in this page, you can find some of my favorite projects. I hope you enjoy it. :)"
       image="https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png"
     />
-    <Layout>
-      <S.Wrapper>
+    <ContentLayout layout="small">
+      <Wrapper>
         <ProjectHeader />
-        <S.Grid>
-          {projects.map((project) => (
-            <Project key={project.link} project={project} />
-          ))}
-        </S.Grid>
-      </S.Wrapper>
-      <YearProjects />
-    </Layout>
+        <TopProjects />
+        <YearProjects />
+      </Wrapper>
+    </ContentLayout>
   </>
 );
 

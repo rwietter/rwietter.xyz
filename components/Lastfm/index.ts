@@ -1,0 +1,1 @@
+export { LastFMTrack } from './lastfm';

@@ -1,15 +1,12 @@
-// import { FooterComponent } from 'components/footer';
 import SEO from 'components/SEO';
 // import { LastPosts } from 'features/site/last-posts';
+// import { LAST_ARTICLES_QUERY } from 'queries/articles/articles';
+// import apolloClient from 'utils/apollo-client';
 import type { GetStaticProps, NextPage } from 'next';
-import { Layout } from 'layouts/content';
-import { LAST_ARTICLES_QUERY } from 'queries/articles/articles';
-import apolloClient from 'utils/apollo-client';
+import { ContentLayout } from 'features/ui/layouts';
 import type { LastArticles } from 'queries/article/article';
-import AuthorContent from 'features/site/author-content';
-import AuthorHeader from 'features/site/author-header';
-import { Padding } from 'components/padding';
-// import NonSSRWrapper from 'components/lazy';
+import { AuthorContent, AuthorHeader } from 'features/home';
+import { Container } from 'features/home/styles';
 
 interface HomeProps {
   lastArticles?: LastArticles;
@@ -26,13 +23,13 @@ const Home: NextPage<HomeProps> = ({ lastFm, weather }: any) => (
       description="This blog is about my journey as a Software Engineer. Here do you find my thoughts, ideas, and experiences. I hope you enjoy it."
       image="https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png"
     />
-    <Layout>
-      <Padding>
+    <ContentLayout layout="small">
+      <Container>
         <AuthorHeader />
         <AuthorContent lastFm={lastFm} weather={weather} />
         {/* <LastPosts lastArticles={lastArticles} /> */}
-      </Padding>
-    </Layout>
+      </Container>
+    </ContentLayout>
   </>
 );
 
@@ -45,16 +42,16 @@ const API_WEATHER = `https://dataservice.accuweather.com/currentconditions/v1/${
 const fetcherWeather = () => fetch(API_WEATHER).then((res) => res.json());
 
 export const getStaticProps: GetStaticProps = async () => {
-  const data = await apolloClient.query({
-    query: LAST_ARTICLES_QUERY,
-  });
+  // const data = await apolloClient.query({
+  //   query: LAST_ARTICLES_QUERY,
+  // });
 
   const lastFm = await fetcherLastFm();
   const weather = await fetcherWeather();
 
   return {
     props: {
-      lastArticles: data.data.articles,
+      // lastArticles: data.data.articles,
       lastFm,
       weather,
     },

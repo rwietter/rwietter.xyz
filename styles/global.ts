@@ -6,26 +6,30 @@ export const globalStyles = globalCss({
     padding: 0,
     boxSizing: 'border-box',
     fontVariantLigatures: 'common-ligatures',
-    scrollbarWidth: 'auto',
-    scrollbarColor: '#ff80bf #151417',
   },
   '::-webkit-scrollbar': {
-    width: '0.3rem',
-    height: '0.5rem',
+    width: '0.5rem',
+    height: '0.6rem',
   },
   '::-webkit-scrollbar-track': {
-    background: '#151417',
+    background: 'var(--colors-gray300)',
+    transition: 'background 350ms ease 0s',
   },
   '::-webkit-scrollbar-thumb': {
     borderRadius: '50rem',
-    background: '#ff80bf',
+    background: 'var(--colors-scrollbar)',
+    transition: 'background 350ms ease 0s',
   },
   '::-webkit-scrollbar-thumb:hover': {
-    background: '#ff80bf',
+    background: 'var(--colors-scrollbar)',
+    transition: 'background 350ms ease 0s',
   },
   body: {
     background: 'var(--colors-background)',
     transition: '$transitonTheme',
     scrollBehavior: 'smooth',
+    WebkitFontSmoothing: 'antialiased',
+    MozOsxFontSmoothing: 'grayscale',
+    textRendering: 'optimizeLegibility',
   },
 });

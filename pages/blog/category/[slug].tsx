@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 import CATEGORY_ARTICLES_QUERY from 'queries/category/articles';
 import apolloClient from 'utils/apollo-client';
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { Articles } from 'components/articles';
 import CATEGORIES_QUERY from 'queries/category/categories';
 import SEO from 'components/SEO';
+import { BlogPosts } from 'features/blog';
 
 const Category: FC<any> = ({ categories }) => {
   if (!categories) return <div />;
@@ -20,7 +20,7 @@ const Category: FC<any> = ({ categories }) => {
         description="The category page of the blog. Here, you can find all the articles of the category. :)"
         image="https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png"
       />
-      <Articles articles={attributes?.articles?.data} />
+      <BlogPosts articles={attributes?.articles?.data} />
     </>
   );
 };

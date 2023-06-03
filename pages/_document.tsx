@@ -2,10 +2,10 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 /* eslint-disable react/no-danger */
 /* eslint-disable no-return-await */
+import { getCssText } from 'features/ui/theme';
 import Document, {
   Html, Head, Main, NextScript,
 } from 'next/document';
-import { getCssText } from 'styles/theme';
 
 const APP_NAME = 'rwietter';
 
@@ -20,7 +20,6 @@ export default class extends Document {
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-          <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet" />
 
           <link rel="stylesheet dns-prefetch preconnect" href="https://fonts.cdnfonts.com/css/fantasque-sans-mono" />
           <link rel="stylesheet dns-prefetch preconnect" href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap" />

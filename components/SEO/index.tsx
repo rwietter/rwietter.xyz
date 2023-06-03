@@ -1,6 +1,4 @@
-/* eslint-disable react/no-danger */
 /* eslint-disable react/no-unused-prop-types */
-/* eslint-disable react/require-default-props */
 import { FC } from 'react';
 import { NextSeo } from 'next-seo';
 

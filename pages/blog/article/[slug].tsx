@@ -6,7 +6,7 @@ import markdownLight from 'styles/github-markdown-css-light.module.css';
 import markdownDark from 'styles/github-markdown-css-dark.module.css';
 import { AiOutlineArrowLeft, AiOutlineCalendar } from 'react-icons/ai';
 import { RiTimer2Line } from 'react-icons/ri';
-import * as CSS from 'components/article/styled';
+import * as CSS from 'features/article/styles';
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import { ARTICLES_QUERY } from 'queries/articles/articles';
 import apolloClient from 'utils/apollo-client';
@@ -14,10 +14,10 @@ import { getReadingTime } from 'utils/getTimeReading';
 import { getLocaleDate } from 'utils/get-locale-date';
 import SEO from 'components/SEO';
 import Link from 'next/link';
-import ArticleFooter from 'components/article-footer';
-import type { ArticleData } from 'components/article/types';
-import { ArticleLayout } from 'layouts/article';
+import { ArticleLayout } from 'features/ui/layouts';
 import { blurImage } from 'utils/blur-image';
+import { ArticleData } from 'features/article/ts';
+import { ArticleFooter } from 'features/article';
 
 const ArticleItem = ({ articles, blurDataURL }: ArticleData) => {
   if (!articles) return null;

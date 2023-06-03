@@ -1,12 +1,12 @@
 import type { FC } from 'react';
 import SEO from 'components/SEO';
-import { Layout } from 'layouts/content';
-import { Articles } from 'components/articles';
+import { ContentLayout } from 'features/ui/layouts';
 import type { GetStaticProps } from 'next';
 import { ARTICLES_QUERY } from 'queries/articles/articles';
 import apolloClient from 'utils/apollo-client';
 import { blurImage } from 'utils/blur-image';
-import { IArticles } from 'types/articles';
+import { BlogPosts } from 'features/blog';
+import { IArticles } from 'features/blog/ts';
 
 const Blog: FC<any> = ({ articles }) => (
   <>
@@ -17,9 +17,9 @@ const Blog: FC<any> = ({ articles }) => (
       description="My blog, where I write about my experiences, my projects, and my life. :)"
       image="https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png"
     />
-    <Layout layout="large">
-      <Articles articles={articles} />
-    </Layout>
+    <ContentLayout layout="large">
+      <BlogPosts articles={articles} />
+    </ContentLayout>
   </>
 );
 
