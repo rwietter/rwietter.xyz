@@ -34,7 +34,7 @@
 .markdown-body code,
 .markdown-body kbd,
 .markdown-body samp {
-  font-family: 'Fantasque Sans Mono', monospace;
+  font-family: 'Dank Mono', monospace;
 }
 
 .markdown-body p:has(img) {
@@ -856,7 +856,7 @@
   margin: 0;
   font-size: 85%;
   border-radius: 6px;
-  font-family: "Fantasque Sans Mono", monospace, sans-serif !important;
+  font-family: "Dank Mono", monospace, sans-serif !important;
   font-weight: 200 !important;
   font-variant-ligatures: common-ligatures !important;
   font-feature-settings: "ss01" on,
@@ -871,7 +871,7 @@
 }
 
 .markdown-body pre code span {
-  font-family: "Fantasque Sans Mono", monospace, sans-serif !important;
+  font-family: "Dank Mono", monospace, sans-serif !important;
   font-weight: 200 !important;
   font-variant-ligatures: common-ligatures !important;
   font-feature-settings: "ss01" on,
