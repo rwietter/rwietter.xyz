@@ -5,6 +5,7 @@ import { CiStar, CiHome } from 'react-icons/ci';
 import { BsCodeSlash } from 'react-icons/bs';
 import { MdWbSunny } from 'react-icons/md';
 import { IoMdMoon } from 'react-icons/io';
+import { VscSymbolArray } from 'react-icons/vsc';
 
 import * as St from './styles';
 
@@ -39,6 +40,10 @@ const Header = () => {
         <div className={activeLink(pathname, '/projects')}>
           <BsCodeSlash aria-hidden="true" size={18} color="var(--colors-gray50)" />
           <Link href="/projects">projects</Link>
+        </div>
+        <div className={activeLink(pathname, '/setup')}>
+          <VscSymbolArray aria-hidden="true" size={18} color="var(--colors-gray50)" />
+          <Link href="/setup">setup</Link>
         </div>
       </St.Nav>
       <St.DarkMode type="button" aria-label="toggle change theme" name="Enable dark mode" onClick={handleSwitchTheme}>
