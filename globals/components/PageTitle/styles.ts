@@ -17,7 +17,7 @@ export const Title = styled('h1', {
   fontWeight: 600,
 
   '--fluid-type-min': '1.2rem',
-  '--fluid-type-max': '2.5rem',
+  '--fluid-type-max': '2rem',
   '--fluid-type-target': '5vw',
 
   variants: {

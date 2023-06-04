@@ -1,0 +1,1 @@
+export { useRealTimeSearch } from './useSearch';
