@@ -23,9 +23,8 @@ function useRealTimeSearch<T>(dataset: T[]): UseRealTimeSearchResult<T> {
     const filteredResults = dataset.filter((char: any) => {
       const type = char.type.toLowerCase();
       const word = char.name.toLowerCase();
-      const url = char.url.toLowerCase();
 
-      return word.includes(searchQuery) || type.includes(searchQuery) || url.includes(searchQuery);
+      return word.includes(searchQuery) || type.includes(searchQuery);
     });
 
     setResults(filteredResults);

@@ -16,13 +16,54 @@ export const Header = styled('header', {
 export const Nav = styled('nav', {
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'space-between',
+  justifyContent: 'flex-start',
+  flexFlow: 'wrap',
   color: '$gray50',
   fontWeight: 600,
-  'div.active': {
+
+  a: {
+    color: '$gray50',
+    textDecoration: 'none',
+    fontWeight: 200,
+    paddingLeft: '0.4rem',
+    position: 'relative',
+    fontFamily: 'Futura Std, sans-serif',
+    transition: 'color 0.2s ease',
+    '--fluid-type-min': '1rem',
+    '--fluid-type-max': '1.3rem',
+    '--fluid-type-target': '2vw',
+  },
+
+  '@bp2': {
+    flexFlow: 'nowrap',
+    justifyContent: 'space-between',
+  },
+});
+
+export const NavIterm = styled('div', {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  position: 'relative',
+  lineHeight: 1.8,
+
+  '&:not(:last-child)': {
+    marginRight: '1rem',
+  },
+
+  'a, svg': {
+    color: '$weakColorText !important',
+  },
+
+  '&.active a, &.active svg': {
+    color: '$gray50 !important',
+  },
+
+  '&.active': {
     'a::after': {
       position: 'absolute',
       content: '',
+      display: 'none',
       width: '8px',
       height: '8px',
       background: '$primary',
@@ -30,31 +71,18 @@ export const Nav = styled('nav', {
       transform: 'translateX(-45%)',
       top: '-10px',
       right: '-10px',
+
+      '@bp2': {
+        display: 'inline-block',
+      },
     },
   },
 
-  div: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    position: 'relative',
-  },
-
-  'div + div': {
-    paddingLeft: '1.3rem',
-  },
-
-  a: {
-    color: '$gray50',
-    paddingLeft: '0.4rem',
-    textDecoration: 'none',
-    fontWeight: 200,
-    position: 'relative',
-    fontFamily: 'Futura Std, sans-serif',
-    transition: 'color 0.2s ease',
-    '--fluid-type-min': '1rem',
-    '--fluid-type-max': '1.3rem',
-    '--fluid-type-target': '2vw',
+  '@bp2': {
+    lineHeight: 'initial',
+    'a, svg': {
+      color: '$gray50 !important',
+    },
   },
 });
 
@@ -71,5 +99,6 @@ export const DarkMode = styled('button', {
 
   '@bp1': {
     display: 'flex',
+    alignItems: 'center',
   },
 });
