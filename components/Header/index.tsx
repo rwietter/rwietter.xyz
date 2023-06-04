@@ -7,7 +7,7 @@ import { MdWbSunny } from 'react-icons/md';
 import { IoMdMoon } from 'react-icons/io';
 import { VscSymbolArray } from 'react-icons/vsc';
 
-import * as St from './styles';
+import * as S from './styles';
 
 const activeLink = (pathname: string, href: string, article?: string) => {
   let isActive = '';
@@ -27,29 +27,29 @@ const Header = () => {
   const handleSwitchTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark');
 
   return (
-    <St.Header>
-      <St.Nav>
-        <div className={activeLink(pathname, '/')}>
+    <S.Header>
+      <S.Nav>
+        <S.NavIterm className={activeLink(pathname, '/')}>
           <CiHome aria-hidden="true" size={19} color="var(--colors-gray50)" />
           <Link href="/">home</Link>
-        </div>
-        <div className={activeLink(pathname, '/blog', '/blog/article/')}>
+        </S.NavIterm>
+        <S.NavIterm className={activeLink(pathname, '/blog', '/blog/article/')}>
           <CiStar aria-hidden="true" size={19} color="var(--colors-gray50)" />
           <Link href="/blog">blog</Link>
-        </div>
-        <div className={activeLink(pathname, '/projects')}>
+        </S.NavIterm>
+        <S.NavIterm className={activeLink(pathname, '/projects')}>
           <BsCodeSlash aria-hidden="true" size={18} color="var(--colors-gray50)" />
           <Link href="/projects">projects</Link>
-        </div>
-        <div className={activeLink(pathname, '/setup')}>
+        </S.NavIterm>
+        <S.NavIterm className={activeLink(pathname, '/setup')}>
           <VscSymbolArray aria-hidden="true" size={18} color="var(--colors-gray50)" />
           <Link href="/setup">setup</Link>
-        </div>
-      </St.Nav>
-      <St.DarkMode type="button" aria-label="toggle change theme" name="Enable dark mode" onClick={handleSwitchTheme}>
+        </S.NavIterm>
+      </S.Nav>
+      <S.DarkMode type="button" aria-label="toggle change theme" name="Enable dark mode" onClick={handleSwitchTheme}>
         {theme === 'dark' ? <IoMdMoon aria-hidden="true" /> : <MdWbSunny aria-hidden="true" />}
-      </St.DarkMode>
-    </St.Header>
+      </S.DarkMode>
+    </S.Header>
   );
 };
 

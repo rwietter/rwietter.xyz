@@ -14,10 +14,10 @@ export const Title = styled('h1', {
   backgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
   WebkitBoxDecorationBreak: 'clone',
-  fontWeight: 600,
+  fontWeight: 650,
 
-  '--fluid-type-min': '1.2rem',
-  '--fluid-type-max': '2rem',
+  '--fluid-type-min': '1.3rem',
+  '--fluid-type-max': '1.8rem',
   '--fluid-type-target': '5vw',
 
   variants: {

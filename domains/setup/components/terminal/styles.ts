@@ -2,6 +2,7 @@ import { styled } from 'features/ui/theme';
 
 export const Terminal = styled('code', {
   borderRadius: '8px',
+  borderTopRightRadius: '0',
   background: '#131523',
   padding: '10px',
   transition: '$transitonTheme',
@@ -19,7 +20,7 @@ export const Terminal = styled('code', {
 
   button: {
     background: '#131523',
-    padding: '.3rem 1rem',
+    padding: '.3rem 1.5rem',
     borderTopRightRadius: '8px',
     borderTopLeftRadius: '8px',
     outline: 'none',
@@ -28,9 +29,11 @@ export const Terminal = styled('code', {
     position: 'absolute',
     right: '0',
     cursor: 'pointer',
-    top: '-26px',
+    top: '-24px',
     color: '$gray50',
-    '--fluid-type-max': '1rem',
+    '--fluid-type-min': '0.6rem',
+    '--fluid-type-target': '2vw',
+    '--fluid-type-max': '0.8rem',
     transition: '$transitonTheme',
 
     '&:hover': {

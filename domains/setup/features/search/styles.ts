@@ -1,14 +1,20 @@
 import { styled } from 'features/ui/theme';
 
 export const SearchContent = styled('section', {
+  alignItems: 'flex-start',
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'flex-start',
 
   nav: {
-    display: 'flex',
-    justifyContent: 'flex-start',
     alignItems: 'center',
+    display: 'flex',
+    flexFlow: 'wrap',
+    justifyContent: 'flex-start',
+    lineHeight: '1.8',
+
+    '@bp1': {
+      lineHeight: 'initial',
+    },
 
     a: {
       color: '$gray50',
@@ -27,16 +33,16 @@ export const InputSearch = styled('div', {
   width: '100%',
 
   input: {
-    marginTop: '0.5rem',
-    width: '100%',
-    outline: 'none',
-    border: '1px solid #8f9ba8',
-    fontSize: '1rem',
-    color: '$gray50',
     background: '$background',
+    border: '1px solid #8f9ba8',
     borderRadius: '8px',
+    color: '$gray50',
+    fontSize: '1rem',
+    marginTop: '0.5rem',
+    outline: 'none',
     padding: '10px',
     transition: '$transitonTheme',
+    width: '100%',
 
     '&::placeholder': {
       color: '$weakColorText',
@@ -45,8 +51,8 @@ export const InputSearch = styled('div', {
 });
 
 export const Description = styled('span', {
+  '--fluid-type-max': '1rem',
+  '--fluid-type-min': '.9rem',
   color: '$weakColorText',
   fontFamily: 'Futura Std, sans-serif',
-  '--fluid-type-min': '.9rem',
-  '--fluid-type-max': '1rem',
 });

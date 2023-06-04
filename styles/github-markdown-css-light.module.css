@@ -5,7 +5,7 @@
   color: #24292f;
   background-color: var(--colors-background);
   line-height: 2em;
-  font-weight: 400;
+  font-weight: 300;
   word-wrap: break-word;
   transition: color 150ms ease 0s, background 350ms ease 0s !important;
 }
@@ -94,6 +94,10 @@
   text-decoration: none;
 }
 
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
 .markdown-body a:active,
 .markdown-body a:hover {
   outline-width: 0;
@@ -107,6 +111,14 @@
 .markdown-body b,
 .markdown-body strong {
   font-weight: 300;
+}
+
+.markdown-body b,
+.markdown-body strong,
+.markdown-body code {
+  font-weight: 500;
+  transition: var(--transitions-transitonTheme);
+  color: var(--colors-gray50);
 }
 
 .markdown-body dfn {
