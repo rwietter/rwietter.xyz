@@ -3,23 +3,23 @@ import { styled } from 'features/ui/theme';
 export const Terminal = styled('code', {
   borderRadius: '8px',
   borderTopRightRadius: '0',
-  background: '#131523',
+  background: '$terminal',
   padding: '10px',
   transition: '$transitonTheme',
-  marginTop: '2.5rem !important',
+  marginTop: '2.8rem',
   display: 'block',
   position: 'relative',
 
   '&:hover': {
-    background: '#1a1a2e',
+    background: '$terminalHover',
 
     '& button': {
-      background: '#1a1a2e',
+      background: '$terminalHover',
     },
   },
 
   button: {
-    background: '#131523',
+    background: '$terminal',
     padding: '.3rem 1.5rem',
     borderTopRightRadius: '8px',
     borderTopLeftRadius: '8px',
@@ -37,7 +37,7 @@ export const Terminal = styled('code', {
     transition: '$transitonTheme',
 
     '&:hover': {
-      background: '#1a1a2e',
+      background: '$terminalHover',
     },
   },
 

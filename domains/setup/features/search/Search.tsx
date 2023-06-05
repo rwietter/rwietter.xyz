@@ -12,7 +12,7 @@ const Search: FC<SearchProps> = ({ handleInputChange }) => (
     <nav>
       <a href="#desk">#Desk</a>
       <a href="#softwares">#Softwares</a>
-      <a href="customization">#Customization</a>
+      <a href="#customization">#Customization</a>
     </nav>
 
     <S.InputSearch>

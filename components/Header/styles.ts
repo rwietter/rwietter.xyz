@@ -1,3 +1,4 @@
+import { keyframes } from '@stitches/react';
 import { styled } from 'features/ui/theme';
 
 export const Header = styled('header', {
@@ -7,9 +8,9 @@ export const Header = styled('header', {
   width: '100%',
   maxWidth: '57.6rem',
   margin: '0 auto',
-  padding: '2rem 1rem 0 1rem',
+  padding: '2rem 0 1rem 0',
   '@bp5': {
-    padding: '4rem 0 0 0',
+    padding: '4rem 0 1rem 0',
   },
 });
 
@@ -80,9 +81,15 @@ export const NavIterm = styled('div', {
 
   '@bp2': {
     lineHeight: 'initial',
-    'a, svg': {
-      color: '$gray50 !important',
-    },
+  },
+});
+
+const clickScaleAnimation = keyframes({
+  '0%': {
+    transform: 'scale(0)',
+  },
+  '100%': {
+    transform: 'scale(1)',
   },
 });
 
@@ -91,8 +98,6 @@ export const DarkMode = styled('button', {
   display: 'none',
   color: '$gray50',
   outline: 'none',
-  width: '2.3rem',
-  height: '2.3rem',
   border: 'none',
   cursor: 'pointer',
   fontFamily: 'Roboto Flex, sans-serif',
@@ -100,5 +105,9 @@ export const DarkMode = styled('button', {
   '@bp1': {
     display: 'flex',
     alignItems: 'center',
+  },
+
+  '& svg.dark, & svg.light': {
+    animation: `${clickScaleAnimation} 300ms linear`,
   },
 });

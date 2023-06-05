@@ -19,7 +19,7 @@ const Home: NextPage<HomeProps> = ({ lastFm, weather }: any) => (
     <SEO
       title="Mauricio Witter | Software Engineer"
       content="website"
-      url="https://rwietter.xyz"
+      url="https://rwietterc.xyz"
       description="This blog is about my journey as a Software Engineer. Here do you find my thoughts, ideas, and experiences. I hope you enjoy it."
       image="https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png"
     />

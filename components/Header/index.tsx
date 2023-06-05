@@ -47,7 +47,11 @@ const Header = () => {
         </S.NavIterm>
       </S.Nav>
       <S.DarkMode type="button" aria-label="toggle change theme" name="Enable dark mode" onClick={handleSwitchTheme}>
-        {theme === 'dark' ? <IoMdMoon aria-hidden="true" /> : <MdWbSunny aria-hidden="true" />}
+        {
+          theme === 'dark'
+            ? <IoMdMoon className="dark" aria-hidden="true" />
+            : <MdWbSunny className="light" aria-hidden="true" />
+        }
       </S.DarkMode>
     </S.Header>
   );

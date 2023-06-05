@@ -17,8 +17,8 @@ const ArticleFooter: FC<ArticleFooterProps> = ({
   author, category, name,
 }) => {
   const { asPath } = useRouter();
-  const tweetUrl = `http://twitter.com/share?text=I just read "${name}"&url=https://rwietter.xyz${asPath}&hashtags=${category}`;
-  const linkToSearchOnTwietter = `https://twitter.com/search?q=https://rwietter.xyz${asPath}`;
+  const tweetUrl = `http://twitter.com/share?text=I just read "${name}"&url=https://rwietterc.xyz${asPath}&hashtags=${category}`;
+  const linkToSearchOnTwietter = `https://twitter.com/search?q=https://rwietterc.xyz${asPath}`;
   return (
     <S.ArticleFooterContainer>
       <S.Separator />

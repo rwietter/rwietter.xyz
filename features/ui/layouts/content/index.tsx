@@ -9,11 +9,13 @@ interface LayoutProps {
 }
 
 const Layout: FC<LayoutProps> = ({ children, layout = 'small' }) => (
-  <LayoutCSS layout={layout}>
-    <Header />
-    {children}
+  <>
+    <LayoutCSS layout={layout}>
+      <Header />
+      {children}
+    </LayoutCSS>
     <StickyBar />
-  </LayoutCSS>
+  </>
 );
 
 export { Layout };

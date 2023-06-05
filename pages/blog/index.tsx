@@ -13,11 +13,11 @@ const Blog: FC<any> = ({ articles }) => (
     <SEO
       title="Blog | Maurício Witter | Software Engineer"
       content="blog"
-      url="https://rwietter.xyz/blog"
+      url="https://rwietterc.xyz/blog"
       description="My blog, where I write about my experiences, my projects, and my life. :)"
       image="https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png"
     />
-    <ContentLayout layout="large">
+    <ContentLayout layout="medium">
       <BlogPosts articles={articles} />
     </ContentLayout>
   </>

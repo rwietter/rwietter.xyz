@@ -2,58 +2,63 @@ import { SetupData } from '../types/setup-data';
 
 export const operationSystem: SetupData[] = [
   {
+    name: 'Operational System',
+    url: 'https://archlinux.org/download/',
+    type: 'Arch Linux',
+  },
+  {
     name: 'Monitor',
-    url: '',
+    url: '#',
     type: 'LG 19.5 HD 20M37AA',
   },
   {
     name: 'CPU',
-    url: '',
+    url: '#',
     type: 'Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz',
   },
   {
     name: 'GPU',
-    url: '',
+    url: '#',
     type: 'Intel Corporation HD Graphics 630',
   },
   {
     name: 'RAM',
-    url: '',
+    url: '#',
     type: 'Kingston 12GB DDR3 1600MHz',
   },
   {
     name: 'SSD',
-    url: '',
+    url: '#',
     type: 'Kingston A400 240GB',
   },
   {
     name: 'Motherboard',
-    url: '',
+    url: '#',
     type: 'PCWare IPMH110G-DDR3',
   },
   {
     name: 'Teclado',
-    url: '',
+    url: '#',
     type: 'Logitech K120',
   },
   {
     name: 'Mouse',
-    url: '',
+    url: '#',
     type: 'K-SNAKE Q5',
   },
   {
     name: 'Headset',
-    url: '',
+    url: '#',
     type: 'Onikuma K1-B',
   },
   {
     name: 'Mousepad',
-    url: '',
+    url: '#',
     type: 'Exbom RGB MP-LED3080',
   },
   {
     name: 'Cadeira',
-    url: '',
+    url: '#',
     type: 'Comfy Way Tela Mesh Preta, Base Giratória e Sistema Relax',
   },
 ];

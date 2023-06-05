@@ -49,6 +49,8 @@ const {
       shortcut: '#ddd',
       shortcutHover: '#fff',
       scrollbar: '#FFFFFF',
+      terminal: '#131523',
+      terminalHover: '#1a1a2e',
     },
     space: {
       1: '0.4rem',
@@ -148,6 +150,8 @@ const { theme: lightTheme } = createStitches({
       shortcut: '#eee',
       shortcutHover: '#bbb',
       scrollbar: '#bbb',
+      terminal: '#eee',
+      terminalHover: '#F4F4F6',
     },
     space: {
       1: '0.4rem',

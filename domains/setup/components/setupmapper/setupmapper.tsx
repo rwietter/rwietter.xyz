@@ -6,8 +6,8 @@ import * as S from './styles';
 
 interface SetupMapperProps {
   title: string;
-  id?: string;
-  data?: any;
+  id: string;
+  data: any;
 }
 
 const SetupMapper: FC<SetupMapperProps> = ({ data, title, id }) => (

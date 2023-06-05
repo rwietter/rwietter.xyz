@@ -11,6 +11,7 @@ import { SetupMapper } from './components/setupmapper';
 import { Search } from './features/search';
 import { useRealTimeSearch } from './hooks/useSearch';
 import { customization } from './data/customization';
+import { AUR, PACMAN } from './data/terminal';
 
 const Setup = () => {
   const { handleInputChange, results } = useRealTimeSearch(
@@ -19,13 +20,13 @@ const Setup = () => {
 
   const SetupInformation = useCallback(() => (
     results.length > 0 ? (
-      <SetupMapper title="Search Results" data={results} />
+      <SetupMapper title="Search Results" id="results" data={results} />
     ) : (
       <>
         <SetupMapper title="Operational System" id="desk" data={operationSystem} />
         <SetupMapper title="Softwares" id="softwares" data={tools} />
-        <Terminal text="sudo pacman -S docker docker-compose cronie git zsh wezterm vnstat tig dzen2" />
-        <Terminal text="paru -S visual-studio-code-bin google-chrome-dev" />
+        <Terminal text={PACMAN} />
+        <Terminal text={AUR} />
         <SetupMapper title="Customization" id="customization" data={customization} />
       </>
     )

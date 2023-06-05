@@ -31,4 +31,9 @@ export const customization: SetupData[] = [
     url: 'https://fsd.it/shop/fonts/pragmatapro/',
     type: 'PragmataPro for Powerline',
   },
+  {
+    name: 'Spotify Theme',
+    url: 'https://github.com/catppuccin/spicetify',
+    type: 'Catppuccin for Spicetify',
+  },
 ];

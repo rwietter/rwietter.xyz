@@ -37,7 +37,7 @@ const ArticleItem = ({ articles, blurDataURL }: ArticleData) => {
         description={article?.attributes?.description}
         image={article?.attributes?.image?.data?.attributes?.url}
         author={article?.attributes?.author?.data?.attributes?.name}
-        url={`https://rwietter.xyz${router.asPath}`}
+        url={`https://rwietterc.xyz${router.asPath}`}
         content="article"
       />
       <ArticleLayout>

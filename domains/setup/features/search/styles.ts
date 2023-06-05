@@ -44,6 +44,10 @@ export const InputSearch = styled('div', {
     transition: '$transitonTheme',
     width: '100%',
 
+    '&:focus': {
+      borderColor: '$primary',
+    },
+
     '&::placeholder': {
       color: '$weakColorText',
     },

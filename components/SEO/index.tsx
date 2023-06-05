@@ -17,13 +17,13 @@ const JSONLD = {
   },
   social: [
     'https://twitter.com/rwietter',
-    'https://rwietter.xyz',
+    'https://rwietterc.xyz',
   ],
   email: 'mailto:mauriciobw17@gmail.com',
   image: 'https://avatars.githubusercontent.com/u/46854467?s=400&u=16a52bab3d6dbcbda716ed7d6bab84b3b307bd22&v=4',
   jobTitle: 'Software Engineer',
   telephone: '(54) 99671-1324',
-  url: 'https://rwietter.xyz/',
+  url: 'https://rwietterc.xyz/',
 };
 
 interface SEOProps {
@@ -52,7 +52,7 @@ const SEO: FC<SEOProps> = ({
     <meta property="og:type" content={ogtype} />
     <meta property="twitter:card" content="summary_large_image" key="twcard" />
     <meta property="twitter:creator" content="@rwietter" key="twcreator" />
-    <meta property="twitter:domain" content="http://rwietter.xyz/" key="twdomain" />
+    <meta property="twitter:domain" content="http://rwietterc.xyz/" key="twdomain" />
     <meta property="twitter:url" content="https://twitter.com/rwietter" key="twurl" />
     <meta property="twitter:image:source" content={image} />
     <meta property="twitter:image" content={image} />
@@ -148,7 +148,7 @@ export const NextSEO: FC<SEOProps> = (props) => {
       ]}
       twitter={{
         handle: '@rwietter',
-        site: 'https://rwietter.xyz',
+        site: 'https://rwietterc.xyz',
         cardType: 'summary_large_image',
       }}
     />

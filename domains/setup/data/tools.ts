@@ -2,11 +2,6 @@ import { SetupData } from '../types/setup-data';
 
 export const tools: SetupData[] = [
   {
-    name: 'Operating System',
-    url: 'https://archlinux.org/download/',
-    type: 'Arch Linux',
-  },
-  {
     name: 'Window Manager',
     url: 'https://wiki.archlinux.org/title/awesome',
     type: 'AwesomeWM',

@@ -6,7 +6,11 @@ export const Main = styled('main', {
   justifyContent: 'center',
   alignItems: 'flex-start',
   transition: '$transitonTheme',
-  padding: '2rem 1rem 2rem 1rem',
+  padding: '2rem 0 2rem 0',
+
+  '@bp2': {
+    padding: '2rem .5rem 0 .5rem',
+  },
 });
 
 export const Content = styled('div', {
