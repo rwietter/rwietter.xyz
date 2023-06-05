@@ -6,11 +6,11 @@ export const Header = styled('header', {
   alignItems: 'center',
   justifyContent: 'space-between',
   width: '100%',
-  maxWidth: '57.6rem',
+  maxWidth: '60rem',
   margin: '0 auto',
-  padding: '2rem 0 1rem 0',
+  padding: '2rem 1rem 0 1rem',
   '@bp5': {
-    padding: '4rem 0 1rem 0',
+    padding: '4rem 1rem 0 1rem',
   },
 });
 

@@ -39,7 +39,6 @@ export const ArticleHeader = styled('section', {
   color: '$gray50',
 
   '@bp3': {
-    padding: '0 1rem',
     paddingBottom: '2rem',
   },
 });
