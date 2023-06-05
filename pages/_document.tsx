@@ -31,6 +31,7 @@ export default class extends Document {
           <meta name="format-detection" content="telephone=no" />
           <meta name="mobile-web-app-capable" content="yes" />
           <meta name="theme-color" content="#FFFFFF" />
+          <meta name="google-site-verification" content="oQ_XpS8_c5DYamhVCpljtPUmV-CX7D8zVxHbTd_ExNc" />
           <link rel="apple-touch-icon" sizes="180x180" href="/icons/mstile-150x150.png" />
           <link rel="manifest" href="/manifest.json" />
           <link rel="icon" href="/icons/android-chrome-512x512.png" />
