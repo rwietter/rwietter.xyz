@@ -52,8 +52,6 @@ export const getStaticProps: GetStaticProps = async () => {
     return articleB - articleA;
   });
 
-  console.log(reorderArticles);
-
   await generateRssFeed(reorderArticles);
 
   return {
