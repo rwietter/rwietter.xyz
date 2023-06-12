@@ -45,12 +45,14 @@
     "react-markdown": "^8.0.5",
     "react-topbar-progress-indicator": "^4.1.1",
     "reading-time": "^1.5.0",
+    "rss": "^1.2.2",
     "sharp": "^0.32.1",
     "zustand": "^4.3.6"
   },
   "devDependencies": {
     "@types/prismjs": "^1.26.0",
     "@types/react": "^18.0.28",
+    "@types/rss": "^0.0.30",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
     "eslint": "^8.36.0",

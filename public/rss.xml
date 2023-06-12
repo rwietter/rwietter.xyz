@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Blog posts | RSS Feed]]></title>
+        <description><![CDATA[Welcome to this blog posts!]]></description>
+        <link>http://localhost:3000</link>
+        <image>
+            <url>http://localhost:3000/logo.png</url>
+            <title>Blog posts | RSS Feed</title>
+            <link>http://localhost:3000</link>
+        </image>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Mon, 12 Jun 2023 23:17:23 GMT</lastBuildDate>
+        <atom:link href="http://localhost:3000/rss.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Mon, 12 Jun 2023 23:17:23 GMT</pubDate>
+        <copyright><![CDATA[All rights reserved 2023, Maurício Witter]]></copyright>
+        <item>
+            <title><![CDATA[Preferir a duplicação sobre a abstração é realmente o melhor caminho ?]]></title>
+            <description><![CDATA[A duplicação de código é algo muito ruim, uma abstração confusa é tão ruim quanto. Então qual seria a melhor abordagem para isso ?]]></description>
+            <link>http://localhost:3000/blog/article/preferir-a-duplicacao-sobre-a-abstracao-e-realmente-o-melhor-caminho</link>
+            <guid isPermaLink="false">preferir-a-duplicacao-sobre-a-abstracao-e-realmente-o-melhor-caminho</guid>
+            <category><![CDATA[tech]]></category>
+            <pubDate>Mon, 29 May 2023 01:45:54 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Programação declarativa: por que você deveria conhecer ?]]></title>
+            <description><![CDATA[Programação declarativa é uma abordagem legível, melhor de manter e paralelizar, que pode melhorar em muitos níveis o seu código.]]></description>
+            <link>http://localhost:3000/blog/article/programacao-declarativa-por-que-voce-deveria-conhecer</link>
+            <guid isPermaLink="false">programacao-declarativa-por-que-voce-deveria-conhecer</guid>
+            <category><![CDATA[tech]]></category>
+            <pubDate>Sat, 25 Feb 2023 01:22:12 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Fluxo bidirecional no React com useImperativeHandle]]></title>
+            <description><![CDATA[Expondo uma função de um componente child para o componente owner no React]]></description>
+            <link>http://localhost:3000/blog/article/fluxo-bidirecional-no-react-com-o-hook-use-imperative-handle</link>
+            <guid isPermaLink="false">fluxo-bidirecional-no-react-com-o-hook-use-imperative-handle</guid>
+            <category><![CDATA[tech]]></category>
+            <pubDate>Mon, 25 Apr 2022 11:59:22 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

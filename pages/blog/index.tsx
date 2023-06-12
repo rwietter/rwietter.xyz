@@ -7,6 +7,7 @@ import apolloClient from 'utils/apollo-client';
 import { blurImage } from 'utils/blur-image';
 import { BlogPosts } from 'features/blog';
 import { IArticles } from 'features/blog/ts';
+import generateRssFeed from 'utils/feed-rss';
 
 const Blog: FC<any> = ({ articles }) => (
   <>
@@ -51,11 +52,15 @@ export const getStaticProps: GetStaticProps = async () => {
     return articleB - articleA;
   });
 
+  console.log(reorderArticles);
+
+  await generateRssFeed(reorderArticles);
+
   return {
     props: {
       articles: reorderArticles,
     },
-    revalidate: 60,
+    revalidate: 60 * 60 * 24, // 24 hours
   };
 };
 
