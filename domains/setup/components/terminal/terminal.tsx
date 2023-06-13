@@ -1,5 +1,5 @@
 /* eslint-disable no-new */
-import React, { useEffect, type FC } from 'react';
+import React, { type FC } from 'react';
 
 import * as S from './styles';
 
@@ -8,32 +8,7 @@ interface TerminalProps {
 }
 
 const Terminal: FC<TerminalProps> = ({ text }) => {
-  const requestNotificationPermission = () => {
-    if (Notification.permission !== 'granted') {
-      Notification.requestPermission().then((permission) => {
-        if (permission === 'granted') {
-          console.log('Notification permission granted.');
-        }
-      });
-    }
-  };
-
-  useEffect(() => {
-    requestNotificationPermission();
-  }, []);
-
-  const showNotification = () => {
-    if (Notification.permission === 'granted') {
-      new Notification('Great', {
-        body: 'Your text has been copied to the clipboard.',
-      });
-    }
-  };
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(text);
-    showNotification();
-  };
+  const handleCopy = () => navigator.clipboard.writeText(text);
 
   return (
     <S.Terminal>

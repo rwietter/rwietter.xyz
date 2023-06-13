@@ -2,6 +2,7 @@ export interface IArticles {
   attributes: {
     slug: string;
     title: string;
+    content: string;
     description: string;
     publishedAt: string;
     category: {
