@@ -46,6 +46,8 @@
     "react-markdown": "^8.0.5",
     "react-topbar-progress-indicator": "^4.1.1",
     "reading-time": "^1.5.0",
+    "remark": "^14.0.3",
+    "remark-html": "^15.0.2",
     "rss": "^1.2.2",
     "sharp": "^0.32.1",
     "zustand": "^4.3.6"
