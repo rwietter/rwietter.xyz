@@ -32,8 +32,6 @@ export const getStaticProps: GetStaticProps = async () => {
   if (loading) return { props: { articles: null } };
   if (errors) return { props: { articles: null } };
 
-  console.log(data.articles.data);
-
   const articles: IArticles[] = data.articles.data.map(async (article: any) => {
     const image = await blurImage(article?.attributes?.image?.data?.attributes?.url);
 

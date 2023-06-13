@@ -6,20 +6,57 @@
 		url('/fonts/Dank-Mono-Italic.ttf') format('ttf');
 }
 
-@supports (font-variation-settings: normal) {
-	:root {
-		font-variant-ligatures: 'common-ligatures';
-	}
+html {
+	scroll-behavior: smooth;
 }
 
 * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+::-webkit-scrollbar {
+	width: 0.5rem;
+	height: 0.6rem;
+}
+
+
+::-webkit-scrollbar-track {
+	background: var(--colors-gray300);
+	transition: background 350ms ease 0s;
+}
+
+
+::-webkit-scrollbar-thumb {
+	border-radius: 50rem;
+	background: var(--colors-scrollbar);
+	transition: background 350ms ease 0s;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--colors-scrollbar);
+	transition: background 350ms ease 0s;
+}
+
+body {
+	background: var(--colors-background);
+	transition: background 350ms ease 0s;
 	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-text-size-adjust: 100%;
-	-moz-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
-	text-size-adjust: 100%;
+}
+
+@supports (-webkit-font-smoothing: antialiased) {
+	body {
+		-webkit-font-smoothing: antialiased;
+	}
+}
+
+@supports not (-moz-osx-font-smoothing: antialiased) {
+	body {
+		-moz-osx-font-smoothing: subpixel-antialiased;
+	}
 }
 
 pre {
@@ -121,4 +158,15 @@ tt {
 	font-size: clamp(var(--fluid-type-min, 1rem),
 			calc(1rem + var(--fluid-type-target, 3vw)),
 			var(--fluid-type-max, 1.2rem)) !important;
+	text-rendering: optimizeLegibility;
+}
+
+
+@supports (-webkit-text-size-adjust: 100%) or (-moz-text-size-adjust: 100%) or (-ms-text-size-adjust: 100%) or (text-size-adjust: 100%) {
+	p {
+		-webkit-text-size-adjust: 100%;
+		-moz-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
+		text-size-adjust: 100%;
+	}
 }

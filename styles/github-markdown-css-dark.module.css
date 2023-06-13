@@ -114,7 +114,7 @@
 .markdown-body code {
   font-weight: 500;
   transition: var(--transitions-transitonTheme);
-  color: var(--colors-gray50);
+  /* color: var(--colors-gray50); */
 }
 
 .markdown-body dfn {
@@ -862,7 +862,6 @@
   font-size: 85%;
   border-radius: 6px;
   font-family: "Dank Mono", monospace, sans-serif !important;
-  font-weight: 200 !important;
   font-variant-ligatures: common-ligatures !important;
   font-feature-settings: "ss01" on,
     "ss02" on,
@@ -870,14 +869,14 @@
 }
 
 .markdown-body p code {
-  font-style: italic;
-  transition: background-color 0.2s ease;
-  background-color: #282828;
+  font-style: normal;
+  --fluid-type-max: 1rem;
+  transition: var(--transitions-transitonTheme);
+  background-color: #131b23;
 }
 
 .markdown-body pre code span {
   font-family: "Dank Mono", monospace, sans-serif !important;
-  font-weight: 200 !important;
   font-variant-ligatures: common-ligatures !important;
   font-feature-settings: "ss01" on,
     "ss02" on,

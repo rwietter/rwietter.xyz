@@ -145,10 +145,6 @@ export const Article = styled('article', {
   maxWidth: '50rem',
   padding: '0 1rem',
   margin: '0 auto',
-
-  '@bp3': {
-    padding: '0',
-  },
 });
 
 export const ArticleMarkdown = styled(ReactMarkdown, {

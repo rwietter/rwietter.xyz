@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://rwietterc.xyz</id>
     <title>Maurício Witter | RSS Feed</title>
-    <updated>2023-06-13T02:08:42.857Z</updated>
+    <updated>2023-06-13T14:54:53.458Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Maurício Witter</name>
@@ -249,13 +249,11 @@
 <pre><code># crie o projeto
 yarn create next-app --typescript
 
-# entre no diretória criado
+# entre no diretório criado
 cd my-app
 
-# compila e executa o projeto em localhost
+# compila e executa o projeto em http://localhost:3000
 yarn dev
-
-# abra no navegador o endereço http://localhost:3000
 </code></pre>
 <p>Projeto criado! Agora, vamos até o <code>index.tsx</code> em <code>/pages/index.tsx</code> e vamos remover o código desnecessário, deixe como no exemplo abaixo.</p>
 <pre><code>import type { NextPage } from 'next'

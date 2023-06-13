@@ -46,7 +46,7 @@ export const Terminal = styled('code', {
     '--fluid-type-min': '0.8rem',
 
     color: '$gray50',
-    fontFamily: 'Dank Mono, monospace',
+    fontFamily: 'Dank Mono',
     lineHeight: '1.8',
   },
 });
