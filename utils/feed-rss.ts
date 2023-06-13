@@ -3,7 +3,7 @@ import { Feed } from 'feed';
 import fs from 'fs';
 import { type IArticles } from 'features/blog/ts';
 
-export default async function generateRssFeed(posts: any[]): Promise<void> {
+export default async function generateRssFeed(posts: IArticles[]): Promise<void> {
   const isProduction = process.env.NODE_ENV === 'production';
   const url = isProduction ? (process.env.SITE_URL || 'https://rwietterc.xyz') : 'http://localhost:3000';
 
@@ -52,7 +52,7 @@ export default async function generateRssFeed(posts: any[]): Promise<void> {
     ],
     published: new Date(post.attributes.publishedAt),
     id: `${url}/blog/article/${post.attributes.slug}`,
-    // content: post.attributes.content,
+    content: post.attributes.content,
     copyright: feedOptions.copyright,
     date: new Date(post.attributes.publishedAt),
     author: [

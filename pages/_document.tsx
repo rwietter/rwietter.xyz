@@ -31,9 +31,9 @@ export default class extends Document {
           <meta name="format-detection" content="telephone=no" />
           <meta name="mobile-web-app-capable" content="yes" />
           <meta name="theme-color" content="#FFFFFF" />
-          <link rel="alternate" type="application/rss+xml" title="RSS feed" href="/rss.xml" />
-          <link rel="alternate" type="application/atom+xml" title="RSS feed" href="/rss.atom" />
-          <link rel="alternate" type="application/json" title="RSS feed" href="/rss.json" />
+          <link rel="alternate" type="application/rss+xml" title="XML RSS feed" href="/rss.xml" />
+          <link rel="alternate" type="application/atom+xml" title="Atom RSS feed" href="/rss.atom" />
+          <link rel="alternate" type="application/json" title="JSON RSS feed" href="/rss.json" />
           <meta name="google-site-verification" content="oQ_XpS8_c5DYamhVCpljtPUmV-CX7D8zVxHbTd_ExNc" />
           <link rel="apple-touch-icon" sizes="180x180" href="/icons/mstile-150x150.png" />
           <link rel="manifest" href="/manifest.json" />
