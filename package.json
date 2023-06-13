@@ -27,6 +27,7 @@
     "apollo-link-http": "^1.5.17",
     "color.js": "^1.2.0",
     "date-fns": "^2.29.3",
+    "feed": "^4.2.2",
     "framer-motion": "^7.10.3",
     "graphql": "^16.6.0",
     "graphql-tag": "^2.12.6",

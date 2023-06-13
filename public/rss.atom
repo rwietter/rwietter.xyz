@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://rwietterc.xyz</id>
+    <title>Blog posts | RSS Feed</title>
+    <updated>2023-06-13T00:04:34.002Z</updated>
+    <generator>Feed for Node.js</generator>
+    <author>
+        <name>Maurício Witter</name>
+        <email>mauriciobw17@gmail.com</email>
+        <uri>https://twitter.com/rwietter</uri>
+    </author>
+    <link rel="alternate" href="https://rwietterc.xyz"/>
+    <link rel="self" href="https://rwietterc.xyz/rss.xml"/>
+    <subtitle>Welcome to this blog posts!</subtitle>
+    <logo>https://rwietterc.xyz/icons/mstile-310x310.png</logo>
+    <icon>https://rwietterc.xyz/favicon.ico</icon>
+    <rights>All rights reserved 2023, Maurício Witter</rights>
+    <entry>
+        <title type="html"><![CDATA[Preferir a duplicação sobre a abstração é realmente o melhor caminho ?]]></title>
+        <id>https://rwietterc.xyz/blog/article/preferir-a-duplicacao-sobre-a-abstracao-e-realmente-o-melhor-caminho</id>
+        <link href="https://rwietterc.xyz/blog/article/preferir-a-duplicacao-sobre-a-abstracao-e-realmente-o-melhor-caminho"/>
+        <updated>2023-05-29T01:45:54.431Z</updated>
+        <summary type="html"><![CDATA[A duplicação de código é algo muito ruim, uma abstração confusa é tão ruim quanto. Então qual seria a melhor abordagem para isso ?]]></summary>
+        <author>
+            <name>Maurício Witter</name>
+            <email>mauriciobw17@gmail.com</email>
+            <uri>https://twitter.com/rwietter</uri>
+        </author>
+        <category label="tech" scheme="https://rwietterc.xyz" term="tech"/>
+        <published>2023-05-29T01:45:54.431Z</published>
+        <rights>All rights reserved 2023, Maurício Witter</rights>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Programação declarativa: por que você deveria conhecer ?]]></title>
+        <id>https://rwietterc.xyz/blog/article/programacao-declarativa-por-que-voce-deveria-conhecer</id>
+        <link href="https://rwietterc.xyz/blog/article/programacao-declarativa-por-que-voce-deveria-conhecer"/>
+        <updated>2023-02-25T01:22:12.570Z</updated>
+        <summary type="html"><![CDATA[Programação declarativa é uma abordagem legível, melhor de manter e paralelizar, que pode melhorar em muitos níveis o seu código.]]></summary>
+        <author>
+            <name>Maurício Witter</name>
+            <email>mauriciobw17@gmail.com</email>
+            <uri>https://twitter.com/rwietter</uri>
+        </author>
+        <category label="tech" scheme="https://rwietterc.xyz" term="tech"/>
+        <published>2023-02-25T01:22:12.570Z</published>
+        <rights>All rights reserved 2023, Maurício Witter</rights>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Fluxo bidirecional no React com useImperativeHandle]]></title>
+        <id>https://rwietterc.xyz/blog/article/fluxo-bidirecional-no-react-com-o-hook-use-imperative-handle</id>
+        <link href="https://rwietterc.xyz/blog/article/fluxo-bidirecional-no-react-com-o-hook-use-imperative-handle"/>
+        <updated>2022-04-25T11:59:22.126Z</updated>
+        <summary type="html"><![CDATA[Expondo uma função de um componente child para o componente owner no React]]></summary>
+        <author>
+            <name>Maurício Witter</name>
+            <email>mauriciobw17@gmail.com</email>
+            <uri>https://twitter.com/rwietter</uri>
+        </author>
+        <category label="tech" scheme="https://rwietterc.xyz" term="tech"/>
+        <published>2022-04-25T11:59:22.126Z</published>
+        <rights>All rights reserved 2023, Maurício Witter</rights>
+    </entry>
+</feed>

@@ -1,0 +1,59 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Blog posts | RSS Feed",
+    "home_page_url": "https://rwietterc.xyz",
+    "feed_url": "https://rwietterc.xyz/rss/feed.json",
+    "description": "Welcome to this blog posts!",
+    "icon": "https://rwietterc.xyz/icons/mstile-310x310.png",
+    "author": {
+        "name": "Maurício Witter",
+        "url": "https://twitter.com/rwietter"
+    },
+    "items": [
+        {
+            "id": "https://rwietterc.xyz/blog/article/preferir-a-duplicacao-sobre-a-abstracao-e-realmente-o-melhor-caminho",
+            "url": "https://rwietterc.xyz/blog/article/preferir-a-duplicacao-sobre-a-abstracao-e-realmente-o-melhor-caminho",
+            "title": "Preferir a duplicação sobre a abstração é realmente o melhor caminho ?",
+            "summary": "A duplicação de código é algo muito ruim, uma abstração confusa é tão ruim quanto. Então qual seria a melhor abordagem para isso ?",
+            "date_modified": "2023-05-29T01:45:54.431Z",
+            "date_published": "2023-05-29T01:45:54.431Z",
+            "author": {
+                "name": "Maurício Witter",
+                "url": "https://twitter.com/rwietter"
+            },
+            "tags": [
+                "tech"
+            ]
+        },
+        {
+            "id": "https://rwietterc.xyz/blog/article/programacao-declarativa-por-que-voce-deveria-conhecer",
+            "url": "https://rwietterc.xyz/blog/article/programacao-declarativa-por-que-voce-deveria-conhecer",
+            "title": "Programação declarativa: por que você deveria conhecer ?",
+            "summary": "Programação declarativa é uma abordagem legível, melhor de manter e paralelizar, que pode melhorar em muitos níveis o seu código.",
+            "date_modified": "2023-02-25T01:22:12.570Z",
+            "date_published": "2023-02-25T01:22:12.570Z",
+            "author": {
+                "name": "Maurício Witter",
+                "url": "https://twitter.com/rwietter"
+            },
+            "tags": [
+                "tech"
+            ]
+        },
+        {
+            "id": "https://rwietterc.xyz/blog/article/fluxo-bidirecional-no-react-com-o-hook-use-imperative-handle",
+            "url": "https://rwietterc.xyz/blog/article/fluxo-bidirecional-no-react-com-o-hook-use-imperative-handle",
+            "title": "Fluxo bidirecional no React com useImperativeHandle",
+            "summary": "Expondo uma função de um componente child para o componente owner no React",
+            "date_modified": "2022-04-25T11:59:22.126Z",
+            "date_published": "2022-04-25T11:59:22.126Z",
+            "author": {
+                "name": "Maurício Witter",
+                "url": "https://twitter.com/rwietter"
+            },
+            "tags": [
+                "tech"
+            ]
+        }
+    ]
+}
