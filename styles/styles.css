@@ -6,10 +6,6 @@
 		url('/fonts/Dank-Mono-Italic.ttf') format('ttf');
 }
 
-html {
-	scroll-behavior: smooth;
-}
-
 * {
 	margin: 0;
 	padding: 0;
