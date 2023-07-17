@@ -46,7 +46,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const articlesData: IArticles[] = await Promise.all(articles);
 
-  const reorderArticles = articlesData.sort((a, b) => {
+  const reorderArticles = [...articlesData].sort((a, b) => {
     const articleA: number = new Date(a.attributes.publishedAt).getTime();
     const articleB: number = new Date(b.attributes.publishedAt).getTime();
     return articleB - articleA;
@@ -58,7 +58,7 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       articles: reorderArticles,
     },
-    revalidate: 60 * 60 * 24, // 24 hours
+    revalidate: 300, // 5 minutes
   };
 };
 

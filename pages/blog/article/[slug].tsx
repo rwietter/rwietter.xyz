@@ -138,7 +138,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       articles: data.articles.data,
       blurDataURL: await blurImage(data.articles.data[0].attributes.image.data.attributes.url),
     },
-    revalidate: 3600,
+    revalidate: 300, // 5 minutes
   };
 };
 
