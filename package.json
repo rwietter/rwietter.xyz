@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && yarn postbuild",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",
     "fix": "eslint --fix ",

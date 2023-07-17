@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:3000</id>
+    <id>https://rwietterc.xyz</id>
     <title>Maurício Witter | RSS Feed</title>
-    <updated>2023-07-17T15:34:02.173Z</updated>
+    <updated>2023-07-17T17:14:13.028Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Maurício Witter</name>
         <email>mauriciobw17@gmail.com</email>
         <uri>https://twitter.com/rwietter</uri>
     </author>
-    <link rel="alternate" href="http://localhost:3000"/>
+    <link rel="alternate" href="https://rwietterc.xyz"/>
     <link rel="self" href="https://rwietterc.xyz/rss.xml"/>
     <subtitle>RSS feed for Maurício Witter blog</subtitle>
-    <logo>http://localhost:3000/icons/mstile-310x310.png</logo>
-    <icon>http://localhost:3000/favicon.ico</icon>
+    <logo>https://rwietterc.xyz/icons/mstile-310x310.png</logo>
+    <icon>https://rwietterc.xyz/favicon.ico</icon>
     <rights>All rights reserved 2023, Maurício Witter</rights>
     <entry>
         <title type="html"><![CDATA[Um paralelo entre Programação Declarativa e Programação Imperativa]]></title>
-        <id>http://localhost:3000/blog/article/programacao-declarativa-por-que-voce-deveria-conhecer</id>
-        <link href="http://localhost:3000/blog/article/programacao-declarativa-por-que-voce-deveria-conhecer"/>
+        <id>https://rwietterc.xyz/blog/article/um-paralelo-entre-programacao-declarativa-e-programacao-imperativa</id>
+        <link href="https://rwietterc.xyz/blog/article/um-paralelo-entre-programacao-declarativa-e-programacao-imperativa"/>
         <updated>2023-07-17T15:13:39.158Z</updated>
-        <summary type="html"><![CDATA[O estilo de programação declarativo é muito usados nos dias atuais, mas nem todo mundo conhece de fato seus conceitos e pilares.]]></summary>
+        <summary type="html"><![CDATA[Quais são os trade-offs entre o Paradigma Imperativo e o Paradigma Declarativo, princípios e uso]]></summary>
         <content type="html"><![CDATA[<h2>Introdução</h2>
 <p>As linguagens de programação podem ser classificadas de diversas formas, podem ser classificadas por Type System forte ou fraco; pelo nível de abstração (Machine code, Low level Assembler ou High level); se são compiladas ou interpretadas, ou por Paradigmas (Orientação a Objetos, Funcional, Procedural, Lógico, Imperativo, Declarativo entre outros). Neste artigo falaremos sobre o Paradigma Imperativo e Declarativo.</p>
 <p>Entender o que são os paradigmas de programação, suas características vai ajudar você a entender melhor outros paradigmas como o Paradigma Funcional, Lógico, ou Orientado a Objetos, pois todos eles tem alguma similaridade com os paradigmas declarativo, declarativo ou ambos.</p>
@@ -34,10 +34,8 @@
 <p>Assim sendo, a programação imperativa é mais adequada para tarefas onde é importante controlar o estado do programa e gerenciar o fluxo de execução.</p>
 <p>Vamos calcular o fatorial de um número natural positivo, cuja fórmula está na imagem abaixo.</p>
 <p><img src="https://substackcdn.com/image/fetch/w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff5c2b102-a99c-45d4-a8ee-71d106821de5_487x157.png" alt="fatorial"></p>
-<p>Primeiramente, temos um código imperativo, onde avaliamos se <code>n</code> é menor ou igual a zero e retornamos 1, do contrário fazemos um loop até <code>n-1</code> e multiplicamos o valor de <code>n</code> pelo índice fazendo a mutabilidade de <code>n</code>, ao final retornamos <code>n</code>. Nesse código criamos a lógica de calcular o fatorial de <code>n</code> e o fluxo de controle.</p>
+<p>No fatorial imperativo, avaliamos se <code>n</code> é menor ou igual a zero e retornamos 1, do contrário fazemos um loop até <code>n-1</code> e multiplicamos o valor de <code>n</code> pelo índice fazendo a mutabilidade de <code>n</code>, ao final retornamos <code>n</code>. Nesse código criamos a lógica de calcular o fatorial de <code>n</code> e o fluxo de controle.</p>
 <p><img src="https://substackcdn.com/image/fetch/w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F36ca5586-ae84-49f3-9be8-23b7b7e716d9_1040x630.png" alt="fatorial imperativo"></p>
-<p>Vejamos agora um exemplo de um fatorial que utiliza um conceito da programação funcional que se chama recursão, que nada mais é do que o processo de chamar uma função dentro dela mesma até que uma condição interrompa a execução. Nesse código abaixo do fatorial com recursão, nós abstraímos o fluxo de controle e definimos apenas a lógica do algoritmo. Primeiramente, temos a mesma condição de retornar 1 se o <code>n</code> for negativo ou igual a zero e depois retornamos <code>n</code> multiplicado pelo valor retornado pela chamada recursiva passando como argumento <code>n-1</code>, isso será repetido até que <code>n</code> seja zero. Além de ser mais legível, deixamos de alterar o estado e não há mais perigos de gerar efeitos colaterais.</p>
-<p><img src="https://substackcdn.com/image/fetch/w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5163b037-876f-43f8-a9b0-b78f597733c3_1040x450.png" alt="fatorial recursivo"></p>
 <h3>Características do código Imperativo</h3>
 <ul>
 <li>Execução sequencial;</li>
@@ -60,11 +58,11 @@
 <p>O Paradigma declarativo, por outro lado, é um modelo de abstração de alto nível. Nesse estilo, declara-se o que deve ser computado ao invés de como deve ser computado, delegamos a implementação de controle para a linguagem.</p>
 <p>Assim, a programação declarativa é como escrever um mapa detalhado para chegar a um destino. Você define o objetivo e descreve as etapas necessárias para alcançá-lo, permitindo que o computador determine a melhor rota e execute as ações correspondentes, sem precisar se preocupar com os detalhes de como cada passo é realizado.</p>
 <p>Muitas linguagens que aplicam esse estilo tentam eliminar os efeitos colaterais descrevendo o que o programa deve realizar em termos do domínio do problema, em vez de descrever como realizá-lo como uma sequência das primitivas da linguagem de programação.</p>
-<p>Conforme R. Kowalski em Communications of the ACM, Volume 22, Issue 7, July 1979, um algoritmo é composto pela lógica e pelo fluxo de controle. Na programação declarativa, a linguagem tende a abstrair a fluxo de controle e deixar para o programador desenvolver a lógica.</p>
+<p>Conforme R. Kowalski em Communications of the ACM, Volume 22, Issue 7, July 1979, <em>um algoritmo é composto pela lógica e pelo fluxo de controle. Na programação declarativa, a linguagem tende a abstrair a fluxo de controle e deixar para o programador desenvolver a lógica</em>.</p>
 <p><img src="https://substackcdn.com/image/fetch/w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F649d082d-40e8-4567-b23f-3779291ec802_452x59.png" alt="algorithm"></p>
 <p>Lloyd, JW. no artigo Practical advantages of declarative programming, explica que a programação declarativa pode ser entendida como “Forte” e “Fraca”. Isto é, no sentido “Forte”, o programador só fornece a lógica do que precisa e no sentido “Fraco”, o programador precisa fornecer a lógica e estender o fluxo de controle para computar o resultado esperado.</p>
 <h3>Princípios da Programação Declarativa</h3>
-<p>Para alcançar o estilo declarativo de programação, é necessário que alguns conceitos sejam aplicados. Os principais princípios deste paradigma são: Stateless, Transparência referencial, Abstração e Ausência de efeitos colaterais.</p>
+<p>Para alcançar o estilo declarativo de programação, é necessário que alguns conceitos sejam aplicados. Os principais princípios deste paradigma são: <em>Stateless</em>, <em>Transparência referencial</em>, <em>Abstração</em> e <em>Ausência de efeitos colaterais</em>.</p>
 <p><img src="https://i.imgur.com/aJz3ZYr.png" alt="pilares da programação declarativa"></p>
 <h4>Stateless</h4>
 <p>Em uma linguagem onde todos os dados são imutáveis, aplica-se o conceito de stateless. Isso significa que, uma vez que uma variável é atribuída, seu valor não pode ser alterado. Em vez disso, qualquer manipulação ou transformação de dados envolve o retorno de uma cópia dos valores originais transformados, de forma que os valores originais sem mantenham intactos. Em outras palavras, não fazemos a persistência dos dados entre as chamadas de execuções. Em JavaScript, funções como <code>map</code>, <code>filter</code> e <code>flatMap</code>são stateless e funções como <code>sort</code> são stateful.</p>
@@ -84,10 +82,10 @@ const r2  = add(1) // 2
 </code></pre>
 <p>Uma função ou expressão é referencialmente transparente se puder ser substituída por seu valor sem alterar o comportamento do programa.</p>
 <h4>Abstração</h4>
-<p>A abstração é um dos principais senão o principal princípio do Paradigma Declarativo, é a primeira coisa que vem a mente quando pensamos nela. Como já foi dito, dizemois o que queremos e não como queremos, assim delegamos a responsabilidade do que fazer para a linguagem de programação e apenas descremos como queremos o resultado a partir de determinada entrada.</p>
+<p>A abstração é um dos principais senão o principal princípio do Paradigma Declarativo, é a primeira coisa que vem a mente quando pensamos nela. Como já foi dito, dizemois o que queremos e não como queremos, assim delegamos a responsabilidade do que fazer para a linguagem de programação e apenas descrevemos como queremos o resultado a partir de determinada entrada.</p>
 <p>Existem linguagens puramente declarativas, linguagens hibridas e multiparadigmas. YAML, SQL, HTML e XML são exemplos de linguagens puramente declarativas. Linguagens puramente funcionais ou lógicas como Haskell e Prolog, respectivamente, são hibridas pois apesar de ter seus próprios paradigmas (funcional e lógico) enfatizam a programação declarativa. Já as linguagens como Javascript, Java, PHP são multiparadigma, elas incluem algumas abstrações declarativas mas também incluem instruções imperativas e não opinam sobre qual meio usar.</p>
 <h4>Ausência de efeitos colaterais</h4>
-<p>Efeitos colaterais são alterações de estado ou execução de funções que não estão diretamente ligadas com a produção do resultado esperado de uma função. O Paradigma declarativa tem como objetivo eliminar as mudanças de estado em variáveis globais ou objetos compartilhados. Em vez disso, ela se concentra em avaliar expressões e produzir resultados imutáveis, o que ajuda a evitar problemas relacionados a estado e concorrência.</p>
+<p>Efeitos colaterais são alterações de estado ou execução de funções que não estão diretamente ligadas com a produção do resultado esperado de uma função. O Paradigma declarativo tem como objetivo eliminar as mudanças de estado em variáveis globais ou objetos compartilhados. Em vez disso, ela se concentra em avaliar expressões e produzir resultados imutáveis, o que ajuda a evitar problemas relacionados a estado e concorrência.</p>
 <p>A função <code>doSomething</code> é considerada referencialmente transparente porque sempre retorna o mesmo valor de saída para uma determinada entrada, e não depende de nenhum estado externo. No entanto, apesar de ser referencialmente transparente, a função possui um side effect, ou seja, uma ação colateral que ocorre além da simples computação do valor de retorno, o side effect não faz parte da computação do valor de retorno da função, mas pode ter efeitos observáveis fora do escopo da função.</p>
 <pre><code>const doSomething = (arg) => {
   console.log("something");
@@ -141,10 +139,8 @@ const r2  = add(1) // 2
 <p>No Front-end também ganhamos muito mais produtividade e segurança com os frameworks declarativos que surgiram nos últimos anos, como o React, o Vue, o Angular, o Next, o Nuxt entre outros.</p>
 <p>Na área de cloud-computing, várias ferramentas no estilo declarativo como o Terraform, Ansible, Docker, Kubernets auxiliam a colocar aplicações em produção com escalabilidade, segurança e confiabilidade, fazendo o CI/CD.</p>
 <h2>Conclusão</h2>
-<p>Não existe de fato uma linguagem puramente declarativa, o que torna um código declarativo ou imperativo é como ele é codificado. As linguagens que oferecem maiores recursos para programar no estilo declarativo são linguagens com os paradigmas lógico e funcional, pois se aproximam mais das características do estilo declarativo, embora o estilo depende da sua codificação como o uso de abstrações, imutabilidade, determinismo e transparência referencial.</p>
-<p>Portanto, pense na hora de programar que seu algoritmo precisa de um lógica e um fluxo de controle, a partir daí, procure recursos na sua linguagem que abstraiam o fluxo de controle e deixe sob sua responsabilidade a implementação da lógica. Os benefícios disso são melhor legibilidade e segurança, pois você abstraiu detalhes menores de controle e também ganha interoperabilidade.</p>
-<p>À medida que a programação declarativa continua a evoluir, é provável que ela desempenhe um papel cada vez mais importante no futuro do desenvolvimento de software. Portanto, aprender sobre programação declarativa pode ser um investimento valioso para qualquer desenvolvedor que deseja melhorar sua habilidade em criar código de alta qualidade e eficiente.</p>
-<p>Se você chegou até aqui, espero que tenha tido uma ótima leitura e que esse conteúdo possa ter lhe ajudado de alguma forma. Obrigado por ler! Qualquer dúvida, agregação ou correção, deixe nos comentários 💚</p>
+<p>À medida que a programação declarativa continua a evoluir, é provável que ela desempenhe um papel cada vez mais importante no futuro do desenvolvimento de software. Portanto, aprender sobre programação declarativa pode ser um investimento valioso para qualquer desenvolvedor que deseja melhorar sua habilidade em criar código de qualidade.</p>
+<p>Se você chegou até aqui, espero que tenha tido uma ótima leitura e que esse conteúdo possa ter lhe ajudado de alguma forma. Obrigado por ler! Qualquer dúvida, agregação ou correção, <a href="https://twitter.com/rwietter">envie-me uma dm no twitter </a>.</p>
 <h2>Referências</h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Declarative_programming#:~:text=Declarative%20programming%20is%20a%20non,by%20a%20declarative%20programming%20style.">Declarative Programming</a></li>
@@ -166,8 +162,8 @@ const r2  = add(1) // 2
     </entry>
     <entry>
         <title type="html"><![CDATA[Preferir a duplicação sobre a abstração é realmente o melhor caminho ?]]></title>
-        <id>http://localhost:3000/blog/article/preferir-a-duplicacao-sobre-a-abstracao-e-realmente-o-melhor-caminho</id>
-        <link href="http://localhost:3000/blog/article/preferir-a-duplicacao-sobre-a-abstracao-e-realmente-o-melhor-caminho"/>
+        <id>https://rwietterc.xyz/blog/article/preferir-a-duplicacao-sobre-a-abstracao-e-realmente-o-melhor-caminho</id>
+        <link href="https://rwietterc.xyz/blog/article/preferir-a-duplicacao-sobre-a-abstracao-e-realmente-o-melhor-caminho"/>
         <updated>2023-05-29T01:45:54.431Z</updated>
         <summary type="html"><![CDATA[A duplicação de código é algo muito ruim, uma abstração confusa é tão ruim quanto. Então qual seria a melhor abordagem para isso ?]]></summary>
         <content type="html"><![CDATA[<p>Hoje vamos falar um pouco do princípio do desenvolvimento de software DRY (Don't Repeat Yourself) e suas implicações. O DRY é um princípio relacionado duplicação de código e abstrações. Falaremos sobre o conceito de Rule of Three proposto por <a href="https://martinfowler.com/">Martin Fowler</a> no seu livro Refactoring, falaremos sobre o conceito AHA (Avoid Hasty Abstractions) proposto por <a href="https://kentcdodds.com/">Kent C. Dodds</a> e, também, sobre conceito <a href="https://dev.to/wuz/stop-trying-to-be-so-dry-instead-write-everything-twice-wet-5g33">WET</a> (Write Everything Twice) proposto por <a href="https://dev.to/wuz">Conlin Durbin</a>.</p>
@@ -243,8 +239,8 @@ const r2  = add(1) // 2
     </entry>
     <entry>
         <title type="html"><![CDATA[Fluxo bidirecional no React com useImperativeHandle]]></title>
-        <id>http://localhost:3000/blog/article/fluxo-bidirecional-no-react-com-o-hook-use-imperative-handle</id>
-        <link href="http://localhost:3000/blog/article/fluxo-bidirecional-no-react-com-o-hook-use-imperative-handle"/>
+        <id>https://rwietterc.xyz/blog/article/fluxo-bidirecional-no-react-com-o-hook-use-imperative-handle</id>
+        <link href="https://rwietterc.xyz/blog/article/fluxo-bidirecional-no-react-com-o-hook-use-imperative-handle"/>
         <updated>2022-04-25T11:59:22.126Z</updated>
         <summary type="html"><![CDATA[Expondo uma função de um componente child para o componente owner no React]]></summary>
         <content type="html"><![CDATA[<h3>Introdução</h3>
