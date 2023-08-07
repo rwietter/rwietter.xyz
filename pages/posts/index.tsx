@@ -10,10 +10,10 @@ import * as S from 'domains/posts/post-list/styles';
 const Posts: FC<any> = ({ posts }) => (
   <>
     <SEO
-      title="Blog | Maurício Witter | Software Engineer"
+      title="Posts | Maurício Witter | Software Engineer"
       content="blog"
-      url="https://rwietterc.xyz/blog"
-      description="My blog, where I write about my experiences, my projects, and my life. :)"
+      url="https://rwietterc.xyz/posts"
+      description="Posts about software development, programming, and other things."
       image="https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png"
     />
     <ContentLayout layout="small">
