@@ -3,18 +3,23 @@ import * as S from './styles';
 
 const ArticleCard = ({ article }: any) => {
   const {
-    slug, title, description, category,
+    slug, title, description, category, image,
   } = article.attributes;
+
   return (
     <S.CardContainer>
       <Link href={`/blog/article/${slug}`} passHref>
-        <S.CardImage
-          width={2000}
-          height={2000}
-          loading="lazy"
-          placeholder="blur"
-          {...article.blurDataURL}
-        />
+        {image?.data?.attributes?.url ? (
+          <S.CardImage
+            width={2000}
+            height={2000}
+            loading="lazy"
+            placeholder="blur"
+            {...article.blurDataURL}
+          />
+        ) : (
+          <span />
+        )}
 
         <S.CardInformations>
           <S.PostTitle>{title}</S.PostTitle>
@@ -24,7 +29,9 @@ const ArticleCard = ({ article }: any) => {
               #
               {category.data?.attributes?.name}
             </h3>
-          ) : <span />}
+          ) : (
+            <span />
+          )}
         </S.CardInformations>
       </Link>
     </S.CardContainer>
