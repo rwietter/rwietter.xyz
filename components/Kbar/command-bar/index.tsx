@@ -1,3 +1,5 @@
+'use client';
+
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unused-prop-types */
 /* eslint-disable react/no-unstable-nested-components */

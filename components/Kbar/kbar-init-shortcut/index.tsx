@@ -1,3 +1,5 @@
+'use client';
+
 import { useKBar } from 'kbar';
 import { KbarButton, KbarContainer } from './styles';
 
@@ -8,10 +10,7 @@ const KbarInit = () => {
 
   return (
     <KbarContainer>
-      <KbarButton
-        type="button"
-        onClick={handleOpenKbar}
-      >
+      <KbarButton type="button" onClick={handleOpenKbar}>
         Press
         {' '}
         <code>ctrl</code>

@@ -26,7 +26,7 @@ const nextConfig = withImages({
   },
 
   experimental: {
-    appDir: false,
+    appDir: true,
   },
 });
 

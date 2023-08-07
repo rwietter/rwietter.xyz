@@ -1,0 +1,32 @@
+.social a svg {
+  --shadow-size: 0;
+  aspect-ratio: 1;
+  --shadow-color: #91a7ff;
+  border-radius: .5px;
+  filter: drop-shadow(0 0 var(--shadow-size) var(--shadow-color));
+  transition: filter 0.5s cubic-bezier(0, 0, 0.1, 1);
+}
+
+.social a svg:hover:not(:active) {
+  --shadow-size: 20px;
+}
+
+.social a svg:active {
+  --shadow-size: 20px;
+}
+
+.social a:nth-child(1) svg {
+  --shadow-color: #286ff3;
+}
+
+.social a:nth-child(2) svg {
+  --shadow-color: #f57520;
+}
+
+.social a:nth-child(3) svg {
+  --shadow-color: #9e9e9e;
+}
+
+.social a:nth-child(4) svg {
+  --shadow-color: #329cff;
+}
