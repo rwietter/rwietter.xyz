@@ -9,8 +9,8 @@ import { useTheme } from 'store/switch-theme';
 import { applyTheme } from 'utils/apply-theme';
 import Prism from 'prismjs';
 
-import '../styles/syntax-nord.css';
 import '../styles/styles.css';
+import '../styles/syntax-nord.css';
 import '../styles/shadow-icon.css';
 import { CommandBar } from 'components/Kbar';
 
