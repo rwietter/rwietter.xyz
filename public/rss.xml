@@ -4,7 +4,7 @@
         <title>Maurício Witter | RSS Feed</title>
         <link>http://localhost:3000</link>
         <description>RSS feed for Maurício Witter blog</description>
-        <lastBuildDate>Mon, 07 Aug 2023 17:43:55 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 07 Aug 2023 18:42:25 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <language>pt-BR</language>

@@ -19,7 +19,7 @@ const PostItem: React.FC<Props> = ({ posts }) => (
   <S.PostList>
     {posts?.map((post: any) => (
       <S.PostListItem
-        href={`/post/${post.attributes?.slug}`}
+        href={`/posts/post/${post.attributes?.slug}`}
         key={post.attributes.slug}
       >
         {new Date(post.attributes?.publishedAt).toLocaleDateString()}
