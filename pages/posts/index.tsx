@@ -5,9 +5,9 @@ import type { GetStaticProps } from 'next';
 import apolloClient from 'utils/apollo-client';
 // import generateRssFeed from 'utils/feed-rss';
 import { POSTS_QUERY } from 'queries/posts/posts';
-import * as S from 'domains/posts/post-list/styles';
+import { PostItem, Posts } from 'domains/posts';
 
-const Posts: FC<any> = ({ posts }) => (
+const Page: FC<any> = ({ posts }) => (
   <>
     <SEO
       title="Posts | Maurício Witter | Software Engineer"
@@ -17,18 +17,9 @@ const Posts: FC<any> = ({ posts }) => (
       image="https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png"
     />
     <ContentLayout layout="small">
-      <S.PostsContainer>
-        <S.PostListTitle>Writings</S.PostListTitle>
-        <S.PostList>
-          {posts?.map((post: any) => (
-            <S.PostListItem href={`/post/${post.attributes?.slug}`} key={post.attributes.slug}>
-              {new Date(post.attributes?.publishedAt).toLocaleDateString()}
-              { ' ' }
-              {post.attributes?.title}
-            </S.PostListItem>
-          ))}
-        </S.PostList>
-      </S.PostsContainer>
+      <Posts>
+        <PostItem posts={posts} />
+      </Posts>
     </ContentLayout>
   </>
 );
@@ -57,4 +48,4 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export default Posts;
+export default Page;
