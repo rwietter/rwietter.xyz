@@ -4,7 +4,7 @@
         <title>Maurício Witter | RSS Feed</title>
         <link>https://rwietterc.xyz</link>
         <description>RSS feed for Maurício Witter blog</description>
-        <lastBuildDate>Mon, 07 Aug 2023 22:31:09 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 08 Aug 2023 15:13:56 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <language>pt-BR</language>
@@ -29,7 +29,6 @@
 <h2>Estilo de Programação Imperativo</h2>
 <p>O estilo imperativo concentra-se em como executar o código detalhe a detalhe e define o fluxo de controle de como instruções alteram o estado de um programa. Para ficar mais claro, o código imperativo ordena comandos ao computador, diz exatamente o que precisa fazer, como precisa fazer e em que ordem exata precisa executar.</p>
 <p>A exemplo, o código abaixo é um algoritmo de ordenação chamado de bubble Sort que percorre o array <code>n^2</code> fazendo a troca dos elementos até ordená-lo completamente. Nesse código há a construção da lógica e fluxo de controle, além da mutabilidade do array.</p>
-<p><img src="https://substackcdn.com/image/fetch/w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0a640f32-3aa6-4420-a048-16e4174e1a81_1348x1350.png" alt="bubble sort"></p>
 <p><img src="https://substackcdn.com/image/fetch/w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0a640f32-3aa6-4420-a048-16e4174e1a81_1348x1350.png" alt="bubble sort"></p>
 <p>O código imperativo é interessante para programação de código de baixo nível para o qual existem poucas ou nenhuma abstração. O código fica extremamente verboso, ruim para depurar, ler e para dar manutenção. Em um código imperativo há muitos loops, condicionais e mutações de estado que facilmente resultam em bugs.</p>
 <p>Assim sendo, a programação imperativa é mais adequada para tarefas onde é importante controlar o estado do programa e gerenciar o fluxo de execução.</p>
@@ -84,7 +83,6 @@ const r2  = add(1) // 2
 <p>Uma função ou expressão é referencialmente transparente se puder ser substituída por seu valor sem alterar o comportamento do programa.</p>
 <h4>Abstração</h4>
 <p>A abstração é um dos principais senão o principal princípio do Paradigma Declarativo, é a primeira coisa que vem a mente quando pensamos nela. Como já foi dito, dizemos o que queremos e não como queremos, assim delegamos a responsabilidade do que fazer para a linguagem de programação e apenas descrevemos como queremos o resultado a partir de determinada entrada.</p>
-<p>A abstração é um dos principais senão o principal princípio do Paradigma Declarativo, é a primeira coisa que vem a mente quando pensamos nela. Como já foi dito, dizemos o que queremos e não como queremos, assim delegamos a responsabilidade do que fazer para a linguagem de programação e apenas descrevemos como queremos o resultado a partir de determinada entrada.</p>
 <p>Existem linguagens puramente declarativas, linguagens hibridas e multiparadigmas. YAML, SQL, HTML e XML são exemplos de linguagens puramente declarativas. Linguagens puramente funcionais ou lógicas como Haskell e Prolog, respectivamente, são hibridas pois apesar de ter seus próprios paradigmas (funcional e lógico) enfatizam a programação declarativa. Já as linguagens como Javascript, Java, PHP são multiparadigma, elas incluem algumas abstrações declarativas mas também incluem instruções imperativas e não opinam sobre qual meio usar.</p>
 <h4>Ausência de efeitos colaterais</h4>
 <p>Efeitos colaterais são alterações de estado ou execução de funções que não estão diretamente ligadas com a produção do resultado esperado de uma função. O Paradigma declarativo tem como objetivo eliminar as mudanças de estado em variáveis globais ou objetos compartilhados. Em vez disso, ela se concentra em avaliar expressões e produzir resultados imutáveis, o que ajuda a evitar problemas relacionados a estado e concorrência.</p>
@@ -132,7 +130,6 @@ const r2  = add(1) // 2
 <li>Desenvolvimento Web: a programação declarativa é frequentemente usada no desenvolvimento Web, onde HTML, CSS e outras linguagens de marcação são usadas para definir a estrutura e a aparência das páginas da Web. A programação declarativa permite que os desenvolvedores especifiquem a aparência da página, em vez de como obter essa aparência.</li>
 <li>Processamento de dados: a programação declarativa é adequada para tarefas de processamento de dados, como consultar bancos de dados e manipular grandes conjuntos de dados. Linguagens de programação declarativas como SQL fornecem uma interface de alto nível para interagir com dados, tornando mais fácil escrever consultas e transformações complexas.</li>
 <li>Programação funcional: a programação funcional enfatiza o uso de funções puras e estruturas de dados imutáveis. A programação funcional é adequada para tarefas que exigem muita simultaneidade ou paralelismo, pois funções puras não têm efeitos colaterais e podem ser executadas em paralelo com segurança.</li>
-<li>Programação funcional: a programação funcional enfatiza o uso de funções puras e estruturas de dados imutáveis. A programação funcional é adequada para tarefas que exigem muita simultaneidade ou paralelismo, pois funções puras não têm efeitos colaterais e podem ser executadas em paralelo com segurança.</li>
 </ul>
 <h2>Estado da Arte</h2>
 <blockquote>
@@ -140,7 +137,6 @@ const r2  = add(1) // 2
 </blockquote>
 <p>Muitas das linguagens imperativas começaram a trazer novos recursos na última década para o estilo declarativo. Um exemplo é o Java 8 que trouce uma nova API para Streams para operar em coleções usando expressões lambda abstraindo o código imperativo.</p>
 <p>No Front-end também ganhamos muito mais produtividade e segurança com os frameworks declarativos que surgiram nos últimos anos, como o React, o Vue, o Angular, o Next, o Nuxt entre outros.</p>
-<p>Na área de cloud-computing, várias ferramentas no estilo declarativo como o Terraform, Ansible, Docker, Kubernetes auxiliam a colocar aplicações em produção com escalabilidade, segurança e confiabilidade, fazendo o CI/CD.</p>
 <p>Na área de cloud-computing, várias ferramentas no estilo declarativo como o Terraform, Ansible, Docker, Kubernetes auxiliam a colocar aplicações em produção com escalabilidade, segurança e confiabilidade, fazendo o CI/CD.</p>
 <h2>Conclusão</h2>
 <p>À medida que a programação declarativa continua a evoluir, é provável que ela desempenhe um papel cada vez mais importante no futuro do desenvolvimento de software. Portanto, aprender sobre programação declarativa pode ser um investimento valioso para qualquer desenvolvedor que deseja melhorar sua habilidade em criar código de qualidade.</p>
