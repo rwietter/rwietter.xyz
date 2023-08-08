@@ -166,3 +166,7 @@ tt {
 		text-size-adjust: 100%;
 	}
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
