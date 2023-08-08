@@ -1,5 +1,9 @@
 import { keyframes } from '@stitches/react';
+<<<<<<< HEAD
 import { styled } from 'features/ui/theme';
+=======
+import { styled } from 'src/domains/ui/theme';
+>>>>>>> 145ecd6 (refactor: rsc)
 
 export const Header = styled('header', {
   display: 'flex',

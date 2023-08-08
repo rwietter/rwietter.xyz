@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+<<<<<<< HEAD
 import { useTheme } from 'store/switch-theme';
 import { CiStar, CiHome } from 'react-icons/ci';
 import { BsCodeSlash } from 'react-icons/bs';
@@ -10,6 +11,11 @@ import { IoMdMoon } from 'react-icons/io';
 import { VscSymbolArray } from 'react-icons/vsc';
 
 import * as S from './styles';
+=======
+
+import * as S from './styles';
+import { SwitchTheme } from './SwitchTheme';
+>>>>>>> 145ecd6 (refactor: rsc)
 
 const activeLink = (pathname: string, href: string, article?: string) => {
   let isActive = '';
@@ -22,16 +28,22 @@ const activeLink = (pathname: string, href: string, article?: string) => {
 };
 
 const Header = () => {
+<<<<<<< HEAD
   const { theme, setTheme } = useTheme();
 
   const pathname = usePathname() ?? '';
 
   const handleSwitchTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark');
 
+=======
+  const pathname = usePathname() ?? '';
+
+>>>>>>> 145ecd6 (refactor: rsc)
   return (
     <S.Header>
       <S.Nav>
         <S.NavIterm className={activeLink(pathname, '/')}>
+<<<<<<< HEAD
           <CiHome aria-hidden="true" size={19} color="var(--colors-gray50)" />
           <Link href="/">home</Link>
         </S.NavIterm>
@@ -55,6 +67,24 @@ const Header = () => {
             : <MdWbSunny className="light" aria-hidden="true" />
         }
       </S.DarkMode>
+=======
+          <Link href="/">home</Link>
+        </S.NavIterm>
+        <S.NavIterm className={activeLink(pathname, '/blog', '/blog/article/')}>
+          <Link href="/blog">blog</Link>
+        </S.NavIterm>
+        <S.NavIterm className={activeLink(pathname, '/projects')}>
+          <Link href="/projects">projects</Link>
+        </S.NavIterm>
+        <S.NavIterm className={activeLink(pathname, '/setup')}>
+          <Link href="/setup">setup</Link>
+        </S.NavIterm>
+        <S.NavIterm className={activeLink(pathname, '/posts')}>
+          <Link href="/posts">posts</Link>
+        </S.NavIterm>
+      </S.Nav>
+      <SwitchTheme />
+>>>>>>> 145ecd6 (refactor: rsc)
     </S.Header>
   );
 };

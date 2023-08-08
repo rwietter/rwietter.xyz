@@ -3,6 +3,8 @@ import { getThemeProps } from './get-theme';
 
 export const applyTheme = (currentTheme: EnvTheme) => {
   const theme = getThemeProps(currentTheme);
-  const classTheme = document.querySelector('body') as HTMLBodyElement;
-  classTheme.className = theme;
+  const element = document.querySelector('body') as HTMLBodyElement;
+  element.className = theme;
+
+  element.classList.toggle(currentTheme === 'dark' ? 'light' : 'dark');
 };

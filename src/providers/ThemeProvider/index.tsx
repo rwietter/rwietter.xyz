@@ -2,21 +2,15 @@
 
 import React, { PropsWithChildren, useEffect } from 'react';
 import { useTheme } from 'store/switch-theme';
+import { applyTheme } from 'utils/apply-theme';
 
 type Props = PropsWithChildren<{}>;
 
 const ThemeProvider: React.FC<Props> = ({ children }) => {
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
 
   useEffect(() => {
-    const classTheme = document.querySelector('body') as HTMLBodyElement;
-    if (classTheme.classList.contains('dark')) {
-      setTheme('dark');
-      classTheme.classList.add('dark');
-    } else {
-      setTheme('light');
-      classTheme.classList.remove('dark');
-    }
+    applyTheme(theme);
   }, [theme]);
   return <div>{children}</div>;
 };

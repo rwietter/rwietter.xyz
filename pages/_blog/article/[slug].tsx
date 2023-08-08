@@ -95,11 +95,7 @@ const ArticleItem = ({ articles, blurDataURL }: ArticleData) => {
               </CSS.ArticleMarkdown>
             </CSS.Article>
           </CSS.ArticleMarkdownContainer>
-          <ArticleFooter
-            author={article?.attributes?.author?.data?.attributes?.name}
-            name={article?.attributes?.title}
-            category={article?.attributes?.category?.data?.attributes?.name}
-          />
+          <ArticleFooter article={article} />
         </CSS.ArticleContainer>
       </ArticleLayout>
     </>

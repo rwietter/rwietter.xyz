@@ -21,25 +21,25 @@
 
 ::-webkit-scrollbar-track {
 	background: var(--colors-gray300);
-	transition: background 350ms ease 0s;
+	transition: background 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
 
 
 ::-webkit-scrollbar-thumb {
 	border-radius: 50rem;
 	background: var(--colors-scrollbar);
-	transition: background 350ms ease 0s;
+	transition: background 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
 
 
 ::-webkit-scrollbar-thumb:hover {
 	background: var(--colors-scrollbar);
-	transition: background 350ms ease 0s;
+	transition: background 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
 
 body {
 	background: var(--colors-background);
-	transition: background 350ms ease 0s;
+	transition: background 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
 	text-rendering: optimizeLegibility;
 }
 
@@ -134,18 +134,8 @@ a {
 	text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-span,
-a,
-p,
 time,
 pre,
-button,
 code,
 samp,
 blockquote,
@@ -166,3 +156,7 @@ tt {
 		text-size-adjust: 100%;
 	}
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

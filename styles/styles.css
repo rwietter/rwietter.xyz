@@ -21,25 +21,25 @@
 
 ::-webkit-scrollbar-track {
 	background: var(--colors-gray300);
-	transition: background 350ms ease 0s;
+	transition: background 300ms ease 0s;
 }
 
 
 ::-webkit-scrollbar-thumb {
 	border-radius: 50rem;
 	background: var(--colors-scrollbar);
-	transition: background 350ms ease 0s;
+	transition: background 300ms ease 0s;
 }
 
 
 ::-webkit-scrollbar-thumb:hover {
 	background: var(--colors-scrollbar);
-	transition: background 350ms ease 0s;
+	transition: background 300ms ease 0s;
 }
 
 body {
 	background: var(--colors-background);
-	transition: background 350ms ease 0s;
+	transition: background 300ms ease 0s;
 	text-rendering: optimizeLegibility;
 }
 

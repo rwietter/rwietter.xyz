@@ -1,3 +1,7 @@
+/* eslint-disable no-unused-vars */
+
+'use client';
+
 import { create, type StoreApi, type UseBoundStore } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 
@@ -8,10 +12,10 @@ interface Theme {
 
 const useTheme: UseBoundStore<StoreApi<Theme>> = create(persist((set) => ({
   theme: 'light',
-  setTheme: (theme) => { set({ theme }); }
+  setTheme: (theme) => { set({ theme }); },
 }), {
   name: 'theme',
-  storage: createJSONStorage(() => sessionStorage)
+  storage: createJSONStorage(() => sessionStorage),
 }));
 
 export { useTheme };

@@ -65,9 +65,9 @@ const {
       10: '5.2rem',
     },
     transitions: {
-      transitonTheme: 'color 350ms ease 0s, background 350ms ease 0s',
+      transitonTheme: 'color 350ms cubic-bezier(0.4, 0, 0.2, 1) 0s, background 350ms cubic-bezier(0.4, 0, 0.2, 1) 0s',
       transitonThemeWidth:
-        'width 350ms ease 0s, color 350ms ease 0s, background 350ms ease 0s',
+        'width 350ms cubic-bezier(0.4, 0, 0.2, 1) 0s, color 350ms cubic-bezier(0.4, 0, 0.2, 1) 0s, background 350ms cubic-bezier(0.4, 0, 0.2, 1) 0s',
     },
     fonts: {
       primary: `'Roboto', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,

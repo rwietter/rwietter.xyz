@@ -1,6 +1,10 @@
+/* eslint-disable import/no-extraneous-dependencies */
 // @type {import('next').NextConfig}
 const withImages = require('next-images');
 const { withPlaiceholder } = require('@plaiceholder/next');
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
 
 const withPWA = require('next-pwa')({
   dest: 'public',
@@ -30,4 +34,4 @@ const nextConfig = withImages({
   },
 });
 
-module.exports = withPWA(withPlaiceholder(nextConfig));
+module.exports = withBundleAnalyzer(withPWA(withPlaiceholder(nextConfig)));
