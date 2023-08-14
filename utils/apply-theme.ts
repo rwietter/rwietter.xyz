@@ -1,25 +1,22 @@
 import {
+  AvailableThemes,
   archTheme, blueberryLight, catppuccinDark, chaosTheory,
 } from 'features/ui/theme';
 
-const choiceTheme = (currentTheme: any) => {
-  switch (currentTheme) {
-    case 'blueberry-light':
-      return blueberryLight;
-    case 'arch':
-      return archTheme;
-    case 'catppuccin':
-      return catppuccinDark;
-    case 'chaos-theory':
-      return chaosTheory;
-    default:
-      return blueberryLight;
-  }
+type T = {
+  // eslint-disable-next-line no-unused-vars
+  [Key in AvailableThemes]: string;
+}
+
+const themes: T = {
+  arch: archTheme,
+  catppuccin: catppuccinDark,
+  'blueberry-light': blueberryLight,
+  'chaos-theory': chaosTheory,
 };
 
-export const applyTheme = (currentTheme: any) => {
-  const theme = choiceTheme(currentTheme);
+export const applyTheme = (type: AvailableThemes) => {
+  const theme = themes[type];
   const classTheme = document.querySelector('body') as HTMLBodyElement;
   classTheme.className = theme;
-  classTheme.classList.toggle('dark', currentTheme === 'light');
 };

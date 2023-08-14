@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build && yarn postbuild",
+    "build": "next build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",
     "fix": "eslint --fix ",
@@ -25,7 +25,6 @@
     "apollo-cache-inmemory": "^1.6.6",
     "apollo-client": "^2.6.10",
     "apollo-link-http": "^1.5.17",
-    "autoprefixer": "^10.4.14",
     "color.js": "^1.2.0",
     "date-fns": "^2.29.3",
     "feed": "^4.2.2",
@@ -39,7 +38,6 @@
     "next-seo": "^5.15.0",
     "next-sitemap": "^3.1.55",
     "plaiceholder": "^2.5.0",
-    "postcss": "^8.4.27",
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
     "react-apollo": "^3.1.5",
@@ -52,7 +50,6 @@
     "remark-html": "^15.0.2",
     "rss": "^1.2.2",
     "sharp": "^0.32.1",
-    "tailwindcss": "^3.3.3",
     "zustand": "^4.3.6"
   },
   "devDependencies": {
