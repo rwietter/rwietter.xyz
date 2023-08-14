@@ -5,7 +5,7 @@ export const Container = styled('section', {
   flexDirection: 'column',
   alignItems: 'flex-start',
   justifyContent: 'flex-start',
-  color: '$gray50',
+  color: '$text_color',
   maxWidth: '45rem',
   padding: '$3 0',
   transition: '$transitonTheme',
@@ -15,7 +15,7 @@ export const Container = styled('section', {
 
   h1: {
     fontWeight: '700',
-    color: '$gray50',
+    color: '$text_color',
     fontFamily: 'Raleway, sans-serif',
     transition: '$transitonTheme',
     fontVariant: 'common-ligatures',
@@ -25,7 +25,7 @@ export const Container = styled('section', {
   },
 
   h2: {
-    color: '$gray50',
+    color: '$text_color',
     lineHeight: '1.5',
     paddingTop: '$1',
     fontFamily: 'Futura Std, sans-serif',

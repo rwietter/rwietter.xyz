@@ -16,34 +16,26 @@ export const Img = styled('img', {
 export const Playing = styled('div', {
   display: 'flex',
   justifyContent: 'flex-start',
-  alignItems: 'center',
-  minHeight: '6rem',
-  border: '1px solid $gray400',
+  border: '1px solid $bg_alt_color',
   borderRadius: '4px',
   marginTop: '$1',
   transition: '$transitonTheme, border 0.3s ease',
   width: '100%',
   maxWidth: '400px',
   overflow: 'hidden',
-  '&:hover': {
-    cursor: 'pointer',
-  },
+  cursor: 'pointer',
   '@bp1': {
     minWidth: '380px',
   },
 });
 
 export const PlayingArtist = styled('div', {
-  paddingLeft: '2.5rem',
-  paddingRight: '.5rem',
+  paddingLeft: '1rem',
   display: 'flex',
   flexWrap: 'wrap',
   flexDirection: 'column',
-  paddingTop: '$2',
-  alignSelf: 'flex-start',
-  justifyContent: 'flex-start',
-  alignItems: 'flex-start',
-  color: '$gray50',
+  paddingTop: '1rem',
+  color: '$text_color',
   transition: '$transitonTheme',
 
   '.play a': {
@@ -51,15 +43,15 @@ export const PlayingArtist = styled('div', {
     alignItems: 'center',
     position: 'relative',
     textDecoration: 'none',
-    color: '$gray50',
-    paddingTop: '1rem',
+    color: '$text_color',
+    paddingTop: '.5rem',
     transition: '$transitonTheme',
     fontFamily: 'Futura Std, sans-serif',
     '--fluid-type-min': '0.9rem',
     '--fluid-type-max': '1rem',
     '--fluid-type-target': '0.8vw',
     '&:hover': {
-      color: '$primary',
+      color: '$main_color',
     },
     '.artist': {
       all: 'unset',
@@ -81,7 +73,8 @@ export const PlayingArtist = styled('div', {
 });
 
 export const PlayingImage = styled('div', {
-  width: '60px',
+  width: '100%',
+  maxWidth: '90px',
   alignSelf: 'flex-end',
 });
 

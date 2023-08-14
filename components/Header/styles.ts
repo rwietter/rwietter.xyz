@@ -1,4 +1,3 @@
-import { keyframes } from '@stitches/react';
 import { styled } from 'features/ui/theme';
 
 export const Header = styled('header', {
@@ -19,17 +18,16 @@ export const Nav = styled('nav', {
   alignItems: 'center',
   justifyContent: 'flex-start',
   flexFlow: 'wrap',
-  color: '$gray50',
   fontWeight: 600,
 
   a: {
-    color: '$gray50',
+    color: '$text_alt_color',
     textDecoration: 'none',
-    fontWeight: 200,
+    fontWeight: 400,
     paddingLeft: '0.4rem',
     position: 'relative',
     fontFamily: 'Futura Std, sans-serif',
-    transition: 'color 0.2s ease',
+    transition: '$transitonTheme',
     '--fluid-type-min': '1rem',
     '--fluid-type-max': '1.3rem',
     '--fluid-type-target': '2vw',
@@ -53,11 +51,11 @@ export const NavIterm = styled('div', {
   },
 
   'a, svg': {
-    color: '$weakColorText !important',
+    color: '$sub_color !important',
   },
 
   '&.active a, &.active svg': {
-    color: '$gray50 !important',
+    color: '$text_alt_color !important',
   },
 
   '&.active': {
@@ -67,7 +65,8 @@ export const NavIterm = styled('div', {
       display: 'none',
       width: '8px',
       height: '8px',
-      background: '$primary',
+      background: '$main_color',
+      transition: '$transitonTheme',
       borderRadius: '50%',
       transform: 'translateX(-45%)',
       top: '-10px',
@@ -84,22 +83,14 @@ export const NavIterm = styled('div', {
   },
 });
 
-const clickScaleAnimation = keyframes({
-  '0%': {
-    transform: 'scale(0)',
-  },
-  '100%': {
-    transform: 'scale(1)',
-  },
-});
-
-export const DarkMode = styled('button', {
+export const Button = styled('button', {
   background: 'none',
   display: 'none',
-  color: '$gray50',
+  color: '$text_color',
   outline: 'none',
   border: 'none',
   cursor: 'pointer',
+  transition: '$transitonTheme',
   fontFamily: 'Roboto Flex, sans-serif',
 
   '@bp1': {
@@ -107,7 +98,7 @@ export const DarkMode = styled('button', {
     alignItems: 'center',
   },
 
-  '& svg.dark, & svg.light': {
-    animation: `${clickScaleAnimation} 300ms linear`,
+  '&:hover': {
+    color: '$main_color',
   },
 });

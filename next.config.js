@@ -24,10 +24,6 @@ const nextConfig = withImages({
     formats: ['image/webp'],
     disableStaticImages: true,
   },
-
-  experimental: {
-    appDir: false,
-  },
 });
 
 module.exports = withPWA(withPlaiceholder(nextConfig));

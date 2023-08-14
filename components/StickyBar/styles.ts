@@ -11,8 +11,8 @@ export const ManuBarWrapper = styled('footer', {
   padding: '0 0.3rem',
   position: 'fixed',
   width: '100%',
-  transition: '$transitonTheme, border 0.35s ease',
-  background: '$mediumBackground',
+  transition: '$transitonTheme',
+  background: '$sub_alt_color',
   zIndex: 10,
 
   '@bp5': {
@@ -21,7 +21,7 @@ export const ManuBarWrapper = styled('footer', {
     height: '100vh',
     padding: '0.8rem 0',
     position: 'fixed',
-    borderLeft: '2px solid $background',
+    borderLeft: '2px solid $bg_color',
     right: '0',
     width: '3.5rem',
   },
@@ -38,8 +38,8 @@ export const MenuBarGroup = styled('div', {
 
 export const MenuBarLink = styled(Link, {
   display: 'block',
-  color: '$primary',
-  transition: 'color 0.35s ease',
+  color: '$text_color',
+  transition: '$transitonTheme',
 });
 
 export const MenuBarItem = styled('button', {
@@ -47,11 +47,11 @@ export const MenuBarItem = styled('button', {
   border: 'none',
   outline: 'none',
   margin: '0',
-  color: '$gray50',
+  color: '$text_color',
   cursor: 'pointer',
   padding: '1.1rem',
   position: 'relative',
-  transition: 'color 0.35s ease',
+  transition: '$transitonTheme',
   display: 'flex',
   alignItems: 'center',
 
@@ -59,8 +59,10 @@ export const MenuBarItem = styled('button', {
     padding: '.9rem',
     position: 'relative',
     '&:hover': {
-      color: '$primary',
+      color: '$caret_color',
     },
   },
-
+  '&:hover': {
+    color: '$main_color',
+  },
 });

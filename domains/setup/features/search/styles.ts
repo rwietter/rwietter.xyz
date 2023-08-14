@@ -17,7 +17,8 @@ export const SearchContent = styled('section', {
     },
 
     a: {
-      color: '$gray50',
+      color: '$sub_color',
+      transition: '$transitonTheme',
       fontFamily: 'Futura Std, sans-serif',
     },
     'a:not(:last-child)': {
@@ -33,10 +34,10 @@ export const InputSearch = styled('div', {
   width: '100%',
 
   input: {
-    background: '$background',
-    border: '1px solid #8f9ba8',
+    background: '$bg_alt_color',
+    border: '1px solid $sub_color',
     borderRadius: '8px',
-    color: '$gray50',
+    color: '$text_color',
     fontSize: '1rem',
     marginTop: '0.5rem',
     outline: 'none',
@@ -45,11 +46,11 @@ export const InputSearch = styled('div', {
     width: '100%',
 
     '&:focus': {
-      borderColor: '$primary',
+      borderColor: '$main_color',
     },
 
     '&::placeholder': {
-      color: '$weakColorText',
+      color: '$text_color',
     },
   },
 });
@@ -57,6 +58,7 @@ export const InputSearch = styled('div', {
 export const Description = styled('span', {
   '--fluid-type-max': '1rem',
   '--fluid-type-min': '.9rem',
-  color: '$weakColorText',
+  color: '$text_color',
+  transition: '$transitonTheme',
   fontFamily: 'Futura Std, sans-serif',
 });

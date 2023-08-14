@@ -3,8 +3,8 @@ import { styled } from 'features/ui/theme';
 export const LayoutCSS = styled('main', {
   display: 'flex',
   flexDirection: 'column',
-  background: 'var(--background)',
-  transition: 'background 0.35s, color 0.35s ease',
+  background: '$bg_color',
+  transition: '$transitonTheme',
   width: '100%',
   maxWidth: '60rem',
   margin: '0 auto',

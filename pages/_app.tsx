@@ -1,4 +1,7 @@
 /* eslint-disable react/no-danger */
+import '../styles/styles.css';
+import '../styles/syntax-nord.css';
+import '../styles/shadow-icon.css';
 import type { AppProps } from 'next/app';
 import { ApolloProvider } from '@apollo/react-hooks';
 import apolloClient from 'utils/apollo-client';
@@ -8,11 +11,8 @@ import { useEffect } from 'react';
 import { useTheme } from 'store/switch-theme';
 import { applyTheme } from 'utils/apply-theme';
 import Prism from 'prismjs';
-
-import '../styles/styles.css';
-import '../styles/syntax-nord.css';
-import '../styles/shadow-icon.css';
 import { CommandBar } from 'components/Kbar';
+import { ModalTheme } from 'components/ModalTheme';
 
 require('prismjs/components/prism-typescript');
 require('prismjs/components/prism-javascript');
@@ -38,6 +38,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <CommandBar>
       <LoadingIndicator />
+      <ModalTheme />
       <ApolloProvider client={apolloClient as any}>
         <Component {...pageProps} />
         <Analytics />

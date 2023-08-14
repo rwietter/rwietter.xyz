@@ -1,9 +1,22 @@
-import { EnvTheme } from 'features/ui/theme/ts';
-import { getThemeProps } from './get-theme';
+import {
+  AvailableThemes,
+  archTheme, blueberryLight, catppuccinDark, chaosTheory,
+} from 'features/ui/theme';
 
-export const applyTheme = (currentTheme: EnvTheme) => {
-  const theme = getThemeProps(currentTheme);
+type T = {
+  // eslint-disable-next-line no-unused-vars
+  [Key in AvailableThemes]: string;
+}
+
+const themes: T = {
+  arch: archTheme,
+  catppuccin: catppuccinDark,
+  'blueberry-light': blueberryLight,
+  'chaos-theory': chaosTheory,
+};
+
+export const applyTheme = (type: AvailableThemes) => {
+  const theme = themes[type];
   const classTheme = document.querySelector('body') as HTMLBodyElement;
   classTheme.className = theme;
-  classTheme.classList.toggle('dark', currentTheme === 'light');
 };

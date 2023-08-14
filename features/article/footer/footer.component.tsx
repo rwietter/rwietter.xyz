@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-one-expression-per-line */
-import { SidebarSocialIcons } from 'components/Social';
+import { SidebarSocialIcons } from 'components/StickyBar/Social';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { type FC } from 'react';

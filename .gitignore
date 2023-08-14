@@ -8,6 +8,13 @@
 /.pnp
 .pnp.js
 
+# sitemap
+/public/sitemap.xml
+/public/sitemap-*.xml
+/public/rss.xml
+/public/rss.atom
+/public/rss.json
+
 .env
 public/sw.js
 public/sw.js.map

@@ -25,6 +25,8 @@ interface WeatherConditionsProps {
 }
 
 export const WeatherConditions: FC<WeatherConditionsProps> = ({ weather }) => {
+  if (weather === null) return <span />;
+
   const data = weather[0];
 
   return (

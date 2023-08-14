@@ -2,7 +2,7 @@ import { styled } from 'features/ui/theme';
 
 export const ArticleFooterContainer = styled('div', {
   padding: '$6 1rem $2 1rem',
-  color: '$gray50',
+  color: '$text_alt_color',
   maxWidth: '60rem',
   margin: '0 auto',
   fontFamily: 'Futura Std, sans-serif',
@@ -17,7 +17,7 @@ export const NavHeader = styled('nav', {
   lineHeight: '2',
 
   a: {
-    color: '$gray50',
+    color: '$text_color',
     textDecoration: 'none',
     transition: '$transitonTheme',
     display: 'flex',
@@ -25,7 +25,7 @@ export const NavHeader = styled('nav', {
     '--fluid-type-max': '1.2rem',
 
     '&:hover': {
-      color: '$primary',
+      color: '$text_alt_color',
     },
   },
   span: {
@@ -34,7 +34,7 @@ export const NavHeader = styled('nav', {
     cursor: 'pointer',
     transition: '$transitonTheme',
     '&:hover': {
-      color: '$primary',
+      color: '$text_alt_color',
     },
   },
 
@@ -46,7 +46,7 @@ export const NavHeader = styled('nav', {
 export const Separator = styled('div', {
   width: '100%',
   height: '1px',
-  background: '$gray200',
+  background: '$sub_color',
   transition: '$transitonTheme',
 });
 
@@ -65,41 +65,5 @@ export const SocialContainer = styled('section', {
     strong: {
       fontWeight: 600,
     },
-  },
-});
-
-export const Link = styled('a', {
-  color: '$gray50',
-  display: 'inline-block',
-  textDecoration: 'none',
-  fontSize: '$2',
-  transition: 'color 0.3s ease',
-
-  variants: {
-    social: {
-      github: {
-        '&:hover': {
-          color: '#999',
-        },
-      },
-      substack: {
-        '&:hover': {
-          color: '#FF6719',
-        },
-      },
-      linkedIn: {
-        '&:hover': {
-          color: '#0077b5',
-        },
-      },
-      twitter: {
-        '&:hover': {
-          color: '#1da1f2',
-        },
-      },
-    },
-  },
-  '& + &': {
-    paddingLeft: '$2',
   },
 });

@@ -1,6 +1,5 @@
 import SEO from 'components/SEO';
 import { ContentLayout } from 'features/ui/layouts';
-import { PageTitle } from 'globals/components';
 import { useCallback } from 'react';
 import { operationSystem } from './data/so';
 import { tools } from './data/tools';
@@ -43,7 +42,6 @@ const Setup = () => {
       />
       <ContentLayout layout="small">
         <S.Main>
-          <PageTitle color="secondary" title="SO and Software Development Setup" />
           <S.Content>
             <Search handleInputChange={handleInputChange} />
             <SetupInformation />

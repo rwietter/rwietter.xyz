@@ -5,16 +5,17 @@ export const PostList = styled('ul', {
   display: 'flex',
   listStyle: 'none',
   paddingTop: '2rem',
-  color: '$weakColorText',
 });
 
 export const PostListItem = styled(Link, {
   cursor: 'pointer',
   textDecoration: 'none',
-  color: '$weakColorText',
   transition: '$transitonTheme',
+  fontFamily: 'Futura Std, sans-serif',
+  color: '$text_color',
+
   '&:hover': {
-    color: '$white',
+    color: '$main_color',
     textDecoration: 'underline',
   },
 });

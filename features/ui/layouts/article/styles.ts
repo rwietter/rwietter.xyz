@@ -2,11 +2,13 @@ import { styled } from 'features/ui/theme';
 
 export const BlogContainerPosts = styled('section', {
   display: 'flex',
+  background: '$bg_color',
+  transition: '$transitonTheme',
   flexDirection: 'column',
 });
 
 export const ArticleLayout = styled('section', {
-  transition: 'background 0.35s, color 0.35s ease',
+  transition: '$transitonTheme',
   width: '100%',
   margin: '0 auto',
   paddingBottom: '4rem',

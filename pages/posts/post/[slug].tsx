@@ -1,8 +1,6 @@
 /* eslint-disable no-tabs */
 import { useRouter } from 'next/router';
-import { useTheme } from 'store/switch-theme';
 import markdownLight from 'styles/github-markdown-css-light.module.css';
-import markdownDark from 'styles/github-markdown-css-dark.module.css';
 import { AiOutlineArrowLeft, AiOutlineCalendar } from 'react-icons/ai';
 import { RiTimer2Line } from 'react-icons/ri';
 import * as CSS from 'features/article/styles';
@@ -19,8 +17,6 @@ import { POST_QUERY } from 'queries/post/post';
 
 const Page = ({ posts }: any) => {
   if (!posts) return null;
-
-  const { theme } = useTheme();
 
   const router = useRouter() as unknown as { asPath: string };
 
@@ -42,28 +38,26 @@ const Page = ({ posts }: any) => {
         <CSS.ArticleContainer>
           <CSS.ArticleMarkdownContainer>
             <CSS.ArticleHeader>
-              <div>
-                <CSS.InfoHeader>
-                  <Link href="/posts">
-                    <CSS.BackToOverview
-                      type="button"
-                      aria-label="Back to overview"
-                    >
-                      <AiOutlineArrowLeft size={19} aria-hidden="true" />
-                      <p>Back to overview</p>
-                    </CSS.BackToOverview>
-                  </Link>
-                  <div>
-                    <CSS.DateTimeRead>
-                      <AiOutlineCalendar size={17} />
-                      {publishedAt}
-                      &nbsp;|&nbsp;
-                      <RiTimer2Line size={17} />
-                      {readTime}
-                    </CSS.DateTimeRead>
-                  </div>
-                </CSS.InfoHeader>
-              </div>
+              <CSS.InfoHeader>
+                <Link href="/posts">
+                  <CSS.BackToOverview
+                    type="button"
+                    aria-label="Back to overview"
+                  >
+                    <AiOutlineArrowLeft size={19} aria-hidden="true" />
+                    <p>Back to overview</p>
+                  </CSS.BackToOverview>
+                </Link>
+                <div>
+                  <CSS.DateTimeRead>
+                    <AiOutlineCalendar size={17} />
+                    {publishedAt}
+                    &nbsp;|&nbsp;
+                    <RiTimer2Line size={17} />
+                    {readTime}
+                  </CSS.DateTimeRead>
+                </div>
+              </CSS.InfoHeader>
 
               <CSS.ArticleTitle>{post?.attributes?.title}</CSS.ArticleTitle>
               <CSS.ArticleDescription>
@@ -71,13 +65,7 @@ const Page = ({ posts }: any) => {
               </CSS.ArticleDescription>
             </CSS.ArticleHeader>
             <CSS.Article>
-              <CSS.ArticleMarkdown
-                className={
-                  theme === 'light'
-                    ? markdownDark['markdown-body']
-                    : markdownLight['markdown-body']
-                }
-              >
+              <CSS.ArticleMarkdown className={markdownLight['markdown-body']}>
                 {post?.attributes?.content}
               </CSS.ArticleMarkdown>
             </CSS.Article>

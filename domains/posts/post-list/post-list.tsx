@@ -24,6 +24,8 @@ const PostItem: React.FC<Props> = ({ posts }) => (
       >
         {new Date(post.attributes?.publishedAt).toLocaleDateString()}
         {' '}
+        —
+        {' '}
         {post.attributes?.title}
       </S.PostListItem>
     ))}

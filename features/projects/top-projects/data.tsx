@@ -13,7 +13,7 @@ export const dbTopProjects = [
     github: 'https://github.com/rwietter/trackrow-monorepo',
     link: 'https://github.com/rwietter/trackrow-monorepo',
     tags: ['React', 'Next', 'TypeScript', 'Postgres', 'Rest API'],
-    icon: () => <TfiAgenda size={18} color="var(--colors-gray50)" />,
+    icon: () => <TfiAgenda size={18} color="var(--colors-text_color)" />,
   },
   {
     title: 'IllusionTheme',
@@ -23,7 +23,7 @@ export const dbTopProjects = [
     github: 'https://github.com/rwietter/illusion-vscode-theme',
     link: 'https://github.com/rwietter/illusion-vscode-theme',
     tags: ['VsCode', 'Theme', 'TypeScript'],
-    icon: () => <DiVisualstudio size={24} color="var(--colors-gray50)" />,
+    icon: () => <DiVisualstudio size={24} color="var(--colors-text_color)" />,
   },
   {
     title: 'PrettySQL',
@@ -33,7 +33,7 @@ export const dbTopProjects = [
     github: 'https://github.com/rwietter/pretty-sql',
     link: 'https://github.com/rwietter/pretty-sql',
     tags: ['Next', 'TypeScript'],
-    icon: () => <SiMysql size={24} color="var(--colors-gray50)" />,
+    icon: () => <SiMysql size={24} color="var(--colors-text_color)" />,
   },
   {
     title: 'MyAwesome',
@@ -43,7 +43,7 @@ export const dbTopProjects = [
     github: 'https://github.com/rwietter/my-awesome',
     link: 'https://github.com/rwietter/my-awesome',
     tags: ['Next', 'TypeScript', 'Redis', 'Postgres'],
-    icon: () => <SiAwesomelists size={24} color="var(--colors-gray50)" />,
+    icon: () => <SiAwesomelists size={24} color="var(--colors-text_color)" />,
   },
   {
     title: 'EcoNext',
@@ -53,6 +53,6 @@ export const dbTopProjects = [
     github: 'https://github.com/rwietter/econext',
     link: 'https://github.com/rwietter/econext',
     tags: ['Next', 'TypeScript', 'Rest API', 'Postgres'],
-    icon: () => <GiEcology size={22} color="var(--colors-gray50)" />,
+    icon: () => <GiEcology size={22} color="var(--colors-text_color)" />,
   },
 ];

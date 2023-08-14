@@ -1,22 +1,24 @@
-/* eslint-disable no-tabs */
 import { BsSpotify } from 'react-icons/bs';
 import type { FC } from 'react';
 import { TbPlayerPause } from 'react-icons/tb';
-import Image from 'next/image';
 import * as S from './styles';
 import type { LastFmTrackProps, TrackProps } from './types';
+import { NotPlaying } from './NotPlaying';
 
 export const LastFMTrack: FC<LastFmTrackProps> = ({ lastFm }) => {
-  if (!lastFm.recenttracks?.track[0]) return <span />;
+  if (lastFm === null) return <span />;
 
   const track: TrackProps = lastFm?.recenttracks?.track[0];
-  const imageUrl = track?.image[3]['#text'] || track?.image[2]['#text'] || track?.image[1]['#text'];
+  const nowPlaying = track['@attr']?.nowplaying === 'true';
+  const imageUrl = track.image[3]['#text'];
+
+  if (!nowPlaying) return <NotPlaying />;
 
   return (
     <S.Playing>
       <S.PlayingImage>
         {imageUrl ? (
-          <Image quality={100} src={imageUrl} alt={track.name} width={90} height={90} />
+          <img src={imageUrl} alt={track.name} width={90} height={90} />
         ) : (
           <span />
         )}
