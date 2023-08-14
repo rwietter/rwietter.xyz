@@ -1,7 +1,7 @@
 {
   "name": "next-pwa-1",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "pages/index.js",
   "license": "MIT",
   "private": true,
   "engines": {
@@ -33,7 +33,7 @@
     "graphql": "^16.6.0",
     "graphql-tag": "^2.12.6",
     "kbar": "0.1.0-beta.40",
-    "next": "^13.2.4",
+    "next": "^13.4.12",
     "next-images": "^1.8.4",
     "next-pwa": "5.6.0",
     "next-seo": "^5.15.0",

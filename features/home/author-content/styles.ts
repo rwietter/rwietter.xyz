@@ -15,7 +15,7 @@ export const Container = styled('section', {
 
 export const CurrentlyInformations = styled('div', {
   padding: '$1 0',
-  color: '$gray50',
+  color: '$text_color',
   transition: '$transitonTheme',
   p: {
     display: 'flex',

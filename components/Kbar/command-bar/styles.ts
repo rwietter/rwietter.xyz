@@ -9,7 +9,7 @@ const Positioner = styled(KBarPositioner, {
   width: '100%',
   inset: '0px',
   padding: '14vh 16px 16px',
-  background: '$kbarBackground',
+  background: 'rgba(0, 0, 0, .8)',
   boxSizing: 'border-box',
   zIndex: 4,
   fontFamily: 'Futura Std, sans-serif',
@@ -26,8 +26,8 @@ const Search = styled(KBarSearch, {
   outline: 'none',
   border: 'none',
   margin: 0,
-  background: '$mediumBackground',
-  color: '$gray50',
+  background: '$bg_alt_color',
+  color: '$text_color',
 });
 
 const GroupName = styled('div', {
@@ -35,12 +35,12 @@ const GroupName = styled('div', {
   fontSize: '10px',
   textTransform: 'uppercase',
   letterSpacing: '1px',
-  background: '$mediumBackground',
+  background: 'rgba(0, 0, 0, 0.6)',
 });
 
 const Kbd = styled('kbd', {
-  background: '$mediumBackground',
-  color: '$gray50',
+  background: '$bg_alt_color',
+  color: '$text_color',
   padding: '4px 8px',
   textTransform: 'uppercase',
 });
@@ -59,7 +59,7 @@ const Action = styled('div', {
   '--fluid-type-max': '1.15rem',
 
   svg: {
-    color: '$gray50',
+    color: '$text_color',
   },
 });
 
@@ -77,7 +77,7 @@ const Animator = styled(KBarAnimator, {
   backgroundColor: '#ffffff0d',
   maxWidth: '600px',
   width: '100%',
-  color: '$gray50',
+  color: '$text_color',
   borderRadius: '8px',
   overflow: 'hidden',
   boxShadow: '0px 10px 20px 8px rgba(0, 0, 0, 0.1)',
@@ -107,7 +107,7 @@ const Box = styled('div', {
   cursor: 'pointer',
 
   '&:hover': {
-    backgroundColor: '$kbarBoxHover',
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
   },
 });
 

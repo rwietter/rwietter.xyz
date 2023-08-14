@@ -28,7 +28,7 @@ export const CardInformations = styled('section', {
   display: 'flex',
   flexFlow: 'column',
   alignItems: 'flex-start',
-  color: '$gray50',
+  color: '$text_color',
   overflowWrap: 'anywhere',
 
   '#description': {
@@ -51,9 +51,10 @@ export const CardInformations = styled('section', {
     letterSpacing: '-0.02em',
     fontFamily: 'Futura Std, sans-serif',
     fontWeight: 400,
-    background: '$gray50',
-    color: '$gray100',
+    background: '$caret_color',
+    color: '$sub_color',
     borderRadius: '4px',
+    transition: '$transitonTheme',
     '--fluid-type-max': '1rem',
   },
 });

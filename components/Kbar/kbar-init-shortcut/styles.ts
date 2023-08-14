@@ -5,33 +5,24 @@ export const KbarContainer = styled('div', {
 });
 
 export const KbarButton = styled('button', {
-  background: 'transparent',
-
-  border: 'none',
   cursor: 'pointer',
+  color: '$text_alt_color',
+  padding: '2px 10px',
+  borderRadius: '1em',
+  border: 'none',
   outline: 'none',
-  color: '$gray50',
-  padding: '5px',
-  borderRadius: '8px',
   transition: '$transitonTheme',
   textAlign: 'center',
   '--fluid-type-min': '0.9rem',
   '--fluid-type-max': '1rem',
-  '&:hover': {
-    color: '$gray50',
-    background: '$kbarBoxActive',
-
-    code: {
-      background: '$shortcutHover',
-    },
-  },
+  background: 'transparent',
 
   code: {
-    background: '$shortcut',
+    background: '$sub_color',
     textAlign: 'center',
-    color: '#08070b',
-    padding: '1px 8px 2px 8px',
-    borderRadius: '4rem',
+    color: '$text_alt_color',
+    padding: '2px 4px',
+    borderRadius: '1em',
     fontWeight: 500,
     transition: '$transitonTheme',
     '--fluid-type-min': '0.9rem',

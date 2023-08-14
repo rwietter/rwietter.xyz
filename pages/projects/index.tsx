@@ -2,7 +2,6 @@ import SEO from 'components/SEO';
 import { Wrapper } from 'features/projects/styles';
 import { ContentLayout } from 'features/ui/layouts';
 import { YearProjects, TopProjects } from 'features/projects';
-import { PageTitle } from 'globals/components';
 
 const Page = () => (
   <>
@@ -15,7 +14,6 @@ const Page = () => (
     />
     <ContentLayout layout="small">
       <Wrapper>
-        <PageTitle title="Trabalho, hobby & open source" color="primary" />
         <TopProjects />
         <YearProjects />
       </Wrapper>

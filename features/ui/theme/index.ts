@@ -1,3 +1,1 @@
-export {
-  styled, getCssText, darkTheme, lightTheme,
-} from './theme';
+export * from './theme';

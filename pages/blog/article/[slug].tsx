@@ -1,9 +1,7 @@
 /* eslint-disable no-tabs */
 import { useRouter } from 'next/router';
 import ARTICLE_QUERY from 'queries/article/article';
-import { useTheme } from 'store/switch-theme';
 import markdownLight from 'styles/github-markdown-css-light.module.css';
-import markdownDark from 'styles/github-markdown-css-dark.module.css';
 import { AiOutlineArrowLeft, AiOutlineCalendar } from 'react-icons/ai';
 import { RiTimer2Line } from 'react-icons/ri';
 import * as CSS from 'features/article/styles';
@@ -21,8 +19,6 @@ import { ArticleFooter } from 'features/article';
 
 const ArticleItem = ({ articles, blurDataURL }: ArticleData) => {
   if (!articles) return null;
-
-  const { theme } = useTheme();
 
   const router = useRouter() as unknown as { asPath: string };
 
@@ -47,7 +43,10 @@ const ArticleItem = ({ articles, blurDataURL }: ArticleData) => {
               <div>
                 <CSS.InfoHeader>
                   <Link href="/blog">
-                    <CSS.BackToOverview type="button" aria-label="Back to overview">
+                    <CSS.BackToOverview
+                      type="button"
+                      aria-label="Back to overview"
+                    >
                       <AiOutlineArrowLeft size={19} aria-hidden="true" />
                       <p>Back to overview</p>
                     </CSS.BackToOverview>
@@ -84,13 +83,7 @@ const ArticleItem = ({ articles, blurDataURL }: ArticleData) => {
               </CSS.ImageCredit>
             </CSS.ImageContainer>
             <CSS.Article>
-              <CSS.ArticleMarkdown
-                className={
-                  theme === 'light'
-                    ? markdownDark['markdown-body']
-                    : markdownLight['markdown-body']
-                }
-              >
+              <CSS.ArticleMarkdown className={markdownLight['markdown-body']}>
                 {article?.attributes?.content}
               </CSS.ArticleMarkdown>
             </CSS.Article>

@@ -1,4 +1,4 @@
-import { SidebarSocialIcons } from 'components/Social';
+import { SidebarSocialIcons } from 'components/StickyBar/Social';
 import { author } from './author';
 import { Container, SocialContainer } from './styles';
 

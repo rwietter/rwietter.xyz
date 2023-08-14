@@ -1,56 +1,52 @@
 import { createStitches } from '@stitches/react';
 
+export type AvailableThemes = 'arch' | 'blueberry-light' | 'catppuccin' | 'chaos-theory'
+
+type ThemeList = {
+  name: AvailableThemes;
+  colors: string[];
+  background: string;
+};
+
+export const themeList: ThemeList[] = [
+  {
+    name: 'arch',
+    colors: ['#0c0d11', '#f6f5f5', '#7ebab5'],
+    background: '#000000',
+  },
+  {
+    name: 'blueberry-light',
+    colors: ['#dae0f5', '#678198', '#506477'],
+    background: '#f6f5f5',
+  },
+  {
+    name: 'catppuccin',
+    colors: ['#1e1e2e', '#CECEE6', '#abe9b3'],
+    background: '#000000',
+  },
+  {
+    name: 'chaos-theory',
+    colors: ['#141221', '#dde5ed', '#fd77d7'],
+    background: '#000000',
+  },
+];
+
 const {
-  theme: darkTheme,
+  theme: archTheme,
   styled,
   getCssText,
 } = createStitches({
   theme: {
     colors: {
-      background: '#000000',
-      mediumBackground: '#13141c',
-      mediumBackgroundHover: '#202230',
-      gradientBackground: '#10101a',
-      linearBackground:
-        'linear-gradient(180deg,rgba(35,37,49,.5),rgba(15,15,24,.5));',
-      gradient:
-        'linear-gradient(90deg, #ffbe0b, #fb5607, #ff006e, #8257e5, #3a86ff );',
-      highlight01: 'linear-gradient(135deg, #80ffea 0%, #8aff80 100%)',
-      highlight145: 'linear-gradient(145deg, #8257e5, #c1b);',
-      highlight30: 'linear-gradient(43deg, #74ebd5, #9face6);',
-      gradientGreen: 'linear-gradient(135deg, #80ffea 0%, #8aff80 100%);',
-      gradientYellow: 'linear-gradient(135deg, #ffff80 0%, #ff80bf 100%);',
-      gray50: '#FFFFFF',
-      gray100: '#27272B',
-      gray200: '#1B1B1E',
-      gray300: '#121214',
-      gray400: '#1B1B1E',
-      card: '#13141C',
-      weakColorText: '#8f9ba8',
-      primary: '#74ebd5',
-      primaryHover: '#A6F2E4',
-      secondary: '#8257e5',
-      tertiary: '#eea3b4',
-      textHighlight: '#9580ff',
-      separator: '#1B1B1E',
-      tooltip: '#ff006e',
-      buttonThumb: '#F4F4F6',
-      white: '#F4F4F6',
-      dark: '#0c0c0e',
-      green: '#17b978',
-      danger: '#FF006E',
-      sidebar: '#121214',
-      bgMd: '#121214',
-      twitter: '#1da1f2',
-      google: '#ea4335',
-      kbarBackground: 'rgba(0, 0, 0, .8)',
-      kbarBoxHover: 'rgba(255, 255, 255, 0.1)',
-      kbarBoxActive: 'rgba(255,255,255,0.1)',
-      shortcut: '#ddd',
-      shortcutHover: '#fff',
-      scrollbar: '#FFFFFF',
-      terminal: '#131523',
-      terminalHover: '#1a1a2e',
+      bg_color: '#0c0d11',
+      bg_alt_color: '#080808',
+      text_color: '#f6f5f5',
+      text_alt_color: '#FFFFFF',
+      caret_color: '#7ebab5',
+      main_color: '#7ebab5',
+      sub_color: '#454864',
+      sub_alt_color: '#171a25',
+      error_color: '#ff4754',
     },
     space: {
       1: '0.4rem',
@@ -65,27 +61,7 @@ const {
       10: '5.2rem',
     },
     transitions: {
-      transitonTheme: 'color 350ms ease 0s, background 350ms ease 0s',
-      transitonThemeWidth:
-        'width 350ms ease 0s, color 350ms ease 0s, background 350ms ease 0s',
-    },
-    fonts: {
-      primary: `'Roboto', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;`,
-      secondary: `'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;`,
-    },
-    fontSizes: {
-      1: '0.8rem',
-      2: '1rem',
-      3: '1.2rem',
-      4: '1.4rem',
-      5: '1.6rem',
-      6: '1.8rem',
-      7: '2rem',
-      8: '2.2rem',
-      9: '2.5rem',
-      10: '3rem',
+      transitonTheme: 'color 300ms ease, background 300ms ease',
     },
   },
   media: {
@@ -107,82 +83,59 @@ const {
   },
 });
 
-const { theme: lightTheme } = createStitches({
+const { theme: blueberryLight } = createStitches({
   theme: {
     colors: {
-      background: '#FFFFFF',
-      mediumBackground: '#F2F3F7',
-      mediumBackgroundHover: '#F9F9FB',
-      gradientBackground: '#10101a',
-      linearBackground:
-        'linear-gradient(90deg,rgba(35,37,49,.5),rgba(15,15,24,.5));',
-      gradient:
-        'linear-gradient(90deg, #ffbe0b, #fb5607, #ff006e, #8257e5, #3a86ff );',
-      highlight01: 'linear-gradient(43deg, #8257e5, #2575fc)',
-      highlight145: 'linear-gradient(145deg, #8257e5, #c1b);',
-      highlight30: 'linear-gradient(43deg, #8257e5, #2575fc);',
-      gray50: '#000000',
-      gray100: '#F4F4F6',
-      gray200: '#E1E1E4',
-      gray300: '#D7D7DB',
-      gray400: '#C9C9CF',
-      card: '#FFFFFF',
-      weakColorText: '#555555',
-      primary: '#3a86ff',
-      textHighlight: '#fb377f',
-      primaryHover: '#7AAEFF',
-      secondary: '#8257e5',
-      tertiary: '#b15cdd',
-      separator: '#C9C9CF',
-      tooltip: '#8257e5',
-      buttonThumb: '#121214',
-      white: '#F4F4F6',
-      dark: '#0c0c0e',
-      green: '#17b978',
-      danger: '#FF006E',
-      sidebar: '#F4F4F6',
-      bgMd: '#FFFFFF',
-      twitter: '#1da1f2',
-      google: '#ea4335',
-      kbarBackground: 'rgba(255, 255, 255, .8)',
-      kbarBoxHover: 'rgba(0, 0, 0, 0.1)',
-      kbarBoxActive: 'rgba(0,0,0,0.1)',
-      shortcut: '#eee',
-      shortcutHover: '#bbb',
-      scrollbar: '#bbb',
-      terminal: '#eee',
-      terminalHover: '#F4F4F6',
+      bg_color: '#dae0f5',
+      bg_alt_color: '#f5f5f5',
+      text_color: '#678198',
+      text_alt_color: '#506477',
+      caret_color: '#df4576',
+      main_color: '#506477',
+      sub_color: '#92a4be',
+      sub_alt_color: '#c1c7df',
+      error_color: '#df4576',
     },
-    space: {
-      1: '0.4rem',
-      2: '0.8rem',
-      3: '1.2rem',
-      4: '1.6rem',
-      5: '2.0rem',
-      6: '2.4rem',
-      7: '3.0rem',
-      8: '3.6rem',
-      9: '4.4rem',
-      10: '5.2rem',
+  },
+});
+
+const { theme: catppuccinDark } = createStitches({
+  theme: {
+    colors: {
+      bg_color: '#1e1e2e',
+      bg_alt_color: '#232335',
+      text_color: '#d9e0ee',
+      text_alt_color: '#EEEEF6',
+      caret_color: '#fae3b0',
+      main_color: '#abe9b3',
+      sub_color: '#645F79',
+      sub_alt_color: '#292739',
+      error_color: '#f28fad',
     },
-    fontSizes: {
-      1: '0.8rem',
-      2: '1rem',
-      3: '1.2rem',
-      4: '1.4rem',
-      5: '1.6rem',
-      6: '1.8rem',
-      7: '2rem',
-      8: '2.2rem',
-      9: '2.5rem',
-      10: '3rem',
+  },
+});
+
+const { theme: chaosTheory } = createStitches({
+  theme: {
+    colors: {
+      bg_color: '#141221',
+      bg_alt_color: '#232335',
+      text_color: '#dde5ed',
+      text_alt_color: '#EEEEF6',
+      caret_color: '#dde5ed',
+      main_color: '#fd77d7',
+      sub_color: '#676e8a',
+      sub_alt_color: '#1e1d2f',
+      error_color: '#ff5869',
     },
   },
 });
 
 export {
-  darkTheme,
-  lightTheme,
+  archTheme,
+  blueberryLight,
+  chaosTheory,
+  catppuccinDark,
   styled,
   getCssText,
 };

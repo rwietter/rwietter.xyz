@@ -2,12 +2,12 @@
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   margin: 0;
-  color: #24292f;
-  background-color: var(--colors-background);
+  color: var(--colors-text_color);
+  background-color: var(--colors-bg_color);
   line-height: 2em;
   font-weight: 300;
   word-wrap: break-word;
-  transition: color 150ms ease 0s, background 350ms ease 0s !important;
+  transition: var(--transitions-transitonTheme);
 }
 
 .markdown-body h1,
@@ -16,7 +16,7 @@
 .markdown-body h4,
 .markdown-body h5,
 .markdown-body h6 {
-  font-family: 'Futura Std', sans-serif;
+  font-family: "Futura Std", sans-serif;
 }
 
 .markdown-body p,
@@ -27,13 +27,13 @@
 .markdown-body pre,
 .markdown-body img,
 .markdown-body table {
-  font-family: 'Futura Std', sans-serif;
+  font-family: "Futura Std", sans-serif;
 }
 
 .markdown-body code,
 .markdown-body kbd,
 .markdown-body samp {
-  font-family: 'Dank Mono', monospace;
+  font-family: "Fira Code", monospace;
 }
 
 .markdown-body p:has(img) {
@@ -90,7 +90,7 @@
 
 .markdown-body a {
   background-color: transparent;
-  color: #0969da;
+  color: var(--colors-main_color);
   text-decoration: none;
 }
 
@@ -118,7 +118,7 @@
 .markdown-body code {
   font-weight: 500;
   transition: var(--transitions-transitonTheme);
-  /* color: var(--colors-gray50); */
+  color: var(--colors-text_color);
 }
 
 .markdown-body dfn {
@@ -130,12 +130,12 @@
   font-weight: 600;
   padding-bottom: 0.3em;
   font-size: 2em;
-  border-bottom: 1px solid hsla(210, 18%, 87%, 1);
+  border-bottom: 1px solid var(--colors-text_color);
 }
 
 .markdown-body mark {
   background-color: #fff8c5;
-  color: #ffff;
+  color: var(--colors-text_color);
 }
 
 .markdown-body small {
@@ -162,7 +162,7 @@
   border-style: none;
   max-width: 100%;
   box-sizing: content-box;
-  background-color: #ffffff;
+  background-color: var(--colors-bg_color);
 }
 
 .markdown-body code,
@@ -185,7 +185,7 @@
   height: 0.25em;
   padding: 0;
   margin: 24px 0;
-  background-color: #d0d7de;
+  background-color: var(--colors-bg_color);
   border: 0;
 }
 
@@ -281,7 +281,7 @@
   cursor: pointer;
 }
 
-.markdown-body details:not([open])>*:not(summary) {
+.markdown-body details:not([open]) > *:not(summary) {
   display: none !important;
 }
 
@@ -293,7 +293,7 @@
   line-height: 10px;
   color: #24292f;
   vertical-align: middle;
-  background-color: #f6f8fa;
+  background-color: var(--colors-bg_color);
   border: solid 1px rgba(175, 184, 193, 0.2);
   border-bottom-color: rgba(175, 184, 193, 0.2);
   border-radius: 6px;
@@ -356,9 +356,9 @@
   text-align: center;
   font-style: italic;
   padding: 2em 0;
-  color: #24292f;
-  border-top: 1px solid #cfcfcf;
-  border-bottom: 1px solid #cfcfcf;
+  color: var(--colors-text_color);
+  border-top: 1px solid var(--colors-sub_color);
+  border-bottom: 1px solid var(--colors-sub_color);
   border-radius: 2px;
 }
 
@@ -570,11 +570,11 @@
   content: "";
 }
 
-.markdown-body>*:first-child {
+.markdown-body > *:first-child {
   margin-top: 0 !important;
 }
 
-.markdown-body>*:last-child {
+.markdown-body > *:last-child {
   margin-bottom: 0 !important;
 }
 
@@ -610,11 +610,11 @@
   margin-bottom: 16px;
 }
 
-.markdown-body blockquote> :first-child {
+.markdown-body blockquote > :first-child {
   margin-top: 0;
 }
 
-.markdown-body blockquote> :last-child {
+.markdown-body blockquote > :last-child {
   margin-bottom: 0;
 }
 
@@ -696,7 +696,7 @@
   list-style-type: lower-roman;
 }
 
-.markdown-body div>ol:not([type]) {
+.markdown-body div > ol:not([type]) {
   list-style-type: decimal;
 }
 
@@ -708,11 +708,11 @@
   margin-bottom: 0;
 }
 
-.markdown-body li>p {
+.markdown-body li > p {
   margin-top: 16px;
 }
 
-.markdown-body li+li {
+.markdown-body li + li {
   margin-top: 0.25em;
 }
 
@@ -775,7 +775,7 @@
   overflow: hidden;
 }
 
-.markdown-body span.frame>span {
+.markdown-body span.frame > span {
   display: block;
   float: left;
   width: auto;
@@ -803,7 +803,7 @@
   clear: both;
 }
 
-.markdown-body span.align-center>span {
+.markdown-body span.align-center > span {
   display: block;
   margin: 13px auto 0;
   overflow: hidden;
@@ -821,7 +821,7 @@
   clear: both;
 }
 
-.markdown-body span.align-right>span {
+.markdown-body span.align-right > span {
   display: block;
   margin: 13px 0 0;
   overflow: hidden;
@@ -851,13 +851,12 @@
   overflow: hidden;
 }
 
-.markdown-body span.float-right>span {
+.markdown-body span.float-right > span {
   display: block;
   margin: 13px auto 0;
   overflow: hidden;
   text-align: right;
 }
-
 
 .markdown-body code,
 .markdown-body tt {
@@ -865,26 +864,22 @@
   margin: 0;
   font-size: 85%;
   border-radius: 6px;
-  font-family: "Dank Mono", monospace, sans-serif !important;
-  font-variant-ligatures: common-ligatures !important;
-  font-feature-settings: "ss01" on,
-    "ss02" on,
-    "ss03" on !important;
+  font-family: "Fira Code", monospace, sans-serif;
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: "ss01" on, "ss02" on, "ss03" on;
 }
 
 .markdown-body p code {
-  background-color: #eaeaea;
+  background-color: var(--colors-sub_color);
   font-style: normal;
-  --fluid-type-max: 1rem;
+  --fluid-type-max: 1.3rem;
   transition: var(--transitions-transitonTheme);
 }
 
 .markdown-body pre code span {
-  font-family: "Dank Mono", monospace, sans-serif !important;
-  font-variant-ligatures: common-ligatures !important;
-  font-feature-settings: "ss01" on,
-    "ss02" on,
-    "ss03" on !important;
+  font-family: "Fira Code", monospace, sans-serif;
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: "ss01" on, "ss02" on, "ss03" on;
 }
 
 .markdown-body code br,
@@ -904,7 +899,7 @@
   font-size: 100%;
 }
 
-.markdown-body pre>code {
+.markdown-body pre > code {
   padding: 0;
   margin: 0;
   word-break: normal;
@@ -941,16 +936,16 @@
   padding: 0;
   margin: 0;
   overflow: visible;
-  line-height: inherit;
+  line-height: 1.5;
   word-wrap: normal;
   background-color: transparent;
   display: block;
   border: 0;
-  --fluid-type-max: 1rem;
+  --fluid-type-max: 1.3rem;
 }
 
 .markdown-body pre code span {
-  --fluid-type-max: 1rem;
+  --fluid-type-max: 1.3rem;
 }
 
 .markdown-body .csv-data td,
@@ -1038,7 +1033,7 @@
   cursor: pointer;
 }
 
-.markdown-body .task-list-item+.task-list-item {
+.markdown-body .task-list-item + .task-list-item {
   margin-top: 4px;
 }
 
@@ -1057,4 +1052,8 @@
 
 .markdown-body ::-webkit-calendar-picker-indicator {
   filter: invert(50%);
+}
+
+.markdown-body ul li {
+  list-style: disc;
 }

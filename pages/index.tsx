@@ -1,12 +1,10 @@
 import SEO from 'components/SEO';
-// import { LastPosts } from 'features/site/last-posts';
-// import { LAST_ARTICLES_QUERY } from 'queries/articles/articles';
-// import apolloClient from 'utils/apollo-client';
 import type { GetStaticProps, NextPage } from 'next';
 import { ContentLayout } from 'features/ui/layouts';
 import type { LastArticles } from 'queries/article/article';
 import { AuthorContent, AuthorHeader } from 'features/home';
 import { Container } from 'features/home/styles';
+import { KbarInit } from 'components/Kbar';
 
 interface HomeProps {
   lastArticles?: LastArticles;
@@ -27,7 +25,7 @@ const Home: NextPage<HomeProps> = ({ lastFm, weather }: any) => (
       <Container>
         <AuthorHeader />
         <AuthorContent lastFm={lastFm} weather={weather} />
-        {/* <LastPosts lastArticles={lastArticles} /> */}
+        <KbarInit />
       </Container>
     </ContentLayout>
   </>
@@ -42,21 +40,25 @@ const API_WEATHER = `https://dataservice.accuweather.com/currentconditions/v1/${
 const fetcherWeather = () => fetch(API_WEATHER).then((res) => res.json());
 
 export const getStaticProps: GetStaticProps = async () => {
-  // const data = await apolloClient.query({
-  //   query: LAST_ARTICLES_QUERY,
-  // });
+  try {
+    const lastFm = await fetcherLastFm();
+    const weather = await fetcherWeather();
 
-  const lastFm = await fetcherLastFm();
-  const weather = await fetcherWeather();
-
-  return {
-    props: {
-      // lastArticles: data.data.articles,
-      lastFm,
-      weather,
-    },
-    revalidate: 60,
-  };
+    return {
+      props: {
+        lastFm,
+        weather,
+      },
+      revalidate: 60,
+    };
+  } catch (error) {
+    return {
+      props: {
+        lastFm: null,
+        weather: null,
+      },
+    };
+  }
 };
 
 export default Home;

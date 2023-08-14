@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://rwietterc.xyz</id>
+    <id>http://localhost:3000</id>
     <title>Maurício Witter | RSS Feed</title>
-    <updated>2023-08-07T20:15:37.594Z</updated>
+    <updated>2023-08-14T01:46:12.939Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Maurício Witter</name>
         <email>mauriciobw17@gmail.com</email>
         <uri>https://twitter.com/rwietter</uri>
     </author>
-    <link rel="alternate" href="https://rwietterc.xyz"/>
+    <link rel="alternate" href="http://localhost:3000"/>
     <link rel="self" href="https://rwietterc.xyz/rss.xml"/>
     <subtitle>RSS feed for Maurício Witter blog</subtitle>
-    <logo>https://rwietterc.xyz/icons/mstile-310x310.png</logo>
-    <icon>https://rwietterc.xyz/favicon.ico</icon>
+    <logo>http://localhost:3000/icons/mstile-310x310.png</logo>
+    <icon>http://localhost:3000/favicon.ico</icon>
     <rights>All rights reserved 2023, Maurício Witter</rights>
     <entry>
         <title type="html"><![CDATA[Um paralelo entre Programação Declarativa e Programação Imperativa]]></title>
-        <id>https://rwietterc.xyz/blog/article/um-paralelo-entre-programacao-declarativa-e-programacao-imperativa</id>
-        <link href="https://rwietterc.xyz/blog/article/um-paralelo-entre-programacao-declarativa-e-programacao-imperativa"/>
+        <id>http://localhost:3000/blog/article/um-paralelo-entre-programacao-declarativa-e-programacao-imperativa</id>
+        <link href="http://localhost:3000/blog/article/um-paralelo-entre-programacao-declarativa-e-programacao-imperativa"/>
         <updated>2023-07-17T15:13:39.158Z</updated>
         <summary type="html"><![CDATA[Quais são os trade-offs entre o Paradigma Imperativo e o Paradigma Declarativo, princípios e uso]]></summary>
         <content type="html"><![CDATA[<h2>Introdução</h2>
@@ -162,8 +162,8 @@ const r2  = add(1) // 2
     </entry>
     <entry>
         <title type="html"><![CDATA[Preferir a duplicação sobre a abstração é realmente o melhor caminho ?]]></title>
-        <id>https://rwietterc.xyz/blog/article/preferir-a-duplicacao-sobre-a-abstracao-e-realmente-o-melhor-caminho</id>
-        <link href="https://rwietterc.xyz/blog/article/preferir-a-duplicacao-sobre-a-abstracao-e-realmente-o-melhor-caminho"/>
+        <id>http://localhost:3000/blog/article/preferir-a-duplicacao-sobre-a-abstracao-e-realmente-o-melhor-caminho</id>
+        <link href="http://localhost:3000/blog/article/preferir-a-duplicacao-sobre-a-abstracao-e-realmente-o-melhor-caminho"/>
         <updated>2023-05-29T01:45:54.431Z</updated>
         <summary type="html"><![CDATA[A duplicação de código é algo muito ruim, uma abstração confusa é tão ruim quanto. Então qual seria a melhor abordagem para isso ?]]></summary>
         <content type="html"><![CDATA[<p>Hoje vamos falar um pouco do princípio do desenvolvimento de software DRY (Don't Repeat Yourself) e suas implicações. O DRY é um princípio relacionado duplicação de código e abstrações. Falaremos sobre o conceito de Rule of Three proposto por <a href="https://martinfowler.com/">Martin Fowler</a> no seu livro Refactoring, falaremos sobre o conceito AHA (Avoid Hasty Abstractions) proposto por <a href="https://kentcdodds.com/">Kent C. Dodds</a> e, também, sobre conceito <a href="https://dev.to/wuz/stop-trying-to-be-so-dry-instead-write-everything-twice-wet-5g33">WET</a> (Write Everything Twice) proposto por <a href="https://dev.to/wuz">Conlin Durbin</a>.</p>
@@ -239,8 +239,8 @@ const r2  = add(1) // 2
     </entry>
     <entry>
         <title type="html"><![CDATA[Fluxo bidirecional no React com useImperativeHandle]]></title>
-        <id>https://rwietterc.xyz/blog/article/fluxo-bidirecional-no-react-com-o-hook-use-imperative-handle</id>
-        <link href="https://rwietterc.xyz/blog/article/fluxo-bidirecional-no-react-com-o-hook-use-imperative-handle"/>
+        <id>http://localhost:3000/blog/article/fluxo-bidirecional-no-react-com-o-hook-use-imperative-handle</id>
+        <link href="http://localhost:3000/blog/article/fluxo-bidirecional-no-react-com-o-hook-use-imperative-handle"/>
         <updated>2022-04-25T11:59:22.126Z</updated>
         <summary type="html"><![CDATA[Expondo uma função de um componente child para o componente owner no React]]></summary>
         <content type="html"><![CDATA[<h3>Introdução</h3>

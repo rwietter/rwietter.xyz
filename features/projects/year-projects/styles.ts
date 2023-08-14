@@ -2,7 +2,8 @@ import { styled } from 'features/ui/theme';
 import { motion } from 'framer-motion';
 
 export const Container = styled('div', {
-  color: '$gray50',
+  color: '$text_color',
+  transition: '$transitonTheme',
   width: '100%',
   maxWidth: '60rem',
   padding: '0 1rem',
@@ -14,7 +15,8 @@ export const Container = styled('div', {
 export const Title = styled('h1', {
   fontWeight: 600,
   padding: '1rem 0 1rem 0',
-  color: '$gray50',
+  color: '$text_color',
+  transition: '$transitonTheme',
   '--fluid-type-min': '1.2rem',
   '--fluid-type-max': '2.5rem',
   '--fluid-type-target': '5vw',
@@ -45,24 +47,26 @@ export const ListItem = styled(motion.li, {
 });
 
 export const ListItemName = styled(motion.a, {
-  color: '$gray50',
+  color: '$text_color',
+  transition: '$transitonTheme',
   '--fluid-type-max': '1.05rem',
 
   strong: {
-    fontWeight: 500,
-    transition: 'all .3s ease',
-    color: '$gray50',
+    fontWeight: 200,
+    transition: '$transitonTheme',
+    color: '$text_color',
   },
   span: {
     paddingLeft: '0.5rem',
-    fontWeight: 200,
-    color: '$weakColorText',
+    fontWeight: 500,
+    color: '$text_alt_color',
     lineHeight: '1.7',
   },
 });
 
 export const HoverBackground = styled(motion.div, {
-  background: '$mediumBackgroundHover',
+  background: '$bg_alt_color',
+  transition: '$transitonTheme',
   position: 'absolute',
   top: '2px',
   right: '5px',

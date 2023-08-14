@@ -4,12 +4,11 @@ import { Header, Title } from './styles';
 
 interface PageTitleProps {
   title: string;
-  color?: 'primary' | 'secondary';
 }
 
-const PageTitle: FC<PageTitleProps> = ({ title, color }) => (
+const PageTitle: FC<PageTitleProps> = ({ title }) => (
   <Header>
-    <Title color={color}>{title}</Title>
+    <Title>{title}</Title>
   </Header>
 );
 

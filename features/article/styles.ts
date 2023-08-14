@@ -3,7 +3,8 @@ import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 
 export const ArticleContainer = styled('section', {
-
+  backgroundColor: '$bg_color',
+  transition: '$transitonTheme',
 });
 
 export const ImageContainer = styled('div', {
@@ -28,15 +29,17 @@ export const ImageCredit = styled('p', {
   position: 'relative',
   paddingTop: '.5rem',
   filter: 'brightness(0.7)',
-  color: '$weakColorText',
+  color: '$text_color',
+  transition: '$transitonTheme',
 });
 
 export const ArticleHeader = styled('section', {
   margin: '0 auto',
   maxWidth: '60rem',
-  padding: '0 1rem',
+  padding: '0 1.4rem',
   paddingBottom: '2rem',
-  color: '$gray50',
+  color: '$text_color',
+  transition: '$transitonTheme',
 
   '@bp3': {
     paddingBottom: '2rem',
@@ -51,7 +54,8 @@ export const InfoHeader = styled('div', {
   alignItems: 'flex-start',
   fontFamily: 'Futura Std, sans-serif',
   width: '100%',
-  color: '$gray50',
+  color: '$sub_color',
+  transition: '$transitonTheme',
 
   '& > div': {
     paddingTop: '$2',
@@ -74,10 +78,11 @@ export const BackToOverview = styled('button', {
   width: 'fit-content',
   margin: 0,
   background: 'none',
-  color: '$gray50',
+  color: '$text_color',
   border: 'none',
   outline: 'none',
   cursor: 'pointer',
+  transition: '$transitonTheme',
 
   svg: {
     marginRight: '$2',
@@ -87,11 +92,11 @@ export const BackToOverview = styled('button', {
 
   '&:hover': {
     svg: {
-      color: '$primary',
+      color: '$text_alt_color',
       transform: 'translateX(-5px)',
     },
     p: {
-      color: '$primary',
+      color: '$text_alt_color',
       transition: '$transitonTheme',
     },
   },
@@ -102,8 +107,8 @@ export const DateTimeRead = styled('p', {
   display: 'inline-flex',
   alignItems: 'center',
   fontFamily: 'Futura Std, sans-serif',
-  color: '$weakColorText',
-  cursor: 'default',
+  color: '$text_color',
+  transition: '$transitonTheme',
 
   svg: {
     marginRight: '$1',
@@ -120,7 +125,8 @@ export const ArticleTitle = styled('h1', {
   padding: 0,
   paddingTop: '$2',
   margin: 0,
-  color: '$gray50',
+  color: '$text_color',
+  transition: '$transitonTheme',
 });
 
 export const ArticleDescription = styled('h2', {
@@ -131,7 +137,8 @@ export const ArticleDescription = styled('h2', {
   lineHeight: '1.6em',
   padding: '$2 0',
   marginTop: '.5rem',
-  color: '$gray50',
+  color: '$text_color',
+  transition: '$transitonTheme',
 });
 
 export const ArticleMarkdownContainer = styled('section', {
@@ -142,8 +149,7 @@ export const ArticleMarkdownContainer = styled('section', {
 
 export const Article = styled('article', {
   fontFamily: 'Futura Std, sans-serif',
-  maxWidth: '50rem',
-  padding: '0 1rem',
+  maxWidth: '60rem',
   margin: '0 auto',
 });
 
@@ -152,7 +158,8 @@ export const ArticleMarkdown = styled(ReactMarkdown, {
   '--fluid-type-max': '1.2rem',
   '--fluid-type-target': '5vw',
   lineHeight: '1.7 !important',
-  paddingTop: '$6',
+  padding: '2rem 1.4rem',
+  color: '$text_color',
 
   '@bp4': {
     '--fluid-type-max': '1.3rem',

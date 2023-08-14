@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { Feed } from 'feed';
 import fs from 'fs';
+import { Feed } from 'feed';
 import { type IArticles } from 'features/blog/ts';
 import { remark } from 'remark';
 import remarkHtml from 'remark-html';
@@ -64,10 +64,6 @@ export default async function generateRssFeed(posts: IArticles[]): Promise<void>
         link: 'https://twitter.com/rwietter',
       },
     ],
-    enclosure: {
-      url: post.attributes.image.data.attributes.url,
-      type: 'image/jpeg',
-    },
   }));
 
   fs.writeFileSync('./public/rss.xml', feed.rss2());

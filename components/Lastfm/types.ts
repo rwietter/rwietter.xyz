@@ -1,4 +1,7 @@
 export interface TrackProps {
+  '@attr'?: {
+    nowplaying?: 'true' | 'false';
+  }
   artist: {
     '#text': string;
   };

@@ -3,7 +3,7 @@ import { styled } from 'features/ui/theme';
 export const Terminal = styled('code', {
   borderRadius: '8px',
   borderTopRightRadius: '0',
-  background: '$terminal',
+  background: '$sub_alt_color',
   padding: '10px',
   transition: '$transitonTheme',
   marginTop: '2.8rem',
@@ -11,15 +11,15 @@ export const Terminal = styled('code', {
   position: 'relative',
 
   '&:hover': {
-    background: '$terminalHover',
+    background: '$sub_color',
 
     '& button': {
-      background: '$terminalHover',
+      background: '$sub_color',
     },
   },
 
   button: {
-    background: '$terminal',
+    background: '$sub_alt_color',
     padding: '.3rem 1.5rem',
     borderTopRightRadius: '8px',
     borderTopLeftRadius: '8px',
@@ -30,14 +30,14 @@ export const Terminal = styled('code', {
     right: '0',
     cursor: 'pointer',
     top: '-24px',
-    color: '$gray50',
+    color: '$text_color',
     '--fluid-type-min': '0.6rem',
     '--fluid-type-target': '2vw',
     '--fluid-type-max': '0.8rem',
     transition: '$transitonTheme',
 
     '&:hover': {
-      background: '$terminalHover',
+      background: '$sub_color',
     },
   },
 
@@ -45,8 +45,8 @@ export const Terminal = styled('code', {
     '--fluid-type-max': '1rem',
     '--fluid-type-min': '0.8rem',
 
-    color: '$gray50',
-    fontFamily: 'Dank Mono',
+    color: '$text_color',
+    fontFamily: 'Fira Code, monospace',
     lineHeight: '1.8',
   },
 });

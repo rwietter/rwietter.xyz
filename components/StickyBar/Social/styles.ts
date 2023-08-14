@@ -13,7 +13,7 @@ export const SocialContainer = styled('div', {
 });
 
 export const Link = styled('a', {
-  color: '$gray50',
+  color: '$text_color',
   display: 'inline-block',
   textDecoration: 'none',
 
