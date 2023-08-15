@@ -25,7 +25,7 @@ export const NavHeader = styled('nav', {
     '--fluid-type-max': '1.2rem',
 
     '&:hover': {
-      color: '$text_alt_color',
+      color: '$main_color',
     },
   },
   span: {
@@ -34,7 +34,7 @@ export const NavHeader = styled('nav', {
     cursor: 'pointer',
     transition: '$transitonTheme',
     '&:hover': {
-      color: '$text_alt_color',
+      color: '$main_color',
     },
   },
 
@@ -51,19 +51,38 @@ export const Separator = styled('div', {
 });
 
 export const SocialContainer = styled('section', {
-  padding: '$4 0 5rem 0',
+  padding: '2rem 0 5rem 0',
   display: 'flex',
+  alignItems: 'center',
   justifyContent: 'space-between',
   flexWrap: 'wrap',
 
   h4: {
-    fontSize: '$2',
     fontWeight: 400,
+    paddingTop: '1rem',
+    '--fluid-type-min': '1.2rem',
     '--fluid-type-max': '1.3rem',
     '--fluid-type-target': '1vw',
+
+    '@media (min-width: 23.7em)': {
+      paddingTop: 0,
+    },
 
     strong: {
       fontWeight: 600,
     },
+  },
+});
+
+export const License = styled('a', {
+  color: '$text_color',
+  textDecoration: 'none',
+  transition: '$transitonTheme',
+  paddingRight: '1rem',
+  '--fluid-type-max': '1rem',
+
+  '&:hover': {
+    color: '$main_color',
+    textDecoration: 'underline',
   },
 });
