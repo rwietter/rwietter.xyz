@@ -7,7 +7,7 @@ export const KbarContainer = styled('div', {
 export const KbarButton = styled('button', {
   cursor: 'pointer',
   color: '$text_alt_color',
-  padding: '2px 10px',
+  padding: '2px 4px',
   borderRadius: '1em',
   border: 'none',
   outline: 'none',
@@ -16,16 +16,23 @@ export const KbarButton = styled('button', {
   '--fluid-type-min': '0.9rem',
   '--fluid-type-max': '1rem',
   background: 'transparent',
+  display: 'flex',
+  alignItems: 'center',
+
+  '&:hover': {
+    background: '$sub_alt_color',
+  },
 
   code: {
     background: '$sub_color',
     textAlign: 'center',
     color: '$text_alt_color',
-    padding: '2px 4px',
+    padding: '2px',
+    margin: '0 3px',
     borderRadius: '1em',
     fontWeight: 500,
     transition: '$transitonTheme',
-    '--fluid-type-min': '0.9rem',
-    '--fluid-type-max': '1rem',
+    '--fluid-type-min': '.8rem',
+    '--fluid-type-max': '.9rem',
   },
 });

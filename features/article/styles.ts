@@ -43,6 +43,7 @@ export const ArticleHeader = styled('section', {
 
   '@bp3': {
     paddingBottom: '2rem',
+    paddingTop: '2rem',
   },
 });
 

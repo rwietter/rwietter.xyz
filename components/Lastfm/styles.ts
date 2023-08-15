@@ -16,9 +16,9 @@ export const Img = styled('img', {
 export const Playing = styled('div', {
   display: 'flex',
   justifyContent: 'flex-start',
-  border: '1px solid $bg_alt_color',
-  borderRadius: '4px',
-  marginTop: '$1',
+  border: '1px solid $sub_alt_color',
+  borderRadius: '8px',
+  marginTop: '.7rem',
   transition: '$transitonTheme, border 0.3s ease',
   width: '100%',
   maxWidth: '400px',
@@ -70,12 +70,6 @@ export const PlayingArtist = styled('div', {
   '@bp1': {
     maxWidth: '100%',
   },
-});
-
-export const PlayingImage = styled('div', {
-  width: '100%',
-  maxWidth: '90px',
-  alignSelf: 'flex-end',
 });
 
 export const PlayingSpot = styled('div', {

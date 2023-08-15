@@ -16,13 +16,11 @@ export const LastFMTrack: FC<LastFmTrackProps> = ({ lastFm }) => {
 
   return (
     <S.Playing>
-      <S.PlayingImage>
-        {imageUrl ? (
-          <img src={imageUrl} alt={track.name} width={90} height={90} />
-        ) : (
-          <span />
-        )}
-      </S.PlayingImage>
+      {imageUrl ? (
+        <img src={imageUrl} alt={track.name} width={90} height={90} />
+      ) : (
+        <span />
+      )}
       <S.PlayingArtist>
         <S.PlayingSpot>
           <BsSpotify size={19} color="#1DB954" />
