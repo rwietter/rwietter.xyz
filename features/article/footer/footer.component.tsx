@@ -34,12 +34,13 @@ const ArticleFooter: FC<ArticleFooterProps> = ({
         </Link>
       </S.NavHeader>
       <S.Separator />
-      <div>
-        <S.SocialContainer>
-          <SidebarSocialIcons />
-          {author && <h4>Written by <strong>{author}</strong></h4>}
-        </S.SocialContainer>
-      </div>
+      <S.SocialContainer>
+        <SidebarSocialIcons />
+        <S.License href="https://github.com/rwietter/rwietter.xyz#CC-BY-SA-4.0-2" target="_blank" rel="noreferrer">
+          CC-BY-SA-4.0
+        </S.License>
+        {author && <h4>Written by <strong>{author}</strong></h4>}
+      </S.SocialContainer>
     </S.ArticleFooterContainer>
   );
 };
