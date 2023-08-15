@@ -25,17 +25,17 @@ const ModalTheme: React.FC = () => {
   };
 
   React.useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDownCloseModal = (event: KeyboardEvent) => {
       if (event.key === 'Escape') handleSetModalInvisible();
     };
 
     if (isVisible) {
-      document.addEventListener('keydown', handleKeyDown);
+      document.addEventListener('keydown', handleKeyDownCloseModal);
       document.addEventListener('mousedown', handleSetModalInvisible);
     }
 
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('keydown', handleKeyDownCloseModal);
       document.removeEventListener('mousedown', handleSetModalInvisible);
     };
   }, [isVisible]);
@@ -46,16 +46,15 @@ const ModalTheme: React.FC = () => {
     <S.ModalSwitchTheme>
       <S.ModalList>
         {themeList.map(({ name, background, colors }) => (
-          <S.ModalContent key={name}>
-            <S.ModalItem
-              onClick={() => {
-                handleSwitchTheme(name);
-                handleSetModalInvisible();
-              }}
-              onMouseEnter={() => handleSwitchTheme(name)}
-            >
-              {name}
-            </S.ModalItem>
+          <S.ModalContent
+            key={name}
+            onClick={() => {
+              handleSwitchTheme(name);
+              handleSetModalInvisible();
+            }}
+            onMouseEnter={() => handleSwitchTheme(name)}
+          >
+            <S.ModalItem>{name}</S.ModalItem>
             <S.ModalColors style={{ background }}>
               {colors.map((color) => (
                 <S.ModalColor key={color} style={{ background: color }} />

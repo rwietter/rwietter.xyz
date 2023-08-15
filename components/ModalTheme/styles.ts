@@ -12,14 +12,14 @@ export const ModalSwitchTheme = styled('div', {
   position: 'fixed',
   zIndex: 100,
   width: '100%',
-  maxWidth: '20rem',
+  maxWidth: '25rem',
   left: 0,
   right: 0,
   top: '40%',
   bottom: 'auto',
-  borderRadius: '0.2rem',
+  borderRadius: '4px',
   margin: '0 auto',
-  padding: '1rem',
+  padding: '2rem 1rem',
   transition: '$transitonTheme',
   boxShadow: '0px 0px 17px 12px rgba(0,0,0,0.1)',
 });
@@ -40,9 +40,13 @@ export const ModalContent = styled('li', {
   transition: '$transitonTheme',
   padding: '0.4rem 0.5rem',
   borderRadius: '1em',
+  fontFamily: 'Futura Std, Arial, Helvetica, sans-serif',
   '&:hover': {
     background: '$main_color',
     color: '$sub_color',
+  },
+  '& + &': {
+    marginTop: '0.5rem',
   },
 });
 
@@ -87,4 +91,9 @@ export const ModalItemButton = styled('button', {
   cursor: 'pointer',
   margin: '.8rem 1rem 0 0',
   transition: '$transitonTheme',
+
+  '&:hover': {
+    color: '$main_color',
+    transform: 'scale(1.1)',
+  },
 });
