@@ -163,8 +163,3 @@ tt {
     text-size-adjust: 100%;
   }
 }
-
-body {
-  background: var(--colors-bg_color);
-  transition: var(--transitions-transitonTheme);
-}
