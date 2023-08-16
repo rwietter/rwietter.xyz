@@ -6,39 +6,38 @@ import { useModalTheme } from 'store/modal-theme';
 import { MdColorLens } from 'react-icons/md';
 import * as S from './styles';
 
-const activeLink = (pathname: string, href: string, entrypath?: string) => {
-  let isActive = '';
+const activePath = (pathname: string) => (href: string, entrypath?: string) => {
   if (pathname === href) {
-    isActive = 'active';
-  } else if (entrypath && pathname.match(entrypath)) {
-    isActive = 'active';
+    return 'active';
   }
-  return isActive;
+
+  if (entrypath && pathname.match(entrypath)) {
+    return 'active';
+  }
+
+  return '';
 };
 
 const Header = () => {
   const { setIsVisible } = useModalTheme();
-  const pathname = usePathname();
-
-  // !TODO: in production, / is not active on first load
-  console.log(pathname);
+  const isActive = activePath(usePathname().trim());
 
   return (
     <S.Header>
       <S.Nav>
-        <S.NavIterm className={activeLink(pathname, '/')}>
+        <S.NavIterm className={isActive('/')}>
           <Link href="/">/home</Link>
         </S.NavIterm>
-        <S.NavIterm className={activeLink(pathname, '/blog', '/blog/article/')}>
+        <S.NavIterm className={isActive('/blog', '/blog/article/')}>
           <Link href="/blog">/blog</Link>
         </S.NavIterm>
-        <S.NavIterm className={activeLink(pathname, '/projects')}>
+        <S.NavIterm className={isActive('/projects')}>
           <Link href="/projects">/projects</Link>
         </S.NavIterm>
-        <S.NavIterm className={activeLink(pathname, '/setup')}>
+        <S.NavIterm className={isActive('/setup')}>
           <Link href="/setup">/setup</Link>
         </S.NavIterm>
-        <S.NavIterm className={activeLink(pathname, '/posts', '/posts/post/')}>
+        <S.NavIterm className={isActive('/posts', '/posts/post/')}>
           <Link href="/posts">/posts</Link>
         </S.NavIterm>
       </S.Nav>
