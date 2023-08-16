@@ -78,6 +78,10 @@ export const NavIterm = styled('div', {
     },
   },
 
+  'a:hover': {
+    color: '$main_color !important',
+  },
+
   '@bp2': {
     lineHeight: 'initial',
   },

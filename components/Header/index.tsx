@@ -20,10 +20,13 @@ const Header = () => {
   const { setIsVisible } = useModalTheme();
   const pathname = usePathname();
 
+  // !TODO: in production, / is not active on first load
+  console.log(pathname);
+
   return (
     <S.Header>
       <S.Nav>
-        <S.NavIterm className={activeLink(pathname, '/', '')}>
+        <S.NavIterm className={activeLink(pathname, '/')}>
           <Link href="/">/home</Link>
         </S.NavIterm>
         <S.NavIterm className={activeLink(pathname, '/blog', '/blog/article/')}>
