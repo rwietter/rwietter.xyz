@@ -20,6 +20,10 @@ export const SearchContent = styled('section', {
       color: '$sub_color',
       transition: '$transitonTheme',
       fontFamily: 'Futura Std, sans-serif',
+
+      '&:hover': {
+        color: '$main_color',
+      },
     },
     'a:not(:last-child)': {
       marginRight: '1rem',
