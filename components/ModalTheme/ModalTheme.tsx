@@ -9,7 +9,7 @@ import * as S from './styles';
 const ModalTheme: React.FC = () => {
   const { isVisible, setIsVisible } = useModalTheme();
 
-  const { setTheme } = useTheme();
+  const { setTheme, theme } = useTheme();
 
   const handleSetModalInvisible = () => setIsVisible(false);
 
@@ -48,6 +48,7 @@ const ModalTheme: React.FC = () => {
         {themeList.map(({ name, background, colors }) => (
           <S.ModalContent
             key={name}
+            data-active={theme === name}
             onClick={() => {
               handleSwitchTheme(name);
               handleSetModalInvisible();

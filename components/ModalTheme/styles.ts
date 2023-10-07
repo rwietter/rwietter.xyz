@@ -45,6 +45,10 @@ export const ModalContent = styled('li', {
     background: '$main_color',
     color: '$sub_color',
   },
+  '&[data-active="true"]': {
+    background: '$main_color',
+    color: '$sub_color',
+  },
   '& + &': {
     marginTop: '0.5rem',
   },
@@ -64,7 +68,7 @@ export const ModalItem = styled('p', {
 export const ModalColors = styled('div', {
   display: 'flex',
   position: 'absolute',
-  right: '2rem',
+  right: '1.3rem',
   padding: '0.5rem',
   borderRadius: '1em',
   transition: '$transitonTheme',
