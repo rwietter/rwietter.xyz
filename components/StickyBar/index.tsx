@@ -25,19 +25,23 @@ const StickyBar = () => {
   const handleOpenCommandBar = () => query.toggle();
 
   return (
-    <S.ManuBarWrapper role="menubar">
-      <S.MenuBarGroup>
-        <S.MenuBarLink href="/" title="home page" role="menuitem">
-          <S.MenuBarItem type="button" aria-label="up to home">
+    <S.ManuBarWrapper>
+      <S.MenuBarGroup role="menubar">
+        <S.MenuBarLink href="/" title="go to home page" role="menuitem">
+          <S.MenuBarItem aria-label="go to home page" role="button">
             <VscHome size={20} aria-hidden="true" />
           </S.MenuBarItem>
         </S.MenuBarLink>
-        <S.MenuBarLink href="/blog" title="Blog" role="menuitem">
-          <S.MenuBarItem type="button" aria-label="up to blog">
+        <S.MenuBarLink href="/blog" title="go to blog" role="menuitem">
+          <S.MenuBarItem aria-label="go to blog" role="button">
             <FiList size={20} aria-hidden="true" />
           </S.MenuBarItem>
         </S.MenuBarLink>
-        <S.MenuBarItem>
+        <S.MenuBarItem
+          role="menuitem"
+          title="open command bar"
+          aria-label="open command bar"
+        >
           <BsCommand
             size={20}
             onClick={handleOpenCommandBar}
@@ -47,19 +51,19 @@ const StickyBar = () => {
         </S.MenuBarItem>
       </S.MenuBarGroup>
 
-      <S.MenuBarGroup>
+      <S.MenuBarGroup role="menubar">
         <S.MenuBarItem
-          title="Toggle Dark Mode"
+          title="change theme"
           role="menuitem"
           onClick={() => setIsVisible(true)}
           className="theme"
           type="button"
           aria-label="toggle change theme"
         >
-          <MdColorLens aria-hidden="true" />
+          <MdColorLens aria-hidden="true" role="button" />
         </S.MenuBarItem>
-        <S.MenuBarItem title="go to top" role="menuitem" type="button">
-          <AiOutlineArrowUp onClick={handleToTop} size={20} />
+        <S.MenuBarItem aria-label="go to top" title="go to top" role="menuitem">
+          <AiOutlineArrowUp onClick={handleToTop} size={20} role="button" />
         </S.MenuBarItem>
       </S.MenuBarGroup>
     </S.ManuBarWrapper>
