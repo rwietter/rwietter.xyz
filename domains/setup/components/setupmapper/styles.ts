@@ -5,6 +5,7 @@ export const SetupMapperContainer = styled('section', {
   h2: {
     color: '$text_color',
     fontFamily: 'Sora, sans-serif',
+    fontWeight: 600,
     fontSize: '1.5rem',
   },
   ul: {
