@@ -1,9 +1,19 @@
-@import url("https://fonts.cdnfonts.com/css/futura-std-4");
+/* @import url("https://fonts.cdnfonts.com/css/futura-std-4"); */
 
 @font-face {
   font-family: "Dank Mono";
   src: url("/fonts/Dank-Mono-Regular.ttf") format("ttf"),
     url("/fonts/Dank-Mono-Italic.ttf") format("ttf");
+  font-display: swap, fallback, optional;
+}
+
+@font-face {
+  font-family: futura std;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Futura Std'), url(https://fonts.cdnfonts.com/s/30938/FuturaStdLight.woff) format('woff'),
+    url(https://fonts.cdnfonts.com/s/30938/FuturaStdBook.woff) format('woff'),
+    url(https://fonts.cdnfonts.com/s/30938/FuturaStdLightOblique.woff) format('woff')
 }
 
 * {
@@ -146,16 +156,14 @@ samp,
 blockquote,
 li,
 tt {
-  font-size: clamp(
-    var(--fluid-type-min, 1rem),
-    calc(1rem + var(--fluid-type-target, 3vw)),
-    var(--fluid-type-max, 1.2rem)
-  ) !important;
+  font-size: clamp(var(--fluid-type-min, 1rem),
+      calc(1rem + var(--fluid-type-target, 3vw)),
+      var(--fluid-type-max, 1.2rem)) !important;
   text-rendering: optimizeLegibility;
+  font-display: swap, fallback, optional;
 }
 
-@supports (-webkit-text-size-adjust: 100%) or (-moz-text-size-adjust: 100%) or
-  (-ms-text-size-adjust: 100%) or (text-size-adjust: 100%) {
+@supports (-webkit-text-size-adjust: 100%) or (-moz-text-size-adjust: 100%) or (-ms-text-size-adjust: 100%) or (text-size-adjust: 100%) {
   p {
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
