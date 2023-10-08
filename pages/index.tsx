@@ -1,18 +1,20 @@
+/* eslint-disable react/prop-types */
 import SEO from 'components/SEO';
 import type { GetStaticProps, NextPage } from 'next';
 import { ContentLayout } from 'features/ui/layouts';
-import type { LastArticles } from 'queries/article/article';
 import { AuthorContent, AuthorHeader } from 'features/home';
 import { Container } from 'features/home/styles';
 import { KbarInit } from 'components/Kbar';
+import { fetcherLastFm, fetcherWeather } from 'services';
+import type { RecentTrackProps } from 'components/Lastfm/types';
+import type { WeatherProps } from 'components/Weather/weather';
 
 interface HomeProps {
-  lastArticles?: LastArticles;
-  lastFm: any;
-  weather: any;
+  lastFm: RecentTrackProps;
+  weather: WeatherProps;
 }
 
-const Home: NextPage<HomeProps> = ({ lastFm, weather }: any) => (
+const Home: NextPage<HomeProps> = ({ lastFm, weather }) => (
   <>
     <SEO
       title="Mauricio Witter | Software Engineer"
@@ -31,14 +33,6 @@ const Home: NextPage<HomeProps> = ({ lastFm, weather }: any) => (
   </>
 );
 
-const USERNAME = process.env.LASTFM_USERNAME!;
-const API_KEY = process.env.LASTFM_API_KEY!;
-const API_LAST_FM = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${USERNAME}&api_key=${API_KEY}&format=json&limit=1`;
-const fetcherLastFm = () => fetch(API_LAST_FM).then((res) => res.json());
-
-const API_WEATHER = `https://dataservice.accuweather.com/currentconditions/v1/${process.env.ACCUWEATHER_CITY_ID}?apikey=${process.env.ACCUWEATHER_API_KEY}`;
-const fetcherWeather = () => fetch(API_WEATHER).then((res) => res.json());
-
 export const getStaticProps: GetStaticProps = async () => {
   try {
     const lastFm = await fetcherLastFm();
@@ -49,7 +43,7 @@ export const getStaticProps: GetStaticProps = async () => {
         lastFm,
         weather,
       },
-      revalidate: 60,
+      revalidate: 120,
     };
   } catch (error) {
     return {

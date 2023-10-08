@@ -1,7 +1,4 @@
-/* eslint-disable react/style-prop-object */
-/* eslint-disable jsx-a11y/iframe-has-title */
 /* eslint-disable react/no-danger */
-/* eslint-disable no-return-await */
 import { getCssText } from 'features/ui/theme';
 import Document, {
   Html, Head, Main, NextScript,
@@ -11,20 +8,20 @@ const APP_NAME = 'rwietter';
 
 export default class extends Document {
   static async getInitialProps(ctx: any) {
-    return await Document.getInitialProps(ctx);
+    const props = await Document.getInitialProps(ctx);
+    return props;
   }
 
   render() {
     return (
       <Html lang="pt-BR">
         <Head>
+          <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
-          <link rel="stylesheet dns-prefetch preconnect" href="https://fonts.cdnfonts.com/css/fantasque-sans-mono" />
-          <link rel="stylesheet dns-prefetch preconnect" href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap" />
+          <link rel="stylesheet dns-prefetch preconnect" href="https://fonts.googleapis.com/css2?family=Sora:wght@600&display=swap" />
           <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;800&display=swap" rel="stylesheet" />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap" rel="stylesheet" />
           <meta name="application-name" content={APP_NAME} />
           <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +29,7 @@ export default class extends Document {
           <meta name="apple-mobile-web-app-title" content={APP_NAME} />
           <meta name="format-detection" content="telephone=no" />
           <meta name="mobile-web-app-capable" content="yes" />
-          <meta name="theme-color" content="#FFFFFF" />
+          <meta name="theme-color" content="#000000" />
           <link rel="alternate" type="application/rss+xml" title="XML RSS feed" href="/rss.xml" />
           <link rel="alternate" type="application/atom+xml" title="Atom RSS feed" href="/rss.atom" />
           <link rel="alternate" type="application/json" title="JSON RSS feed" href="/rss.json" />
@@ -53,14 +50,12 @@ export default class extends Document {
           <link rel="icon" type="image/png" href="/icons/favicon-32x32.png" sizes="32x32" />
           <link rel="icon" type="image/png" href="/icons/favicon-16x16.png" sizes="16x16" />
           <link rel="icon" type="image/png" href="/icons/favicon-128.png" sizes="128x128" />
-          <meta name="application-name" content="&nbsp;" />
           <meta name="msapplication-TileColor" content="#FFFFFF" />
           <meta name="msapplication-TileImage" content="/icons/mstile-144x144.png" />
           <meta name="msapplication-square70x70logo" content="/icons/mstile-70x70.png" />
           <meta name="msapplication-square150x150logo" content="/icons/mstile-150x150.png" />
           <meta name="msapplication-wide310x150logo" content="/icons/mstile-310x150.png" />
           <meta name="msapplication-square310x310logo" content="/icons/mstile-310x310.png" />
-          <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
         </Head>
         <body>
           <Main />
