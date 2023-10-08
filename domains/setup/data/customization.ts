@@ -13,18 +13,18 @@ export const customization: SetupData[] = [
   },
   {
     name: 'VS Code Icon',
-    url: 'https://marketplace.visualstudio.com/items?itemName=manojjoshi.aesthetic',
-    type: 'Aesthetic',
+    url: 'https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols',
+    type: 'Symbols',
   },
   {
     name: 'VS Code Product Icon',
-    url: 'https://marketplace.visualstudio.com/items?itemName=PKief.material-product-icons',
-    type: 'Material Product Icons',
+    url: 'https://marketplace.visualstudio.com/items?itemName=manojjoshi.aesthetic',
+    type: 'Aesthetic Product Icon',
   },
   {
     name: 'Terminal Color Scheme',
-    url: 'https://wezfurlong.org/wezterm/colorschemes/n/index.html#nebula-base16',
-    type: 'Nebula (base16)',
+    url: 'https://wezfurlong.org/wezterm/colorschemes/r/index.html#rouge-2',
+    type: 'Rouge 2',
   },
   {
     name: 'Terminal Font',

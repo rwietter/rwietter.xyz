@@ -27,12 +27,12 @@ export const tools: SetupData[] = [
     type: 'Docker Compose',
   },
   {
-    name: 'Shell ',
+    name: 'Shell',
     url: 'https://archlinux.org/packages/extra/x86_64/zsh/',
     type: 'ZSH',
   },
   {
-    name: 'Terminal ',
+    name: 'Terminal',
     url: 'https://archlinux.org/packages/extra/x86_64/wezterm/',
     type: 'Wezterm',
   },
