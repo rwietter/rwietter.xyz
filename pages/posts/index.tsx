@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import SEO from 'components/SEO';
+import { NextSEO } from 'components/SEO';
 import { ContentLayout } from 'features/ui/layouts';
 import type { GetStaticProps } from 'next';
 import apolloClient from 'utils/apollo-client';
@@ -9,8 +9,8 @@ import { PostItem, Posts } from 'domains/posts';
 
 const Page: FC<any> = ({ posts }) => (
   <>
-    <SEO
-      title="Posts | Maurício Witter | Software Engineer"
+    <NextSEO
+      title="Posts | Maurício Witter | Software Developer"
       content="blog"
       url="https://rwietterc.xyz/posts"
       description="Posts about software development, programming, and other things."

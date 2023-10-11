@@ -1,4 +1,4 @@
-import SEO from 'components/SEO';
+import { NextSEO } from 'components/SEO';
 import { ContentLayout } from 'features/ui/layouts';
 import { useCallback } from 'react';
 import { operationSystem } from './data/so';
@@ -33,7 +33,7 @@ const Setup = () => {
 
   return (
     <>
-      <SEO
+      <NextSEO
         title="Setup | Maurício Witter"
         content="website"
         url="https://rwietterc.xyz/setup"

@@ -45,6 +45,7 @@ export interface Properties {
     description: string
     author: Author
     publishedAt: string
+    updatedAt: string
     category: Category
     image: Image
 }

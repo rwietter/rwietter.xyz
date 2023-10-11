@@ -7,7 +7,7 @@ const JSONLD = {
   '@type': 'Person',
   name: 'Maurício Witter Blog',
   brand: 'rwietter',
-  description: 'This blog is about my journey as a software engineer. Here do you find my thoughts, ideas, and experiences. I hope you enjoy it.',
+  description: 'This blog is about my journey as a Software Developer. Here do you find my thoughts, ideas, and experiences. I hope you enjoy it.',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Constantina',
@@ -21,7 +21,7 @@ const JSONLD = {
   ],
   email: 'mailto:mauriciobw17@gmail.com',
   image: 'https://avatars.githubusercontent.com/u/46854467?s=400&u=16a52bab3d6dbcbda716ed7d6bab84b3b307bd22&v=4',
-  jobTitle: 'Software Engineer',
+  jobTitle: 'Software Developer',
   telephone: '(54) 99671-1324',
   url: 'https://rwietterc.xyz/',
 };
@@ -108,6 +108,7 @@ export const NextSEO: FC<SEOProps> = (props) => {
     <NextSeo
       title={title}
       description={description}
+      canonical="https://rwietterc.xyz"
       openGraph={{
         url: `${url}`,
         title,
@@ -129,8 +130,12 @@ export const NextSEO: FC<SEOProps> = (props) => {
             type: 'image/jpeg',
             secureUrl: image,
           },
-          { url: 'https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png' },
-          { url: 'https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png' },
+          {
+            url: 'https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png',
+          },
+          {
+            url: 'https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png',
+          },
         ],
         site_name: author,
       }}

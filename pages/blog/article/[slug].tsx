@@ -10,17 +10,18 @@ import { ARTICLES_QUERY } from 'queries/articles/articles';
 import apolloClient from 'utils/apollo-client';
 import { getReadingTime } from 'utils/getTimeReading';
 import { getLocaleDate } from 'utils/get-locale-date';
-import SEO from 'components/SEO';
+import { NextSEO } from 'components/SEO';
 import Link from 'next/link';
 import { ArticleLayout } from 'features/ui/layouts';
 import { blurImage } from 'utils/blur-image';
 import { ArticleData } from 'features/article/ts';
 import { ArticleFooter } from 'features/article';
+import JSONLD from 'components/JSON-LD';
 
 const ArticleItem = ({ articles, blurDataURL }: ArticleData) => {
   if (!articles) return null;
 
-  const router = useRouter() as unknown as { asPath: string };
+  const router = useRouter();
 
   const [article] = articles;
   const { readTime } = getReadingTime(article?.attributes?.content);
@@ -28,13 +29,21 @@ const ArticleItem = ({ articles, blurDataURL }: ArticleData) => {
 
   return (
     <>
-      <SEO
+      <NextSEO
         title={article?.attributes?.title}
         description={article?.attributes?.description}
         image={article?.attributes?.image?.data?.attributes?.url}
         author={article?.attributes?.author?.data?.attributes?.name}
-        url={`https://rwietterc.xyz${router.asPath}`}
+        url={`https://rwietterc.xyz${router?.asPath}`}
         content="article"
+      />
+      <JSONLD
+        description={article?.attributes?.description}
+        title={article?.attributes?.title}
+        image={article?.attributes?.image?.data?.attributes?.url}
+        authorName={article?.attributes?.author?.data?.attributes?.name}
+        datePublished={article?.attributes?.publishedAt}
+        url={`https://rwietterc.xyz${router?.asPath}`}
       />
       <ArticleLayout>
         <CSS.ArticleContainer>

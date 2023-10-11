@@ -1,17 +1,8 @@
 import { styled } from 'features/ui/theme';
-import Image from 'next/image';
 
 export const CardContainer = styled('section', {
   maxWidth: '350px',
   width: '100%',
-});
-
-export const CardImage = styled(Image, {
-  objectFit: 'cover',
-  borderRadius: '8px',
-  width: '100%',
-  height: '100%',
-  maxHeight: '12rem',
 });
 
 export const PostTitle = styled('p', {
