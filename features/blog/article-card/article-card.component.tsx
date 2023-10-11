@@ -16,6 +16,8 @@ const ArticleCard = ({ article }: any) => {
             height={190}
             style={{ objectFit: 'cover', borderRadius: '10px' }}
             loading="lazy"
+            priority
+            alt={`Imagem do artigo ${title} - ${description}`}
             placeholder="blur"
             {...article.blurDataURL}
           />
