@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import * as S from './styles';
 
 const ArticleCard = ({ article }: any) => {
@@ -10,9 +11,10 @@ const ArticleCard = ({ article }: any) => {
     <S.CardContainer>
       <Link href={`/blog/article/${slug}`} passHref>
         {image?.data?.attributes?.url ? (
-          <S.CardImage
-            width={2000}
-            height={2000}
+          <Image
+            width={320}
+            height={190}
+            style={{ objectFit: 'cover', borderRadius: '10px' }}
             loading="lazy"
             placeholder="blur"
             {...article.blurDataURL}
