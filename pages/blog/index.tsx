@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import SEO from 'components/SEO';
+import { NextSEO } from 'components/SEO';
 import { ContentLayout } from 'features/ui/layouts';
 import type { GetStaticProps } from 'next';
 import { ARTICLES_QUERY } from 'queries/articles/articles';
@@ -11,8 +11,8 @@ import generateRssFeed from 'utils/feed-rss';
 
 const Blog: FC<any> = ({ articles }) => (
   <>
-    <SEO
-      title="Blog | Maurício Witter | Software Engineer"
+    <NextSEO
+      title="Blog | Maurício Witter | Software Developer"
       content="blog"
       url="https://rwietterc.xyz/blog"
       description="My blog, where I write about my experiences, my projects, and my life. :)"

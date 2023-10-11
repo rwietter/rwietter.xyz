@@ -10,7 +10,7 @@ import { PostItem, Posts } from 'domains/posts';
 const Page: FC<any> = ({ posts }) => (
   <>
     <SEO
-      title="Posts | Maurício Witter | Software Engineer"
+      title="Posts | Maurício Witter | Software Developer"
       content="blog"
       url="https://rwietterc.xyz/posts"
       description="Posts about software development, programming, and other things."

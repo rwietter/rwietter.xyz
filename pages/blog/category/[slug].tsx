@@ -14,7 +14,7 @@ const Category: FC<any> = ({ categories }) => {
   return (
     <>
       <SEO
-        title="Blog | Maurício W. | Software Engineer"
+        title="Blog | Maurício W. | Software Developer"
         content="blog"
         url="https://rwietterc.xyz/blog"
         description="The category page of the blog. Here, you can find all the articles of the category. :)"

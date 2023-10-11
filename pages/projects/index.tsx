@@ -6,7 +6,7 @@ import { YearProjects, TopProjects } from 'features/projects';
 const Page = () => (
   <>
     <SEO
-      title="Projects | Maurício W. | Software Engineer"
+      title="Projects | Maurício W. | Software Developer"
       content="website"
       url="https://rwietterc.xyz"
       description="Here, in this page, you can find some of my favorite projects. I hope you enjoy it. :)"
