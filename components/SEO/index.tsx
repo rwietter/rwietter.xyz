@@ -108,6 +108,7 @@ export const NextSEO: FC<SEOProps> = (props) => {
     <NextSeo
       title={title}
       description={description}
+      canonical="https://rwietterc.xyz"
       openGraph={{
         url: `${url}`,
         title,
@@ -129,8 +130,12 @@ export const NextSEO: FC<SEOProps> = (props) => {
             type: 'image/jpeg',
             secureUrl: image,
           },
-          { url: 'https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png' },
-          { url: 'https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png' },
+          {
+            url: 'https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png',
+          },
+          {
+            url: 'https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png',
+          },
         ],
         site_name: author,
       }}

@@ -8,7 +8,7 @@ import type { GetStaticPaths, GetStaticProps } from 'next';
 import apolloClient from 'utils/apollo-client';
 import { getReadingTime } from 'utils/getTimeReading';
 import { getLocaleDate } from 'utils/get-locale-date';
-import SEO from 'components/SEO';
+import { NextSEO } from 'components/SEO';
 import Link from 'next/link';
 import { ArticleLayout } from 'features/ui/layouts';
 // import { ArticleFooter } from 'features/article';
@@ -26,7 +26,7 @@ const Page = ({ posts }: any) => {
 
   return (
     <>
-      <SEO
+      <NextSEO
         title={post?.attributes?.title}
         description={post?.attributes?.description}
         image={post?.attributes?.image?.data?.attributes?.url}

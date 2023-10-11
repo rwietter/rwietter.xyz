@@ -3,7 +3,7 @@ import CATEGORY_ARTICLES_QUERY from 'queries/category/articles';
 import apolloClient from 'utils/apollo-client';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import CATEGORIES_QUERY from 'queries/category/categories';
-import SEO from 'components/SEO';
+import { NextSEO } from 'components/SEO';
 import { BlogPosts } from 'features/blog';
 
 const Category: FC<any> = ({ categories }) => {
@@ -13,7 +13,7 @@ const Category: FC<any> = ({ categories }) => {
 
   return (
     <>
-      <SEO
+      <NextSEO
         title="Blog | Maurício W. | Software Developer"
         content="blog"
         url="https://rwietterc.xyz/blog"

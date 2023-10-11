@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import SEO from 'components/SEO';
+import { NextSEO } from 'components/SEO';
 import type { GetStaticProps, NextPage } from 'next';
 import { ContentLayout } from 'features/ui/layouts';
 import { AuthorContent, AuthorHeader } from 'features/home';
@@ -16,7 +16,7 @@ interface HomeProps {
 
 const Home: NextPage<HomeProps> = ({ lastFm, weather }) => (
   <>
-    <SEO
+    <NextSEO
       title="Mauricio Witter | Software Developer"
       content="website"
       url="https://rwietterc.xyz"
