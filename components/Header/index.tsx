@@ -2,9 +2,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import React from 'react';
-import { useModalTheme } from 'store/modal-theme';
-import { MdColorLens } from 'react-icons/md';
+import dynamic from 'next/dynamic';
 import * as S from './styles';
+
+const SwitchTheme = dynamic(() => import('components/SwitchTheme/SwitchTheme'), { ssr: false });
 
 const activePath = (pathname: string) => (href: string, entrypath?: string) => {
   if (pathname === href) {
@@ -19,7 +20,6 @@ const activePath = (pathname: string) => (href: string, entrypath?: string) => {
 };
 
 const Header = () => {
-  const { setIsVisible } = useModalTheme();
   const isActive = activePath(usePathname().trim());
 
   return (
@@ -41,14 +41,7 @@ const Header = () => {
           <Link href="/posts">/posts</Link>
         </S.NavIterm>
       </S.Nav>
-
-      <S.Button
-        type="button"
-        aria-label="toggle change theme"
-        onClick={() => setIsVisible(true)}
-      >
-        <MdColorLens aria-hidden="true" />
-      </S.Button>
+      <SwitchTheme visible="header" />
     </S.Header>
   );
 };

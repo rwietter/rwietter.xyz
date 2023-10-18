@@ -9,7 +9,7 @@ const Positioner = styled(KBarPositioner, {
   width: '100%',
   inset: '0px',
   padding: '14vh 16px 16px',
-  background: 'rgba(0, 0, 0, .8)',
+  background: '$cb_bg_color',
   boxSizing: 'border-box',
   zIndex: 4,
   fontFamily: 'Futura Std, sans-serif',
@@ -26,7 +26,7 @@ const Search = styled(KBarSearch, {
   outline: 'none',
   border: 'none',
   margin: 0,
-  background: '$bg_alt_color',
+  background: '$sub_alt_color',
   color: '$text_color',
 });
 
@@ -35,7 +35,7 @@ const GroupName = styled('div', {
   fontSize: '10px',
   textTransform: 'uppercase',
   letterSpacing: '1px',
-  background: 'rgba(0, 0, 0, 0.6)',
+  background: '$sub_alt_color',
 });
 
 const Kbd = styled('kbd', {
@@ -83,8 +83,8 @@ const Animator = styled(KBarAnimator, {
   boxShadow: '0px 10px 20px 8px rgba(0, 0, 0, 0.1)',
   '@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none))': {
     backgroundColor: '#ffffff0d',
-    WebkitBackdropFilter: 'saturate(900%) blur(8px)',
-    backdropFilter: 'saturate(900%) blur(8px)',
+    WebkitBackdropFilter: 'saturate(207%) blur(8px)',
+    backdropFilter: 'saturate(207%) blur(8px)',
   },
 
   /* Hide scrollbar for Chrome, Safari and Opera */
@@ -107,7 +107,7 @@ const Box = styled('div', {
   cursor: 'pointer',
 
   '&:hover': {
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    backgroundColor: '$cb_box_alt_color',
   },
 });
 

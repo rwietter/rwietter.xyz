@@ -19,13 +19,14 @@ export const SetupMapperContainer = styled('section', {
       '--fluid-type-max': '1rem',
       span: {
         color: '$text_color',
+        fontWeight: 600,
       },
     },
   },
 });
 
 export const SoftwareLink = styled('a', {
-  color: '$sub_color',
+  color: '$text_color',
   fontFamily: 'Futura Std, sans-serif',
   lineHeight: '1.8',
   fontWeight: 500,
@@ -34,7 +35,7 @@ export const SoftwareLink = styled('a', {
   '--fluid-type-max': '1rem',
 
   '&:hover': {
-    color: '$caret_color',
+    color: '$main_color',
   },
 
   span: {

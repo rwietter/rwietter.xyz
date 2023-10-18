@@ -1,18 +1,13 @@
-import {
-  AvailableThemes,
-  archTheme, blueberryLight, catppuccinDark, chaosTheory,
-} from 'features/ui/theme';
+import { AvailableThemes, dark, light } from 'features/ui/theme';
 
 type T = {
   // eslint-disable-next-line no-unused-vars
   [Key in AvailableThemes]: string;
-}
+};
 
 const themes: T = {
-  arch: archTheme,
-  catppuccin: catppuccinDark,
-  'blueberry-light': blueberryLight,
-  'chaos-theory': chaosTheory,
+  dark,
+  light,
 };
 
 export const applyTheme = (type: AvailableThemes) => {

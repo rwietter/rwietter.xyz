@@ -4,13 +4,13 @@ import { FiList } from 'react-icons/fi';
 import { VscHome } from 'react-icons/vsc';
 import { AiOutlineArrowUp } from 'react-icons/ai';
 import { BsCommand } from 'react-icons/bs';
-import { MdColorLens } from 'react-icons/md';
 import { useKBar } from 'kbar';
-import { useModalTheme } from 'store/modal-theme';
+import dynamic from 'next/dynamic';
 import * as S from './styles';
 
+const SwitchTheme = dynamic(() => import('components/SwitchTheme/SwitchTheme'), { ssr: false });
+
 const StickyBar = () => {
-  const { setIsVisible } = useModalTheme();
   const { query } = useKBar();
 
   const handleToTop = () => {
@@ -53,16 +53,14 @@ const StickyBar = () => {
 
       <S.MenuBarGroup role="menubar">
         <S.MenuBarItem
-          title="change theme"
+          title="Toggle Dark Mode"
           role="menuitem"
-          onClick={() => setIsVisible(true)}
           className="theme"
-          type="button"
           aria-label="toggle change theme"
         >
-          <MdColorLens aria-hidden="true" role="button" />
+          <SwitchTheme visible="sticky" />
         </S.MenuBarItem>
-        <S.MenuBarItem aria-label="go to top" title="go to top" role="menuitem">
+        <S.MenuBarItem aria-label="go to top" title="go to top" role="button">
           <AiOutlineArrowUp onClick={handleToTop} size={20} role="button" />
         </S.MenuBarItem>
       </S.MenuBarGroup>

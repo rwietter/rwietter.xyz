@@ -8,17 +8,12 @@ const KbarInit = () => {
 
   return (
     <KbarContainer>
-      <KbarButton
-        type="button"
-        onClick={handleOpenKbar}
-      >
-        Press
-        {' '}
+      <KbarButton type="button" onClick={handleOpenKbar}>
+        Press &nbsp;
         <code>ctrl</code>
-        {' '}
+        &nbsp;
         <code>Space</code>
-        {' '}
-        to start →
+        &nbsp; to start →
       </KbarButton>
     </KbarContainer>
   );
