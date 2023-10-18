@@ -4,9 +4,11 @@ import { IoMdMoon } from 'react-icons/io';
 import { MdSunny } from 'react-icons/md';
 import { Button } from './styles';
 
-// import { Container } from './styles';
+interface SwitchThemeProps {
+  visible: 'header' | 'sticky';
+}
 
-const SwitchTheme: React.FC = () => {
+const SwitchTheme: React.FC<SwitchThemeProps> = ({ visible }) => {
   const { theme, setTheme } = useTheme();
 
   const handleSwitchTheme = () => (theme === 'light' ? setTheme('dark') : setTheme('light'));
@@ -17,6 +19,7 @@ const SwitchTheme: React.FC = () => {
       role="menuitem"
       onClick={handleSwitchTheme}
       className="theme"
+      visible={visible}
     >
       {theme === 'dark' ? (
         <IoMdMoon className="dark" aria-hidden="true" />

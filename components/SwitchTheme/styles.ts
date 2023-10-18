@@ -10,12 +10,21 @@ export const Button = styled('button', {
   transition: '$transitonTheme',
   fontFamily: 'Roboto Flex, sans-serif',
 
-  '@bp1': {
-    display: 'flex',
-    alignItems: 'center',
-  },
-
   '&:hover': {
     color: '$main_color',
+  },
+
+  variants: {
+    visible: {
+      header: {
+        '@bp1': {
+          display: 'flex',
+          alignItems: 'center',
+        },
+      },
+      sticky: {
+        display: 'flex',
+      },
+    },
   },
 });

@@ -41,7 +41,7 @@ const Header = () => {
           <Link href="/posts">/posts</Link>
         </S.NavIterm>
       </S.Nav>
-      <SwitchTheme />
+      <SwitchTheme visible="header" />
     </S.Header>
   );
 };
