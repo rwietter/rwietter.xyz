@@ -42,7 +42,7 @@ export const MenuBarLink = styled(Link, {
   transition: '$transitonTheme',
 });
 
-export const MenuBarItem = styled('button', {
+export const MenuBarItem = styled('div', {
   background: 'none',
   border: 'none',
   outline: 'none',

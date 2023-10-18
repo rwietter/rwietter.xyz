@@ -65,7 +65,7 @@ export const ListItemName = styled(motion.a, {
 });
 
 export const HoverBackground = styled(motion.div, {
-  background: '$bg_alt_color',
+  background: '$sub_alt_color',
   transition: '$transitonTheme',
   position: 'absolute',
   top: '2px',

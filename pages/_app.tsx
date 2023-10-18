@@ -12,7 +12,6 @@ import { useTheme } from 'store/switch-theme';
 import { applyTheme } from 'utils/apply-theme';
 import Prism from 'prismjs';
 import { CommandBar } from 'components/Kbar';
-import { ModalTheme } from 'components/ModalTheme';
 
 require('prismjs/components/prism-typescript');
 require('prismjs/components/prism-javascript');
@@ -38,7 +37,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <CommandBar>
       <LoadingIndicator />
-      <ModalTheme />
       <ApolloProvider client={apolloClient as any}>
         <Component {...pageProps} />
         <Analytics />

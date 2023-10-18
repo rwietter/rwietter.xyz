@@ -35,7 +35,7 @@ export const Title = styled('h2', {
 });
 
 export const Description = styled('p', {
-  color: '$sub_color',
+  color: '$text_alt_color',
   fontWeight: 400,
   paddingTop: '$2',
   lineHeight: '1.5',
@@ -46,7 +46,7 @@ export const Description = styled('p', {
 });
 
 export const HoverBackground = styled(motion.div, {
-  background: '$bg_alt_color',
+  background: '$sub_alt_color',
   transition: '$transitonTheme',
   position: 'absolute',
   left: 0,
