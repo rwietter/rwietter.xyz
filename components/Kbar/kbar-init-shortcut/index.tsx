@@ -12,7 +12,7 @@ const KbarInit = () => {
         Press &nbsp;
         <code>ctrl</code>
         &nbsp;
-        <code>Space</code>
+        <code>space</code>
         &nbsp; to start →
       </KbarButton>
     </KbarContainer>

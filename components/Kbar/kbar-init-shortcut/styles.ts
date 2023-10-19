@@ -26,9 +26,12 @@ export const KbarButton = styled('button', {
   code: {
     background: '$sub_color',
     textAlign: 'center',
+    verticalAlign: 'middle',
     color: '$text_alt_color',
+    fontFamily: 'Futura std',
+    padding: '2px 4px',
+    letterSpacing: '0.1em',
     borderRadius: '1em',
-    fontWeight: 500,
     transition: '$transitonTheme',
     '--fluid-type-min': '.9rem',
     '--fluid-type-max': '1rem',
