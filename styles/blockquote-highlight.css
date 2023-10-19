@@ -1,0 +1,86 @@
+/* ---------------------------- GENERAL ---------------------------- */
+
+pre:has(.language-important, .language-note, .language-warn) {
+  padding: 1em;
+  background: var(--colors-bg_color) !important;
+  font-family: 'Futura std', sans-serif !important;
+  overflow: auto;
+  border-radius: 0 !important;
+  word-break: break-all;
+  width: 100% !important;
+  --fluid-type-min: 0.9rem;
+  --fluid-type-max: 1.2rem;
+  --fluid-type-target: 2vw;
+}
+
+pre:has(.language-important, .language-note, .language-warn)::before {
+  content: '';
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 1.5em;
+  width: 1.5em;
+  height: 1.5em;
+  top: 5px;
+  left: 10px;
+}
+
+pre:has(.language-important, .language-note, .language-warn)::after {
+  position: absolute;
+  top: 5px;
+  left: 2.2em;
+  font-weight: 600;
+}
+
+pre:has(.language-important, .language-note, .language-warn) code {
+  padding-top: 1.8em !important;
+  display: block !important;
+}
+
+pre:has(.language-important, .language-note, .language-warn) * {
+  all: unset !important;
+}
+
+/* ---------------------------- IMPORTANT ---------------------------- */
+
+pre[class="language-important"] {
+  border-left: 0.25em solid #A371F7;
+}
+
+pre[class="language-important"]::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="%23A371F7" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 17v-4l-5 3l-5 -3v4l5 3z" /><path d="M17 8v-4l-5 3l-5 -3v4l5 3z" /></svg>');
+}
+
+pre[class="language-important"]::after {
+  content: 'Important';
+  color: #A371F7;
+}
+
+/* ---------------------------- NOTE ---------------------------- */
+
+pre[class="language-note"] {
+  border-left: 0.25em solid #2F81F7;
+}
+
+pre[class="language-note"]::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="%232F81F7" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M12 8v4" /><path d="M12 16h.01" /></svg>');
+}
+
+pre[class="language-note"]::after {
+  content: 'Note';
+  color: #2F81F7;
+}
+
+/* ---------------------------- WARN ---------------------------- */
+
+pre[class="language-warn"] {
+  border-left: 0.25em solid #D29922;
+}
+
+pre[class="language-warn"]::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="%23D29922" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 9v4" /><path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z" /><path d="M12 16h.01" /></svg>');
+}
+
+pre[class="language-warn"]::after {
+  content: 'Warning';
+  color: #D29922;
+}

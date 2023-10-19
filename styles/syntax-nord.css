@@ -122,3 +122,5 @@ pre[class*="language-"] {
 .token.entity {
   cursor: help;
 }
+
+@import 'blockquote-highlight.css';
