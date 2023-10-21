@@ -13,6 +13,7 @@ export const PostListItem = styled(Link, {
   transition: '$transitonTheme',
   fontFamily: 'Futura Std, sans-serif',
   color: '$text_color',
+  lineHeight: '1.5',
 
   '&:hover': {
     color: '$main_color',

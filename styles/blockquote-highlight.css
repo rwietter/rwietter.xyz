@@ -34,6 +34,7 @@ pre:has(.language-important, .language-note, .language-warn)::after {
 pre:has(.language-important, .language-note, .language-warn) code {
   padding-top: 1.8em !important;
   display: block !important;
+  white-space: pre-wrap !important;
 }
 
 pre:has(.language-important, .language-note, .language-warn) * {
