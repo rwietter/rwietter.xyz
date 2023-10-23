@@ -9,6 +9,9 @@ export const LastFMTrack: FC<LastFmTrackProps> = ({ lastFm }) => {
   if (lastFm === null) return <span />;
 
   const track: TrackProps = lastFm?.recenttracks?.track[0];
+
+  if (!track) return <NotPlaying />;
+
   const nowPlaying = track['@attr']?.nowplaying === 'true';
   const imageUrl = track.image[3]['#text'];
 

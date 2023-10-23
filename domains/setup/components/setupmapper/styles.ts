@@ -39,6 +39,6 @@ export const SoftwareLink = styled('a', {
   },
 
   span: {
-    color: '$text_alt_color',
+    color: '$main_color',
   },
 });

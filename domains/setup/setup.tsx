@@ -37,6 +37,7 @@ const Setup = () => {
         title="Setup | Maurício Witter"
         content="website"
         url="https://rwietterc.xyz/setup"
+        canonical="https://rwietterc.xyz/blog"
         description="Operational System and Software Development Setup for Development and Productivity."
         image="https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png"
       />

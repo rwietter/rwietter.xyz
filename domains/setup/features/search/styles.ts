@@ -17,7 +17,7 @@ export const SearchContent = styled('section', {
     },
 
     a: {
-      color: '$sub_color',
+      color: '$text_color',
       transition: '$transitonTheme',
       fontFamily: 'Futura Std, sans-serif',
 

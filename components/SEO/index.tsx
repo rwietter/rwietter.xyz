@@ -33,6 +33,7 @@ interface SEOProps {
   content: 'article' | 'website' | 'blog';
   image: string;
   author?: string;
+  canonical?: string;
   ogtype?: 'article:section' | 'website' | 'article:author' | 'article:tag' | '';
 }
 const SEO: FC<SEOProps> = ({
@@ -102,13 +103,13 @@ const SEO: FC<SEOProps> = ({
 
 export const NextSEO: FC<SEOProps> = (props) => {
   const {
-    title, description, url, content = 'website', image, author = '@rwietter',
+    title, description, canonical, url, content = 'website', image, author = '@rwietter',
   } = props;
   return (
     <NextSeo
       title={title}
       description={description}
-      canonical="https://rwietterc.xyz"
+      canonical={canonical || 'https://rwietterc.xyz/blog'}
       openGraph={{
         url: `${url}`,
         title,
