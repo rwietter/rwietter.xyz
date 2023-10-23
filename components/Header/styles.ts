@@ -51,7 +51,7 @@ export const NavIterm = styled('div', {
   },
 
   'a, svg': {
-    color: '$sub_color !important',
+    color: '$text_gray_color !important',
   },
 
   '&.active a, &.active svg': {

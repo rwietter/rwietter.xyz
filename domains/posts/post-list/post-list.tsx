@@ -17,7 +17,7 @@ type Props = {
 
 const PostItem: React.FC<Props> = ({ posts }) => (
   <S.PostList>
-    {posts?.map((post: any) => (
+    {posts?.map((post) => (
       <S.PostListItem
         href={`/posts/post/${post.attributes?.slug}`}
         key={post.attributes.slug}

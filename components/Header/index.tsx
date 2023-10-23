@@ -24,21 +24,21 @@ const Header = () => {
 
   return (
     <S.Header>
-      <S.Nav>
-        <S.NavIterm className={isActive('/')}>
+      <S.Nav aria-label="navigation" role="menubar">
+        <S.NavIterm className={isActive('/')} aria-current="page" role="menuitem" title="Home">
           <Link href="/">/home</Link>
         </S.NavIterm>
-        <S.NavIterm className={isActive('/blog', '/blog/article/')}>
+        <S.NavIterm className={isActive('/blog', '/blog/article/')} aria-current="page" role="menuitem" title="Blog">
           <Link href="/blog">/blog</Link>
         </S.NavIterm>
-        <S.NavIterm className={isActive('/projects')}>
+        <S.NavIterm className={isActive('/posts', '/posts/post/')} aria-current="page" role="menuitem" title="Posts">
+          <Link href="/posts">/posts</Link>
+        </S.NavIterm>
+        <S.NavIterm className={isActive('/projects')} aria-current="page" role="menuitem" title="Projects">
           <Link href="/projects">/projects</Link>
         </S.NavIterm>
-        <S.NavIterm className={isActive('/setup')}>
+        <S.NavIterm className={isActive('/setup')} aria-current="page" role="menuitem" title="Setup">
           <Link href="/setup">/setup</Link>
-        </S.NavIterm>
-        <S.NavIterm className={isActive('/posts', '/posts/post/')}>
-          <Link href="/posts">/posts</Link>
         </S.NavIterm>
       </S.Nav>
       <SwitchTheme visible="header" />

@@ -1,19 +1,11 @@
 /* @import url("https://fonts.cdnfonts.com/css/futura-std-4"); */
 
 @font-face {
-  font-family: "Dank Mono";
-  src: url("/fonts/Dank-Mono-Regular.ttf") format("ttf"),
-    url("/fonts/Dank-Mono-Italic.ttf") format("ttf");
-  font-display: swap, fallback, optional;
-}
-
-@font-face {
   font-family: futura std;
   font-style: normal;
   font-weight: 400;
   src: local('Futura Std'), url(https://fonts.cdnfonts.com/s/30938/FuturaStdLight.woff) format('woff'),
     url(https://fonts.cdnfonts.com/s/30938/FuturaStdBook.woff) format('woff'),
-    url(https://fonts.cdnfonts.com/s/30938/FuturaStdLightOblique.woff) format('woff')
 }
 
 * {

@@ -60,8 +60,8 @@ const StickyBar = () => {
         >
           <SwitchTheme visible="sticky" />
         </S.MenuBarItem>
-        <S.MenuBarItem aria-label="go to top" title="go to top" role="button">
-          <AiOutlineArrowUp onClick={handleToTop} size={20} role="button" />
+        <S.MenuBarItem aria-label="go to top" title="go to top" role="menuitem">
+          <AiOutlineArrowUp onClick={handleToTop} size={20} />
         </S.MenuBarItem>
       </S.MenuBarGroup>
     </S.ManuBarWrapper>

@@ -128,6 +128,11 @@ export const ArticleTitle = styled('h1', {
   margin: 0,
   color: '$text_color',
   transition: '$transitonTheme',
+
+  '@supports (text-wrap: balance)': {
+    maxInlineSize: '50ch',
+    textWrap: 'balance',
+  },
 });
 
 export const ArticleDescription = styled('h2', {
