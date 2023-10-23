@@ -22,7 +22,7 @@ require('prismjs/components/prism-rust');
 require('prismjs/components/prism-bash');
 require('prismjs/components/prism-json');
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps }: AppProps) => {
   const { theme } = useTheme();
 
   useEffect(() => {
@@ -45,4 +45,4 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   );
 };
 
-export default MyApp;
+export default App;

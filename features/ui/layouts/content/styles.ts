@@ -11,6 +11,7 @@ export const LayoutCSS = styled('main', {
   paddingBottom: '4rem',
   padding: '1rem 1rem 4rem 1rem',
   paddingTop: '1rem',
+  fontDisplay: 'swap',
 
   variants: {
     layout: {

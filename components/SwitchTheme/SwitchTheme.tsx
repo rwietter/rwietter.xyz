@@ -16,15 +16,15 @@ const SwitchTheme: React.FC<SwitchThemeProps> = ({ visible }) => {
     <Button
       type="button"
       aria-label="toggle change theme"
-      role="menuitem"
+      title="toggle change theme"
       onClick={handleSwitchTheme}
       className="theme"
       visible={visible}
     >
       {theme === 'dark' ? (
-        <IoMdMoon className="dark" aria-hidden="true" />
+        <IoMdMoon className="dark" aria-hidden="true" title="dark" />
       ) : (
-        <MdSunny className="light" aria-hidden="true" />
+        <MdSunny className="light" aria-hidden="true" title="light" />
       )}
     </Button>
   );
