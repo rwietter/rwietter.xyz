@@ -1,5 +1,5 @@
 {
-  "name": "next-pwa-1",
+  "name": "rwietterc.xyz",
   "version": "1.0.0",
   "main": "pages/index.js",
   "license": "MIT",
@@ -7,6 +7,7 @@
   "engines": {
     "node": ">=16.8.0"
   },
+  "packageManager": "pnpm",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

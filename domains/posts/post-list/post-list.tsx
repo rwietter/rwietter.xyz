@@ -18,16 +18,15 @@ type Props = {
 const PostItem: React.FC<Props> = ({ posts }) => (
   <S.PostList>
     {posts?.map((post) => (
-      <S.PostListItem
-        href={`/posts/post/${post.attributes?.slug}`}
-        key={post.attributes.slug}
-      >
-        {new Date(post.attributes?.publishedAt).toLocaleDateString()}
-        {' '}
-        —
-        {' '}
-        {post.attributes?.title}
-      </S.PostListItem>
+      <li key={post.attributes.slug}>
+        <S.PostListItem href={`/posts/post/${post.attributes?.slug}`}>
+          {new Date(post.attributes?.publishedAt).toLocaleDateString()}
+          {' '}
+          —
+          {' '}
+          {post.attributes?.title}
+        </S.PostListItem>
+      </li>
     ))}
   </S.PostList>
 );

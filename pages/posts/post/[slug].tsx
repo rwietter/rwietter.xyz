@@ -32,6 +32,7 @@ const Page = ({ posts }: any) => {
         image={post?.attributes?.image?.data?.attributes?.url}
         author={post?.attributes?.author?.data?.attributes?.name}
         url={`https://rwietterc.xyz${router.asPath}`}
+        canonical={`https://rwietterc.xyz${router.asPath}`}
         content="article"
       />
       <ArticleLayout>
