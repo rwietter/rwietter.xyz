@@ -4,23 +4,28 @@ import '../styles/syntax-nord.css';
 import '../styles/shadow-icon.css';
 import type { AppProps } from 'next/app';
 import { ApolloProvider } from '@apollo/react-hooks';
-import apolloClient from 'utils/apollo-client';
+// import apolloClient from 'utils/apollo-client';
 import { Analytics } from '@vercel/analytics/react';
 import { LoadingIndicator } from 'components/Loading';
 import { useEffect } from 'react';
 import { useTheme } from 'store/switch-theme';
 import { applyTheme } from 'utils/apply-theme';
 import Prism from 'prismjs';
-import { CommandBar } from 'components/Kbar';
+import dynamic from 'next/dynamic';
 
-require('prismjs/components/prism-typescript');
-require('prismjs/components/prism-javascript');
-require('prismjs/components/prism-jsx');
-require('prismjs/components/prism-tsx');
-require('prismjs/components/prism-css');
-require('prismjs/components/prism-rust');
-require('prismjs/components/prism-bash');
-require('prismjs/components/prism-json');
+const CommandBar = dynamic(() => import('components/Kbar/command-bar'), { ssr: true });
+const apolloClient = dynamic(() => import('components/Kbar/command-bar'), {
+  ssr: true,
+});
+
+// require('prismjs/components/prism-typescript');
+// require('prismjs/components/prism-javascript');
+// require('prismjs/components/prism-jsx');
+// require('prismjs/components/prism-tsx');
+// require('prismjs/components/prism-css');
+// require('prismjs/components/prism-rust');
+// require('prismjs/components/prism-bash');
+// require('prismjs/components/prism-json');
 
 const App = ({ Component, pageProps }: AppProps) => {
   const { theme } = useTheme();
@@ -32,7 +37,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   useEffect(() => {
     Prism.highlightAll();
-  });
+  }, []);
 
   return (
     <CommandBar>
