@@ -20,9 +20,12 @@ export default class extends Document {
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
-          <link rel="stylesheet dns-prefetch preconnect" href="https://fonts.googleapis.com/css2?family=Sora:wght@600&display=swap" />
           <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;800&display=swap" rel="stylesheet" />
-          <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,300;1,300&display=swap" rel="stylesheet prefetch" />
+          <link rel="preload" as="font" href="https://fonts.cdnfonts.com/s/30938/FuturaStdLight.woff" type="font/woff" crossOrigin="anonymous" />
+          <link rel="preload" as="font" href="https://fonts.cdnfonts.com/s/30938/FuturaStdBook.woff" type="font/woff" crossOrigin="anonymous" />
+
           <meta name="application-name" content={APP_NAME} />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-status-bar-style" content="default" />

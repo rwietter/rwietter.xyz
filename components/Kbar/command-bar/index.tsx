@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unused-prop-types */
 /* eslint-disable react/no-unstable-nested-components */
-import { ReactNode } from 'react';
+import { ReactNode, memo } from 'react';
 import { useRouter } from 'next/router';
 import {
   KBarProvider,
@@ -68,7 +68,7 @@ type Props = {
   children: ReactNode;
 };
 
-export const CommandBar = ({ children }: Props) => {
+const CommandBar = ({ children }: Props) => {
   const router = useRouter();
 
   const copyLink = () => {
@@ -189,3 +189,5 @@ export const CommandBar = ({ children }: Props) => {
     </KBarProvider>
   );
 };
+
+export default memo(CommandBar);
