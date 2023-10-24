@@ -37,7 +37,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   useEffect(() => {
     Prism.highlightAll();
-  }, []);
+  });
 
   return (
     <CommandBar>
