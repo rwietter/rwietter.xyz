@@ -872,7 +872,7 @@
 .markdown-body p code {
   background-color: var(--colors-sub_color);
   font-style: normal;
-  --fluid-type-max: 1.3rem;
+  --fluid-type-max: 1.1rem;
   transition: var(--transitions-transitonTheme);
 }
 
@@ -941,11 +941,7 @@
   background-color: transparent;
   display: block;
   border: 0;
-  --fluid-type-max: 1.3rem;
-}
-
-.markdown-body pre code span {
-  --fluid-type-max: 1.3rem;
+  --fluid-type-max: 1.1rem;
 }
 
 .markdown-body .csv-data td,

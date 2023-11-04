@@ -18,14 +18,14 @@ const apolloClient = dynamic(() => import('components/Kbar/command-bar'), {
   ssr: true,
 });
 
-// require('prismjs/components/prism-typescript');
-// require('prismjs/components/prism-javascript');
-// require('prismjs/components/prism-jsx');
-// require('prismjs/components/prism-tsx');
-// require('prismjs/components/prism-css');
-// require('prismjs/components/prism-rust');
-// require('prismjs/components/prism-bash');
-// require('prismjs/components/prism-json');
+require('prismjs/components/prism-typescript');
+require('prismjs/components/prism-javascript');
+require('prismjs/components/prism-jsx');
+require('prismjs/components/prism-tsx');
+require('prismjs/components/prism-css');
+require('prismjs/components/prism-rust');
+require('prismjs/components/prism-bash');
+require('prismjs/components/prism-json');
 
 const App = ({ Component, pageProps }: AppProps) => {
   const { theme } = useTheme();
