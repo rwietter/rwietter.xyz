@@ -1,19 +1,17 @@
 /* eslint-disable no-tabs */
 import { useRouter } from 'next/router';
-import markdownLight from 'styles/github-markdown-css-light.module.css';
-import { AiOutlineArrowLeft, AiOutlineCalendar } from 'react-icons/ai';
-import { RiTimer2Line } from 'react-icons/ri';
 import * as CSS from 'features/article/styles';
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import apolloClient from 'utils/apollo-client';
-import { getReadingTime } from 'utils/getTimeReading';
-import { getLocaleDate } from 'utils/get-locale-date';
 import { NextSEO } from 'components/SEO';
-import Link from 'next/link';
 import { ArticleLayout } from 'features/ui/layouts';
 // import { ArticleFooter } from 'features/article';
 import { POSTS_QUERY } from 'queries/posts/posts';
 import { POST_QUERY } from 'queries/post/post';
+import dynamic from 'next/dynamic';
+
+const ArticleHeader = dynamic(() => import('features/article/header'), { ssr: true });
+const Markdown = dynamic(() => import('features/article/markdown'), { ssr: true });
 
 const Page = ({ posts }: any) => {
   if (!posts) return null;
@@ -21,8 +19,6 @@ const Page = ({ posts }: any) => {
   const router = useRouter() as unknown as { asPath: string };
 
   const [post] = posts;
-  const { readTime } = getReadingTime(post?.attributes?.content);
-  const { localeDate: publishedAt } = getLocaleDate(post?.attributes?.publishedAt, 'pt-BR');
 
   return (
     <>
@@ -38,38 +34,8 @@ const Page = ({ posts }: any) => {
       <ArticleLayout>
         <CSS.ArticleContainer>
           <CSS.ArticleMarkdownContainer>
-            <CSS.ArticleHeader>
-              <CSS.InfoHeader>
-                <Link href="/posts">
-                  <CSS.BackToOverview
-                    type="button"
-                    aria-label="Back to overview"
-                  >
-                    <AiOutlineArrowLeft size={19} aria-hidden="true" />
-                    <p>Back to overview</p>
-                  </CSS.BackToOverview>
-                </Link>
-                <div>
-                  <CSS.DateTimeRead>
-                    <AiOutlineCalendar size={17} />
-                    {publishedAt}
-                    &nbsp;|&nbsp;
-                    <RiTimer2Line size={17} />
-                    {readTime}
-                  </CSS.DateTimeRead>
-                </div>
-              </CSS.InfoHeader>
-
-              <CSS.ArticleTitle>{post?.attributes?.title}</CSS.ArticleTitle>
-              <CSS.ArticleDescription>
-                {post?.attributes?.description}
-              </CSS.ArticleDescription>
-            </CSS.ArticleHeader>
-            <CSS.Article>
-              <CSS.ArticleMarkdown className={markdownLight['markdown-body']}>
-                {post?.attributes?.content}
-              </CSS.ArticleMarkdown>
-            </CSS.Article>
+            <ArticleHeader article={post} />
+            <Markdown article={post} />
           </CSS.ArticleMarkdownContainer>
           {/* <ArticleFooter
             author={post?.attributes?.author?.data?.attributes?.name}

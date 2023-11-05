@@ -22,4 +22,4 @@ const AuthorContent: FC<AuthorContentProps> = ({ lastFm, weather }) => (
   </S.Container>
 );
 
-export { AuthorContent };
+export default AuthorContent;

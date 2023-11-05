@@ -1,13 +1,15 @@
-/* eslint-disable react/prop-types */
 import { NextSEO } from 'components/SEO';
 import type { GetStaticProps, NextPage } from 'next';
 import { ContentLayout } from 'features/ui/layouts';
-import { AuthorContent, AuthorHeader } from 'features/home';
 import { Container } from 'features/home/styles';
 import { KbarInit } from 'components/Kbar';
 import { fetcherLastFm, fetcherWeather } from 'services';
 import type { RecentTrackProps } from 'components/Lastfm/types';
 import type { WeatherProps } from 'components/Weather/weather';
+import dynamic from 'next/dynamic';
+
+const AuthorContent = dynamic(() => import('features/home/author-content'), { ssr: true });
+const AuthorHeader = dynamic(() => import('features/home/author-header'), { ssr: true });
 
 interface HomeProps {
   lastFm: RecentTrackProps;
@@ -44,7 +46,7 @@ export const getStaticProps: GetStaticProps = async () => {
         lastFm,
         weather,
       },
-      revalidate: 3600, // 1 hour
+      revalidate: 300, // 5 minutes
     };
   } catch (error) {
     return {

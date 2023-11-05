@@ -16,6 +16,7 @@ export default class extends Document {
     return (
       <Html lang="pt-BR">
         <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

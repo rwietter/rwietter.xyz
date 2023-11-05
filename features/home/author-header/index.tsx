@@ -12,4 +12,4 @@ const AuthorHeader = () => (
   </Container>
 );
 
-export { AuthorHeader };
+export default AuthorHeader;
