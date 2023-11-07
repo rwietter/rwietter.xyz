@@ -11,7 +11,10 @@ interface SwitchThemeProps {
 const SwitchTheme: React.FC<SwitchThemeProps> = ({ visible }) => {
   const { theme, setTheme } = useTheme();
 
-  const handleSwitchTheme = () => (theme === 'light' ? setTheme('dark') : setTheme('light'));
+  const handleSwitchTheme = () => (
+    theme === 'light' ? setTheme('dark') : setTheme('light')
+  );
+
   return (
     <Button
       type="button"
@@ -22,9 +25,17 @@ const SwitchTheme: React.FC<SwitchThemeProps> = ({ visible }) => {
       visible={visible}
     >
       {theme === 'dark' ? (
-        <IoMdMoon className="dark" aria-hidden="true" title="dark" />
+        <MdSunny
+          className={`light ${theme && 'active'}`}
+          aria-hidden="true"
+          title="light"
+        />
       ) : (
-        <MdSunny className="light" aria-hidden="true" title="light" />
+        <IoMdMoon
+          className={`dark ${theme && 'active'}`}
+          aria-hidden="true"
+          title="dark"
+        />
       )}
     </Button>
   );
