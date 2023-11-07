@@ -9,15 +9,15 @@ const {
 } = createStitches({
   theme: {
     colors: {
-      bg_color: '#0c0d11',
-      bg_alt_color: '#080808',
+      bg_color: '#121212',
+      bg_alt_color: '#1E1E1E',
       text_color: '#f6f5f5',
       text_gray_color: '#ADADAD',
       text_alt_color: '#FFFFFF',
-      caret_color: '#44475a',
-      main_color: '#ffb86c',
-      sub_color: '#454864',
-      sub_alt_color: '#171a25',
+      caret_color: '#1E1E1E',
+      main_color: '#96F2D7',
+      sub_color: '#1E1E1E',
+      sub_alt_color: '#1E1E1E',
       error_color: '#ff4754',
 
       cb_bg_color: 'rgba(0, 0, 0, 0.6)',

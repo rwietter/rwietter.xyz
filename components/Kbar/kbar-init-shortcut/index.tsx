@@ -11,7 +11,7 @@ const KbarInit = () => {
       <KbarButton type="button" onClick={handleOpenKbar}>
         Press &nbsp;
         <code>ctrl</code>
-        &nbsp;
+        &nbsp;+&nbsp;
         <code>space</code>
         &nbsp; to start →
       </KbarButton>
