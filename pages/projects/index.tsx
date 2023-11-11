@@ -2,6 +2,7 @@ import { NextSEO } from 'components/SEO';
 import { Wrapper } from 'features/projects/styles';
 import { ContentLayout } from 'features/ui/layouts';
 import { YearProjects, TopProjects } from 'features/projects';
+import { Contribs } from 'features/projects/contribs';
 
 const Page = () => (
   <>
@@ -17,6 +18,7 @@ const Page = () => (
       <Wrapper>
         <TopProjects />
         <YearProjects />
+        <Contribs />
       </Wrapper>
     </ContentLayout>
   </>

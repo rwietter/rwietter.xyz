@@ -4,7 +4,7 @@ import { DiVisualstudio } from 'react-icons/di';
 import { SiMysql, SiAwesomelists } from 'react-icons/si';
 import { GiEcology } from 'react-icons/gi';
 
-export const dbTopProjects = [
+export const topProjects = [
   {
     title: 'Trackd',
     description:
