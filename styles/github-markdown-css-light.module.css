@@ -110,7 +110,7 @@
 
 .markdown-body b,
 .markdown-body strong {
-  font-weight: 300;
+  font-weight: 900 !important
 }
 
 .markdown-body b,

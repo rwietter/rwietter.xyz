@@ -122,7 +122,6 @@ export const ArticleTitle = styled('h1', {
   '--fluid-type-target': '4vw',
   fontFamily: 'Raleway, sans-serif',
   fontWeight: 800,
-  letterSpacing: '-0.02em',
   padding: 0,
   paddingTop: '$2',
   margin: 0,

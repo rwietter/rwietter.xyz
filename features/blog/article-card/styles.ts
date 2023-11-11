@@ -39,7 +39,6 @@ export const CardInformations = styled('section', {
   '#category': {
     fontSize: 'clamp(0.9rem, 2vw, 1rem)',
     padding: '.1rem .4rem',
-    letterSpacing: '-0.02em',
     fontFamily: 'Futura Std, sans-serif',
     fontWeight: 400,
     background: '$sub_color',
