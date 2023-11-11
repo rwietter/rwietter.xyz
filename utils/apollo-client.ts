@@ -1,22 +1,15 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import { ApolloClient } from 'apollo-client';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import { HttpLink } from 'apollo-link-http';
+import { ApolloClient, InMemoryCache, type NormalizedCacheObject } from '@apollo/client';
 
 const cache = new InMemoryCache();
 
-const link = new HttpLink({
+const apolloClient: ApolloClient<NormalizedCacheObject> = new ApolloClient({
   uri: `${process.env.REACT_APP_BACKEND_URL}/graphql`,
-});
-
-const apolloClient = new ApolloClient({
-  cache,
-  link,
   defaultOptions: {
     query: {
       fetchPolicy: 'no-cache',
     },
   },
+  cache,
 });
 
 export default apolloClient;

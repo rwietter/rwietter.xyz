@@ -12,11 +12,9 @@ import { useTheme } from 'store/switch-theme';
 import { applyTheme } from 'utils/apply-theme';
 import Prism from 'prismjs';
 import dynamic from 'next/dynamic';
+import apolloClient from 'utils/apollo-client';
 
 const CommandBar = dynamic(() => import('components/Kbar/command-bar'), { ssr: true });
-const apolloClient = dynamic(() => import('components/Kbar/command-bar'), {
-  ssr: true,
-});
 
 require('prismjs/components/prism-typescript');
 require('prismjs/components/prism-javascript');
@@ -42,7 +40,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <CommandBar>
       <LoadingIndicator />
-      <ApolloProvider client={apolloClient as any}>
+      <ApolloProvider client={apolloClient}>
         <Component {...pageProps} />
         <Analytics />
       </ApolloProvider>
