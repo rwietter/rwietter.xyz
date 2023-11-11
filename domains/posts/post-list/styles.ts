@@ -3,8 +3,19 @@ import Link from 'next/link';
 
 export const PostList = styled('ul', {
   display: 'flex',
+  flexDirection: 'column',
   listStyle: 'none',
   paddingTop: '2rem',
+
+  'li': {
+    '@bp5': {
+      alignSelf: 'center',
+    }
+  },
+
+  'li:not(:first-child)': {
+    marginTop: '1rem',
+  },
 });
 
 export const PostListItem = styled(Link, {
@@ -13,7 +24,9 @@ export const PostListItem = styled(Link, {
   transition: '$transitonTheme',
   fontFamily: 'Futura Std, sans-serif',
   color: '$text_color',
-  lineHeight: '1.5',
+  lineHeight: 1.6,
+  textAlign: 'center',
+  display: 'inline-flex',
 
   '&:hover': {
     color: '$main_color',
