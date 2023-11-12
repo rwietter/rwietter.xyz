@@ -24,7 +24,7 @@ export const Terminal = styled('code', {
     borderTopRightRadius: '8px',
     borderTopLeftRadius: '8px',
     outline: 'none',
-    fontFamily: 'Futura Std, sans-serif',
+    fontFamily: 'var(--font-inconsolata), sans-serif',
     border: 'none',
     position: 'absolute',
     right: '0',

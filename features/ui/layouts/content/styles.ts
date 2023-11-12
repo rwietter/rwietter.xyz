@@ -1,6 +1,6 @@
 import { styled } from 'features/ui/theme';
 
-export const LayoutCSS = styled('main', {
+export const LayoutCSS = styled('section', {
   display: 'flex',
   flexDirection: 'column',
   background: '$bg_color',

@@ -3,7 +3,7 @@
 pre:has(.language-important, .language-note, .language-warn) {
   padding: 1em;
   background: var(--colors-bg_color) !important;
-  font-family: 'Futura std', sans-serif !important;
+  font-family: 'var(--font-inconsolata)', sans-serif !important;
   overflow: auto;
   border-radius: 0 !important;
   word-break: break-all;

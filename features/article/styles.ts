@@ -25,7 +25,7 @@ export const ArticleImage = styled(Image, {
 export const ImageCredit = styled('p', {
   '--fluid-type-max': '1rem',
   textAlign: 'center',
-  fontFamily: 'Futura Std, sans-serif',
+  fontFamily: 'var(--font-inconsolata), sans-serif',
   position: 'relative',
   paddingTop: '.5rem',
   filter: 'brightness(0.7)',
@@ -53,7 +53,7 @@ export const InfoHeader = styled('div', {
   flexDirection: 'column',
   justifyContent: 'flex-start',
   alignItems: 'flex-start',
-  fontFamily: 'Futura Std, sans-serif',
+  fontFamily: 'var(--font-inter), sans-serif',
   width: '100%',
   color: '$sub_color',
   transition: '$transitonTheme',
@@ -75,7 +75,7 @@ export const InfoHeader = styled('div', {
 
 export const BackToOverview = styled('button', {
   display: 'flex',
-  fontFamily: 'Futura Std, sans-serif',
+  fontFamily: 'var(--font-inter), sans-serif',
   width: 'fit-content',
   margin: 0,
   background: 'none',
@@ -107,7 +107,7 @@ export const DateTimeRead = styled('p', {
   '--fluid-type-max': '1rem',
   display: 'inline-flex',
   alignItems: 'center',
-  fontFamily: 'Futura Std, sans-serif',
+  fontFamily: 'var(--font-inter), sans-serif',
   color: '$text_color',
   transition: '$transitonTheme',
 
@@ -120,7 +120,7 @@ export const ArticleTitle = styled('h1', {
   '--fluid-type-max': '3rem',
   '--fluid-type-min': '1.1rem',
   '--fluid-type-target': '4vw',
-  fontFamily: 'Raleway, sans-serif',
+  fontFamily: 'var(--font-inter), sans-serif',
   fontWeight: 800,
   padding: 0,
   paddingTop: '$2',
@@ -137,7 +137,7 @@ export const ArticleTitle = styled('h1', {
 export const ArticleDescription = styled('h2', {
   '--fluid-type-max': '1.3rem',
   '--fluid-type-target': '2vw',
-  fontFamily: 'Futura Std, sans-serif',
+  fontFamily: 'var(--font-inter), sans-serif',
   fontWeight: 400,
   lineHeight: '1.6em',
   padding: '$2 0',
@@ -153,7 +153,7 @@ export const ArticleMarkdownContainer = styled('section', {
 });
 
 export const Article = styled('article', {
-  fontFamily: 'Futura Std, sans-serif',
+  fontFamily: 'var(--font-inconsolata), sans-serif',
   maxWidth: '60rem',
   margin: '0 auto',
 });
