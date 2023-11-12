@@ -9,8 +9,8 @@ export const PostTitle = styled('p', {
   justifySelf: 'flex-start',
   lineHeight: '1.2',
   paddingTop: '.5rem',
-  fontWeight: 600,
-  fontFamily: 'Raleway, sans-serif',
+  fontWeight: 'bold',
+  fontFamily: 'var(--font-inter), sans-serif',
   '--fluid-type-min': '1.1rem',
   '--fluid-type-max': '1.6rem',
 });
@@ -25,7 +25,7 @@ export const CardInformations = styled('section', {
   '#description': {
     padding: '.5rem 0 1rem 0',
     lineHeight: '1.3',
-    fontFamily: 'Futura Std, sans-serif',
+    fontFamily: 'var(--font-inter), sans-serif',
     fontWeight: 200,
     whiteSpace: 'nowrap',
     overflow: 'hidden',
@@ -39,8 +39,7 @@ export const CardInformations = styled('section', {
   '#category': {
     fontSize: 'clamp(0.9rem, 2vw, 1rem)',
     padding: '.1rem .4rem',
-    letterSpacing: '-0.02em',
-    fontFamily: 'Futura Std, sans-serif',
+    fontFamily: 'var(--font-inter), sans-serif',
     fontWeight: 400,
     background: '$sub_color',
     color: '$text_color',

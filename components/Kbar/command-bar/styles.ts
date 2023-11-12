@@ -12,7 +12,7 @@ const Positioner = styled(KBarPositioner, {
   background: '$cb_bg_color',
   boxSizing: 'border-box',
   zIndex: 4,
-  fontFamily: 'Futura Std, sans-serif',
+  fontFamily: 'var(--font-inter), sans-serif',
   '--fluid-type-min': '1rem',
   '--fluid-type-max': '1.2rem',
   '--fluid-type-target': '3vw',

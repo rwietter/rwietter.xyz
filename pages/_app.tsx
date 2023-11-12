@@ -1,10 +1,8 @@
-/* eslint-disable react/no-danger */
 import '../styles/styles.css';
 import '../styles/syntax-nord.css';
 import '../styles/shadow-icon.css';
 import type { AppProps } from 'next/app';
 import { ApolloProvider } from '@apollo/react-hooks';
-// import apolloClient from 'utils/apollo-client';
 import { Analytics } from '@vercel/analytics/react';
 import { LoadingIndicator } from 'components/Loading';
 import { useEffect } from 'react';
@@ -13,8 +11,20 @@ import { applyTheme } from 'utils/apply-theme';
 import Prism from 'prismjs';
 import dynamic from 'next/dynamic';
 import apolloClient from 'utils/apollo-client';
+import { Inter } from 'next/font/google';
 
-const CommandBar = dynamic(() => import('components/Kbar/command-bar'), { ssr: true });
+const inter = Inter({
+  weight: ['200', '400', '800'],
+  subsets: ['latin'],
+  display: 'swap',
+  preload: false,
+  style: 'normal',
+  variable: '--font-inter',
+});
+
+const CommandBar = dynamic(() => import('components/Kbar/command-bar'), {
+  ssr: true,
+});
 
 require('prismjs/components/prism-typescript');
 require('prismjs/components/prism-javascript');
@@ -38,13 +48,15 @@ const App = ({ Component, pageProps }: AppProps) => {
   });
 
   return (
-    <CommandBar>
-      <LoadingIndicator />
-      <ApolloProvider client={apolloClient}>
-        <Component {...pageProps} />
-        <Analytics />
-      </ApolloProvider>
-    </CommandBar>
+    <main className={inter.variable}>
+      <CommandBar>
+        <LoadingIndicator />
+        <ApolloProvider client={apolloClient}>
+          <Component {...pageProps} />
+          <Analytics />
+        </ApolloProvider>
+      </CommandBar>
+    </main>
   );
 };
 

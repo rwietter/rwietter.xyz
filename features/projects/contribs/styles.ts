@@ -9,7 +9,7 @@ export const Container = styled('div', {
   padding: '0 1rem',
   paddingTop: '2rem',
   margin: '0 auto',
-  fontFamily: 'Futura Std, sans-serif',
+  fontFamily: 'var(--font-inter), sans-serif',
 });
 
 export const Title = styled('h1', {
@@ -54,20 +54,23 @@ export const ListItemName = styled(motion.a, {
   '--fluid-type-max': '1.05rem',
 
   '.tag': {
-    fontWeight: 900,
+    fontWeight: 400,
     transition: '$transitonTheme',
-    fontFamily: 'Raleway, sans-serif',
+    fontFamily: 'var(--font-inter), sans-serif',
     color: '$bg_color',
     background: '$main_color',
-    padding: '0.2rem 1rem',
+    padding: '0.1rem 1rem',
     borderRadius: '50rem',
   },
   strong: {
     paddingLeft: '0.5rem',
     fontWeight: 500,
     color: '$text_alt_color',
-    textDecoration: 'underline',
     lineHeight: '1.7',
+  },
+
+  '&:hover': {
+    textDecoration: 'underline',
   },
 });
 

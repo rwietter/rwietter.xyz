@@ -16,7 +16,7 @@
 .markdown-body h4,
 .markdown-body h5,
 .markdown-body h6 {
-  font-family: "Futura Std", sans-serif;
+  /* font-family: "var(--font-inconsolata)", sans-serif; */
 }
 
 .markdown-body p,
@@ -27,7 +27,7 @@
 .markdown-body pre,
 .markdown-body img,
 .markdown-body table {
-  font-family: "Futura Std", sans-serif;
+  /* font-family: "var(--font-inconsolata)", sans-serif; */
 }
 
 .markdown-body code,
@@ -110,7 +110,7 @@
 
 .markdown-body b,
 .markdown-body strong {
-  font-weight: 300;
+  font-weight: 500 !important;
 }
 
 .markdown-body b,

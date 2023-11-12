@@ -5,7 +5,7 @@ export const Wrapper = styled(motion.a, {
   position: 'relative',
   display: 'flex',
   height: '100%',
-  fontFamily: 'Futura Std, sans-serif',
+  fontFamily: 'var(--font-inter), sans-serif',
 });
 
 export const Container = styled(motion.section, {

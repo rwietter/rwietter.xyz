@@ -1,13 +1,5 @@
 /* @import url("https://fonts.cdnfonts.com/css/futura-std-4"); */
 
-@font-face {
-  font-family: futura std;
-  font-style: normal;
-  font-weight: 400;
-  src: local('Futura Std'), url(https://fonts.cdnfonts.com/s/30938/FuturaStdLight.woff) format('woff'),
-    url(https://fonts.cdnfonts.com/s/30938/FuturaStdBook.woff) format('woff'),
-}
-
 * {
   margin: 0;
   padding: 0;
