@@ -11,9 +11,9 @@ import { applyTheme } from 'utils/apply-theme';
 import Prism from 'prismjs';
 import dynamic from 'next/dynamic';
 import apolloClient from 'utils/apollo-client';
-import { Inter } from 'next/font/google';
+import { Sora } from 'next/font/google';
 
-const inter = Inter({
+const sora = Sora({
   weight: ['200', '400', '800'],
   subsets: ['latin'],
   display: 'swap',
@@ -48,7 +48,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   });
 
   return (
-    <main className={inter.variable}>
+    <main className={sora.variable}>
       <CommandBar>
         <LoadingIndicator />
         <ApolloProvider client={apolloClient}>
