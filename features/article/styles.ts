@@ -120,7 +120,7 @@ export const ArticleTitle = styled('h1', {
   '--fluid-type-max': '3rem',
   '--fluid-type-min': '1.1rem',
   '--fluid-type-target': '4vw',
-  fontFamily: 'var(--font-inter), sans-serif',
+  fontFamily: 'var(--font-fira-sans), sans-serif',
   fontWeight: 800,
   padding: 0,
   paddingTop: '$2',
@@ -137,8 +137,8 @@ export const ArticleTitle = styled('h1', {
 export const ArticleDescription = styled('h2', {
   '--fluid-type-max': '1.3rem',
   '--fluid-type-target': '2vw',
-  fontFamily: 'var(--font-inter), sans-serif',
-  fontWeight: 400,
+  fontFamily: 'var(--font-fira-sans), sans-serif',
+  fontWeight: 500,
   lineHeight: '1.6em',
   padding: '$2 0',
   marginTop: '.5rem',
@@ -165,6 +165,7 @@ export const ArticleMarkdown = styled(ReactMarkdown, {
   lineHeight: '1.7 !important',
   padding: '2rem 1.4rem',
   color: '$text_color',
+  textAlign: 'justify',
 
   '@bp4': {
     '--fluid-type-max': '1.3rem',
