@@ -9,7 +9,7 @@ export const Container = styled('div', {
   padding: '0 1rem',
   paddingTop: '2rem',
   margin: '0 auto',
-  fontFamily: 'var(--font-inter), sans-serif',
+  fontFamily: 'var(--font-inconsolata), monospace',
 });
 
 export const Title = styled('h1', {
@@ -56,7 +56,7 @@ export const ListItemName = styled(motion.a, {
   '.tag': {
     fontWeight: 400,
     transition: '$transitonTheme',
-    fontFamily: 'var(--font-inter), sans-serif',
+    fontFamily: 'var(--font-inconsolata), monospace',
     color: '$bg_color',
     background: '$main_color',
     padding: '0.1rem 1rem',

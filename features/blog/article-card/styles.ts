@@ -7,12 +7,12 @@ export const CardContainer = styled('section', {
 
 export const PostTitle = styled('p', {
   justifySelf: 'flex-start',
-  lineHeight: '1.2',
+  lineHeight: 1.2,
   paddingTop: '.5rem',
-  fontWeight: 'bold',
-  fontFamily: 'var(--font-inter), sans-serif',
-  '--fluid-type-min': '1.1rem',
-  '--fluid-type-max': '1.6rem',
+  fontWeight: 500,
+  fontFamily: 'var(--font-inconsolata), monospace',
+  '--fluid-type-min': '1rem',
+  '--fluid-type-max': '1.3rem',
 });
 
 export const CardInformations = styled('section', {
@@ -24,8 +24,8 @@ export const CardInformations = styled('section', {
 
   '#description': {
     padding: '.5rem 0 1rem 0',
-    lineHeight: '1.3',
-    fontFamily: 'var(--font-inter), sans-serif',
+    lineHeight: 1.2,
+    fontFamily: 'var(--font-inconsolata), monospace',
     fontWeight: 200,
     whiteSpace: 'nowrap',
     overflow: 'hidden',
@@ -33,18 +33,23 @@ export const CardInformations = styled('section', {
     maxWidth: 'max-content',
     width: '100%',
     display: 'block',
-    '--fluid-type-max': '1.2rem',
+    '--fluid-type-max': '1.1rem',
   },
 
   '#category': {
     fontSize: 'clamp(0.9rem, 2vw, 1rem)',
     padding: '.1rem .4rem',
-    fontFamily: 'var(--font-inter), sans-serif',
-    fontWeight: 400,
+    fontFamily: 'var(--font-inconsolata), monospace',
+    fontWeight: 300,
     background: '$sub_color',
     color: '$text_color',
     borderRadius: '4px',
     transition: '$transitonTheme',
     '--fluid-type-max': '1rem',
+
+    '&:hover': {
+      background: '$main_color',
+      color: '$bg_color',
+    },
   },
 });

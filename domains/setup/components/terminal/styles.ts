@@ -11,10 +11,10 @@ export const Terminal = styled('code', {
   position: 'relative',
 
   '&:hover': {
-    background: '$sub_color',
+    background: '$cb_box_alt_color',
 
     '& button': {
-      background: '$sub_color',
+      background: '$cb_box_alt_color',
     },
   },
 
@@ -24,21 +24,17 @@ export const Terminal = styled('code', {
     borderTopRightRadius: '8px',
     borderTopLeftRadius: '8px',
     outline: 'none',
-    fontFamily: 'var(--font-inconsolata), sans-serif',
+    fontFamily: 'var(--font-inconsolata), monospace',
     border: 'none',
     position: 'absolute',
     right: '0',
     cursor: 'pointer',
-    top: '-24px',
+    top: '-23px',
     color: '$text_color',
     '--fluid-type-min': '0.6rem',
     '--fluid-type-target': '2vw',
     '--fluid-type-max': '0.8rem',
     transition: '$transitonTheme',
-
-    '&:hover': {
-      background: '$sub_color',
-    },
   },
 
   code: {
@@ -46,7 +42,7 @@ export const Terminal = styled('code', {
     '--fluid-type-min': '0.8rem',
 
     color: '$text_color',
-    fontFamily: 'Fira Code, monospace',
-    lineHeight: '1.8',
+    fontFamily: 'var(--font-inconsolata), monospace',
+    lineHeight: 1.5,
   },
 });

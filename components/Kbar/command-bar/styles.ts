@@ -12,10 +12,6 @@ const Positioner = styled(KBarPositioner, {
   background: '$cb_bg_color',
   boxSizing: 'border-box',
   zIndex: 4,
-  fontFamily: 'var(--font-inter), sans-serif',
-  '--fluid-type-min': '1rem',
-  '--fluid-type-max': '1.2rem',
-  '--fluid-type-target': '3vw',
 });
 
 const Search = styled(KBarSearch, {
@@ -26,6 +22,7 @@ const Search = styled(KBarSearch, {
   outline: 'none',
   border: 'none',
   margin: 0,
+  fontFamily: 'monospace',
   background: '$sub_alt_color',
   color: '$text_color',
 });
@@ -36,6 +33,7 @@ const GroupName = styled('div', {
   textTransform: 'uppercase',
   letterSpacing: '1px',
   background: '$sub_alt_color',
+  fontFamily: 'monospace',
 });
 
 const Kbd = styled('kbd', {
@@ -55,8 +53,10 @@ const Action = styled('div', {
   display: 'flex',
   gap: '8px',
   alignItems: 'center',
-  '--fluid-type-min': '1rem',
-  '--fluid-type-max': '1.15rem',
+  fontFamily: 'monospace',
+  '--fluid-type-min': '.8rem',
+  '--fluid-type-max': '.9rem',
+  '--fluid-type-target': '2vw',
 
   svg: {
     color: '$text_color',

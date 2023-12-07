@@ -21,7 +21,7 @@ export const CurrentlyInformations = styled('div', {
     display: 'flex',
     alignItems: 'center',
     flexWrap: 'wrap',
-    fontFamily: 'Roboto Flex, sans-serif',
+    fontFamily: 'var(--font-inconsolata), monospace',
     fontFeatureSettings: "'ss01' on, 'ss02' on, 'ss03' on, 'salt' on",
     fontVariantLigatures: 'common-ligatures',
     lineHeight: 1.5,

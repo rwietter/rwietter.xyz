@@ -46,7 +46,7 @@ export const PlayingArtist = styled('div', {
     color: '$text_color',
     paddingTop: '.5rem',
     transition: '$transitonTheme',
-    fontFamily: 'var(--font-inter), sans-serif',
+    fontFamily: 'var(--font-inconsolata), monospace',
     '--fluid-type-min': '0.9rem',
     '--fluid-type-max': '1rem',
     '--fluid-type-target': '0.8vw',
@@ -63,7 +63,7 @@ export const PlayingArtist = styled('div', {
   '.song': {
     all: 'unset',
     paddingLeft: '.2rem',
-    fontFamily: 'var(--font-inter), sans-serif',
+    fontFamily: 'var(--font-inconsolata), monospace',
     ...ellipsis,
   },
 
@@ -77,7 +77,7 @@ export const PlayingSpot = styled('div', {
   alignItems: 'center',
 
   span: {
-    fontFamily: 'var(--font-inter), sans-serif',
+    fontFamily: 'var(--font-inconsolata), monospace',
     letterSpacing: '0.02em',
     marginLeft: '.5rem',
     ...ellipsis,
