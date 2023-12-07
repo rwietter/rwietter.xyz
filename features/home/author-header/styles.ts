@@ -38,6 +38,15 @@ export const Container = styled('section', {
       '--fluid-type-max': '1.3rem',
     },
   },
+
+  span: {
+    color: '$text_color',
+    fontFamily: 'var(--font-inconsolata), monospace',
+    fontWeight: 200,
+    padding: '.2rem 0',
+    transition: '$transitonTheme',
+    '--fluid-type-max': '1.1rem',
+  },
 });
 
 export const SocialContainer = styled('div', {
