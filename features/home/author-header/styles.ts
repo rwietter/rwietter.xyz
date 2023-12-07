@@ -16,7 +16,7 @@ export const Container = styled('section', {
   h1: {
     fontWeight: '700',
     color: '$text_color',
-    fontFamily: 'var(--font-inter), sans-serif',
+    fontFamily: 'var(--font-inconsolata), monospace',
     transition: '$transitonTheme',
     fontVariant: 'common-ligatures',
     '--fluid-type-min': '1.2rem',
@@ -28,7 +28,7 @@ export const Container = styled('section', {
     color: '$text_color',
     lineHeight: '1.5',
     paddingTop: '$1',
-    fontFamily: 'var(--font-inter), sans-serif',
+    fontFamily: 'var(--font-inconsolata), monospace',
     fontWeight: 200,
     transition: '$transitonTheme',
     '--fluid-type-min': '1rem',

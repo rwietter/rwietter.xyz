@@ -19,11 +19,11 @@ import { ArticleFooter } from 'features/article';
 import JSONLD from 'components/JSON-LD';
 
 const ArticleItem = ({ articles, blurDataURL }: ArticleData) => {
-  if (!articles) return null;
-
   const router = useRouter();
 
-  const [article] = articles;
+  if (!articles || !articles.length) return null;
+
+  const article = articles[0];
   const { readTime } = getReadingTime(article?.attributes?.content);
   const { localeDate: publishedAt } = getLocaleDate(article?.attributes?.publishedAt, 'pt-BR');
 

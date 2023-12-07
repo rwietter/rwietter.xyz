@@ -11,15 +11,15 @@ import { applyTheme } from 'utils/apply-theme';
 import Prism from 'prismjs';
 import dynamic from 'next/dynamic';
 import apolloClient from 'utils/apollo-client';
-import { Sora } from 'next/font/google';
+import { Inconsolata } from 'next/font/google';
 
-const sora = Sora({
-  weight: ['200', '400', '800'],
+const inconsolata = Inconsolata({
+  weight: ['300', '400', '500', '800'],
   subsets: ['latin'],
   display: 'swap',
   preload: false,
   style: 'normal',
-  variable: '--font-inter',
+  variable: '--font-inconsolata',
 });
 
 const CommandBar = dynamic(() => import('components/Kbar/command-bar'), {
@@ -48,7 +48,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   });
 
   return (
-    <main className={sora.variable}>
+    <div className={inconsolata.variable}>
       <CommandBar>
         <LoadingIndicator />
         <ApolloProvider client={apolloClient}>
@@ -56,7 +56,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           <Analytics />
         </ApolloProvider>
       </CommandBar>
-    </main>
+    </div>
   );
 };
 
