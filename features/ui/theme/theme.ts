@@ -9,8 +9,8 @@ const {
 } = createStitches({
   theme: {
     colors: {
-      bg_color: '#121212',
-      bg_alt_color: '#1E1E1E',
+      bg_color: '#000000',
+      bg_alt_color: '#121212',
       text_color: '#f6f5f5',
       text_gray_color: '#ADADAD',
       text_alt_color: '#FFFFFF',
