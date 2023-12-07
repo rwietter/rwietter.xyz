@@ -12,6 +12,8 @@ import { ArticleFooter } from 'features/article';
 import JSONLD from 'components/JSON-LD';
 import dynamic from 'next/dynamic';
 import ArticleHeader from 'features/article/header';
+import Image from 'next/image';
+
 import {
   ArticleContainer,
   ArticleImage,
@@ -52,15 +54,16 @@ const ArticleItem = ({ articles, blurDataURL }: ArticleData) => {
           <ArticleMarkdownContainer>
             <ArticleHeader article={article} />
             <ImageContainer>
-              <ArticleImage
-                width={5000}
-                height={5000}
-                quality={100}
-                alt={`Image of the article: ${article.attributes.title} | ${article.attributes.image.data.attributes.alternativeText}`}
-                loading="lazy"
-                placeholder="blur"
-                {...blurDataURL}
-              />
+              <ArticleImage>
+                <Image
+                  fill
+                  quality={50}
+                  alt={`Image of the article: ${article.attributes.title} | ${article.attributes.image.data.attributes.alternativeText}`}
+                  loading="lazy"
+                  placeholder="blur"
+                  style={{ objectFit: 'cover' }}
+                  {...blurDataURL} />
+              </ArticleImage>
               <ImageCredit>
                 {article.attributes.image.data.attributes.caption}
               </ImageCredit>
@@ -73,7 +76,7 @@ const ArticleItem = ({ articles, blurDataURL }: ArticleData) => {
             category={article?.attributes?.category?.data?.attributes?.name}
           />
         </ArticleContainer>
-      </ArticleLayout>
+      </ArticleLayout >
     </>
   );
 };

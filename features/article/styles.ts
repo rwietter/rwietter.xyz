@@ -1,5 +1,4 @@
 import { styled } from 'features/ui/theme';
-import Image from 'next/image';
 
 export const ArticleContainer = styled('section', {
   backgroundColor: '$bg_color',
@@ -12,13 +11,16 @@ export const ImageContainer = styled('div', {
   backgroundPosition: 'center',
 });
 
-export const ArticleImage = styled(Image, {
+export const ArticleImage = styled('div', {
   position: 'relative',
   width: '100%',
-  height: '100%',
-  maxHeight: '30rem',
+  height: '15rem',
   backgroundPosition: 'center',
   objectFit: 'cover',
+
+  '@bp3': {
+    height: '25rem',
+  },
 });
 
 export const ImageCredit = styled('p', {
