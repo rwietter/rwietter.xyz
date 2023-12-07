@@ -62,7 +62,8 @@ const ArticleItem = ({ articles, blurDataURL }: ArticleData) => {
                   loading="lazy"
                   placeholder="blur"
                   style={{ objectFit: 'cover' }}
-                  {...blurDataURL} />
+                  {...blurDataURL}
+                />
               </ArticleImage>
               <ImageCredit>
                 {article.attributes.image.data.attributes.caption}
@@ -76,7 +77,7 @@ const ArticleItem = ({ articles, blurDataURL }: ArticleData) => {
             category={article?.attributes?.category?.data?.attributes?.name}
           />
         </ArticleContainer>
-      </ArticleLayout >
+      </ArticleLayout>
     </>
   );
 };
