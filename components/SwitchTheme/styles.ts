@@ -42,7 +42,7 @@ export const Button = styled('button', {
     },
   },
 
-  '& .active': {
+  '&.active': {
     animation: `${rotate} 500ms ease`,
   },
 });

@@ -18,7 +18,7 @@ const Blog: FC<any> = ({ articles }) => (
       description="My blog, where I write about my experiences, my projects, and my life. :)"
       image="https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png"
     />
-    <ContentLayout layout="medium">
+    <ContentLayout layout="small">
       <BlogPosts articles={articles} />
     </ContentLayout>
   </>

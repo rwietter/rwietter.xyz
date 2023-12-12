@@ -1,18 +1,22 @@
-import React from 'react';
-import ReactMarkdown from 'react-markdown';
+import { FC } from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import Markdown from 'markdown-to-jsx';
 import markdownLight from 'styles/github-markdown-css-light.module.css';
 import { ArticleMarkdown, ArticleContainer } from './styles';
+import { Properties } from '../ts';
 
 interface ArticleData {
-  article: any;
+  article: {
+    attributes: Pick<Properties, 'content'>;
+  }
 }
 
-const ArticleContent: React.FC<ArticleData> = ({ article }) => (
+const ArticleContent: FC<ArticleData> = ({ article }) => (
   <ArticleContainer>
     <ArticleMarkdown className={markdownLight['markdown-body']}>
-      <ReactMarkdown>
+      <Markdown>
         {article?.attributes?.content}
-      </ReactMarkdown>
+      </Markdown>
     </ArticleMarkdown>
   </ArticleContainer>
 );

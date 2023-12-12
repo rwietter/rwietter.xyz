@@ -10,10 +10,16 @@ interface SwitchThemeProps {
 
 const SwitchTheme: React.FC<SwitchThemeProps> = ({ visible }) => {
   const { theme, setTheme } = useTheme();
+  const buttonRef = React.useRef<HTMLButtonElement>(null);
 
-  const handleSwitchTheme = () => (
-    theme === 'light' ? setTheme('dark') : setTheme('light')
-  );
+  const handleSwitchTheme = () => {
+    buttonRef.current?.classList.add('active');
+    const timeout = setTimeout(() => {
+      buttonRef.current?.classList.remove('active');
+      clearTimeout(timeout);
+    }, 500);
+    return theme === 'light' ? setTheme('dark') : setTheme('light');
+  };
 
   return (
     <Button
@@ -22,17 +28,16 @@ const SwitchTheme: React.FC<SwitchThemeProps> = ({ visible }) => {
       title="toggle change theme"
       onClick={handleSwitchTheme}
       className="theme"
+      ref={buttonRef}
       visible={visible}
     >
       {theme === 'dark' ? (
         <MdSunny
-          className={`light ${theme && 'active'}`}
           aria-hidden="true"
           title="light"
         />
       ) : (
         <IoMdMoon
-          className={`dark ${theme && 'active'}`}
           aria-hidden="true"
           title="dark"
         />

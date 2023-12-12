@@ -31,9 +31,6 @@ const Header = () => {
         <S.NavIterm className={isActive('/blog', '/blog/article/')} aria-current="page" role="menuitem" title="Blog">
           <Link href="/blog">/blog</Link>
         </S.NavIterm>
-        <S.NavIterm className={isActive('/posts', '/posts/post/')} aria-current="page" role="menuitem" title="Posts">
-          <Link href="/posts">/posts</Link>
-        </S.NavIterm>
         <S.NavIterm className={isActive('/projects')} aria-current="page" role="menuitem" title="Projects">
           <Link href="/projects">/projects</Link>
         </S.NavIterm>

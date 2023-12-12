@@ -11,7 +11,7 @@ export const ManuBarWrapper = styled('footer', {
   padding: '0 0.3rem',
   position: 'fixed',
   width: '100%',
-  transition: '$transitonTheme',
+  transition: '$transitonTheme, border-color 300ms ease',
   background: '$sub_alt_color',
   zIndex: 10,
 

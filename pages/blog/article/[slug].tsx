@@ -22,7 +22,7 @@ import {
   ImageCredit,
 } from 'features/article/styles';
 
-const ArticleContent = dynamic(() => import('features/article/content'), { ssr: false });
+const ArticleContent = dynamic(() => import('features/article/content'), { ssr: true });
 
 const ArticleItem = ({ articles, blurDataURL }: ArticleData) => {
   const router = useRouter();
