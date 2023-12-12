@@ -44,14 +44,6 @@ export default async function generateRssFeed(posts: IArticles[]): Promise<void>
     description: post.attributes.description,
     link: `${url}/blog/article/${post.attributes.slug}`,
     guid: post.attributes.slug,
-    category: [
-      {
-        domain: 'https://rwietterc.xyz',
-        name: post.attributes.category.data.attributes.name,
-        scheme: 'https://rwietterc.xyz',
-        term: post.attributes.category.data.attributes.name,
-      },
-    ],
     published: new Date(post.attributes.publishedAt),
     id: `${url}/blog/article/${post.attributes.slug}`,
     content: remark().use(remarkHtml).processSync(post.attributes.content).toString(),

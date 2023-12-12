@@ -7,7 +7,7 @@
   "engines": {
     "node": ">=16.8.0"
   },
-  "packageManager": "pnpm",
+  "packageManager": "yarn@1.22.21",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
