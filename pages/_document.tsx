@@ -17,7 +17,7 @@ export default class extends Document {
       <Html lang="pt-BR">
         <Head>
           <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
-          <script async src="https://cloud.umami.is/script.js" data-website-id="99c64e87-1dbd-4e1c-b45b-ada2e802dcc1" />
+          <script async src="https://us.umami.is/script.js" data-website-id="99c64e87-1dbd-4e1c-b45b-ada2e802dcc1"></script>
           <meta name="application-name" content={APP_NAME} />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-status-bar-style" content="default" />
