@@ -19,6 +19,7 @@ const {
       sub_color: '#1E1E1E',
       sub_alt_color: '#1E1E1E',
       error_color: '#ff4754',
+      rgba_bg_color: 'hsla(0,0%,100%,.2)',
 
       cb_bg_color: 'rgba(0, 0, 0, 0.6)',
       cb_box_alt_color: 'rgba(255, 255, 255, 0.1)',
@@ -73,6 +74,7 @@ const {
       sub_color: '#C9C9CF',
       sub_alt_color: '#F4F4F6',
       error_color: '#ff4754',
+      rgba_bg_color: 'rgba(0, 0, 0, 0.2)',
 
       cb_bg_color: 'rgba(255, 255, 255, 0.6)',
       cb_box_alt_color: 'rgba(0, 0, 0, 0.1)',

@@ -1,7 +1,7 @@
 import { styled } from 'features/ui/theme';
 
 export const ArticleContainer = styled('div', {
-  fontFamily: 'var(--font-inconsolata), monospace',
+  fontFamily: 'var(--font-space-grotesk), monospace',
   maxWidth: '60rem',
   margin: '0 auto',
 });
@@ -13,9 +13,8 @@ export const ArticleMarkdown = styled('article', {
   lineHeight: '1.7 !important',
   padding: '2rem 1.4rem',
   color: '$text_color',
-  textAlign: 'justify',
 
   '@bp4': {
-    '--fluid-type-max': '1.3rem',
+    '--fluid-type-max': '1.1rem',
   },
 });

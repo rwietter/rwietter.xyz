@@ -3,33 +3,28 @@ import { styled } from 'features/ui/theme';
 export const Terminal = styled('code', {
   borderRadius: '8px',
   borderTopRightRadius: '0',
-  background: '$sub_alt_color',
   padding: '10px',
   transition: '$transitonTheme',
   marginTop: '2.8rem',
   display: 'block',
   position: 'relative',
-
-  '&:hover': {
-    background: '$cb_box_alt_color',
-
-    '& button': {
-      background: '$cb_box_alt_color',
-    },
-  },
+  border: '1px solid $cb_box_alt_color',
 
   button: {
-    background: '$sub_alt_color',
-    padding: '.3rem 1.5rem',
+    padding: '.3rem 1rem',
     borderTopRightRadius: '8px',
     borderTopLeftRadius: '8px',
     outline: 'none',
-    fontFamily: 'var(--font-inconsolata), monospace',
-    border: 'none',
+    fontFamily: 'var(--font-space-grotesk), monospace',
     position: 'absolute',
     right: '0',
+    background: 'transparent',
     cursor: 'pointer',
-    top: '-23px',
+    top: '-28px',
+    borderTop: '1px solid $cb_box_alt_color',
+    borderLeft: '1px solid $cb_box_alt_color',
+    borderRight: '1px solid $cb_box_alt_color',
+    borderBottom: 'none',
     color: '$text_color',
     '--fluid-type-min': '0.6rem',
     '--fluid-type-target': '2vw',
@@ -42,7 +37,8 @@ export const Terminal = styled('code', {
     '--fluid-type-min': '0.8rem',
 
     color: '$text_color',
-    fontFamily: 'var(--font-inconsolata), monospace',
+    fontFamily: 'var(--font-space-grotesk), monospace',
     lineHeight: 1.5,
+    fontWeight: 200,
   },
 });

@@ -5,7 +5,7 @@ export const Wrapper = styled(motion.a, {
   position: 'relative',
   display: 'flex',
   height: '100%',
-  fontFamily: 'var(--font-inconsolata), monospace',
+  fontFamily: 'var(--font-space-grotesk), monospace',
 });
 
 export const Container = styled(motion.section, {
@@ -36,7 +36,7 @@ export const Title = styled('h2', {
 
 export const Description = styled('p', {
   color: '$text_alt_color',
-  fontWeight: 400,
+  fontWeight: 300,
   paddingTop: '$2',
   lineHeight: '1.5',
   textAlign: 'start',

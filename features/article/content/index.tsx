@@ -1,7 +1,6 @@
 import { FC } from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import Markdown from 'markdown-to-jsx';
-import markdownLight from 'styles/github-markdown-css-light.module.css';
+import pretty from 'styles/github-markdown.module.css';
 import { ArticleMarkdown, ArticleContainer } from './styles';
 import { Properties } from '../ts';
 
@@ -13,7 +12,7 @@ interface ArticleData {
 
 const ArticleContent: FC<ArticleData> = ({ article }) => (
   <ArticleContainer>
-    <ArticleMarkdown className={markdownLight['markdown-body']}>
+    <ArticleMarkdown className={pretty['markdown-body']}>
       <Markdown>
         {article?.attributes?.content}
       </Markdown>

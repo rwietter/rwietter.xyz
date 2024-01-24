@@ -14,9 +14,9 @@ export const Container = styled('section', {
   },
 
   h1: {
-    fontWeight: '700',
+    fontWeight: 700,
     color: '$text_color',
-    fontFamily: 'var(--font-inconsolata), monospace',
+    fontFamily: 'var(--font-space-grotesk), monospace',
     transition: '$transitonTheme',
     fontVariant: 'common-ligatures',
     '--fluid-type-min': '1.2rem',
@@ -28,20 +28,20 @@ export const Container = styled('section', {
     color: '$text_color',
     lineHeight: '1.5',
     paddingTop: '$1',
-    fontFamily: 'var(--font-inconsolata), monospace',
-    fontWeight: 200,
+    fontFamily: 'var(--font-space-grotesk), monospace',
+    fontWeight: 300,
     transition: '$transitonTheme',
     '--fluid-type-min': '1rem',
     '--fluid-type-max': '1.1rem',
 
     '@bp3': {
-      '--fluid-type-max': '1.3rem',
+      '--fluid-type-max': '1.1rem',
     },
   },
 
   span: {
     color: '$text_color',
-    fontFamily: 'var(--font-inconsolata), monospace',
+    fontFamily: 'var(--font-space-grotesk), monospace',
     fontWeight: 200,
     padding: '.2rem 0',
     transition: '$transitonTheme',

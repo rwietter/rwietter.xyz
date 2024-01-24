@@ -10,7 +10,7 @@ import { SetupMapper } from './components/setupmapper';
 import { Search } from './features/search';
 import { useRealTimeSearch } from './hooks/useSearch';
 import { customization } from './data/customization';
-import { AUR, PACMAN } from './data/terminal';
+import { AUR, NPM, PACMAN, SNAP } from './data/terminal';
 
 const Setup = () => {
   const { handleInputChange, results } = useRealTimeSearch(
@@ -26,6 +26,8 @@ const Setup = () => {
         <SetupMapper title="Softwares" id="softwares" data={tools} />
         <Terminal text={PACMAN} />
         <Terminal text={AUR} />
+        <Terminal text={NPM} />
+        <Terminal text={SNAP} />
         <SetupMapper title="Customization" id="customization" data={customization} />
       </>
     )

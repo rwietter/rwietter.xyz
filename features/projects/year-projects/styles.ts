@@ -9,12 +9,13 @@ export const Container = styled('div', {
   padding: '0 1rem',
   paddingTop: '2rem',
   margin: '0 auto',
-  fontFamily: 'var(--font-inconsolata), monospace',
+  fontFamily: 'var(--font-space-grotesk), monospace',
 });
 
 export const Title = styled('h1', {
-  fontWeight: 600,
+  fontWeight: 400,
   padding: '1rem 0 1rem 0',
+  fontFamily: 'var(--font-gloock), monospace',
   color: '$text_color',
   transition: '$transitonTheme',
   '--fluid-type-min': '1.2rem',
