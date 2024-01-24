@@ -20,6 +20,7 @@ const {
       sub_alt_color: '#1E1E1E',
       error_color: '#ff4754',
       rgba_bg_color: 'hsla(0,0%,100%,.2)',
+      highlight: 'rgba(187, 247, 208, 1)',
 
       cb_bg_color: 'rgba(0, 0, 0, 0.6)',
       cb_box_alt_color: 'rgba(255, 255, 255, 0.1)',
