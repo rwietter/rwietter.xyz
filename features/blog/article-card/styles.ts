@@ -19,7 +19,7 @@ export const DateTimeRead = styled('p', {
   display: 'inline-flex',
   alignItems: 'center',
   fontWeight: 200,
-  fontFamily: 'var(--font-inconsolata), monospace',
+  fontFamily: 'var(--font-space-grotesk), monospace',
   color: '$text_gray_color',
   transition: '$transitonTheme',
 
@@ -37,7 +37,7 @@ export const PostTitle = styled('p', {
   lineHeight: 1.2,
   fontWeight: 500,
   transition: '$transitonTheme',
-  fontFamily: 'var(--font-inconsolata), monospace',
+  fontFamily: 'var(--font-space-grotesk), monospace',
   '--fluid-type-min': '1rem',
   '--fluid-type-max': '1.3rem',
 });
@@ -52,7 +52,7 @@ export const CardInformations = styled('section', {
   '#description': {
     paddingTop: '.5rem',
     lineHeight: 1.2,
-    fontFamily: 'var(--font-inconsolata), monospace',
+    fontFamily: 'var(--font-space-grotesk), monospace',
     fontWeight: 300,
     whiteSpace: 'nowrap',
     overflow: 'hidden',
@@ -72,7 +72,7 @@ export const ReadMore = styled('p', {
   borderRadius: '4px',
   marginTop: '.8rem',
   display: 'inline-block',
-  fontFamily: 'var(--font-inconsolata), monospace',
+  fontFamily: 'var(--font-space-grotesk), monospace',
   transition: '$transitonTheme',
   '--fluid-type-max': '1rem',
 

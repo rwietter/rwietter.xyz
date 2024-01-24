@@ -20,11 +20,11 @@ export const Button = styled('button', {
   border: 'none',
   cursor: 'pointer',
   transition: '$transitonTheme, transform 700ms ease, rotate 700ms ease',
-  fontFamily: 'var(--font-inconsolata), monospace',
+  fontFamily: 'var(--font-space-grotesk), monospace',
 
   '&:hover': {
     color: '$main_color',
-    background: '$sub_alt_color',
+    background: 'transparent',
   },
 
   variants: {

@@ -26,7 +26,7 @@ export const Nav = styled('nav', {
     fontWeight: 400,
     paddingLeft: '0.4rem',
     position: 'relative',
-    fontFamily: 'var(--font-inconsolata), monospace',
+    fontFamily: 'var(--font-gloock), monospace',
     transition: '$transitonTheme',
     '--fluid-type-min': '1rem',
     '--fluid-type-max': '1.3rem',

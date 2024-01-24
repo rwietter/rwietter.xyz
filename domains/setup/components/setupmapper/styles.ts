@@ -4,7 +4,7 @@ export const SetupMapperContainer = styled('section', {
   paddingTop: '2rem',
   h2: {
     color: '$text_color',
-    fontFamily: 'var(--font-inconsolata), monospace',
+    fontFamily: 'var(--font-space-grotesk), monospace',
     fontWeight: 600,
     fontSize: '1.5rem',
   },
@@ -13,7 +13,7 @@ export const SetupMapperContainer = styled('section', {
     paddingTop: '1rem',
     li: {
       color: '$text_color',
-      fontFamily: 'var(--font-inconsolata), monospace',
+      fontFamily: 'var(--font-space-grotesk), monospace',
       lineHeight: '2',
       '--fluid-type-min': '0.8rem',
       '--fluid-type-max': '1rem',
@@ -27,7 +27,7 @@ export const SetupMapperContainer = styled('section', {
 
 export const SoftwareLink = styled('a', {
   color: '$text_color',
-  fontFamily: 'var(--font-inconsolata), monospace',
+  fontFamily: 'var(--font-space-grotesk), monospace',
   lineHeight: '1.8',
   fontWeight: 500,
   transition: '$transitonTheme',
