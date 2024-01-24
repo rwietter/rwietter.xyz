@@ -22,7 +22,6 @@ export const InfoHeader = styled('div', {
   alignItems: 'flex-start',
   fontFamily: 'var(--font-space-grotesk), monospace',
   width: '100%',
-  color: '$sub_color',
   transition: '$transitonTheme',
 
   '& > div': {
@@ -46,7 +45,7 @@ export const BackToOverview = styled('button', {
   width: 'fit-content',
   margin: 0,
   background: 'none',
-  color: '$text_color',
+  color: '$text_gray_color',
   border: 'none',
   outline: 'none',
   cursor: 'pointer',
@@ -60,11 +59,11 @@ export const BackToOverview = styled('button', {
 
   '&:hover': {
     svg: {
-      color: '$text_alt_color',
+      color: '$text_color',
       transform: 'translateX(-5px)',
     },
     p: {
-      color: '$text_alt_color',
+      color: '$text_color',
       transition: '$transitonTheme',
     },
   },
@@ -75,7 +74,7 @@ export const DateTimeRead = styled('p', {
   display: 'inline-flex',
   alignItems: 'center',
   fontFamily: 'var(--font-space-grotesk), monospace',
-  color: '$text_color',
+  color: '$text_gray_color',
   transition: '$transitonTheme',
 
   svg: {
@@ -84,7 +83,7 @@ export const DateTimeRead = styled('p', {
 });
 
 export const ArticleTitle = styled('h1', {
-  '--fluid-type-max': '3rem',
+  '--fluid-type-max': '4rem',
   '--fluid-type-min': '1.1rem',
   '--fluid-type-target': '4vw',
   fontFamily: 'var(--font-gloock), monospace',
@@ -110,6 +109,6 @@ export const ArticleDescription = styled('h2', {
   lineHeight: '1.6em',
   padding: '$2 0',
   marginTop: '.5rem',
-  color: '$text_color',
+  color: '$text_gray_color',
   transition: '$transitonTheme',
 });

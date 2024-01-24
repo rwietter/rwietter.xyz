@@ -18,10 +18,7 @@ const ArticleCard = ({ article }: any) => {
       <S.CardContainer>
         <Link href={`/blog/article/${slug}`} passHref suppressHydrationWarning>
           <S.CardInformations>
-            <S.PostTitle>
-              {'## '}
-              {title}
-            </S.PostTitle>
+            <S.PostTitle>{title}</S.PostTitle>
             <S.LocalTimeContainer>
               <S.DateTimeRead>
                 <TfiPencil size={17} />

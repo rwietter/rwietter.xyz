@@ -14,13 +14,13 @@ export const Container = styled('section', {
   },
 
   h1: {
-    fontWeight: 700,
+    fontWeight: 400,
     color: '$text_color',
-    fontFamily: 'var(--font-space-grotesk), monospace',
+    fontFamily: 'var(--font-gloock), monospace',
     transition: '$transitonTheme',
     fontVariant: 'common-ligatures',
     '--fluid-type-min': '1.2rem',
-    '--fluid-type-max': '3.5rem',
+    '--fluid-type-max': '5rem',
     '--fluid-type-target': '8vw',
   },
 

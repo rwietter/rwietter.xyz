@@ -34,7 +34,7 @@ const ArticleHeader: React.FC<ArticleHeaderData> = (props) => {
             <CSS.DateTimeRead>
               <AiOutlineCalendar size={17} />
               {publishedAt}
-            &nbsp;|&nbsp;
+              &nbsp;|&nbsp;
               <RiTimer2Line size={17} />
               {readTime}
             </CSS.DateTimeRead>

@@ -57,7 +57,7 @@ export const CardInformations = styled('section', {
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
-    color: '$text_alt_color',
+    color: '$text_gray_color',
     maxWidth: 'max-content',
     width: '100%',
     display: 'block',
@@ -69,7 +69,6 @@ export const CardInformations = styled('section', {
 export const ReadMore = styled('p', {
   color: '$main_color',
   fontWeight: 500,
-  borderRadius: '4px',
   marginTop: '.8rem',
   display: 'inline-block',
   fontFamily: 'var(--font-space-grotesk), monospace',
