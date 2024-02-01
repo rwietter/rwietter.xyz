@@ -21,9 +21,7 @@ export const CurrentlyInformations = styled('div', {
     display: 'flex',
     alignItems: 'center',
     flexWrap: 'wrap',
-    fontFamily: 'var(--font-space-grotesk), monospace',
-    fontFeatureSettings: "'ss01' on, 'ss02' on, 'ss03' on, 'salt' on",
-    fontVariantLigatures: 'common-ligatures',
+    fontFamily: 'var(--font-primary), monospace',
     lineHeight: 1.5,
     svg: {
       marginRight: '$1',

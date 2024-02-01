@@ -5,7 +5,7 @@ export const ArticleFooterContainer = styled('div', {
   color: '$text_alt_color',
   maxWidth: '60rem',
   margin: '0 auto',
-  fontFamily: 'var(--font-space-grotesk), monospace',
+  fontFamily: 'var(--font-primary), monospace',
 });
 
 export const NavHeader = styled('nav', {

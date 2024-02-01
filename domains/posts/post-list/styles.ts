@@ -22,7 +22,7 @@ export const PostListItem = styled(Link, {
   cursor: 'pointer',
   textDecoration: 'none',
   transition: '$transitonTheme',
-  fontFamily: 'var(--font-space-grotesk), monospace',
+  fontFamily: 'var(--font-primary), monospace',
   color: '$text_color',
   lineHeight: 1.6,
   textAlign: 'center',

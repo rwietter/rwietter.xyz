@@ -22,6 +22,8 @@ export default class extends Document {
             src="https://us.umami.is/script.js"
             data-website-id="99c64e87-1dbd-4e1c-b45b-ada2e802dcc1"
           />
+          <link rel="preconnect" href="https://rsms.me/" />
+          <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
           <meta name="application-name" content={APP_NAME} />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-status-bar-style" content="default" />

@@ -26,7 +26,7 @@ export const ArticleImage = styled('div', {
 export const ImageCredit = styled('p', {
   '--fluid-type-max': '1rem',
   textAlign: 'center',
-  fontFamily: 'var(--font-space-grotesk), monospace',
+  fontFamily: 'var(--font-primary), monospace',
   position: 'relative',
   paddingTop: '.5rem',
   filter: 'brightness(0.7)',

@@ -5,7 +5,7 @@ export const Wrapper = styled(motion.a, {
   position: 'relative',
   display: 'flex',
   height: '100%',
-  fontFamily: 'var(--font-space-grotesk), monospace',
+  fontFamily: 'var(--font-primary), monospace',
 });
 
 export const Container = styled(motion.section, {

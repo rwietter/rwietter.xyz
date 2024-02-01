@@ -19,7 +19,7 @@ export const SearchContent = styled('section', {
     a: {
       color: '$text_color',
       transition: '$transitonTheme',
-      fontFamily: 'var(--font-space-grotesk), monospace',
+      fontFamily: 'var(--font-primary), monospace',
 
       '&:hover': {
         color: '$main_color',
@@ -64,5 +64,5 @@ export const Description = styled('span', {
   '--fluid-type-min': '.9rem',
   color: '$text_color',
   transition: '$transitonTheme',
-  fontFamily: 'var(--font-space-grotesk), monospace',
+  fontFamily: 'var(--font-primary), monospace',
 });

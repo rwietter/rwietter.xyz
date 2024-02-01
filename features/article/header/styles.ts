@@ -20,7 +20,7 @@ export const InfoHeader = styled('div', {
   flexDirection: 'column',
   justifyContent: 'flex-start',
   alignItems: 'flex-start',
-  fontFamily: 'var(--font-space-grotesk), monospace',
+  fontFamily: 'var(--font-primary), monospace',
   width: '100%',
   transition: '$transitonTheme',
 
@@ -41,7 +41,7 @@ export const InfoHeader = styled('div', {
 
 export const BackToOverview = styled('button', {
   display: 'flex',
-  fontFamily: 'var(--font-space-grotesk), monospace',
+  fontFamily: 'var(--font-primary), monospace',
   width: 'fit-content',
   margin: 0,
   background: 'none',
@@ -73,7 +73,7 @@ export const DateTimeRead = styled('p', {
   '--fluid-type-max': '1rem',
   display: 'inline-flex',
   alignItems: 'center',
-  fontFamily: 'var(--font-space-grotesk), monospace',
+  fontFamily: 'var(--font-primary), monospace',
   color: '$text_gray_color',
   transition: '$transitonTheme',
 
@@ -86,11 +86,10 @@ export const ArticleTitle = styled('h1', {
   '--fluid-type-max': '4rem',
   '--fluid-type-min': '1.1rem',
   '--fluid-type-target': '4vw',
-  fontFamily: 'var(--font-gloock), monospace',
+  fontFamily: 'var(--font-secondary), monospace',
   padding: 0,
   paddingTop: '$2',
-  fontStyle: 'normal',
-  fontWeight: 400,
+  fontWeight: 800,
   margin: 0,
   color: '$text_color',
   transition: '$transitonTheme',
@@ -104,7 +103,7 @@ export const ArticleTitle = styled('h1', {
 export const ArticleDescription = styled('h2', {
   '--fluid-type-max': '1.3rem',
   '--fluid-type-target': '2vw',
-  fontFamily: 'var(--font-space-grotesk), monospace',
+  fontFamily: 'var(--font-primary), monospace',
   fontWeight: 400,
   lineHeight: '1.6em',
   padding: '$2 0',

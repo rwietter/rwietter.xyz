@@ -7,7 +7,7 @@ export const KbarContainer = styled('div', {
 export const KbarButton = styled('button', {
   cursor: 'pointer',
   color: '$text_alt_color',
-  fontFamily: 'var(--font-space-grotesk), monospace',
+  fontFamily: 'var(--font-primary), monospace',
   padding: '2px 8px 4px 8px',
   borderRadius: '1em',
   outline: 'none',
