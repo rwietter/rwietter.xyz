@@ -20,7 +20,7 @@ export const Button = styled('button', {
   border: 'none',
   cursor: 'pointer',
   transition: '$transitonTheme, transform 700ms ease, rotate 700ms ease',
-  fontFamily: 'var(--font-space-grotesk), monospace',
+  fontFamily: 'var(--font-primary), monospace',
 
   '&:hover': {
     color: '$main_color',

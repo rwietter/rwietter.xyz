@@ -14,11 +14,10 @@ export const Container = styled('section', {
   },
 
   h1: {
-    fontWeight: 400,
+    fontWeight: 900,
     color: '$text_color',
-    fontFamily: 'var(--font-gloock), monospace',
+    fontFamily: 'var(--font-secondary), monospace',
     transition: '$transitonTheme',
-    fontVariant: 'common-ligatures',
     '--fluid-type-min': '1.2rem',
     '--fluid-type-max': '5rem',
     '--fluid-type-target': '8vw',
@@ -28,24 +27,20 @@ export const Container = styled('section', {
     color: '$text_color',
     lineHeight: '1.5',
     paddingTop: '$1',
-    fontFamily: 'var(--font-space-grotesk), monospace',
+    fontFamily: 'var(--font-primary), monospace',
     fontWeight: 300,
     transition: '$transitonTheme',
     '--fluid-type-min': '1rem',
-    '--fluid-type-max': '1.1rem',
-
-    '@bp3': {
-      '--fluid-type-max': '1.1rem',
-    },
+    '--fluid-type-max': '1.2rem',
   },
 
   span: {
     color: '$text_color',
-    fontFamily: 'var(--font-space-grotesk), monospace',
+    fontFamily: 'var(--font-primary), monospace',
     fontWeight: 200,
     padding: '.2rem 0',
     transition: '$transitonTheme',
-    '--fluid-type-max': '1.1rem',
+    '--fluid-type-max': '1.2rem',
   },
 });
 

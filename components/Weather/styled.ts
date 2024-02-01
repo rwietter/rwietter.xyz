@@ -7,7 +7,7 @@ export const Weather = styled('span', {
   justifyContent: 'flex-start',
   flexFlow: 'row wrap',
   lineHeight: '1.6',
-  fontFamily: 'var(--font-space-grotesk), monospace',
+  fontFamily: 'var(--font-primary), monospace',
   '--fluid-type-max': '1rem',
 
   div: {

@@ -17,7 +17,7 @@
 .markdown-body h5,
 .markdown-body h6 {
   font-weight: 400 !important;
-  font-family: var(--font-gloock), monospace !important;
+  font-family: var(--font-secondary), monospace !important;
 }
 
 .markdown-body p,
@@ -28,13 +28,13 @@
 .markdown-body pre,
 .markdown-body img,
 .markdown-body table {
-  font-family: var(--font-space-grotesk), sans-serif;
+  font-family: var(--font-primary), sans-serif;
 }
 
 .markdown-body code,
 .markdown-body kbd,
 .markdown-body samp {
-  font-family: var(--font-berkeley), monospace;
+  font-family: var(--font-code), monospace;
 }
 
 .markdown-body p:has(img) {
@@ -395,7 +395,7 @@
 .markdown-body pre {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: var(--font-berkeley), monospace;
+  font-family: var(--font-code), monospace;
   word-wrap: normal;
   font-size: 12px;
 }
@@ -864,7 +864,7 @@
   margin: 0;
   font-size: 85%;
   border-radius: 6px;
-  font-family: var(--font-berkeley), monospace, sans-serif;
+  font-family: var(--font-code), monospace, sans-serif;
   font-variant-ligatures: common-ligatures;
   font-feature-settings: "ss01" on, "ss02" on, "ss03" on;
 }
@@ -877,7 +877,7 @@
 }
 
 .markdown-body pre code span {
-  font-family: var(--font-berkeley), monospace, sans-serif;
+  font-family: var(--font-code), monospace, sans-serif;
   font-variant-ligatures: common-ligatures;
   font-feature-settings: "ss01" on, "ss02" on, "ss03" on;
 }

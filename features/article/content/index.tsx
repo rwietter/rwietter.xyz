@@ -1,5 +1,6 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import Markdown from 'markdown-to-jsx';
+
 import pretty from 'styles/github-markdown.module.css';
 import { ArticleMarkdown, ArticleContainer } from './styles';
 import { Properties } from '../ts';

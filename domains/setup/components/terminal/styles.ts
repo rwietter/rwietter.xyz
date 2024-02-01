@@ -15,7 +15,7 @@ export const Terminal = styled('code', {
     borderTopRightRadius: '8px',
     borderTopLeftRadius: '8px',
     outline: 'none',
-    fontFamily: 'var(--font-space-grotesk), monospace',
+    fontFamily: 'var(--font-primary), monospace',
     position: 'absolute',
     right: '0',
     background: 'transparent',
@@ -37,7 +37,7 @@ export const Terminal = styled('code', {
     '--fluid-type-min': '0.8rem',
 
     color: '$text_color',
-    fontFamily: 'var(--font-space-grotesk), monospace',
+    fontFamily: 'var(--font-primary), monospace',
     lineHeight: 1.5,
     fontWeight: 200,
   },
