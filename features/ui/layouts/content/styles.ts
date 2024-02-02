@@ -8,10 +8,7 @@ export const LayoutCSS = styled('section', {
   width: '100%',
   maxWidth: '60rem',
   margin: '0 auto',
-  paddingBottom: '4rem',
-  padding: '1rem 1rem 4rem 1rem',
-  paddingTop: '1rem',
-  fontDisplay: 'swap',
+  padding: '1rem 1.5rem 8rem 1.5rem',
 
   variants: {
     layout: {

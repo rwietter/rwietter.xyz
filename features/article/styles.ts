@@ -8,7 +8,6 @@ export const ArticleContainer = styled('section', {
 export const ImageContainer = styled('div', {
   position: 'relative',
   width: '100%',
-  backgroundPosition: 'center',
 });
 
 export const ArticleImage = styled('div', {

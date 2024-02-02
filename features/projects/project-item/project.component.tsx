@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-one-expression-per-line */
-import { FC, useState } from 'react';
+import React, { FC, useState } from 'react';
 import * as S from './styles';
 
 interface IProject {
@@ -10,7 +10,7 @@ interface IProject {
     github: string;
     link: string;
     tags: string[];
-    icon: () => any;
+    icon: () => React.ReactNode;
   };
 }
 
@@ -35,7 +35,7 @@ export const ProjectItem: FC<IProject> = ({ project }) => {
         <span>
           <div>{project.icon()}</div>
           <div>
-            <S.Title>#{project.title}</S.Title>
+            <S.Title>{project.title}</S.Title>
             <S.Description>{project.description}</S.Description>
           </div>
         </span>

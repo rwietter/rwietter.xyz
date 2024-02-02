@@ -15,7 +15,7 @@ export const Terminal = styled('code', {
     borderTopRightRadius: '8px',
     borderTopLeftRadius: '8px',
     outline: 'none',
-    fontFamily: 'var(--font-primary), monospace',
+    fontFamily: 'var(--font-secondary), monospace',
     position: 'absolute',
     right: '0',
     background: 'transparent',
@@ -33,11 +33,11 @@ export const Terminal = styled('code', {
   },
 
   code: {
-    '--fluid-type-max': '1rem',
-    '--fluid-type-min': '0.8rem',
-
+    '--fluid-type-max': '0.8rem',
+    '--fluid-type-target': '1vw',
+    '--fluid-type-min': '0.6rem',
     color: '$text_color',
-    fontFamily: 'var(--font-primary), monospace',
+    fontFamily: 'var(--font-code)',
     lineHeight: 1.5,
     fontWeight: 200,
   },

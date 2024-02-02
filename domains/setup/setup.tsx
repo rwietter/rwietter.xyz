@@ -10,7 +10,9 @@ import { SetupMapper } from './components/setupmapper';
 import { Search } from './features/search';
 import { useRealTimeSearch } from './hooks/useSearch';
 import { customization } from './data/customization';
-import { AUR, NPM, PACMAN, SNAP } from './data/terminal';
+import {
+  AUR, NPM, PACMAN, SNAP,
+} from './data/terminal';
 
 const Setup = () => {
   const { handleInputChange, results } = useRealTimeSearch(

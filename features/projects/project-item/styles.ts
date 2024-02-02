@@ -5,7 +5,7 @@ export const Wrapper = styled(motion.a, {
   position: 'relative',
   display: 'flex',
   height: '100%',
-  fontFamily: 'var(--font-primary), monospace',
+  fontFamily: 'var(--font-secondary)',
 });
 
 export const Container = styled(motion.section, {
@@ -25,7 +25,7 @@ export const Container = styled(motion.section, {
 
 export const Title = styled('h2', {
   color: '$text_color',
-  fontWeight: 400,
+  fontWeight: 600,
   paddingTop: '$2',
   transition: '$transitonTheme',
 

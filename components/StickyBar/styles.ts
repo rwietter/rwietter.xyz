@@ -15,8 +15,8 @@ export const ManuBarWrapper = styled('footer', {
   borderRadius: '0.5rem',
   width: '90%',
   transition: '$transitonTheme, border-color 300ms ease',
-  background: '$rgba_bg_color',
-  backdropFilter: 'blur(6px)',
+  background: '$cb_box_alt_color',
+  backdropFilter: 'blur(5px)',
   zIndex: 10,
 
   '@bp5': {
