@@ -59,8 +59,6 @@ html {
 }
 
 body {
-  background: var(--colors-bg_color);
-  transition: var(--transitions-transitonTheme);
   text-rendering: optimizeLegibility;
 }
 
