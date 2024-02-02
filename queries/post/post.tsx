@@ -1,4 +1,4 @@
-import gql from "graphql-tag";
+import gql from 'graphql-tag'
 
 export const POST_QUERY = gql`
   query Post($slug: String!) {
@@ -29,4 +29,4 @@ export const POST_QUERY = gql`
       }
     }
   }
-`;
+`

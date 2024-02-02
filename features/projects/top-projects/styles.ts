@@ -1,12 +1,12 @@
-import { styled } from "features/ui/theme";
+import { styled } from 'features/ui/theme'
 
-export const Grid = styled("section", {
-	display: "grid",
-	gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-	gridAutoFlow: "row",
-	paddingTop: "$4",
+export const Grid = styled('section', {
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+  gridAutoFlow: 'row',
+  paddingTop: '$4',
 
-	"div > div": {
-		height: "auto",
-	},
-});
+  'div > div': {
+    height: 'auto',
+  },
+})

@@ -1,23 +1,23 @@
-import { styled } from "features/ui/theme";
+import { styled } from 'features/ui/theme'
 
-export const SocialContainer = styled("div", {
-	display: "none",
-	justifyContent: "center",
-	alignItems: "center",
-	flexDirection: "row",
-	cursor: "pointer",
+export const SocialContainer = styled('div', {
+  display: 'none',
+  justifyContent: 'center',
+  alignItems: 'center',
+  flexDirection: 'row',
+  cursor: 'pointer',
 
-	"@bp5": {
-		display: "flex",
-	},
-});
+  '@bp5': {
+    display: 'flex',
+  },
+})
 
-export const Link = styled("a", {
-	color: "$text_color",
-	display: "inline-block",
-	textDecoration: "none",
+export const Link = styled('a', {
+  color: '$text_color',
+  display: 'inline-block',
+  textDecoration: 'none',
 
-	"& + &": {
-		paddingLeft: "$2",
-	},
-});
+  '& + &': {
+    paddingLeft: '$2',
+  },
+})

@@ -1,1 +1,1 @@
-export { Setup } from "./setup";
+export { Setup } from './setup'

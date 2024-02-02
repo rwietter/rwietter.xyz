@@ -1,1 +1,1 @@
-export * from "./SwitchTheme";
+export * from './SwitchTheme'

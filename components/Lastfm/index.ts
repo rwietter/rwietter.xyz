@@ -1,1 +1,1 @@
-export { LastFMTrack } from "./lastfm";
+export { LastFMTrack } from './lastfm'

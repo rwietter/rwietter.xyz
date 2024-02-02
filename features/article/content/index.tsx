@@ -1,27 +1,25 @@
-/* eslint-disable react/no-unstable-nested-components */
-/* eslint-disable import/no-extraneous-dependencies */
-import React, { FC } from "react";
-import dynamic from "next/dynamic";
+import dynamic from 'next/dynamic'
+import { FC } from 'react'
 
-import { ArticleMarkdown, ArticleContainer } from "./styles";
-import { Properties } from "../ts";
+import { Properties } from '../ts'
+import { ArticleContainer, ArticleMarkdown } from './styles'
 
-const MdRenderer = dynamic(() => import("features/article/content/md"), {
-	ssr: true,
-});
+const MdRenderer = dynamic(() => import('features/article/content/md'), {
+  ssr: true,
+})
 
 interface ArticleData {
-	article: {
-		attributes: Pick<Properties, "content">;
-	};
+  article: {
+    attributes: Pick<Properties, 'content'>
+  }
 }
 
 const ArticleContent: FC<ArticleData> = ({ article }) => (
-	<ArticleContainer>
-		<ArticleMarkdown>
-			<MdRenderer article={article.attributes.content} />
-		</ArticleMarkdown>
-	</ArticleContainer>
-);
+  <ArticleContainer>
+    <ArticleMarkdown>
+      <MdRenderer article={article.attributes.content} />
+    </ArticleMarkdown>
+  </ArticleContainer>
+)
 
-export default ArticleContent;
+export default ArticleContent

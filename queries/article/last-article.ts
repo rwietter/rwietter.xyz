@@ -1,4 +1,4 @@
-import gql from "graphql-tag";
+import gql from 'graphql-tag'
 
 export const LAST_ARTICLE = gql`
 query{
@@ -12,4 +12,4 @@ query{
     }
   }
 }
-`;
+`

@@ -1,1 +1,1 @@
-export { type IArticles } from "./articles";
+export { type IArticles } from './articles'
