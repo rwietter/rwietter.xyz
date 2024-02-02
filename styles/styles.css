@@ -7,6 +7,13 @@
   src: url('/BerkeleyMono-Regular.ttf') format('woff2'),
 }
 
+@font-face {
+  font-family: 'Kalam';
+  src: url('/fonts/Kalam-Regular.ttf') format('woff2'),
+    url('/fonts/Kalam-Light.ttf') format('woff2'),
+    url('/fonts/Kalam-Bold.ttf') format('woff2');
+}
+
 :root {
   font-family: Inter, sans-serif;
 }
@@ -22,6 +29,7 @@
   --font-primary: "InterVariable", sans-serif;
   --font-title: var(--font-secondary), sans-serif;
   --font-code: "Berkeley", monospace;
+  --font-bolder: 'Kalam', sans-serif;
 }
 
 html {
@@ -35,7 +43,8 @@ html {
 }
 
 *::selection {
-  background: var(--colors-cb_box_alt_color) !important;
+  background: var(--colors-select) !important;
+  color: #FFFFFF !important;
 }
 
 ::-webkit-scrollbar {
@@ -117,5 +126,19 @@ tt {
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     text-size-adjust: 100%;
+  }
+}
+
+.fade-in-layout {
+  opacity: 0;
+  animation: fadeIn 300ms ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

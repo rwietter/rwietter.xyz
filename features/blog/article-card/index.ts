@@ -1,1 +1,1 @@
-export { ArticleCard } from './article-card.component';
+export { ArticleCard } from "./article-card.component";

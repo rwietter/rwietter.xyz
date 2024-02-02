@@ -1,4 +1,4 @@
-import gql from 'graphql-tag';
+import gql from "graphql-tag";
 
 // slug, title, description, publishedAt, content
 const ARTICLES_QUERY = gql`

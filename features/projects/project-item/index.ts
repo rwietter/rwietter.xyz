@@ -1,1 +1,1 @@
-export { ProjectItem } from './project.component';
+export { ProjectItem } from "./project.component";

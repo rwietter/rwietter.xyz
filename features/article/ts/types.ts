@@ -1,66 +1,66 @@
 export interface Name {
-    name: string
+	name: string;
 }
 
 export interface Data {
-    attributes: Name
+	attributes: Name;
 }
 
 export interface Author {
-    data: Data
+	data: Data;
 }
 
 export interface Article {
-    slug: string
-    name: string
+	slug: string;
+	name: string;
 }
 
 export interface ArticleAttributes {
-    attributes: Article
+	attributes: Article;
 }
 
 export interface Category {
-    data: ArticleAttributes
+	data: ArticleAttributes;
 }
 
 export interface ImageAttributes {
-    url: string
-    name: string
-    caption: string
-    alternativeText: string
+	url: string;
+	name: string;
+	caption: string;
+	alternativeText: string;
 }
 
 export interface TypeImage {
-    attributes: ImageAttributes
+	attributes: ImageAttributes;
 }
 
 export interface Image {
-    data: TypeImage
+	data: TypeImage;
 }
 
 export interface Properties {
-    slug: string
-    title: string
-    content: string
-    description: string
-    author: Author
-    publishedAt: string
-    updatedAt: string
-    category: Category
-    image: Image
+	slug: string;
+	title: string;
+	content: string;
+	description: string;
+	author: Author;
+	publishedAt: string;
+	updatedAt: string;
+	category: Category;
+	image: Image;
 }
 
 export interface Attributes {
-    attributes: Properties
+	attributes: Properties;
 }
 
 type ImageBlurData = {
-    src: string
-    type: string
-    blurDataURL: string
-}
+	src: string;
+	type: string;
+	blurDataURL: string;
+};
 
 export type ArticleData = {
-    articles: Attributes[]
-    blurDataURL: ImageBlurData
-}
+	articles: Attributes[];
+	blurDataURL: ImageBlurData;
+};

@@ -1,1 +1,1 @@
-export { SetupMapper } from './setupmapper';
+export { SetupMapper } from "./setupmapper";

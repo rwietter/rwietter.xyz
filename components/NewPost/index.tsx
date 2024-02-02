@@ -1,13 +1,11 @@
-import React from 'react';
+import React from "react";
 
 type NewPostProps = {
-  lastArticle: any;
-}
+	lastArticle: any;
+};
 
 const NewPost: React.FC<NewPostProps> = ({ lastArticle }) => (
-  <div>
-    {JSON.stringify(lastArticle)}
-  </div>
+	<div>{JSON.stringify(lastArticle)}</div>
 );
 
 export default NewPost;

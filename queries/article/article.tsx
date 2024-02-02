@@ -1,4 +1,4 @@
-import gql from 'graphql-tag';
+import gql from "graphql-tag";
 
 const ARTICLE_QUERY = gql`
   query Article($slug: String!) {
@@ -42,31 +42,31 @@ const ARTICLE_QUERY = gql`
 `;
 
 export interface LastArticles {
-  data: [
-    {
-      attributes: {
-        slug: string;
-        title: string;
-        description: string;
-        updateAt: string;
-        category: {
-          data: {
-            attributes: {
-              name: string;
-              slug: string;
-            }
-          }
-        }
-        image: {
-          data: {
-            attributes: {
-              url: string;
-            }
-          }
-        }
-      }
-    }
-  ];
+	data: [
+		{
+			attributes: {
+				slug: string;
+				title: string;
+				description: string;
+				updateAt: string;
+				category: {
+					data: {
+						attributes: {
+							name: string;
+							slug: string;
+						};
+					};
+				};
+				image: {
+					data: {
+						attributes: {
+							url: string;
+						};
+					};
+				};
+			};
+		},
+	];
 }
 
 export default ARTICLE_QUERY;

@@ -1,4 +1,4 @@
-import { Setup } from 'domains/setup';
+import { Setup } from "domains/setup";
 
 const Page = () => <Setup />;
 

@@ -111,7 +111,8 @@
 
 .markdown-body b,
 .markdown-body strong {
-  font-weight: 500 !important;
+  font-weight: 600 !important;
+  font-family: var(--font-bolder);
 }
 
 .markdown-body b,
@@ -249,7 +250,7 @@
   font: inherit;
 }
 
-.markdown-body a:hover {
+.markdown-body a {
   text-decoration: underline;
 }
 
@@ -352,14 +353,15 @@
 }
 
 .markdown-body blockquote {
-  margin: 0;
-  text-align: center;
+  margin: 1.5em 0 !important;
+  text-align: right;
   font-style: italic;
-  padding: 2em 0;
+  padding: 2em;
   color: var(--colors-text_color);
-  border-top: 1px solid var(--colors-sub_color);
-  border-bottom: 1px solid var(--colors-sub_color);
-  border-radius: 2px;
+  background-color: var(--colors-neutral);
+  border-left: 4px solid var(--colors-select);
+  transition: var(--transitions-transitonTheme);
+  border-radius: 4px;
 }
 
 .markdown-body ul,
@@ -872,6 +874,7 @@
 .markdown-body p code {
   background-color: var(--colors-neutral);
   font-style: normal;
+  font-family: var(--font-secondary);
   padding: 0.15em 0.4em;
   font-weight: 400;
   transition: var(--transitions-transitonTheme);
