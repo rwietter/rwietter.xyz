@@ -1,8 +1,8 @@
-import { styled } from "features/ui/theme";
+import { styled } from 'features/ui/theme'
 
-export const DateTime = styled("time", {
-	all: "unset",
-	span: {
-		"--fluid-type-max": "1rem",
-	},
-});
+export const DateTime = styled('time', {
+  all: 'unset',
+  span: {
+    '--fluid-type-max': '1rem',
+  },
+})

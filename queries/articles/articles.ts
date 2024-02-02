@@ -1,4 +1,4 @@
-import gql from "graphql-tag";
+import gql from 'graphql-tag'
 
 // slug, title, description, publishedAt, content
 const ARTICLES_QUERY = gql`
@@ -30,7 +30,7 @@ const ARTICLES_QUERY = gql`
       }
     }
   }
-`;
+`
 
 const LAST_ARTICLES_QUERY = gql`
   query Articles {
@@ -60,6 +60,6 @@ const LAST_ARTICLES_QUERY = gql`
       }
     }
   }
-`;
+`
 
-export { ARTICLES_QUERY, LAST_ARTICLES_QUERY };
+export { ARTICLES_QUERY, LAST_ARTICLES_QUERY }

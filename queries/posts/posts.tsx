@@ -1,4 +1,4 @@
-import gql from "graphql-tag";
+import gql from 'graphql-tag'
 
 export const POSTS_QUERY = gql`
   query Posts {
@@ -22,4 +22,4 @@ export const POSTS_QUERY = gql`
       }
     }
   }
-`;
+`

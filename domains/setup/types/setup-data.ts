@@ -1,5 +1,5 @@
 export interface SetupData {
-	name: string;
-	url: string;
-	type: string;
+  name: string
+  url: string
+  type: string
 }

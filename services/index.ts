@@ -1,2 +1,2 @@
-export { fetcherLastFm } from "./fetcherLastFm";
-export { fetcherWeather } from "./fetcherWeather";
+export { fetcherLastFm } from './fetcherLastFm'
+export { fetcherWeather } from './fetcherWeather'

@@ -1,5 +1,5 @@
-import { Setup } from "domains/setup";
+import { Setup } from 'domains/setup'
 
-const Page = () => <Setup />;
+const Page = () => <Setup />
 
-export default Page;
+export default Page

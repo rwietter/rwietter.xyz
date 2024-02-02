@@ -1,1 +1,1 @@
-export { useRealTimeSearch } from "./useSearch";
+export { useRealTimeSearch } from './useSearch'

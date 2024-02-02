@@ -1,10 +1,10 @@
-import { styled } from "features/ui/theme";
+import { styled } from 'features/ui/theme'
 
-export const Wrapper = styled("section", {
-	display: "flex",
-	flexDirection: "column",
-	justifyContent: "center",
-	alignItems: "flex-start",
-	transition: "$transitonTheme",
-	padding: "2rem 0",
-});
+export const Wrapper = styled('section', {
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'flex-start',
+  transition: '$transitonTheme',
+  padding: '2rem 0',
+})

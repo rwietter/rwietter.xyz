@@ -1,1 +1,1 @@
-export { KbarInit } from "./kbar-init-shortcut";
+export { KbarInit } from './kbar-init-shortcut'
