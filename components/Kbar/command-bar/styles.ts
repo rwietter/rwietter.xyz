@@ -22,9 +22,14 @@ const Search = styled(KBarSearch, {
   outline: 'none',
   border: 'none',
   margin: 0,
-  fontFamily: 'monospace',
+  fontFamily: 'var(--font-secondary)',
   background: '$sub_alt_color',
   color: '$text_color',
+  '@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none))': {
+    backgroundColor: '#ffffff0d',
+    WebkitBackdropFilter: 'saturate(207%) blur(30px)',
+    backdropFilter: 'saturate(207%) blur(30px)',
+  },
 });
 
 const GroupName = styled('div', {
@@ -33,7 +38,13 @@ const GroupName = styled('div', {
   textTransform: 'uppercase',
   letterSpacing: '1px',
   background: '$sub_alt_color',
-  fontFamily: 'monospace',
+  fontFamily: 'var(--font-secondary)',
+
+  '@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none))': {
+    backgroundColor: '#ffffff0d',
+    WebkitBackdropFilter: 'saturate(207%) blur(30px)',
+    backdropFilter: 'saturate(207%) blur(30px)',
+  },
 });
 
 const Kbd = styled('kbd', {
@@ -53,7 +64,7 @@ const Action = styled('div', {
   display: 'flex',
   gap: '8px',
   alignItems: 'center',
-  fontFamily: 'monospace',
+  fontFamily: 'var(--font-secondary)',
   '--fluid-type-min': '.8rem',
   '--fluid-type-max': '.9rem',
   '--fluid-type-target': '2vw',
@@ -80,11 +91,11 @@ const Animator = styled(KBarAnimator, {
   color: '$text_color',
   borderRadius: '8px',
   overflow: 'hidden',
-  boxShadow: '0px 10px 20px 8px rgba(0, 0, 0, 0.1)',
+  boxShadow: '0px 10px 20px 8px rgba(0, 0, 0, 0.2)',
   '@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none))': {
     backgroundColor: '#ffffff0d',
-    WebkitBackdropFilter: 'saturate(207%) blur(8px)',
-    backdropFilter: 'saturate(207%) blur(8px)',
+    WebkitBackdropFilter: 'saturate(207%) blur(30px)',
+    backdropFilter: 'saturate(207%) blur(30px)',
   },
 
   /* Hide scrollbar for Chrome, Safari and Opera */

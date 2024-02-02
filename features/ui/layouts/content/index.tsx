@@ -10,8 +10,8 @@ interface LayoutProps {
 
 const Layout: FC<LayoutProps> = ({ children, layout = 'small' }) => (
   <>
+    <Header />
     <LayoutCSS layout={layout}>
-      <Header />
       {children}
     </LayoutCSS>
     <StickyBar />

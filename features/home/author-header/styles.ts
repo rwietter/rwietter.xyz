@@ -18,9 +18,9 @@ export const Container = styled('section', {
     color: '$text_color',
     fontFamily: 'var(--font-secondary), monospace',
     transition: '$transitonTheme',
-    '--fluid-type-min': '1.2rem',
-    '--fluid-type-max': '5rem',
-    '--fluid-type-target': '8vw',
+    '--fluid-type-min': '1.4rem',
+    '--fluid-type-max': '4.5rem',
+    '--fluid-type-target': '12vw',
   },
 
   h2: {

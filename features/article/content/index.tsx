@@ -1,9 +1,14 @@
+/* eslint-disable react/no-unstable-nested-components */
+/* eslint-disable import/no-extraneous-dependencies */
 import React, { FC } from 'react';
-import Markdown from 'markdown-to-jsx';
+import dynamic from 'next/dynamic';
 
-import pretty from 'styles/github-markdown.module.css';
 import { ArticleMarkdown, ArticleContainer } from './styles';
 import { Properties } from '../ts';
+
+const MdRenderer = dynamic(() => import('features/article/content/md'), {
+  ssr: true,
+});
 
 interface ArticleData {
   article: {
@@ -13,10 +18,8 @@ interface ArticleData {
 
 const ArticleContent: FC<ArticleData> = ({ article }) => (
   <ArticleContainer>
-    <ArticleMarkdown className={pretty['markdown-body']}>
-      <Markdown>
-        {article?.attributes?.content}
-      </Markdown>
+    <ArticleMarkdown>
+      <MdRenderer article={article.attributes.content} />
     </ArticleMarkdown>
   </ArticleContainer>
 );

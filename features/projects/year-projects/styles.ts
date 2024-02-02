@@ -6,14 +6,13 @@ export const Container = styled('div', {
   transition: '$transitonTheme',
   width: '100%',
   maxWidth: '60rem',
-  padding: '0 1rem',
   paddingTop: '2rem',
   margin: '0 auto',
-  fontFamily: 'var(--font-primary), monospace',
+  fontFamily: 'var(--font-secondary), monospace',
 });
 
 export const Title = styled('h1', {
-  fontWeight: 400,
+  fontWeight: 800,
   padding: '1rem 0 1rem 0',
   fontFamily: 'var(--font-secondary), monospace',
   color: '$text_color',
@@ -53,13 +52,13 @@ export const ListItemName = styled(motion.a, {
   '--fluid-type-max': '1.05rem',
 
   strong: {
-    fontWeight: 200,
+    fontWeight: 500,
     transition: '$transitonTheme',
     color: '$text_color',
   },
   span: {
     paddingLeft: '0.5rem',
-    fontWeight: 500,
+    fontWeight: 200,
     color: '$text_alt_color',
     lineHeight: '1.7',
   },

@@ -14,16 +14,16 @@ const {
       text_color: '#f6f5f5',
       text_gray_color: '#ADADAD',
       text_alt_color: '#FFFFFF',
-      caret_color: '#1E1E1E',
+      caret_color: '#0F0F11',
       main_color: '#96F2D7',
-      sub_color: '#1E1E1E',
-      sub_alt_color: '#1E1E1E',
+      sub_color: '#0F0F11',
+      sub_alt_color: '#0F0F11',
       error_color: '#ff4754',
-      rgba_bg_color: 'hsla(0,0%,100%,.2)',
       highlight: 'rgba(187, 247, 208, 1)',
 
       cb_bg_color: 'rgba(0, 0, 0, 0.6)',
       cb_box_alt_color: 'rgba(255, 255, 255, 0.1)',
+      neutral: '#3A4048',
     },
     space: {
       1: '0.4rem',
@@ -75,10 +75,10 @@ const {
       sub_color: '#C9C9CF',
       sub_alt_color: '#F4F4F6',
       error_color: '#ff4754',
-      rgba_bg_color: 'rgba(0, 0, 0, 0.2)',
 
       cb_bg_color: 'rgba(255, 255, 255, 0.6)',
       cb_box_alt_color: 'rgba(0, 0, 0, 0.1)',
+      neutral: '#F0F2F4',
     },
   },
 });

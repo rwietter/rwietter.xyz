@@ -16,7 +16,7 @@
 .markdown-body h4,
 .markdown-body h5,
 .markdown-body h6 {
-  font-weight: 400 !important;
+  font-weight: 800 !important;
   font-family: var(--font-secondary), monospace !important;
 }
 
@@ -28,7 +28,7 @@
 .markdown-body pre,
 .markdown-body img,
 .markdown-body table {
-  font-family: var(--font-primary), sans-serif;
+  font-family: var(--font-secondary), sans-serif;
 }
 
 .markdown-body code,
@@ -870,9 +870,10 @@
 }
 
 .markdown-body p code {
-  background-color: var(--colors-sub_color);
+  background-color: var(--colors-neutral);
   font-style: normal;
-  --fluid-type-max: 1.1rem;
+  padding: 0.15em 0.4em;
+  font-weight: 400;
   transition: var(--transitions-transitonTheme);
 }
 
@@ -919,16 +920,10 @@
 
 .markdown-body .highlight pre,
 .markdown-body pre {
-  padding: 16px;
   overflow: auto;
   font-size: 1em;
   line-height: 1.45;
   border-radius: 6px;
-  transition: var(--transitions-transitonTheme), border-color 0.15s ease-in-out;
-  background: var(--colors-bg_color);
-  border: 1px solid var(--colors-sub_color);
-  border-radius: 6px;
-  margin: 2rem 0;
 }
 
 .markdown-body pre code,

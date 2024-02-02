@@ -5,7 +5,7 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import * as S from './styles';
 
-const SwitchTheme = dynamic(() => import('components/SwitchTheme/SwitchTheme'), { ssr: false });
+const SwitchTheme = dynamic(() => import('components/SwitchTheme/SwitchTheme'), { ssr: true });
 
 const activePath = (pathname: string) => (href: string, entrypath?: string) => {
   if (pathname === href) {

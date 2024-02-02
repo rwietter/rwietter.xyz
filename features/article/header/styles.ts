@@ -83,14 +83,15 @@ export const DateTimeRead = styled('p', {
 });
 
 export const ArticleTitle = styled('h1', {
-  '--fluid-type-max': '4rem',
-  '--fluid-type-min': '1.1rem',
-  '--fluid-type-target': '4vw',
-  fontFamily: 'var(--font-secondary), monospace',
+  '--fluid-type-max': '3.6rem',
+  '--fluid-type-min': '1.3rem',
+  '--fluid-type-target': '6vw',
+  fontFamily: 'var(--font-secondary)',
   padding: 0,
   paddingTop: '$2',
   fontWeight: 800,
   margin: 0,
+  lineHeight: 1.2,
   color: '$text_color',
   transition: '$transitonTheme',
 

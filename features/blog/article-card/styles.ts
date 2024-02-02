@@ -3,33 +3,21 @@ import { styled } from 'features/ui/theme';
 export const CardContainer = styled('li', {
   width: '100%',
 
-  '@bp2': {
-    display: 'grid',
-    gridTemplateColumns: 'auto 1fr',
-    alignItems: 'center',
-  },
-
   '& + &': {
-    marginTop: '$3',
+    marginTop: '2rem',
   },
 });
 
 export const DateTimeRead = styled('p', {
-  contentVisibility: 'hidden',
-  '--fluid-type-max': '1rem',
   alignItems: 'center',
   fontWeight: 200,
-  fontFamily: 'var(--font-primary), monospace',
+  fontFamily: 'var(--font-secondary), monospace',
   color: '$text_gray_color',
   transition: '$transitonTheme',
-  paddingRight: '3rem',
+  '--fluid-type-max': '1rem',
 
   svg: {
     marginRight: '$1',
-  },
-
-  '@bp2': {
-    contentVisibility: 'visible',
   },
 });
 
@@ -41,11 +29,10 @@ export const PostTitle = styled('p', {
   borderBottom: '1px dotted $text_gray_color',
   transition: '$transitonTheme',
   display: 'inline',
-  fontFamily: 'var(--font-primary), monospace',
+  fontFamily: 'var(--font-secondary), monospace',
   color: '$text_color',
   overflowWrap: 'anywhere',
-  '--fluid-type-min': '1rem',
-  '--fluid-type-max': '1.3rem',
+  '--fluid-type-max': '1.1rem',
 
   '&:hover': {
     color: '$main_color',
