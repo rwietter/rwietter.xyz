@@ -2,10 +2,18 @@ import { KbarInit } from 'components/Kbar'
 import type { RecentTrackProps } from 'components/Lastfm/types'
 import { NextSEO } from 'components/SEO'
 import type { WeatherProps } from 'components/Weather/weather'
-import { AuthorContent, AuthorHeader } from 'features/home'
 import { ContentLayout } from 'features/ui/layouts'
 import type { GetStaticProps, NextPage } from 'next'
+import dynamic from 'next/dynamic'
 import { fetcherLastFm, fetcherWeather } from 'services'
+
+const AuthorContent = dynamic(() => import('features/home/author-content'), {
+  ssr: true,
+})
+
+const AuthorHeader = dynamic(() => import('features/home/author-header'), {
+  ssr: true,
+})
 
 interface HomeProps {
   lastFm: RecentTrackProps
