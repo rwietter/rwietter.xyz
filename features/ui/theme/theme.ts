@@ -19,7 +19,7 @@ const {
       sub_color: '#0F0F11',
       sub_alt_color: '#0F0F11',
       error_color: '#ff4754',
-      highlight: 'rgba(187, 247, 208, 1)',
+      highlight: 'rgba(97, 123, 255, 1)',
       select: '#617BFF',
 
       cb_bg_color: 'rgba(0, 0, 0, 0.6)',
@@ -75,6 +75,7 @@ const { theme: light } = createStitches({
       sub_alt_color: '#F4F4F6',
       error_color: '#ff4754',
       select: '#4433FF',
+      highlight: '#4433FF',
 
       cb_bg_color: 'rgba(255, 255, 255, 0.6)',
       cb_box_alt_color: 'rgba(0, 0, 0, 0.1)',
