@@ -1,8 +1,10 @@
 import { useKBar } from 'kbar'
 import dynamic from 'next/dynamic'
+import { useTranslation } from 'react-i18next'
 import { AiOutlineArrowUp } from 'react-icons/ai'
 import { BsCommand } from 'react-icons/bs'
 import { FiList } from 'react-icons/fi'
+import { IoLanguageOutline } from 'react-icons/io5'
 import { VscHome } from 'react-icons/vsc'
 import * as S from './styles'
 
@@ -13,6 +15,7 @@ const SwitchTheme = dynamic(
 
 const StickyBar = () => {
   const { query } = useKBar()
+  const { i18n } = useTranslation()
 
   const handleToTop = () => {
     const position =
@@ -54,6 +57,16 @@ const StickyBar = () => {
       </S.MenuBarGroup>
 
       <S.MenuBarGroup role='menubar'>
+        <S.MenuBarItem
+          aria-label='Switch language'
+          title='Switch language'
+          role='menuitem'
+          onClick={() =>
+            i18n.changeLanguage(i18n.language === 'en' ? 'pt' : 'en')
+          }
+        >
+          <IoLanguageOutline size={20} />
+        </S.MenuBarItem>
         <S.MenuBarItem
           title='Toggle Dark Mode'
           role='menuitem'

@@ -9,7 +9,13 @@ import { dark, light } from 'features/ui/theme'
 import { useEffect } from 'react'
 import { useTheme } from 'store/switch-theme'
 
+import i18n from 'i18next'
+import { initReactI18next } from 'react-i18next'
+
 import type { AppProps } from 'next/app'
+
+import en from 'public/locales/en/en.json'
+import pt from 'public/locales/pt/pt.json'
 
 import '../styles/dracula-prism.css'
 import '../styles/shadow-icon.css'
@@ -33,6 +39,22 @@ const themes = {
   dark,
   light,
 }
+
+i18n.use(initReactI18next).init({
+  resources: {
+    en: {
+      translation: en,
+    },
+    pt: {
+      translation: pt,
+    },
+  },
+  lng: 'en',
+  fallbackLng: 'en',
+  interpolation: {
+    escapeValue: false,
+  },
+})
 
 const App = ({ Component, pageProps }: AppProps) => {
   const { theme } = useTheme()
