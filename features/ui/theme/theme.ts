@@ -79,7 +79,7 @@ const { theme: light } = createStitches({
 
       cb_bg_color: 'rgba(255, 255, 255, 0.6)',
       cb_box_alt_color: 'rgba(0, 0, 0, 0.1)',
-      neutral: '#F0F2F4',
+      neutral: '#EBF0F5',
     },
   },
 })

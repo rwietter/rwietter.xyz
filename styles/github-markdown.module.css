@@ -113,15 +113,13 @@
 .markdown-body b,
 .markdown-body strong {
   font-weight: 700 !important;
-  font-family: var(--font-bolder);
+  font-family: var(--font-primary);
 }
 
 .markdown-body b,
 .markdown-body strong,
 .markdown-body code {
   font-weight: 500;
-  transition: var(--transitions-transitonTheme);
-  color: var(--colors-text_color);
 }
 
 .markdown-body dfn {
@@ -183,12 +181,10 @@
 .markdown-body hr {
   box-sizing: content-box;
   overflow: hidden;
-  background: transparent;
-  border-bottom: 1px solid hsla(210, 18%, 87%, 1);
-  height: 0.25em;
-  padding: 0;
+  height: 0.2em;
   margin: 24px 0;
-  background-color: var(--colors-bg_color);
+  transition: var(--transitions-transitonTheme), background-color 300ms ease;
+  background-color: var(--colors-neutral);
   border: 0;
 }
 
@@ -355,7 +351,7 @@
 
 .markdown-body blockquote {
   margin: 1.5em 0 !important;
-  text-align: right;
+  text-align: left;
   padding: 2em;
   color: var(--colors-text_color);
   background-color: var(--colors-neutral);
@@ -367,7 +363,7 @@
 .markdown-body blockquote p {
   font-family: var(--font-bolder);
   font-weight: 500;
-  --fluid-type-max: 1.5rem;
+  --fluid-type-max: 1.4rem;
   --fluid-type-target: 4vw;
 }
 
@@ -896,7 +892,7 @@
   font-family: var(--font-secondary);
   padding: 0.01em 0.3em;
   font-weight: 400;
-  transition: var(--transitions-transitonTheme);
+  transition: background-color 200ms ease;
 }
 
 .markdown-body pre code span {
@@ -956,10 +952,14 @@
   margin: 0;
   overflow: visible;
   line-height: 1.5;
+  letter-spacing: 0.8px;
   word-wrap: normal;
   background-color: transparent;
   display: block;
   border: 0;
+  --fluid-type-min: 0.9rem;
+  --fluid-type-max: 1.1rem;
+  --fluid-type-target: 2vw;
 }
 
 .markdown-body .csv-data td,

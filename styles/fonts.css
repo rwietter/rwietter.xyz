@@ -1,6 +1,7 @@
 @font-face {
-  font-family: 'Berkeley';
-  src: url('/BerkeleyMono-Regular.ttf') format('woff2');
+  font-family: 'Fantasque Sans Mono';
+  src: url('/fonts/FantasqueSansMono-Regular.woff2') format('woff2');
+  font-weight: 400;
   font-display: swap;
 }
 

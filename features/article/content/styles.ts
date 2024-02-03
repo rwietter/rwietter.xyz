@@ -8,7 +8,7 @@ export const ArticleContainer = styled('div', {
 
 export const ArticleMarkdown = styled('article', {
   '--fluid-type-min': '1rem',
-  '--fluid-type-max': '1.3rem',
+  '--fluid-type-max': '1.15rem',
   lineHeight: '1.7 !important',
   padding: '2rem 1.4rem',
   color: '$text_color',
