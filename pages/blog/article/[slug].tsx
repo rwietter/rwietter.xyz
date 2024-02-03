@@ -73,8 +73,6 @@ const ArticleItem = ({ articles, blurDataURL }: ArticleData) => {
                   rel='preload'
                   placeholder='blur'
                   style={{ objectFit: 'cover' }}
-                  width={1200}
-                  height={600}
                   src={blurDataURL.src}
                   blurDataURL={blurDataURL.blurDataURL}
                 />
