@@ -111,7 +111,7 @@
 
 .markdown-body b,
 .markdown-body strong {
-  font-weight: 600 !important;
+  font-weight: 700 !important;
   font-family: var(--font-bolder);
 }
 
@@ -355,13 +355,19 @@
 .markdown-body blockquote {
   margin: 1.5em 0 !important;
   text-align: right;
-  font-style: italic;
   padding: 2em;
   color: var(--colors-text_color);
   background-color: var(--colors-neutral);
   border-left: 4px solid var(--colors-select);
   transition: var(--transitions-transitonTheme);
   border-radius: 4px;
+}
+
+.markdown-body blockquote p {
+  font-family: var(--font-bolder);
+  font-weight: 500;
+  --fluid-type-max: 1.5rem;
+  --fluid-type-target: 4vw;
 }
 
 .markdown-body ul,

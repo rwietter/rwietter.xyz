@@ -1,18 +1,8 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
-@font-face {
-  font-family: 'Berkeley';
-  src: url('/BerkeleyMono-Regular.ttf') format('woff2'),
-}
-
-@font-face {
-  font-family: 'Kalam';
-  src: url('/fonts/Kalam-Regular.ttf') format('woff2'),
-    url('/fonts/Kalam-Light.ttf') format('woff2'),
-    url('/fonts/Kalam-Bold.ttf') format('woff2');
-}
+@import "fonts.css";
 
 :root {
   font-family: Inter, sans-serif;
@@ -20,14 +10,14 @@
 
 @supports (font-variation-settings: normal) {
   :root {
-    --font-secondary: 'InterVariable', sans-serif;
+    --font-secondary: InterVariable, sans-serif;
     font-feature-settings: 'ss01' 1, 'ss02' 1, 'ss03' 1, 'ss04' 1, 'ss07' 1, 'zero' 1, 'cv05' 1, 'cv08' 1, 'cv10' 1, 'cv09' 1, 'cv02' 1, 'cv03' 1, 'cv04' 1, 'cv06' 1, 'cv12' 1, 'cv13' 1, 'liga' 1, 'calt' 1;
   }
 }
 
 :root {
-  --font-primary: "InterVariable", sans-serif;
-  --font-title: var(--font-secondary), sans-serif;
+  --font-primary: Inter, sans-serif;
+  --font-title: var(--font-secondary), Inter, sans-serif;
   --font-code: "Berkeley", monospace;
   --font-bolder: 'Kalam', sans-serif;
 }
@@ -69,8 +59,6 @@ html {
 }
 
 body {
-  background: var(--colors-bg_color);
-  transition: var(--transitions-transitonTheme);
   text-rendering: optimizeLegibility;
 }
 
@@ -138,6 +126,7 @@ tt {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }

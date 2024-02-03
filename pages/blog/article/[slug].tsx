@@ -1,12 +1,10 @@
 import JSONLD from 'components/JSON-LD'
-import ArticleHeader from 'features/article/header'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import ARTICLE_QUERY from 'queries/article/article'
 import apolloClient from 'utils/apollo-client'
 
 import { NextSEO } from 'components/SEO'
-import { ArticleFooter } from 'features/article'
 import { ArticleData } from 'features/article/ts'
 import { ArticleLayout } from 'features/ui/layouts'
 import type { GetStaticPaths, GetStaticProps } from 'next'
@@ -21,9 +19,17 @@ import {
   ImageContainer,
   ImageCredit,
 } from 'features/article/styles'
-import { AnimatePresence } from 'framer-motion'
+import { memo } from 'react'
 
 const ArticleContent = dynamic(() => import('features/article/content'), {
+  ssr: true,
+})
+
+const ArticleFooter = dynamic(() => import('features/article/footer'), {
+  ssr: true,
+})
+
+const ArticleHeader = dynamic(() => import('features/article/header'), {
   ssr: true,
 })
 
@@ -53,35 +59,38 @@ const ArticleItem = ({ articles, blurDataURL }: ArticleData) => {
         url={`https://rwietterc.xyz${router?.asPath}`}
       />
       <ArticleLayout>
-        <AnimatePresence mode='wait'>
-          <ArticleContainer>
-            <ArticleMarkdownContainer>
-              <ArticleHeader article={article} />
-              <ImageContainer>
-                <ArticleImage>
-                  <Image
-                    fill
-                    quality={50}
-                    alt={`Image of the article: ${article.attributes.title} | ${article.attributes.image.data.attributes.alternativeText}`}
-                    loading='lazy'
-                    placeholder='blur'
-                    style={{ objectFit: 'cover' }}
-                    {...blurDataURL}
-                  />
-                </ArticleImage>
-                <ImageCredit>
-                  {article.attributes.image.data.attributes.caption}
-                </ImageCredit>
-              </ImageContainer>
-              <ArticleContent article={article} />
-            </ArticleMarkdownContainer>
-            <ArticleFooter
-              author={article?.attributes?.author?.data?.attributes?.name}
-              name={article?.attributes?.title}
-              category={article?.attributes?.category?.data?.attributes?.name}
-            />
-          </ArticleContainer>
-        </AnimatePresence>
+        <ArticleContainer>
+          <ArticleMarkdownContainer>
+            <ArticleHeader article={article} />
+            <ImageContainer>
+              <ArticleImage>
+                <Image
+                  fill
+                  quality={50}
+                  alt={`Image of the article: ${article.attributes.title} | ${article.attributes.image.data.attributes.alternativeText}`}
+                  loading='lazy'
+                  fetchPriority='high'
+                  rel='preload'
+                  placeholder='blur'
+                  style={{ objectFit: 'cover' }}
+                  width={1200}
+                  height={600}
+                  src={blurDataURL.src}
+                  blurDataURL={blurDataURL.blurDataURL}
+                />
+              </ArticleImage>
+              <ImageCredit>
+                {article.attributes.image.data.attributes.caption}
+              </ImageCredit>
+            </ImageContainer>
+            <ArticleContent article={article} />
+          </ArticleMarkdownContainer>
+          <ArticleFooter
+            author={article?.attributes?.author?.data?.attributes?.name}
+            name={article?.attributes?.title}
+            category={article?.attributes?.category?.data?.attributes?.name}
+          />
+        </ArticleContainer>
       </ArticleLayout>
     </>
   )
@@ -126,4 +135,4 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
 }
 
-export default ArticleItem
+export default memo(ArticleItem)

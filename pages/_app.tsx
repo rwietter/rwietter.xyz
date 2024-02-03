@@ -46,7 +46,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   }, [theme])
 
   return (
-    <div className='fade-in-layout'>
+    <div>
       <CommandBar>
         <LoadingIndicator />
         <ApolloProvider client={apolloClient}>

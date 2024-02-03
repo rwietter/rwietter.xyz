@@ -1,5 +1,18 @@
 import { styled } from 'features/ui/theme'
 
+export const Main = styled('main', {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'flex-start',
+  justifyContent: 'flex-start',
+  width: '100%',
+  height: '100%',
+  minHeight: '100dvh',
+  background: '$bg_color',
+  padding: '0 1.5rem',
+  transition: '$transitonTheme',
+})
+
 export const LayoutCSS = styled('section', {
   display: 'flex',
   flexDirection: 'column',
