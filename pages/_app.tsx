@@ -11,8 +11,7 @@ import { useTheme } from 'store/switch-theme'
 
 import type { AppProps } from 'next/app'
 
-import '../styles/blockquote-highlight.css'
-import '../styles/one-dark.css'
+import '../styles/dracula-prism.css'
 import '../styles/shadow-icon.css'
 import '../styles/styles.css'
 
@@ -28,6 +27,7 @@ require('prismjs/components/prism-css')
 require('prismjs/components/prism-rust')
 require('prismjs/components/prism-bash')
 require('prismjs/components/prism-json')
+require('prismjs/components/prism-c')
 
 const themes = {
   dark,
