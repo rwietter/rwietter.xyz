@@ -1,7 +1,7 @@
 import { SidebarSocialIcons } from 'components/StickyBar/Social'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { type FC } from 'react'
+import { memo, type FC } from 'react'
 import { FiCoffee, FiTwitter } from 'react-icons/fi'
 import { GoCommentDiscussion } from 'react-icons/go'
 import * as S from './styles'
@@ -53,4 +53,4 @@ const ArticleFooter: FC<ArticleFooterProps> = ({ author, category, name }) => {
   )
 }
 
-export { ArticleFooter }
+export default memo(ArticleFooter)

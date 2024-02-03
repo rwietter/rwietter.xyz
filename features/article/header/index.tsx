@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React from 'react'
+import React, { memo } from 'react'
 import { AiOutlineArrowLeft, AiOutlineCalendar } from 'react-icons/ai'
 import { RiTimer2Line } from 'react-icons/ri'
 
@@ -49,4 +49,4 @@ const ArticleHeader: React.FC<ArticleHeaderData> = (props) => {
   )
 }
 
-export default ArticleHeader
+export default memo(ArticleHeader)

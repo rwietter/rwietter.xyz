@@ -7,7 +7,7 @@ export const Main = styled('main', {
   justifyContent: 'flex-start',
   width: '100%',
   height: '100%',
-  minHeight: '100svh',
+  minHeight: '100dvh',
   background: '$bg_color',
   padding: '0 1.5rem',
   transition: '$transitonTheme',

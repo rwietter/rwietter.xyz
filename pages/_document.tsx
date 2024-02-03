@@ -30,6 +30,7 @@ export default class extends Document {
             src='https://us.umami.is/script.js'
             data-website-id='99c64e87-1dbd-4e1c-b45b-ada2e802dcc1'
           />
+          <link rel='preconnect' href='https://res.cloudinary.com/' />
           <meta name='application-name' content={APP_NAME} />
           <meta name='apple-mobile-web-app-capable' content='yes' />
           <meta
