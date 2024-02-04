@@ -10,7 +10,7 @@ const AuthorHeader = () => {
     <Container>
       <h1>{author.name}</h1>
       <span>@{author.username}</span>
-      <h2>{t('author.biography')}</h2>
+      <h2>{t('home.author-biography')}</h2>
       <SocialContainer>
         <SidebarSocialIcons />
       </SocialContainer>
