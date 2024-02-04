@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 import dynamic from 'next/dynamic'
+import { useTranslation } from 'react-i18next'
 import * as S from './styles'
 
 const SwitchTheme = dynamic(
@@ -23,6 +24,7 @@ const activePath = (pathname: string) => (href: string, entrypath?: string) => {
 
 const Header = () => {
   const isActive = activePath(usePathname().trim())
+  const { t } = useTranslation()
 
   return (
     <S.Header>
@@ -49,7 +51,7 @@ const Header = () => {
           role='menuitem'
           title='Projects'
         >
-          <Link href='/projects'>/projects</Link>
+          <Link href='/projects'>/{t('header.pages.projects')}</Link>
         </S.NavIterm>
         {/* <S.NavIterm className={isActive('/setup')} aria-current="page" role="menuitem" title="Setup">
           <Link href="/setup">/setup</Link>

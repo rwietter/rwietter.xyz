@@ -23,9 +23,10 @@
   --font-bolder: 'Kalam', sans-serif;
 }
 
-html {
+/* scrollbar-gutter prevents layout shift when scrollbar appears */
+/* html {
   scrollbar-gutter: stable;
-}
+} */
 
 * {
   margin: 0;
