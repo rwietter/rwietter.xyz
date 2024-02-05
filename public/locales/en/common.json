@@ -1,0 +1,22 @@
+{
+  "home.author-biography": "I'm a brazilian Software Developer, student and a writer. I'm currently working as a Fullstack Developer. I love to write about my experiences and contribute to the community.",
+  "home.kbar-shortcut": "Press <1>ctrl</1> + <3>space</3> to start →",
+  "header.pages.projects": "projects",
+  "projects.years.title": "More projects",
+  "projects.years.illusion-spicetify": "A dark theme for Spotify, using Spicetify.",
+  "projects.years.breview": "A desktop application to navigate and show your bookmarks in a pretty way like mega.nz.",
+  "projects.years.findit": "A command-line tool to advanced search in your favorite search engine.",
+  "projects.years.exterm-vscode": "Extension for VSCode to open directories in the external terminal.",
+  "projects.years.covid-insights": "Pretty charts and insights about the Covid-19 pandemic in Brazil.'",
+  "projects.years.telegram-space-picture": "Bot to send the space picture of the day from NASA to your Telegram chat.",
+  "projects.years.trackd": "Trackd é uma plataforma para gestão de agenda odontológica para UBS.",
+  "projects.years.personal-site-blog": "Static website that uses TS/Next.js and ISR (Incremental Static Regeneration) and GraphQL.",
+  "projects.years.astro-picture-bot": "Every day, a new picture of the universe in your Twitter feed.",
+  "projects.years.jhonny": "Landing page for a musician and composer.",
+  "projects.years.certfs": "Certfs is an application that utilizes the Fantom Blockchain and IPFS to record student certificates and diplomas, aiming to ensure the integrity and availability of data.",
+  "projects.years.my-awesome": "Create your notes, favorite lists and share with your friends.",
+  "projects.years.illusion-theme": "A fork of Dracula Official, Illusion is a dark theme for Visual Studio Code.",
+  "projects.years.prettysql": "Indent and format your SQL code, take a screenshot and share with your friends.",
+  "projects.years.econext": "EcoNext aims to connect entities, companies and people to assist in the disposal of organic and inorganic waste.",
+  "projects.years.lyrics": "Search for song lyrics simply and quickly."
+}
