@@ -1,0 +1,19 @@
+{
+  "years.title": "More projects",
+  "years.illusion-spicetify": "A dark theme for Spotify, using Spicetify.",
+  "years.breview": "A desktop application to navigate and show your bookmarks in a pretty way like mega.nz.",
+  "years.findit": "A command-line tool to advanced search in your favorite search engine.",
+  "years.exterm-vscode": "Extension for VSCode to open directories in the external terminal.",
+  "years.covid-insights": "Pretty charts and insights about the Covid-19 pandemic in Brazil.'",
+  "years.telegram-space-picture": "Bot to send the space picture of the day from NASA to your Telegram chat.",
+  "years.trackd": "Trackd é uma plataforma para gestão de agenda odontológica para UBS.",
+  "years.personal-site-blog": "Static website that uses TS/Next.js and ISR (Incremental Static Regeneration) and GraphQL.",
+  "years.astro-picture-bot": "Every day, a new picture of the universe in your Twitter feed.",
+  "years.jhonny": "Landing page for a musician and composer.",
+  "years.certfs": "Certfs is an application that utilizes the Fantom Blockchain and IPFS to record student certificates and diplomas, aiming to ensure the integrity and availability of data.",
+  "years.my-awesome": "Create your notes, favorite lists and share with your friends.",
+  "years.illusion-theme": "A fork of Dracula Official, Illusion is a dark theme for Visual Studio Code.",
+  "years.prettysql": "Indent and format your SQL code, take a screenshot and share with your friends.",
+  "years.econext": "EcoNext aims to connect entities, companies and people to assist in the disposal of organic and inorganic waste.",
+  "years.lyrics": "Search for song lyrics simply and quickly."
+}
