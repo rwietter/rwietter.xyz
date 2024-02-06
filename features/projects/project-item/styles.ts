@@ -21,6 +21,17 @@ export const Container = styled(motion.section, {
       color: '$text_color',
     },
   },
+
+  '& svg': {
+    fill: '$text_color',
+    color: '$text_color',
+    transition: '$transitonTheme',
+  },
+
+  '&:hover svg': {
+    fill: '$select',
+    color: '$select',
+  },
 })
 
 export const Title = styled('h2', {
