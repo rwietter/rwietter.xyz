@@ -1,4 +1,5 @@
 import { FC, ReactNode, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import * as S from './styles'
 
 interface IProject {
@@ -15,6 +16,7 @@ interface IProject {
 
 export const ProjectItem: FC<IProject> = ({ project }) => {
   const [isBeingHovered, setIsBeingHovered] = useState(false)
+  const { t } = useTranslation()
 
   return (
     <S.Wrapper
@@ -30,7 +32,9 @@ export const ProjectItem: FC<IProject> = ({ project }) => {
           {project.icon}
           <div>
             <S.Title>{project.title}</S.Title>
-            <S.Description>{project.description}</S.Description>
+            <S.Description>
+              {t(`projects.${project.title.replace(/ /g, '-').toLowerCase()}`)}
+            </S.Description>
           </div>
         </span>
       </S.Container>

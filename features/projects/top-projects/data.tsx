@@ -14,7 +14,7 @@ export const topProjects = [
     github: 'https://github.com/rwietter/trackrow-monorepo',
     link: 'https://github.com/rwietter/trackrow-monorepo',
     tags: ['React', 'Next', 'TypeScript', 'Postgres', 'Rest API'],
-    icon: <TfiAgenda size={18} color='var(--colors-text_color)' />,
+    icon: <TfiAgenda size={18} />,
   },
   {
     title: 'Illusion Theme',
@@ -24,7 +24,7 @@ export const topProjects = [
     github: 'https://github.com/rwietter/illusion-vscode-theme',
     link: 'https://github.com/rwietter/illusion-vscode-theme',
     tags: ['VsCode', 'Theme', 'TypeScript'],
-    icon: <DiVisualstudio size={24} color='var(--colors-text_color)' />,
+    icon: <DiVisualstudio size={24} />,
   },
   {
     title: 'PrettySQL',
@@ -34,7 +34,7 @@ export const topProjects = [
     github: 'https://github.com/rwietter/pretty-sql',
     link: 'https://github.com/rwietter/pretty-sql',
     tags: ['Next', 'TypeScript'],
-    icon: <SiPostgresql size={24} color='var(--colors-text_color)' />,
+    icon: <SiPostgresql size={24} />,
   },
   {
     title: 'My Awesome',
@@ -44,7 +44,7 @@ export const topProjects = [
     github: 'https://github.com/rwietter/my-awesome',
     link: 'https://github.com/rwietter/my-awesome',
     tags: ['Next', 'TypeScript', 'Redis', 'Postgres'],
-    icon: <SiAwesomelists size={24} color='var(--colors-text_color)' />,
+    icon: <SiAwesomelists size={24} />,
   },
   {
     title: 'Illusion Spicetify',
@@ -53,7 +53,7 @@ export const topProjects = [
     github: 'https://github.com/rwietter/illusion-spicetify',
     link: 'https://github.com/rwietter/illusion-spicetify',
     tags: ['Toml', 'CSS', 'Spicetify'],
-    icon: <GrSpotify size={22} color='var(--colors-text_color)' />,
+    icon: <GrSpotify size={22} />,
   },
   {
     title: 'Breview',
@@ -63,7 +63,7 @@ export const topProjects = [
     github: 'https://github.com/rwietter/breview',
     link: 'https://github.com/rwietter/breview',
     tags: ['Rust', 'Next', 'React', 'SQLite'],
-    icon: <TbBookmarksFilled size={22} color='var(--colors-text_color)' />,
+    icon: <TbBookmarksFilled size={22} />,
   },
   {
     title: 'Covid Insights',
@@ -73,7 +73,7 @@ export const topProjects = [
     github: 'https://github.com/rwietter/covid-19-insights',
     link: 'https://github.com/rwietter/covid-19-insights',
     tags: ['Next', 'TypeScript', 'GraphQL', 'Mongo', 'Docker'],
-    icon: <IoPieChartSharp size={22} color='var(--colors-text_color)' />,
+    icon: <IoPieChartSharp size={22} />,
   },
   {
     title: 'Findit',
@@ -83,6 +83,6 @@ export const topProjects = [
     github: 'https://github.com/rwietter/findit',
     link: 'https://github.com/rwietter/findit',
     tags: ['Rust', 'CLI', 'DuckDuckGo'],
-    icon: <SiDuckduckgo size={22} color='var(--colors-text_color)' />,
+    icon: <SiDuckduckgo size={22} />,
   },
 ]
