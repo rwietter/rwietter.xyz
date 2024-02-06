@@ -7,7 +7,7 @@ export const YearProjects = () => {
   const { t } = useTranslation()
   return (
     <S.Container>
-      <S.Title>{t('projects.years.title')}</S.Title>
+      <S.Title>{t('projects.title')}</S.Title>
       {Object.keys(projects)
         .sort((a, b) => Number(b) - Number(a))
         .map((year) => (
@@ -42,9 +42,7 @@ const ProjectItemComponent = ({ project }: any) => {
       >
         <strong>{project.title}</strong>:
         <span>
-          {t(
-            `projects.years.${project.title.toLowerCase().replace(/ /g, '-')}`,
-          )}
+          {t(`projects.${project.title.toLowerCase().replace(/ /g, '-')}`)}
         </span>
       </S.ListItemName>
     </S.ListItem>
