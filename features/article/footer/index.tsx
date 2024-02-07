@@ -2,6 +2,7 @@ import { SidebarSocialIcons } from 'components/StickyBar/Social'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { memo, type FC } from 'react'
+import { useTranslation } from 'react-i18next'
 import { FiCoffee, FiTwitter } from 'react-icons/fi'
 import { GoCommentDiscussion } from 'react-icons/go'
 import * as S from './styles'
@@ -14,24 +15,32 @@ interface ArticleFooterProps {
 
 const ArticleFooter: FC<ArticleFooterProps> = ({ author, category, name }) => {
   const { asPath } = useRouter()
-  const tweetUrl = `http://twitter.com/share?text=I just read "${name}"&url=https://rwietterc.xyz${asPath}&hashtags=${category}`
+  const { t } = useTranslation()
+
+  const tweetUrl = `http://twitter.com/share?text=${t(
+    'article.justRead',
+  )} "${name}"&url=https://rwietterc.xyz${asPath}&hashtags=${category}`
+
   const linkToSearchOnTwietter = `https://twitter.com/search?q=https://rwietterc.xyz${asPath}`
+
   return (
     <S.ArticleFooterContainer>
       <S.Separator />
       <S.NavHeader>
         <a href={tweetUrl} target='_blank' rel='noreferrer'>
           <FiTwitter size={14} />
-          &nbsp;Tweet this article
+          &nbsp;{t('article.shareOnTwitter')}
         </a>
         <a href={linkToSearchOnTwietter} target='_blank' rel='noreferrer'>
           <GoCommentDiscussion size={14} />
-          &nbsp;Discuss on Twitter
+          &nbsp;{t('article.joinTheDiscussion')}
         </a>
-        <Link href={`/blog/category/${category}`}>
-          <FiCoffee size={14} />
-          &nbsp;Learn more about {category}
-        </Link>
+        {category && (
+          <Link href={`/blog/category/${category}`}>
+            <FiCoffee size={14} />
+            &nbsp;{t('article.moreIn')} {category}
+          </Link>
+        )}
       </S.NavHeader>
       <S.Separator />
       <S.SocialContainer>
@@ -45,7 +54,7 @@ const ArticleFooter: FC<ArticleFooterProps> = ({ author, category, name }) => {
         </S.License>
         {author && (
           <h4>
-            Written by <strong>{author}</strong>
+            {t('article.writtenBy')} <strong>{author}</strong>
           </h4>
         )}
       </S.SocialContainer>

@@ -18,5 +18,10 @@
   "projects.illusion-theme": "A fork of Dracula Official, Illusion is a dark theme for Visual Studio Code.",
   "projects.prettysql": "Indent and format your SQL code, take a screenshot and share with your friends.",
   "projects.econext": "EcoNext aims to connect entities, companies and people to assist in the disposal of organic and inorganic waste.",
-  "projects.lyrics": "Search for song lyrics simply and quickly."
+  "projects.lyrics": "Search for song lyrics simply and quickly.",
+  "article.writtenBy": "Written by",
+  "article.moreIn": "Learn more about",
+  "article.joinTheDiscussion": "Discuss on Twitter",
+  "article.shareOnTwitter": "Tweet this article",
+  "article.justRead": "I just read"
 }

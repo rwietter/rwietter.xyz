@@ -13,8 +13,8 @@ i18n.use(initReactI18next).init({
       translation: commonPt,
     },
   },
-  lng: 'pt',
-  fallbackLng: 'pt',
+  lng: 'en',
+  fallbackLng: 'en',
   debug: process.env.NODE_ENV === 'development',
   cache: {
     enabled: true,
