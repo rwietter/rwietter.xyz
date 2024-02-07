@@ -13,11 +13,7 @@ interface ArticleFooterProps {
   category: string
 }
 
-const ArticleFooter: FC<ArticleFooterProps> = ({
-  author = '',
-  category = '',
-  name = '',
-}) => {
+const ArticleFooter: FC<ArticleFooterProps> = ({ author, category, name }) => {
   const { asPath } = useRouter()
   const { t } = useTranslation()
 
@@ -39,10 +35,12 @@ const ArticleFooter: FC<ArticleFooterProps> = ({
           <GoCommentDiscussion size={14} />
           &nbsp;{t('article.joinTheDiscussion')}
         </a>
-        <Link href={`/blog/category/${category}`}>
-          <FiCoffee size={14} />
-          &nbsp;{t('article.moreIn')} {category}
-        </Link>
+        {category && (
+          <Link href={`/blog/category/${category}`}>
+            <FiCoffee size={14} />
+            &nbsp;{t('article.moreIn')} {category}
+          </Link>
+        )}
       </S.NavHeader>
       <S.Separator />
       <S.SocialContainer>
