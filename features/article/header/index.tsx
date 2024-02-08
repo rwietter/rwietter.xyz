@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React, { memo } from 'react'
 import { AiOutlineArrowLeft, AiOutlineCalendar } from 'react-icons/ai'
 import { RiTimer2Line } from 'react-icons/ri'
+import { useTranslation } from 'react-i18next'
 
 import { getLocaleDate } from 'utils/get-locale-date'
 import { getReadingTime } from 'utils/getTimeReading'
@@ -12,11 +13,22 @@ interface ArticleHeaderData {
   article: Attributes
 }
 
+type Langs = {
+  [key: string]: string
+}
+
+const langs: Langs = {
+  en: 'en-US',
+  pt: 'pt-BR',
+}
+
 const ArticleHeader: React.FC<ArticleHeaderData> = (props) => {
   const { readTime } = getReadingTime(props.article?.attributes?.content)
+  const { t, i18n } = useTranslation()
+
   const { localeDate: publishedAt } = getLocaleDate(
     props.article?.attributes?.publishedAt,
-    'pt-BR',
+    langs[i18n.language],
   )
 
   return (
@@ -26,7 +38,7 @@ const ArticleHeader: React.FC<ArticleHeaderData> = (props) => {
           <Link href='/blog'>
             <CSS.BackToOverview type='button' aria-label='Back to overview'>
               <AiOutlineArrowLeft size={19} aria-hidden='true' />
-              <p>Back to overview</p>
+              <p>{t('backToOverview')}</p>
             </CSS.BackToOverview>
           </Link>
           <div>
