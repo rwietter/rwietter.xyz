@@ -107,7 +107,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: true,
+    fallback: 'blocking',
   }
 }
 
@@ -129,7 +129,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         data.articles.data[0].attributes.image.data.attributes.url,
       ),
     },
-    revalidate: 300, // 5 minutes
+    revalidate: 10,
   }
 }
 
