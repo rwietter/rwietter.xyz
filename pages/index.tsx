@@ -48,7 +48,7 @@ export const getStaticProps: GetStaticProps = async () => {
         lastFm,
         weather,
       },
-      revalidate: 10, // 1 hour
+      revalidate: 10,
     }
   } catch (error) {
     return {
