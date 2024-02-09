@@ -49,7 +49,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     variables: { slug: params?.slug },
   })
 
-  if (!data) return { props: {} }
+  if (!data)
+    return {
+      props: {
+        slug: '',
+        categories: [],
+      },
+    }
 
   return {
     props: {
