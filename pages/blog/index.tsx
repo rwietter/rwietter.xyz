@@ -32,9 +32,6 @@ export const getStaticProps: GetStaticProps = async () => {
     query: ARTICLES_QUERY,
   })
 
-  if (loading) return { props: { articles: null } }
-  if (errors) return { props: { articles: null } }
-
   // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   const articles: IArticles[] = data.articles.data.map(async (article: any) => {
     const image = await blurImage(
@@ -64,7 +61,7 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       articles: reorderArticles,
     },
-    revalidate: 300, // 5 minutes
+    revalidate: 10,
   }
 }
 
