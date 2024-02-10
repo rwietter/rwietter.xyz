@@ -1,0 +1,56 @@
+:root {
+  --bg-color: #ffffff;
+  --bg-alt-color: #f2f3f7;
+  --text-color: #0c0d11;
+  --text-gray-color: #555969;
+  --text-alt-color: #080808;
+  --caret-color: #0c0d11;
+  --main-color: #8338ec;
+  --sub-color: #c9c9cf;
+  --sub-alt-color: #f4f4f6;
+  --select: #4433ff;
+  --highlight: #4433ff;
+  --cb-bg-color: rgba(255, 255, 255, 0.6);
+  --cb-box-alt-color: rgba(0, 0, 0, 0.1);
+  --neutral: #ebf0f5;
+
+  --transition-primary: color 300ms ease, background 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
+
+  --font-primary: Inter, sans-serif;
+  --font-secondary: Inter, sans-serif;
+  --font-title: var(--font-secondary), Inter, sans-serif;
+  --font-code: "Fantasque Sans Mono", monospace;
+  --font-bolder: 'Kalam', sans-serif;
+
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    --font-secondary: InterVariable, sans-serif;
+    font-feature-settings: 'ss01' 1, 'ss02' 1, 'ss03' 1, 'ss04' 1, 'ss07' 1, 'zero' 1, 'cv05' 1, 'cv08' 1, 'cv10' 1, 'cv09' 1, 'cv02' 1, 'cv03' 1, 'cv04' 1, 'cv06' 1, 'cv12' 1, 'cv13' 1, 'liga' 1, 'calt' 1;
+  }
+}
+
+.dark:root {
+  --bg-color: #000000;
+  --bg-alt-color: #121212;
+  --text-color: #f6f5f5;
+  --text-gray-color: #adadad;
+  --text-alt-color: #ffffff;
+  --caret-color: #0f0f11;
+  --main-color: #a4b9ef;
+  --sub-color: #0f0f11;
+  --sub-alt-color: #0f0f11;
+  --error-color: #ff4754;
+  --highlight: rgba(97, 123, 255, 1);
+  --select: #617bff;
+  --cb-bg-color: rgba(0, 0, 0, 0.6);
+  --cb-box-alt-color: rgba(255, 255, 255, 0.1);
+  --neutral: #3a4048;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Inter, sans-serif;
+}

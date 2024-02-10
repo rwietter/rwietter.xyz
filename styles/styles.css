@@ -3,25 +3,7 @@
 @tailwind utilities; */
 
 @import "fonts.css";
-
-:root {
-  font-family: Inter, sans-serif;
-}
-
-@supports (font-variation-settings: normal) {
-  :root {
-    --font-secondary: InterVariable, sans-serif;
-    font-feature-settings: 'ss01' 1, 'ss02' 1, 'ss03' 1, 'ss04' 1, 'ss07' 1, 'zero' 1, 'cv05' 1, 'cv08' 1, 'cv10' 1, 'cv09' 1, 'cv02' 1, 'cv03' 1, 'cv04' 1, 'cv06' 1, 'cv12' 1, 'cv13' 1, 'liga' 1, 'calt' 1;
-  }
-}
-
-:root {
-  --font-primary: Inter, sans-serif;
-  --font-secondary: Inter, sans-serif;
-  --font-title: var(--font-secondary), Inter, sans-serif;
-  --font-code: "Fantasque Sans Mono", monospace;
-  --font-bolder: 'Kalam', sans-serif;
-}
+@import "theme.css";
 
 /* scrollbar-gutter prevents layout shift when scrollbar appears */
 /* html {
@@ -98,6 +80,7 @@ a,
 p,
 time,
 pre,
+strong,
 button,
 code,
 samp,

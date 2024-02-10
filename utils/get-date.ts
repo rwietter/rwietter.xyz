@@ -15,11 +15,11 @@ export const getDate = (date: Date, locale: LocaleLang): string | null => {
     en: () =>
       `${format(date, "dd'rd' MMMM yyyy", {
         locale: lang,
-      })} • ${format(date, 'HH:mm:ss a', { locale: lang })}`,
+      })}`,
     pt: () =>
       `${format(date, 'dd MMMM yyyy', {
         locale: lang,
-      })} • ${format(date, 'HH:mm:ss a', { locale: lang })}`,
+      })}`,
   }
 
   return localeIndexedLoockup[locale] ? localeIndexedLoockup[locale]() : null

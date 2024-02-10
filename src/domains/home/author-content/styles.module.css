@@ -1,0 +1,21 @@
+.container {
+  padding: 1.2rem 0 0 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 720px) {
+  .container {
+    padding: 1.6rem 0 0.8rem 0;
+  }
+}
+
+/* CurrentlyInformation styles */
+.currentlyInformation {
+  padding: 0.4rem 0;
+  color: var(--text-color);
+  transition: var(--transition-primary);
+}

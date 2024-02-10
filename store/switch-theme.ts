@@ -1,4 +1,4 @@
-import { AvailableThemes } from 'features/ui/theme'
+import { AvailableThemes } from 'src/ui/theme'
 import { create, type StoreApi, type UseBoundStore } from 'zustand'
 import { createJSONStorage, persist } from 'zustand/middleware'
 
