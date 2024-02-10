@@ -6,7 +6,7 @@ import { FC } from 'react'
 export const JSONLD = {
   '@context': 'http://schema.org',
   '@type': 'Person',
-  name: 'Maurício Witter Blog',
+  name: 'Maurício Witter',
   brand: 'rwietter',
   description:
     'This blog is about my journey as a Software Developer. Here do you find my thoughts, ideas, and experiences. I hope you enjoy it.',
@@ -15,7 +15,7 @@ export const JSONLD = {
     addressLocality: 'Constantina',
     addressRegion: 'RS',
     postalCode: '9968000',
-    streetAddress: 'Bulevar kralja Aleksandra 1',
+    streetAddress: '',
   },
   social: ['https://twitter.com/rwietter', 'https://rwietterc.xyz'],
   email: 'mailto:mauriciobw17@gmail.com',

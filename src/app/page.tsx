@@ -1,6 +1,5 @@
-// import { KbarInit } from 'components/Kbar'
-// import type { RecentTrackProps } from 'components/Lastfm/types'
 import { Metadata } from 'next'
+import { KbarInit } from 'src/components/Kbar/KbarInit'
 import { NextSEO } from 'src/components/SEO'
 import { makeSeo } from 'src/components/SEO/makeSeo'
 import AuthorContent from 'src/domains/home/author-content'
@@ -34,7 +33,7 @@ const Page = () => (
     />
     <AuthorHeader />
     <AuthorContent />
-    {/* <KbarInit /> */}
+    <KbarInit />
   </>
 )
 

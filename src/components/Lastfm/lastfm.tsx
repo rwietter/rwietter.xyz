@@ -1,23 +1,24 @@
 import type { FC } from 'react'
 import { BsSpotify } from 'react-icons/bs'
 import { TbPlayerPause, TbPlayerStop } from 'react-icons/tb'
-import { NotPlaying } from './NotPlaying'
 import styles from './styles.module.css'
 import type { LastFmTrackProps, TrackProps } from './types'
 
 export const LastFMTrack: FC<LastFmTrackProps> = ({ lastFm }) => {
-  if (lastFm === null) return <span />
-
   const track: TrackProps = lastFm?.recenttracks?.track[0]
 
-  if (!track) return <NotPlaying />
+  if (!track) return <span />
 
   const isPlaying = track['@attr']?.nowplaying === 'true'
   const imageUrl = track.image[3]['#text']
 
   return (
     <div className={styles.playing}>
-      {imageUrl ? <img alt={track.name} width={90} height={90} /> : <span />}
+      {imageUrl ? (
+        <img alt={track.name} src={imageUrl} width={90} height={90} />
+      ) : (
+        <span />
+      )}
       <div className={styles.playingArtist}>
         <div className={styles.playingSpot}>
           <BsSpotify size={19} color='#1DB954' />

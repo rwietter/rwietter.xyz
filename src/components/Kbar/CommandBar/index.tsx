@@ -6,7 +6,7 @@ import {
   KBarResults,
   useDeepMatches,
 } from 'kbar'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import { ReactNode, memo } from 'react'
 import { BiCodeCurly } from 'react-icons/bi'
 import { CiLink } from 'react-icons/ci'
@@ -74,7 +74,6 @@ type Props = {
 }
 
 const CommandBar = ({ children }: Props) => {
-  'use client'
   const router = useRouter()
 
   const copyLink = () => {
@@ -190,7 +189,6 @@ const CommandBar = ({ children }: Props) => {
           </Animator>
         </Positioner>
       </KBarPortal>
-
       {children}
     </KBarProvider>
   )

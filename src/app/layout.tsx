@@ -1,9 +1,8 @@
 import type { Metadata } from 'next'
 import { Highlights } from 'src/app/highlights'
 import { StickyBar } from 'src/components/StickyBar'
-
+import CommandBar from 'src/components/Kbar/CommandBar'
 import Header from 'src/components/Header'
-// import CommandBar from 'src/components/Kbar/command-bar'
 
 import { Analytics } from '@vercel/analytics/react'
 
@@ -148,10 +147,12 @@ export default function RootLayout({
       <body>
         <div className={styles.main}>
           <Highlights>
-            <Header />
-            <Analytics />
-            <main className={styles.layout}>{children}</main>
-            <StickyBar />
+            <CommandBar>
+              <Header />
+              <Analytics />
+              <main className={styles.layout}>{children}</main>
+              <StickyBar />
+            </CommandBar>
           </Highlights>
         </div>
       </body>

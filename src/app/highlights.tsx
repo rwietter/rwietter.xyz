@@ -5,7 +5,6 @@ import apolloClient from 'utils/apollo-client'
 
 import { ApolloProvider } from '@apollo/react-hooks'
 import { FC, PropsWithChildren, useEffect } from 'react'
-import { LoadingIndicator } from 'src/components/Loading'
 
 import 'languages/i18n'
 import 'utils/highlights'
@@ -37,7 +36,6 @@ const Highlights: FC<HighlightsProps> = ({ children }) => {
 
   return (
     <>
-      <LoadingIndicator />
       <ApolloProvider client={apolloClient}>{children}</ApolloProvider>
     </>
   )

@@ -1,6 +1,8 @@
+'use client'
+
 import { useKBar } from 'kbar'
 import { Trans, useTranslation } from 'react-i18next'
-import { KbarButton, KbarContainer } from './styles'
+import styles from './styles.module.css'
 
 const KbarInit = () => {
   const kbar = useKBar()
@@ -9,8 +11,12 @@ const KbarInit = () => {
   const handleOpenKbar = () => kbar.query.toggle()
 
   return (
-    <KbarContainer>
-      <KbarButton type='button' onClick={handleOpenKbar}>
+    <div className={styles.kbarContainer}>
+      <button
+        className={styles.kbarButton}
+        type='button'
+        onClick={handleOpenKbar}
+      >
         <Trans i18nKey='home.kbar-shortcut' t={t}>
           Press &nbsp;
           <code>ctrl</code>
@@ -18,8 +24,8 @@ const KbarInit = () => {
           <code>space</code>
           &nbsp; to start →
         </Trans>
-      </KbarButton>
-    </KbarContainer>
+      </button>
+    </div>
   )
 }
 

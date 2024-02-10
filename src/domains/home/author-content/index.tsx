@@ -11,6 +11,8 @@ export interface AuthorContentProps {
   weather: any
 }
 
+export const revalidate = 60
+
 async function getData() {
   const [weather, lastfm] = await Promise.all([
     fetcherWeather(),
