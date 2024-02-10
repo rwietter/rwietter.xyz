@@ -1,2 +1,2 @@
-export { TopProjects } from './top-projects'
-export { YearProjects } from './year-projects'
+export { TopProjects } from './TopProjects'
+export { YearProjects } from './YearProjects'

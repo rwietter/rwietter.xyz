@@ -1,26 +1,27 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ProjectItem, projects } from './data'
-import * as S from './styles'
+import { motion } from 'framer-motion'
+import styles from './styles.module.css'
 
 export const YearProjects = () => {
   const { t } = useTranslation()
   return (
-    <S.Container>
-      <S.Title>{t('projects.title')}</S.Title>
+    <div className={styles.container}>
+      <h1 className={styles.title}>{t('projects.title')}</h1>
       {Object.keys(projects)
         .sort((a, b) => Number(b) - Number(a))
         .map((year) => (
-          <S.ProjectItemContainer key={year}>
-            <S.Year>{year}</S.Year>
-            <S.List>
+          <div className={styles.projectItemContainer} key={year}>
+            <span className={styles.year}>{year}</span>
+            <div className={styles.list}>
               {projects[year].map((project: ProjectItem) => (
                 <ProjectItemComponent key={project.title} project={project} />
               ))}
-            </S.List>
-          </S.ProjectItemContainer>
+            </div>
+          </div>
         ))}
-    </S.Container>
+    </div>
   )
 }
 
@@ -29,13 +30,21 @@ const ProjectItemComponent = ({ project }: any) => {
   const { t } = useTranslation()
 
   return (
-    <S.ListItem
+    <motion.section
+      className={styles.listItem}
       key={project.title}
       onHoverStart={() => setIsBeingHovered(true)}
       onHoverEnd={() => setIsBeingHovered(false)}
     >
-      {isBeingHovered && <S.HoverBackground layoutId='background' layout />}
-      <S.ListItemName
+      {isBeingHovered && (
+        <motion.div
+          className={styles.hoverBackground}
+          layoutId='background'
+          layout
+        />
+      )}
+      <a
+        className={styles.listItemName}
         href={project.github}
         target='_blank'
         rel='noopener noreferrer'
@@ -44,7 +53,7 @@ const ProjectItemComponent = ({ project }: any) => {
         <span>
           {t(`projects.${project.title.toLowerCase().replace(/ /g, '-')}`)}
         </span>
-      </S.ListItemName>
-    </S.ListItem>
+      </a>
+    </motion.section>
   )
 }

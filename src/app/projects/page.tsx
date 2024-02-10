@@ -1,7 +1,6 @@
 'use client'
 import { NextSEO } from 'src/components/SEO'
 import { TopProjects, YearProjects } from 'src/domains/projects'
-import { Wrapper } from 'src/domains/projects/styles'
 
 const Page = () => (
   <>
@@ -13,10 +12,8 @@ const Page = () => (
       description='Here, in this page, you can find some of my favorite projects. I hope you enjoy it. :)'
       image='https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png'
     />
-    <Wrapper>
-      <TopProjects />
-      <YearProjects />
-    </Wrapper>
+    <TopProjects />
+    <YearProjects />
   </>
 )
 

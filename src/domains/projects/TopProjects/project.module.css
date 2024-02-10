@@ -1,0 +1,59 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  height: 100%;
+  font-family: var(--font-primary);
+}
+
+.container {
+  transition: var(--transiton-primary);
+  padding: var(--space-3);
+  position: relative;
+  z-index: 1;
+  border-radius: 8px;
+  background: transparent;
+
+  --fluid-type-max: 1.1rem;
+}
+
+.container:hover p {
+  color: var(--text-color);
+}
+
+.container svg {
+  fill: var(--text-color);
+  color: var(--text-color);
+  transition: var(--transiton-primary);
+}
+
+.container:hover svg {
+  fill: var(--select);
+  color: var(--select);
+}
+
+.title {
+  color: var(--text-color);
+  font-weight: 600;
+  padding-top: var(--space-2);
+}
+
+.description {
+  color: var(--text-alt-color);
+  font-weight: 300;
+  padding-top: var(--space-2);
+  line-height: 1.5;
+  text-align: start;
+}
+
+.hoverBackground {
+  background: var(--sub-alt-color);
+  transition: var(--transiton-primary);
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 8px;
+}

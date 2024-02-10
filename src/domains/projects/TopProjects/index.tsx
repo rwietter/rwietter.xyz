@@ -1,16 +1,16 @@
 import React from 'react'
-import { ProjectItem } from '../project-item'
 import { topProjects } from './data'
-import { Grid } from './styles'
+import styles from './styles.module.css'
+import { ProjectItem } from './ProjectItem'
 
 const TopProjects: React.FC = () => (
-  <Grid>
+  <section className={styles.grid}>
     {topProjects
       .sort((item, bitem) => (item.title < bitem.title ? -1 : 1))
       .map((project) => (
         <ProjectItem key={project.link} project={project} />
       ))}
-  </Grid>
+  </section>
 )
 
 export { TopProjects }
