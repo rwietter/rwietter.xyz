@@ -11,7 +11,9 @@
   position: fixed;
   border-radius: 0.5rem;
   width: 90%;
-  transition: var(--transiton-primary), border-color 300ms ease;
+  transition:
+    var(--transition-primary),
+    border-color 300ms ease;
   background: var(--cb-box-alt-color);
   backdrop-filter: blur(5px);
   z-index: 10;
@@ -51,7 +53,7 @@
 .menuBarLink {
   display: block;
   color: var(--text-color);
-  transition: var(--transiton-primary);
+  transition: var(--transition-primary);
 }
 
 .menuBarItem {
@@ -63,7 +65,7 @@
   cursor: pointer;
   padding: 1.1rem;
   position: relative;
-  transition: var(--transiton-primary);
+  transition: var(--transition-primary);
   display: flex;
   align-items: center;
 }

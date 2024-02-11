@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities; */
 
-@import "fonts.css";
-@import "theme.css";
-
-/* scrollbar-gutter prevents layout shift when scrollbar appears */
-/* html {
-  scrollbar-gutter: stable;
-} */
-
 * {
   margin: 0;
   padding: 0;
@@ -17,29 +9,30 @@
 }
 
 *::selection {
-  background: var(--colors-select) !important;
-  color: #FFFFFF !important;
+  background: var(--select) !important;
+  color: #ffffff !important;
+  transition: var(--transition-primary);
 }
 
 ::-webkit-scrollbar {
-  width: .5rem;
-  height: .5rem;
+  width: 0.5rem;
+  height: 0.5rem;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--colors-bg_alt_color);
-  transition: var(--transitions-transitonTheme);
+  background: var(--bg_alt_color);
+  transition: var(--transition-primary);
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 50rem;
-  background: var(--colors-main_color);
-  transition: var(--transitions-transitonTheme);
+  background: var(--main-color);
+  transition: var(--transition-primary);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--colors-main_color);
-  transition: var(--transitions-transitonTheme);
+  background: var(--main-color);
+  transition: var(--transition-primary);
 }
 
 body {
@@ -87,13 +80,16 @@ samp,
 blockquote,
 li,
 tt {
-  font-size: clamp(var(--fluid-type-min, 1rem),
-      calc(1rem + var(--fluid-type-target, 5vw)),
-      var(--fluid-type-max, 1.4rem)) !important;
+  font-size: clamp(
+    var(--fluid-type-min, 1rem),
+    calc(1rem + var(--fluid-type-target, 5vw)),
+    var(--fluid-type-max, 1.4rem)
+  ) !important;
   text-rendering: optimizeLegibility;
 }
 
-@supports (-webkit-text-size-adjust: 100%) or (-moz-text-size-adjust: 100%) or (-ms-text-size-adjust: 100%) or (text-size-adjust: 100%) {
+@supports (-webkit-text-size-adjust: 100%) or (-moz-text-size-adjust: 100%) or
+  (-ms-text-size-adjust: 100%) or (text-size-adjust: 100%) {
   p {
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;

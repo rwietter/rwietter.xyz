@@ -6,7 +6,7 @@
 }
 
 .container {
-  transition: var(--transiton-primary);
+  transition: var(--transition-primary);
   padding: var(--space-3);
   position: relative;
   z-index: 1;
@@ -23,7 +23,7 @@
 .container svg {
   fill: var(--text-color);
   color: var(--text-color);
-  transition: var(--transiton-primary);
+  transition: var(--transition-primary);
 }
 
 .container:hover svg {
@@ -47,7 +47,7 @@
 
 .hoverBackground {
   background: var(--sub-alt-color);
-  transition: var(--transiton-primary);
+  transition: var(--transition-primary);
   position: absolute;
   left: 0;
   top: 0;

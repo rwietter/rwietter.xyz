@@ -8,36 +8,36 @@
   min-height: 100vh;
   background: var(--bg-color);
   padding: 0 1.5rem;
-  transition: var(--transitonTheme);
+  transition: var(--transition-primary);
 }
 
 .layout {
   display: flex;
   flex-direction: column;
   background: var(--bg-color);
-  transition: var(--transitonTheme);
+  transition: var(--transition-primary);
   width: 100%;
   max-width: 60rem;
   margin: 0 auto;
   padding: 1rem 1.5rem 8rem 1.5rem;
 }
 
-.layout[layout='small'] {
+.layout[layout="small"] {
   max-width: 60rem;
 }
 
-.layout[layout='medium'] {
+.layout[layout="medium"] {
   max-width: 70rem;
 }
 
-.layout[layout='large'] {
+.layout[layout="large"] {
   max-width: 80rem;
 }
 
-.layout[layout='full'] {
+.layout[layout="full"] {
   max-width: 100%;
 }
 
-.layout[layout='default'] {
+.layout[layout="default"] {
   max-width: 60rem;
 }

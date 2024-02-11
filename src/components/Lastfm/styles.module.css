@@ -4,7 +4,9 @@
   border: 1px solid var(--sub-alt-color);
   border-radius: 8px;
   margin-top: 0.7rem;
-  transition: var(--transiton-primary), border 0.3s ease;
+  transition:
+    var(--transition-primary),
+    border 0.3s ease;
   width: 100%;
   max-width: 400px;
   overflow: hidden;
@@ -25,7 +27,7 @@
   flex-direction: column;
   padding-top: 1rem;
   color: var(--text-color);
-  transition: var(--transiton-primary);
+  transition: var(--transition-primary);
 }
 
 .playingArtist .play a {
@@ -35,7 +37,7 @@
   text-decoration: none;
   color: var(--text-color);
   padding-top: 0.5rem;
-  transition: var(--transiton-primary);
+  transition: var(--transition-primary);
   font-family: var(--font-primary), monospace;
 }
 

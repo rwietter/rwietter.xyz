@@ -1,17 +1,17 @@
-import type { Metadata } from 'next'
-import { Highlights } from 'src/app/highlights'
 import { StickyBar } from 'src/components/StickyBar'
 import CommandBar from 'src/components/Kbar/CommandBar'
 import Header from 'src/components/Header'
 
 import { Analytics } from '@vercel/analytics/react'
 
-import styles from './styles.module.css'
+import Providers from './providers'
 
+import '../../styles/theme.css'
 import '../../styles/dracula-prism.css'
 import '../../styles/shadow-icon.css'
 import '../../styles/styles.css'
-import Providers from './providers'
+
+import styles from './styles.module.css'
 
 export default function RootLayout({
   children,
@@ -141,7 +141,7 @@ export default function RootLayout({
         content='/icons/mstile-310x310.png'
       />
       <body>
-        <div className={styles.main}>
+        <div className={`${styles.main} fade-in-layout`}>
           <CommandBar>
             <Providers>
               <Header />

@@ -1,6 +1,6 @@
 .container {
   color: var(--text-color);
-  transition: var(--transiton-primary);
+  transition: var(--transition-primary);
   width: 100%;
   max-width: 60rem;
   padding-top: 2rem;
@@ -13,7 +13,7 @@
   padding: 1rem 0;
   font-family: var(--font-secondary), monospace;
   color: var(--text-color);
-  transition: var(--transiton-primary);
+  transition: var(--transition-primary);
 
   --fluid-type-min: 1.5rem;
   --fluid-type-max: 2rem;
@@ -43,7 +43,7 @@
 
 .listItemName {
   color: var(--text-color);
-  transition: var(--transiton-primary);
+  transition: var(--transition-primary);
   font-family: var(--font-primary);
   font-weight: 300;
 
@@ -65,7 +65,7 @@
 
 .hoverBackground {
   background: var(--sub-alt-color);
-  transition: var(--transiton-primary);
+  transition: var(--transition-primary);
   position: absolute;
   top: 2px;
   right: 5px;

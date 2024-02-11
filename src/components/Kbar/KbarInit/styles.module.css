@@ -11,7 +11,7 @@
   padding: 2px 8px 4px 8px;
   border-radius: 1em;
   outline: none;
-  transition: var(--transitonTheme);
+  transition: var(--transition-primary);
   text-align: center;
   background: transparent;
   display: block;

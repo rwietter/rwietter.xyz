@@ -31,7 +31,7 @@
   padding-left: 0.4rem;
   position: relative;
   font-family: var(--font-secondary), monospace;
-  transition: var(--transiton-primary);
+  transition: var(--transition-primary);
   --fluid-type-min: 1rem;
   --fluid-type-max: 1.3rem;
   --fluid-type-target: 2vw;
@@ -69,11 +69,11 @@
 
 .navItem[data-active="active"] .link::after {
   position: absolute;
-  content: '';
+  content: "";
   width: 8px;
   height: 8px;
   background: var(--main-color);
-  transition: var(--transiton-primary);
+  transition: var(--transition-primary);
   border-radius: 50%;
   transform: translateX(-45%);
   top: -10px;
