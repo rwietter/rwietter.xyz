@@ -5,6 +5,8 @@ import { makeSeo } from 'src/components/SEO/makeSeo'
 import AuthorContent from 'src/domains/home/author-content'
 import AuthorHeader from 'src/domains/home/author-header'
 
+export const revalidate = 60
+
 const meta = {
   title: 'Mauricio Witter | Software Developer',
   description:
@@ -16,7 +18,7 @@ const meta = {
 export const metadata: Metadata = makeSeo({
   title: meta.title,
   description: meta.description,
-  slug: `/`,
+  slug: '/',
   image: meta.image,
   ogText: `*${meta.title}*;/n/n ${meta.description}`,
 })

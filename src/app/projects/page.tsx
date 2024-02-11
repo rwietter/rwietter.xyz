@@ -1,4 +1,3 @@
-'use client'
 import { NextSEO } from 'src/components/SEO'
 import { TopProjects, YearProjects } from 'src/domains/projects'
 

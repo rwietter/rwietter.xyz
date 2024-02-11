@@ -1,12 +1,16 @@
 import Image from 'next/image'
 import ARTICLE_QUERY from 'queries/article/article'
 import { ARTICLES_QUERY } from 'queries/articles/articles'
-import ArticleHeader from 'src/domains/article/header'
+import JSONLD from 'src/components/JSON-LD'
+import { NextSEO } from 'src/components/SEO'
 import ArticleContent from 'src/domains/article/content'
 import ArticleFooter from 'src/domains/article/footer'
+import ArticleHeader from 'src/domains/article/header'
+import styles from 'src/domains/article/styles.module.css'
 import apolloClient from 'utils/apollo-client'
 import { blurImage } from 'utils/blur-image'
-import styles from 'src/domains/article/styles.module.css'
+
+export const revalidate = 60
 
 export async function generateStaticParams() {
   const { data } = await apolloClient.query({ query: ARTICLES_QUERY })
@@ -45,12 +49,12 @@ const Page = async ({ params }: { params: { slug: string } }) => {
   return (
     <>
       {/* <Highlights /> */}
-      {/* <NextSEO
+      <NextSEO
         title={article?.attributes?.title}
         description={article?.attributes?.description}
         image={article?.attributes?.image?.data?.attributes?.url}
         author={article?.attributes?.author?.data?.attributes?.name}
-        url={`https://rwietterc.xyz${pathname}`}
+        url={'https://rwietterc.xyz'}
         content='article'
       />
       <JSONLD
@@ -59,8 +63,8 @@ const Page = async ({ params }: { params: { slug: string } }) => {
         image={article?.attributes?.image?.data?.attributes?.url}
         authorName={article?.attributes?.author?.data?.attributes?.name}
         datePublished={article?.attributes?.publishedAt}
-        url={`https://rwietterc.xyz${pathname}`}
-      /> */}
+        url={'https://rwietterc.xyz'}
+      />
       <section className={styles.articleContainer}>
         <div className={styles.articleMarkdownContainer}>
           <ArticleHeader article={article} />

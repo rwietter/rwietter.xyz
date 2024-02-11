@@ -1,7 +1,9 @@
+'use client'
+
+import { motion } from 'framer-motion'
 import { FC, ReactNode, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import styles from './project.module.css'
-import { motion } from 'framer-motion'
 
 interface IProject {
   project: {

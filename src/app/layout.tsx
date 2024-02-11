@@ -1,15 +1,15 @@
-import { StickyBar } from 'src/components/StickyBar'
-import CommandBar from 'src/components/Kbar/CommandBar'
 import Header from 'src/components/Header'
+import CommandBar from 'src/components/Kbar/CommandBar'
+import { StickyBar } from 'src/components/StickyBar'
 
 import { Analytics } from '@vercel/analytics/react'
 
 import Providers from './providers'
 
-import '../../styles/theme.css'
 import '../../styles/dracula-prism.css'
 import '../../styles/shadow-icon.css'
 import '../../styles/styles.css'
+import '../../styles/theme.css'
 
 import styles from './styles.module.css'
 
@@ -142,14 +142,14 @@ export default function RootLayout({
       />
       <body>
         <div className={`${styles.main} fade-in-layout`}>
-          {/* <CommandBar> */}
-          <Providers>
-            <Header />
-            <Analytics />
-            <main className={styles.layout}>{children}</main>
-            <StickyBar />
-          </Providers>
-          {/* </CommandBar> */}
+          <CommandBar>
+            <Providers>
+              <Header />
+              <Analytics />
+              <main className={styles.layout}>{children}</main>
+              <StickyBar />
+            </Providers>
+          </CommandBar>
         </div>
       </body>
     </html>

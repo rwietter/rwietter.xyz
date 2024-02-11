@@ -1,40 +1,28 @@
-'use client'
-
-import { useEffect, useRef, type ChangeEvent, type FC } from 'react'
-import * as S from './styles'
+import { type ChangeEvent, type FC } from 'react'
+import styles from './styles.module.css'
 
 interface SearchProps {
   handleInputChange: (event: ChangeEvent<HTMLInputElement>) => void
 }
 
 const Search: FC<SearchProps> = ({ handleInputChange }) => {
-  const inputRef = useRef<HTMLInputElement>(null)
-
-  useEffect(() => {
-    inputRef.current?.focus()
-    return () => {
-      inputRef.current?.blur()
-    }
-  }, [])
-
   return (
-    <S.SearchContent>
+    <section className={styles.searchContent}>
       <nav>
         <a href='#desk'>#Desk</a>
         <a href='#softwares'>#Softwares</a>
         <a href='#customization'>#Customization</a>
       </nav>
 
-      <S.InputSearch>
-        <S.Description>Pesquise por um item</S.Description>
+      <div className={styles.inputSearch}>
+        <span className={styles.description}>Pesquise por um item</span>
         <input
           type='text'
           onChange={handleInputChange}
           placeholder='Ex: vscode theme'
-          ref={inputRef}
         />
-      </S.InputSearch>
-    </S.SearchContent>
+      </div>
+    </section>
   )
 }
 export { Search }

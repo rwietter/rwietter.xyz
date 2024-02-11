@@ -1,0 +1,39 @@
+/* terminal */
+.terminal {
+  border-radius: 8px;
+  border-top-right-radius: 0;
+  padding: 10px;
+  transition: var(--transition-primary);
+  margin-top: 2.8rem;
+  display: block;
+  position: relative;
+  border: 1px solid var(--cb-box-alt-color);
+}
+
+.terminal button {
+  padding: 0.1rem 1rem;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  outline: none;
+  font-family: var(--font-secondary), monospace;
+  position: absolute;
+  right: 0;
+  background: transparent;
+  cursor: pointer;
+  top: -33px;
+  border-top: 1px solid var(--cb-box-alt-color);
+  border-left: 1px solid var(--cb-box-alt-color);
+  border-right: 1px solid var(--cb-box-alt-color);
+  border-bottom: none;
+  color: var(--text-color);
+  transition: var(--transition-primary);
+}
+
+.code {
+  color: var(--text-color);
+  font-family: var(--font-code);
+  line-height: 1.5;
+  font-weight: 200;
+
+  --fluid-type-max: 1rem;
+}

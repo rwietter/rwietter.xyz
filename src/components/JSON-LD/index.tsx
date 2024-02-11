@@ -14,7 +14,7 @@ interface JSONLDProps {
 
 const JSONLD: React.FC<JSONLDProps> = (props) => (
   <ArticleJsonLd
-    useAppDir={false}
+    useAppDir={true}
     url={props.url}
     title={props.title}
     images={[props.image]}

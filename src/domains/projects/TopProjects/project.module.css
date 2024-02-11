@@ -7,7 +7,7 @@
 
 .container {
   transition: var(--transition-primary);
-  padding: var(--space-3);
+  padding: 1em;
   position: relative;
   z-index: 1;
   border-radius: 8px;

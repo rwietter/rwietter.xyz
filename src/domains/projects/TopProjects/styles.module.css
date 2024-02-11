@@ -2,9 +2,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-auto-flow: row;
-  padding-top: var(--space-4);
+  padding-top: 2em;
 }
 
-.grid > div > div {
+.grid>div>div {
   height: auto;
 }

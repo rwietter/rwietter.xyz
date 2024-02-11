@@ -1,0 +1,64 @@
+/* searchContent */
+.searchContent {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.searchContent nav {
+  align-items: center;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-start;
+  line-height: 1.8;
+}
+
+.searchContent nav a {
+  color: var(--text-color);
+  transition: var(--transition-primary);
+  font-family: var(--font-secondary);
+}
+
+.searchContent nav a:hover {
+  color: var(--main-color);
+}
+
+.searchContent nav a:not(:last-child) {
+  margin-right: 1rem;
+}
+
+/* inputSearch */
+.inputSearch {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  width: 100%;
+}
+
+.inputSearch input {
+  background: var(--bg-alt-color);
+  border: 1px solid var(--sub-color);
+  border-radius: 8px;
+  color: var(--text-color);
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  outline: none;
+  padding: 10px;
+  transition: var(--transition-primary);
+  width: 100%;
+}
+
+.inputSearch input:focus {
+  border-color: var(--main-color);
+}
+
+.inputSearch input::placeholder {
+  color: var(--text-color);
+}
+
+/* description */
+.description {
+  color: var(--text-color);
+  transition: var(--transition-primary);
+  font-family: var(--font-secondary);
+}

@@ -1,6 +1,6 @@
 import { type FC } from 'react'
 
-import * as S from './styles'
+import styles from './styles.module.css'
 
 interface SetupMapperProps {
   title: string
@@ -9,18 +9,23 @@ interface SetupMapperProps {
 }
 
 const SetupMapper: FC<SetupMapperProps> = ({ data, title, id }) => (
-  <S.SetupMapperContainer>
+  <div className={styles.setupMapperContainer}>
     <h2 id={id}>{title}</h2>
     <ul>
-      {data.map((item: any) => (
+      {data?.map((item: any) => (
         <li key={item.name}>
-          <S.SoftwareLink href={item.url} target='_blank' rel='noreferrer'>
+          <a
+            className={styles.softwareLink}
+            href={item.url}
+            target='_blank'
+            rel='noreferrer'
+          >
             <span>{item.name}</span>: {item.type}
-          </S.SoftwareLink>
+          </a>
         </li>
       ))}
     </ul>
-  </S.SetupMapperContainer>
+  </div>
 )
 
 export { SetupMapper }

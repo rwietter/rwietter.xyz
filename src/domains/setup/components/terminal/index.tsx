@@ -2,14 +2,14 @@
 
 import { type FC } from 'react'
 
-import * as S from './styles'
+import styles from './styles.module.css'
 
 interface TerminalProps {
   text: string
 }
 
 const Terminal: FC<TerminalProps> = ({ text }) => (
-  <S.Terminal>
+  <code className={styles.terminal}>
     <button
       type='button'
       title='copy code'
@@ -17,8 +17,10 @@ const Terminal: FC<TerminalProps> = ({ text }) => (
     >
       <CopyIcon />
     </button>
-    <code lang='bash'>{text}</code>
-  </S.Terminal>
+    <code className={styles.code} lang='bash'>
+      {text}
+    </code>
+  </code>
 )
 
 export { Terminal }
