@@ -1,9 +1,8 @@
 import { FC } from 'react'
-
-import { Properties } from '../ts'
-import { ArticleContainer, ArticleMarkdown } from './styles'
-
 import MdRenderer from 'src/domains/article/content/md'
+import { Properties } from '../ts'
+
+import styles from './styles.module.css'
 
 interface ArticleData {
   article: {
@@ -12,11 +11,11 @@ interface ArticleData {
 }
 
 const ArticleContent: FC<ArticleData> = ({ article }) => (
-  <ArticleContainer>
-    <ArticleMarkdown>
+  <div className={styles.articleContainer}>
+    <article className={styles.articleMarkdown}>
       <MdRenderer article={article.attributes.content} />
-    </ArticleMarkdown>
-  </ArticleContainer>
+    </article>
+  </div>
 )
 
 export default ArticleContent

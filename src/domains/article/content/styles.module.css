@@ -1,0 +1,13 @@
+.articleContainer {
+  font-family: var(--font-primary);
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.articleMarkdown {
+  --fluid-type-min: 1rem;
+  --fluid-type-max: 1.15rem;
+  line-height: 1.7 !important;
+  padding: 2rem 1.4rem;
+  color: var(--text-color);
+}

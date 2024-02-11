@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import ARTICLE_QUERY from 'queries/article/article'
 import { ARTICLES_QUERY } from 'queries/articles/articles'
-import { Highlights } from 'src/app/highlights'
 import ArticleHeader from 'src/domains/article/header'
 import ArticleContent from 'src/domains/article/content'
 import ArticleFooter from 'src/domains/article/footer'
@@ -45,7 +44,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
 
   return (
     <>
-      <Highlights />
+      {/* <Highlights /> */}
       {/* <NextSEO
         title={article?.attributes?.title}
         description={article?.attributes?.description}
