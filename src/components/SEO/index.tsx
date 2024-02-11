@@ -57,7 +57,7 @@ export const NextSEO: FC<SEOProps> = (props) => {
         title,
         description,
         images: [
-          {
+          { 
             url: image,
             width: 800,
             height: 600,

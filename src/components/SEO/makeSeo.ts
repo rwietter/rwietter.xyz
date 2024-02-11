@@ -6,39 +6,69 @@ export const makeSeo = ({
   image,
   slug,
   ogText,
+  abstract = 'Notices about my projects.',
+  keywords = 'projects, portfolio, software, developer',
+  author = 'Mauricio Witter',
 }: {
   title: string
   description: string
   image: string
   slug: string
   ogText: string
+  abstract?: string
+  keywords?: string
+  author?: string
 }): Metadata => {
   return {
     title,
     description,
-    twitter: {
-      site: '@rwietter',
-      creator: '@rwietter',
-      // @ts-ignore
-      card: 'summary_large_image',
-      title: title,
-      description: description,
-      // image: ogImageUrl,
-      // imageAlt: ogText.replace('*', ''),
+    openGraph: {
+      url: `https://rwietterc.xyz${slug}`,
+      type: 'website',
+      siteName: 'Maurício W. | Software Developer',
+      ttl: 60,
+      determiner: 'auto',
+      countryName: 'Brazil',
+      alternateLocale: 'pt-BR',
+      locale: 'en_US',
+      title,
+      description,
       images: [
         {
-          url: image,
-          width: 1200,
-          height: 630,
-          alt: ogText.replace('*', '').replace('/n', ''),
+          url: '',
+          width: 800,
+          height: 600,
+          alt: description,
         },
       ],
     },
-    openGraph: {
-      title: title,
-      description: description,
-      url: `https://www.rwietterc.xyz${slug}`,
-      type: 'website',
+    abstract,
+    keywords,
+    robots: 'index, follow',
+    authors: [
+      {
+        name: author,
+        url: 'https://rwietterc.xyz',
+      },
+    ],
+    applicationName: 'Maurício W. | Software Developer',
+    manifest: '/manifest.json',
+    classification: 'Software Engineer',
+    alternates: {
+      canonical: `https://rwietterc.xyz${slug}`,
+    },
+    category: 'Software Engineer',
+    creator: author,
+    bookmarks: `https://rwietterc.xyz${slug}`,
+    publisher: author,
+    twitter: {
+      site: '@rwietter',
+      creator: '@rwietter',
+      card: 'summary_large_image',
+      title,
+      description,
+      siteId: `https://rwietterc.xyz${slug}`,
+      creatorId: 'https://rwietterc.xyz',
       images: [
         {
           url: image,
