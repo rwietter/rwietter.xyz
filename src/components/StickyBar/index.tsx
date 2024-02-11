@@ -10,7 +10,7 @@ import { IoLanguageOutline } from 'react-icons/io5'
 import { VscHome } from 'react-icons/vsc'
 import styles from './styles.module.css'
 
-import SwitchTheme from 'src/components/SwitchTheme/SwitchTheme'
+import SwitchTheme from 'src/components/SwitchTheme'
 
 const StickyBar = () => {
   const { query } = useKBar()

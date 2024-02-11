@@ -1,38 +1,38 @@
 'use client'
 
-import React from 'react'
+import { FC, useRef } from 'react'
 import { MdSunny } from 'react-icons/md'
-import { Button } from './styles'
+import styles from './styles.module.css'
 
-interface SwitchThemeProps {
+interface Props {
   visible: 'header' | 'sticky'
 }
 
-const SwitchTheme: React.FC<SwitchThemeProps> = ({ visible }) => {
-  const buttonRef = React.useRef<HTMLButtonElement>(null)
+const SwitchTheme: FC<Props> = ({ visible }) => {
+  const buttonRef = useRef<HTMLButtonElement>(null)
 
   const handleSwitchTheme = () => {
-    buttonRef.current?.classList.add('active')
+    buttonRef.current?.setAttribute('data-active', 'true')
     document.querySelector('html')?.classList.toggle('dark')
 
     const timeout = setTimeout(() => {
-      buttonRef.current?.classList.remove('active')
+      buttonRef.current?.removeAttribute('data-active')
       clearTimeout(timeout)
     }, 500)
   }
 
   return (
-    <Button
+    <button
+      className={`${styles.theme} theme`}
       type='button'
       aria-label='toggle change theme'
       title='toggle change theme'
       onClick={handleSwitchTheme}
-      className='theme'
       ref={buttonRef}
-      visible={visible}
+      data-visible={visible}
     >
       <MdSunny aria-hidden='true' title='light' />
-    </Button>
+    </button>
   )
 }
 

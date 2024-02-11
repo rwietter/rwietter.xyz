@@ -1,0 +1,47 @@
+/* cardContainer */
+.cardContainer {
+  width: 100%;
+}
+
+.cardContainer + .cardContainer {
+  margin-top: 2rem;
+}
+
+/* dateTimeRead */
+.dateTimeRead {
+  align-items: center;
+  font-weight: 200;
+  font-family: var(--font-secondary), monospace;
+  color: var(--text-gray-color);
+  transition: var(--transitonTheme);
+}
+
+.dateTimeRead svg {
+  margin-right: var(--space-1);
+}
+
+.dateTimeRead {
+  --fluid-type-max: 1rem;
+}
+
+/* postTitle */
+.postTitle {
+  justify-self: flex-start;
+  line-height: 1.6;
+  font-weight: 500;
+  max-width: fit-content;
+  border-bottom: 1px dotted var(--text-gray-color);
+  transition: var(--transitonTheme);
+  display: inline;
+  font-family: var(--font-secondary), monospace;
+  color: var(--text-color);
+  overflow-wrap: anywhere;
+}
+
+.postTitle:hover {
+  color: var(--main-color);
+}
+
+.postTitle {
+  --fluid-type-max: 1.1rem;
+}

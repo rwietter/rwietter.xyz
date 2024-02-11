@@ -142,14 +142,14 @@ export default function RootLayout({
       />
       <body>
         <div className={`${styles.main} fade-in-layout`}>
-          <CommandBar>
-            <Providers>
-              <Header />
-              <Analytics />
-              <main className={styles.layout}>{children}</main>
-              <StickyBar />
-            </Providers>
-          </CommandBar>
+          {/* <CommandBar> */}
+          <Providers>
+            <Header />
+            <Analytics />
+            <main className={styles.layout}>{children}</main>
+            <StickyBar />
+          </Providers>
+          {/* </CommandBar> */}
         </div>
       </body>
     </html>

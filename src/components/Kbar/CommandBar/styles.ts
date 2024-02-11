@@ -1,5 +1,4 @@
 import { KBarAnimator, KBarPositioner, KBarSearch } from 'kbar'
-import { styled } from 'src/ui/theme'
 
 const Positioner = styled(KBarPositioner, {
   position: 'fixed',

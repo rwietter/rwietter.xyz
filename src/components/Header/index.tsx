@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 import { useTranslation } from 'react-i18next'
-import SwitchTheme from 'src/components/SwitchTheme/SwitchTheme'
+import SwitchTheme from 'src/components/SwitchTheme'
 // import * as S from './styles'
 import styles from './styles.module.css'
 

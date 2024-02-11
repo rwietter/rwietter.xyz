@@ -1,12 +1,12 @@
-import { ArticleCard } from '../article-card'
-import * as S from './styles'
+import { ArticleCard } from '../posts'
+import styles from './styles.module.css'
 
 const BlogPosts = ({ articles }: any) => (
-  <S.ArticlesContainer>
+  <ul className={styles.articlesContainer}>
     {articles?.map((article: any) => (
       <ArticleCard article={article} key={article.attributes.slug} />
     ))}
-  </S.ArticlesContainer>
+  </ul>
 )
 
 export { BlogPosts }
