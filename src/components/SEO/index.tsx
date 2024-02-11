@@ -3,28 +3,28 @@
 import { NextSeo } from 'next-seo'
 import { FC } from 'react'
 
-export const JSONLD = {
-  '@context': 'http://schema.org',
-  '@type': 'Person',
-  name: 'Maurício Witter',
-  brand: 'rwietter',
-  description:
-    'This blog is about my journey as a Software Developer. Here do you find my thoughts, ideas, and experiences. I hope you enjoy it.',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Constantina',
-    addressRegion: 'RS',
-    postalCode: '9968000',
-    streetAddress: '',
-  },
-  social: ['https://twitter.com/rwietter', 'https://rwietterc.xyz'],
-  email: 'mailto:mauriciobw17@gmail.com',
-  image:
-    'https://avatars.githubusercontent.com/u/46854467?s=400&u=16a52bab3d6dbcbda716ed7d6bab84b3b307bd22&v=4',
-  jobTitle: 'Software Developer',
-  telephone: '(54) 99671-1324',
-  url: 'https://rwietterc.xyz/',
-}
+// export const JSONLD = {
+//   '@context': 'http://schema.org',
+//   '@type': 'Person',
+//   name: 'Maurício Witter',
+//   brand: 'rwietter',
+//   description:
+//     'This blog is about my journey as a Software Developer. Here do you find my thoughts, ideas, and experiences. I hope you enjoy it.',
+//   address: {
+//     '@type': 'PostalAddress',
+//     addressLocality: 'Constantina',
+//     addressRegion: 'RS',
+//     postalCode: '9968000',
+//     streetAddress: '',
+//   },
+//   social: ['https://twitter.com/rwietter', 'https://rwietterc.xyz'],
+//   email: 'mailto:mauriciobw17@gmail.com',
+//   image:
+//     'https://avatars.githubusercontent.com/u/46854467?s=400&u=16a52bab3d6dbcbda716ed7d6bab84b3b307bd22&v=4',
+//   jobTitle: 'Software Developer',
+//   telephone: '(54) 99671-1324',
+//   url: 'https://rwietterc.xyz/',
+// }
 
 interface SEOProps {
   title: string

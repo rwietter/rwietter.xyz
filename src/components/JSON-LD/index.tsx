@@ -5,11 +5,11 @@ interface JSONLDProps {
   title: string
   description: string
   url: string
-  datePublished: string
+  datePublished?: string
   authorName: string
   image: string
   isAccessibleForFree?: boolean
-  type?: 'Article' | 'BlogPosting'
+  type?: 'Article' | 'BlogPosting' | 'NewsArticle' | 'Blog'
 }
 
 const JSONLD: React.FC<JSONLDProps> = (props) => (
@@ -18,7 +18,7 @@ const JSONLD: React.FC<JSONLDProps> = (props) => (
     url={props.url}
     title={props.title}
     images={[props.image]}
-    datePublished={props.datePublished}
+    datePublished={props.datePublished || ''}
     authorName={[
       {
         name: props.authorName,

@@ -1,8 +1,8 @@
 import Header from 'src/components/Header'
-import CommandBar from 'src/components/Kbar/CommandBar'
 import { StickyBar } from 'src/components/StickyBar'
 
 import { Analytics } from '@vercel/analytics/react'
+import Script from 'next/script'
 
 import Providers from './providers'
 
@@ -21,14 +21,26 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <head>
-        <script
-          async
-          defer
-          src='https://us.umami.is/script.js'
-          data-website-id='99c64e87-1dbd-4e1c-b45b-ada2e802dcc1'
-        />
-        <link rel='preconnect' href='https://res.cloudinary.com/' />
+        <DocumentStuff />
       </head>
+      <body>
+        <div className={`${styles.main} fade-in-layout`}>
+          <Providers>
+            <Header />
+            <Analytics />
+            <main className={styles.layout}>{children}</main>
+            <StickyBar />
+          </Providers>
+        </div>
+      </body>
+    </html>
+  )
+}
+
+function DocumentStuff() {
+  return (
+    <>
+      <link rel='preconnect' href='https://res.cloudinary.com/' />
       <meta name='application-name' content='Maurício Witter' />
       <meta name='apple-mobile-web-app-capable' content='yes' />
       <meta name='apple-mobile-web-app-status-bar-style' content='default' />
@@ -140,18 +152,11 @@ export default function RootLayout({
         name='msapplication-square310x310logo'
         content='/icons/mstile-310x310.png'
       />
-      <body>
-        <div className={`${styles.main} fade-in-layout`}>
-          <CommandBar>
-            <Providers>
-              <Header />
-              <Analytics />
-              <main className={styles.layout}>{children}</main>
-              <StickyBar />
-            </Providers>
-          </CommandBar>
-        </div>
-      </body>
-    </html>
+      <Script
+        strategy='afterInteractive'
+        src='https://us.umami.is/script.js'
+        data-website-id='99c64e87-1dbd-4e1c-b45b-ada2e802dcc1'
+      />
+    </>
   )
 }

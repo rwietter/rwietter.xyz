@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import JSONLD from 'src/components/JSON-LD'
 import { KbarInit } from 'src/components/Kbar/KbarInit'
 import { NextSEO } from 'src/components/SEO'
 import { makeSeo } from 'src/components/SEO/makeSeo'
@@ -31,6 +32,14 @@ const Page = () => (
       url='https://rwietterc.xyz'
       canonical='https://rwietterc.xyz/'
       description='This blog is about my journey as a Software Developer. Here do you find my thoughts, ideas, and experiences. I hope you enjoy it.'
+      image='https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png'
+    />
+    <JSONLD
+      type='Blog'
+      authorName='Mauricio Witter'
+      url='https://rwietterc.xyz'
+      title='Mauricio Witter | Software Developer'
+      description='This blog is about my journey as a Software Developer. Here do you find my thoughts, ideas, and experiences. I hope you enjoy it'
       image='https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png'
     />
     <AuthorHeader />
