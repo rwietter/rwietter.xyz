@@ -1,17 +1,13 @@
 import Image from 'next/image'
 import ARTICLE_QUERY from 'queries/article/article'
 import { ARTICLES_QUERY } from 'queries/articles/articles'
+import { Highlights } from 'src/app/highlights'
+import ArticleHeader from 'src/domains/article/header'
 import ArticleContent from 'src/domains/article/content'
 import ArticleFooter from 'src/domains/article/footer'
-import {
-  ArticleContainer,
-  ArticleImage,
-  ArticleMarkdownContainer,
-  ImageContainer,
-  ImageCredit,
-} from 'src/domains/article/styles'
 import apolloClient from 'utils/apollo-client'
 import { blurImage } from 'utils/blur-image'
+import styles from 'src/domains/article/styles.module.css'
 
 export async function generateStaticParams() {
   const { data } = await apolloClient.query({ query: ARTICLES_QUERY })
@@ -49,6 +45,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
 
   return (
     <>
+      <Highlights />
       {/* <NextSEO
         title={article?.attributes?.title}
         description={article?.attributes?.description}
@@ -65,11 +62,11 @@ const Page = async ({ params }: { params: { slug: string } }) => {
         datePublished={article?.attributes?.publishedAt}
         url={`https://rwietterc.xyz${pathname}`}
       /> */}
-      <ArticleContainer>
-        <ArticleMarkdownContainer>
-          {/* <ArticleHeader article={article} /> */}
-          <ImageContainer>
-            <ArticleImage>
+      <section className={styles.articleContainer}>
+        <div className={styles.articleMarkdownContainer}>
+          <ArticleHeader article={article} />
+          <div className={styles.imageContainer}>
+            <div className={styles.articleImage}>
               <Image
                 fill
                 quality={50}
@@ -82,19 +79,19 @@ const Page = async ({ params }: { params: { slug: string } }) => {
                 src={data.blurDataURL.src}
                 blurDataURL={data.blurDataURL.blurDataURL}
               />
-            </ArticleImage>
-            <ImageCredit>
+            </div>
+            <p className={styles.imageCredit}>
               {article.attributes.image.data.attributes.caption}
-            </ImageCredit>
-          </ImageContainer>
+            </p>
+          </div>
           <ArticleContent article={article} />
-        </ArticleMarkdownContainer>
+        </div>
         <ArticleFooter
           author={article?.attributes?.author?.data?.attributes?.name}
           name={article?.attributes?.title}
           category={article?.attributes?.category?.data?.attributes?.name}
         />
-      </ArticleContainer>
+      </section>
     </>
   )
 }

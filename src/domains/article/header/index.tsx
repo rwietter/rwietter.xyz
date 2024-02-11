@@ -1,3 +1,4 @@
+'use client'
 import Link from 'next/link'
 import React, { memo } from 'react'
 import { AiOutlineArrowLeft, AiOutlineCalendar } from 'react-icons/ai'
@@ -7,7 +8,7 @@ import { useTranslation } from 'react-i18next'
 import { getLocaleDate } from 'utils/get-locale-date'
 import { getReadingTime } from 'utils/getTimeReading'
 import { Attributes } from '../ts'
-import * as CSS from './styles'
+import styles from './styles.module.css'
 
 interface ArticleHeaderData {
   article: Attributes
@@ -32,32 +33,38 @@ const ArticleHeader: React.FC<ArticleHeaderData> = (props) => {
   )
 
   return (
-    <CSS.ArticleHeader>
+    <section className={styles.section}>
       <div>
-        <CSS.InfoHeader>
+        <div className={styles.infoHeader}>
           <Link href='/blog'>
-            <CSS.BackToOverview type='button' aria-label='Back to overview'>
+            <button
+              className={styles.backToOverview}
+              type='button'
+              aria-label='Back to overview'
+            >
               <AiOutlineArrowLeft size={19} aria-hidden='true' />
               <p>{t('backToOverview')}</p>
-            </CSS.BackToOverview>
+            </button>
           </Link>
           <div>
-            <CSS.DateTimeRead>
+            <p className={styles.dateTimeRead}>
               <AiOutlineCalendar size={17} />
               {publishedAt}
               &nbsp;|&nbsp;
               <RiTimer2Line size={17} />
               {readTime}
-            </CSS.DateTimeRead>
+            </p>
           </div>
-        </CSS.InfoHeader>
+        </div>
       </div>
 
-      <CSS.ArticleTitle>{props.article?.attributes?.title}</CSS.ArticleTitle>
-      <CSS.ArticleDescription>
+      <h1 className={styles.articleTitle}>
+        {props.article?.attributes?.title}
+      </h1>
+      <p className={styles.articleDescription}>
         {props.article?.attributes?.description}
-      </CSS.ArticleDescription>
-    </CSS.ArticleHeader>
+      </p>
+    </section>
   )
 }
 
