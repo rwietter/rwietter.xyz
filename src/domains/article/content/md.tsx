@@ -5,6 +5,7 @@ import React, { FC, memo, useEffect } from 'react'
 import Markdown from 'react-markdown'
 
 import md from 'styles/github-markdown.module.css'
+import 'utils/highlights'
 
 interface ArticleData {
   article: string

@@ -80,16 +80,13 @@ samp,
 blockquote,
 li,
 tt {
-  font-size: clamp(
-    var(--fluid-type-min, 1rem),
-    calc(1rem + var(--fluid-type-target, 5vw)),
-    var(--fluid-type-max, 1.4rem)
-  ) !important;
+  font-size: clamp(var(--fluid-type-min, 1rem),
+      calc(1rem + var(--fluid-type-target, 5vw)),
+      var(--fluid-type-max, 1.4rem)) !important;
   text-rendering: optimizeLegibility;
 }
 
-@supports (-webkit-text-size-adjust: 100%) or (-moz-text-size-adjust: 100%) or
-  (-ms-text-size-adjust: 100%) or (text-size-adjust: 100%) {
+@supports (-webkit-text-size-adjust: 100%) or (-moz-text-size-adjust: 100%) or (-ms-text-size-adjust: 100%) or (text-size-adjust: 100%) {
   p {
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
@@ -100,7 +97,7 @@ tt {
 
 .fade-in-layout {
   opacity: 0;
-  animation: fadeIn 300ms ease-in-out forwards;
+  animation: fadeIn 200ms ease-in forwards;
 }
 
 @keyframes fadeIn {
