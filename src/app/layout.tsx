@@ -1,5 +1,4 @@
 import Header from 'src/components/Header'
-import JSONLD from 'src/components/JSON-LD'
 import { StickyBar } from 'src/components/StickyBar'
 
 import { Analytics } from '@vercel/analytics/react'
@@ -7,7 +6,6 @@ import Script from 'next/script'
 
 import Providers from './providers'
 
-import '../../styles/dracula-prism.css'
 import '../../styles/shadow-icon.css'
 import '../../styles/styles.css'
 import '../../styles/theme.css'
@@ -154,18 +152,11 @@ function DocumentStuff() {
         content='/icons/mstile-310x310.png'
       />
       <Script
+        async
         strategy='afterInteractive'
-        src='https://us.umami.is/script.js'
+        src='/umami.js'
         data-website-id='99c64e87-1dbd-4e1c-b45b-ada2e802dcc1'
       />
-      {/* <JSONLD */}
-      {/*   type='Blog' */}
-      {/*   authorName='Mauricio Witter' */}
-      {/*   url='https://rwietterc.xyz/' */}
-      {/*   title='Mauricio Witter | Software Developer' */}
-      {/*   description='This blog is about my journey as a Software Developer. Here do you find my thoughts, ideas, and experiences. I hope you enjoy it' */}
-      {/*   image='https://res.cloudinary.com/ddwnioveu/image/upload/v1707422678/large_joshua_sortino_71v_Ab1_FXB_6g_unsplash_46a1453603.jpg' */}
-      {/* /> */}
     </>
   )
 }

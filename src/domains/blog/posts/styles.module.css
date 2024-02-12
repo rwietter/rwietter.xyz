@@ -17,7 +17,7 @@
 }
 
 .dateTimeRead svg {
-  margin-right: var(--space-1);
+  margin-right: 0.4rem;
 }
 
 .dateTimeRead {

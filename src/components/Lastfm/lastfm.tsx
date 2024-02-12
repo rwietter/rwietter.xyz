@@ -3,6 +3,7 @@ import { BsSpotify } from 'react-icons/bs'
 import { TbPlayerPause, TbPlayerStop } from 'react-icons/tb'
 import styles from './styles.module.css'
 import type { LastFmTrackProps, TrackProps } from './types'
+import Image from 'next/image'
 
 export const LastFMTrack: FC<LastFmTrackProps> = ({ lastFm }) => {
   const track: TrackProps = lastFm?.recenttracks?.track[0]
@@ -15,7 +16,15 @@ export const LastFMTrack: FC<LastFmTrackProps> = ({ lastFm }) => {
   return (
     <div className={styles.playing}>
       {imageUrl ? (
-        <img alt={track.name} src={imageUrl} width={90} height={90} />
+        <Image
+          fetchPriority='high'
+          rel='preload'
+          quality={60}
+          alt={track.name}
+          src={imageUrl}
+          width={90}
+          height={90}
+        />
       ) : (
         <span />
       )}

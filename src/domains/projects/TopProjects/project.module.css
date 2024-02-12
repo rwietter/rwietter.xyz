@@ -34,13 +34,13 @@
 .title {
   color: var(--text-color);
   font-weight: 600;
-  padding-top: var(--space-2);
+  padding-top: 0.8rem;
 }
 
 .description {
   color: var(--text-alt-color);
   font-weight: 300;
-  padding-top: var(--space-2);
+  padding-top: 0.8rem;
   line-height: 1.5;
   text-align: start;
 }

@@ -5,7 +5,7 @@
   justify-content: flex-start;
   color: var(--text-color);
   max-width: 45rem;
-  padding: var(--space-3) 0;
+  padding: 1.2rem 0;
   transition: var(--transition-primary);
 }
 
@@ -22,7 +22,7 @@
 .biography {
   color: var(--text-color);
   line-height: 1.5;
-  padding-top: var(--space-1);
+  padding-top: 0.4rem;
   font-family: var(--font-primary), monospace;
   font-weight: 300;
   transition: var(--transition-primary);
@@ -39,5 +39,5 @@
 }
 
 .socialContainer {
-  padding-top: var(--space-2);
+  padding-top: 0.8rem;
 }

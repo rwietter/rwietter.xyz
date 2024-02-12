@@ -56,7 +56,7 @@ const ArticleFooter: FC<ArticleFooterProps> = ({ author, category, name }) => {
           CC-BY-SA-4.0
         </a>
         {author && (
-          <p>
+          <p className={styles.author}>
             {t('article.writtenBy')} <strong>{author}</strong>
           </p>
         )}

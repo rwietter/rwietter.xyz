@@ -364,7 +364,7 @@
   text-align: left;
   padding: 2em;
   color: var(--text-color);
-  background: var(--neutral);
+  background: var(--bg-alt-color);
   border-left: 4px solid var(--select);
   transition: var(--transition-primary);
   border-radius: 4px;
@@ -372,9 +372,10 @@
 
 .markdown-body blockquote p {
   font-family: var(--font-bolder);
-  font-weight: 500;
-  --fluid-type-max: 1.4rem;
-  --fluid-type-target: 4vw;
+  font-weight: 200;
+  font-style: italic;
+  --fluid-type-max: 1.1rem;
+  --fluid-type-target: 2vw;
 }
 
 .markdown-body blockquote p code {

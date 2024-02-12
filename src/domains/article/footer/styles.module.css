@@ -1,5 +1,5 @@
 .articleFooterContainer {
-  padding: var(--space-6) 1rem var(--space-2) 1rem;
+  padding: 1.4rem 1rem 0.8rem 1rem;
   color: var(--text-alt-color);
   max-width: 60rem;
   margin: 0 auto;
@@ -8,7 +8,7 @@
 
 .navHeader {
   display: flex;
-  padding: var(--space-2) 0;
+  padding: 0.8rem;
   flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: column;
@@ -21,6 +21,8 @@
   transition: var(--transition-primary);
   display: flex;
   align-items: center;
+
+  --fluid-type-max: 1.2rem;
 }
 
 .navHeader a:hover {
@@ -59,19 +61,18 @@
   flex-wrap: wrap;
 }
 
-.socialContainer h4 {
+.socialContainer .author {
   font-weight: 400;
-  padding-top: 1rem;
 }
 
-.socialContainer h4 strong {
+.socialContainer .author strong {
   font-weight: 600;
 }
 
-.socialContainer h4 {
+.socialContainer .author {
   --fluid-type-min: 1.2rem;
-  --fluid-type-max: 1.3rem;
-  --fluid-type-target: 1vw;
+  --fluid-type-max: 1.2rem;
+  --fluid-type-target: 2vw;
 }
 
 .license {
@@ -79,6 +80,8 @@
   text-decoration: none;
   transition: var(--transition-primary);
   padding-right: 1rem;
+
+  --fluid-type-max: 1.2rem;
 }
 
 .license:hover {

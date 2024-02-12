@@ -28,7 +28,7 @@
 }
 
 .infoHeader > div {
-  padding-top: var(--space-2);
+  padding-top: 0.8rem;
 }
 
 @media (min-width: 480px) {
@@ -58,7 +58,7 @@
 }
 
 .backToOverview svg {
-  margin-right: var(--space-2);
+  margin-right: 0.8rem;
   transition:
     var(--transition-primary),
     transform 0.4s ease;
@@ -86,7 +86,7 @@
 }
 
 .dateTimeRead svg {
-  margin-right: var(--space-1);
+  margin-right: 0.4rem;
 }
 
 /* articleTitle */
@@ -96,7 +96,7 @@
   --fluid-type-target: 6vw;
   font-family: var(--font-secondary);
   padding: 0;
-  padding-top: var(--space-2);
+  padding-top: 0.8rem;
   font-weight: 800;
   margin: 0;
   line-height: 1.2;
@@ -118,7 +118,7 @@
   font-family: var(--font-primary), monospace;
   font-weight: 400;
   line-height: 1.6em;
-  padding: var(--space-2) 0;
+  padding: 0.8rem 0;
   margin-top: 0.5rem;
   color: var(--text-gray-color);
   transition: var(--transition-primary);
