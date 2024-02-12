@@ -1,15 +1,17 @@
 import { Metadata } from 'next'
+import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import ARTICLE_QUERY from 'queries/article/article'
 import { ARTICLES_QUERY } from 'queries/articles/articles'
-import { NextSEO } from 'src/components/SEO'
+import { Suspense } from 'react'
 import { makeSeo } from 'src/components/SEO/makeSeo'
 import ArticleContent from 'src/domains/article/content'
-import ArticleFooter from 'src/domains/article/footer'
 import ArticleHeader from 'src/domains/article/header'
 import styles from 'src/domains/article/styles.module.css'
 import apolloClient from 'utils/apollo-client'
 import { blurImage } from 'utils/blur-image'
+
+const ArticleFooter = dynamic(() => import('src/domains/article/footer'))
 
 type Props = {
   params: { slug: string }
@@ -64,7 +66,6 @@ const getData = async (slug: string) => {
 }
 
 const Page = async ({ params }: { params: { slug: string } }) => {
-  // const pathname = usePathname()
   const { slug } = params
   const { data } = await getData(slug)
 
@@ -85,15 +86,6 @@ const Page = async ({ params }: { params: { slug: string } }) => {
 
   return (
     <>
-      {/* <Highlights /> */}
-      <NextSEO
-        title={article?.attributes?.title}
-        description={article?.attributes?.description}
-        image={article?.attributes?.image?.data?.attributes?.url}
-        author={article?.attributes?.author?.data?.attributes?.name}
-        url={'https://rwietterc.xyz'}
-        content='article'
-      />
       <script
         type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -122,11 +114,13 @@ const Page = async ({ params }: { params: { slug: string } }) => {
           </div>
           <ArticleContent article={article} />
         </div>
-        <ArticleFooter
-          author={article?.attributes?.author?.data?.attributes?.name}
-          name={article?.attributes?.title}
-          category={article?.attributes?.category?.data?.attributes?.name}
-        />
+        <Suspense fallback={<div>...</div>}>
+          <ArticleFooter
+            author={article?.attributes?.author?.data?.attributes?.name}
+            name={article?.attributes?.title}
+            category={article?.attributes?.category?.data?.attributes?.name}
+          />
+        </Suspense>
       </section>
     </>
   )
