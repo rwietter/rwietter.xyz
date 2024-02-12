@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@apollo/react-hooks": "^4.0.0",
+    "@next/bundle-analyzer": "^14.1.0",
     "@plaiceholder/next": "^2.5.0",
     "@radix-ui/colors": "^0.1.8",
     "@stitches/react": "^1.2.8",

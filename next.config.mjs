@@ -1,8 +1,12 @@
 // @type {import('next').NextConfig}
 import withImages from 'next-images'
 import { withPlaiceholder } from '@plaiceholder/next'
-
+import bundleAnalyzer from '@next/bundle-analyzer'
 import pwa from 'next-pwa'
+
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+})
 
 const withPWA = pwa({
   dest: 'public',
@@ -38,4 +42,4 @@ const nextConfig = withImages({
   },
 })
 
-export default withPWA(withPlaiceholder(nextConfig))
+export default withBundleAnalyzer(withPWA(withPlaiceholder(nextConfig)))
