@@ -1,6 +1,8 @@
+import { Metadata } from 'next'
 import { ARTICLES_QUERY } from 'queries/articles/articles'
 import JSONLD from 'src/components/JSON-LD'
 import { NextSEO } from 'src/components/SEO'
+import { makeSeo } from 'src/components/SEO/makeSeo'
 import { BlogPosts } from 'src/domains/blog'
 import { IArticles } from 'src/domains/blog/ts'
 import apolloClient from 'utils/apollo-client'
@@ -44,24 +46,38 @@ const getData = async () => {
   }
 }
 
+export const metadata: Metadata = makeSeo({
+  title: 'Blog | Maurício Witter | Software Developer',
+  description:
+    'My blog, where I write about my experiences, my projects, and my life. :)',
+  image:
+    'https://res.cloudinary.com/ddwnioveu/image/upload/v1707422678/large_joshua_sortino_71v_Ab1_FXB_6g_unsplash_46a1453603.jpg',
+  slug: '/blog',
+  ogText:
+    'My blog, where I write about my experiences, my projects, and my life. :)',
+  abstract:
+    'My blog, where I write about my experiences, my projects, and my life.',
+  keywords: 'blog, experiences, projects, life',
+})
+
+const jsonLd = {
+  type: 'Blog',
+  authorName: 'Maurício Witter',
+  url: 'https://rwietterc.xyz/blog',
+  title: 'Blog | Maurício Witter | Software Developer',
+  description:
+    'My blog, where I write about my experiences, my projects, and my life. :)',
+  image:
+    'https://res.cloudinary.com/ddwnioveu/image/upload/v1707422678/large_joshua_sortino_71v_Ab1_FXB_6g_unsplash_46a1453603.jpg',
+}
+
 const Page = async () => {
   const data = await getData()
   return (
     <>
-      <NextSEO
-        title='Blog | Maurício Witter | Software Developer'
-        content='blog'
-        url='https://rwietterc.xyz/blog'
-        description='My blog, where I write about my experiences, my projects, and my life. :)'
-        image='https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png'
-      />
-      <JSONLD
-        type='Blog'
-        authorName='Maurício Witter'
-        url='https://rwietterc.xyz/blog'
-        title='Blog | Maurício Witter | Software Developer'
-        description='My blog, where I write about my experiences, my projects, and my life. :)'
-        image='https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png'
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <BlogPosts articles={data.articles} />
     </>

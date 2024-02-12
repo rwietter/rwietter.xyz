@@ -1,14 +1,38 @@
+import { Metadata } from 'next'
 import Image from 'next/image'
 import ARTICLE_QUERY from 'queries/article/article'
 import { ARTICLES_QUERY } from 'queries/articles/articles'
-import JSONLD from 'src/components/JSON-LD'
 import { NextSEO } from 'src/components/SEO'
+import { makeSeo } from 'src/components/SEO/makeSeo'
 import ArticleContent from 'src/domains/article/content'
 import ArticleFooter from 'src/domains/article/footer'
 import ArticleHeader from 'src/domains/article/header'
 import styles from 'src/domains/article/styles.module.css'
 import apolloClient from 'utils/apollo-client'
 import { blurImage } from 'utils/blur-image'
+
+type Props = {
+  params: { slug: string }
+  searchParams: { [key: string]: string | string[] | undefined }
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const slug = params.slug
+  const { data } = await getData(slug)
+  const article = data.articles[0]
+
+  const seo = makeSeo({
+    title: article.attributes.title.trim(),
+    description: article.attributes.description,
+    image: article.attributes.image.data.attributes.url,
+    ogText: article.attributes.description,
+    keywords: 'article, blog, rwietter, web development, programming, tech',
+    author: article.attributes.author.data.attributes.name,
+    slug: `/blog/article/${slug}`,
+  })
+
+  return seo
+}
 
 export const revalidate = 60
 
@@ -46,6 +70,19 @@ const Page = async ({ params }: { params: { slug: string } }) => {
 
   const article = data.articles[0]
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id:': 'https://rwietterc.xyz',
+    },
+    headline: article?.attributes?.title,
+    image: article?.attributes?.image?.data?.attributes?.url,
+    datePublished: article?.attributes?.publishedAt,
+    dateModified: article?.attributes?.updatedAt,
+  }
+
   return (
     <>
       {/* <Highlights /> */}
@@ -57,13 +94,9 @@ const Page = async ({ params }: { params: { slug: string } }) => {
         url={'https://rwietterc.xyz'}
         content='article'
       />
-      <JSONLD
-        description={article?.attributes?.description}
-        title={article?.attributes?.title}
-        image={article?.attributes?.image?.data?.attributes?.url}
-        authorName={article?.attributes?.author?.data?.attributes?.name}
-        datePublished={article?.attributes?.publishedAt}
-        url={'https://rwietterc.xyz'}
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <section className={styles.articleContainer}>
         <div className={styles.articleMarkdownContainer}>

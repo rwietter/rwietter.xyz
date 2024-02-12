@@ -25,7 +25,7 @@ export const makeSeo = ({
     openGraph: {
       url: `https://rwietterc.xyz${slug}`,
       type: 'website',
-      siteName: 'Maurício W. | Software Developer',
+      siteName: 'Mauricio Witter | Software Developer',
       ttl: 60,
       determiner: 'auto',
       countryName: 'Brazil',
@@ -51,7 +51,7 @@ export const makeSeo = ({
         url: 'https://rwietterc.xyz',
       },
     ],
-    applicationName: 'Maurício W. | Software Developer',
+    applicationName: 'Mauricio Witter | Software Developer',
     manifest: '/manifest.json',
     classification: 'Software Engineer',
     alternates: {

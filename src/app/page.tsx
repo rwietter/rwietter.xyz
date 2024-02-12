@@ -1,46 +1,38 @@
 import { Metadata } from 'next'
-import JSONLD from 'src/components/JSON-LD'
 import { KbarInit } from 'src/components/Kbar/KbarInit'
-import { NextSEO } from 'src/components/SEO'
 import { makeSeo } from 'src/components/SEO/makeSeo'
 import AuthorContent from 'src/domains/home/author-content'
 import AuthorHeader from 'src/domains/home/author-header'
 
 export const revalidate = 60
 
-const meta = {
+export const metadata: Metadata = makeSeo({
   title: 'Mauricio Witter | Software Developer',
   description:
-    'This blog is about my journey as a Software Developer. Here do you find my thoughts, ideas, and experiences. I hope you enjoy it',
+    'This blog is about my journey as a Software Developer. Here do you find my thoughts, ideas, and experiences. I hope you enjoy it.',
   image:
-    'https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png',
-}
-
-export const metadata: Metadata = makeSeo({
-  title: meta.title,
-  description: meta.description,
+    'https://res.cloudinary.com/ddwnioveu/image/upload/v1707422678/large_joshua_sortino_71v_Ab1_FXB_6g_unsplash_46a1453603.jpg',
   slug: '/',
-  image: meta.image,
-  ogText: `*${meta.title}*;/n/n ${meta.description}`,
+  ogText:
+    'This blog is about my journey as a Software Developer. Here do you find my thoughts, ideas, and experiences. I hope you enjoy it.',
+  abstract: 'My journey as a Software Developer.',
+  keywords: 'software, developer, blog, journey',
 })
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  url: 'https://rwietterc.xyz/',
+  name: 'Mauricio Witter | Software Developer',
+  description:
+    'This blog is about my journey as a Software Developer. Here do you find my thoughts, ideas, and experiences. I hope you enjoy it.',
+}
 
 const Page = () => (
   <>
-    <NextSEO
-      title='Mauricio Witter | Software Developer'
-      content='website'
-      url='https://rwietterc.xyz'
-      canonical='https://rwietterc.xyz/'
-      description='This blog is about my journey as a Software Developer. Here do you find my thoughts, ideas, and experiences. I hope you enjoy it.'
-      image='https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png'
-    />
-    <JSONLD
-      type='Blog'
-      authorName='Mauricio Witter'
-      url='https://rwietterc.xyz'
-      title='Mauricio Witter | Software Developer'
-      description='This blog is about my journey as a Software Developer. Here do you find my thoughts, ideas, and experiences. I hope you enjoy it'
-      image='https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png'
+    <script
+      type='application/ld+json'
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
     />
     <AuthorHeader />
     <AuthorContent />

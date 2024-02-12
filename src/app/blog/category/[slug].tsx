@@ -20,7 +20,7 @@ export const Page = () => <div>Category</div>
 //         content='blog'
 //         url='https://rwietterc.xyz/blog'
 //         description='The category page of the blog. Here, you can find all the articles of the category. :)'
-//         image='https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png'
+//         image='https://res.cloudinary.com/ddwnioveu/image/upload/v1707422678/large_joshua_sortino_71v_Ab1_FXB_6g_unsplash_46a1453603.jpg'
 //       />
 //       <BlogPosts articles={attributes?.articles?.data} />
 //     </>

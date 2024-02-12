@@ -57,7 +57,7 @@ export const NextSEO: FC<SEOProps> = (props) => {
         title,
         description,
         images: [
-          { 
+          {
             url: image,
             width: 800,
             height: 600,
@@ -74,10 +74,10 @@ export const NextSEO: FC<SEOProps> = (props) => {
             secureUrl: image,
           },
           {
-            url: 'https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png',
+            url: 'https://res.cloudinary.com/ddwnioveu/image/upload/v1707422678/large_joshua_sortino_71v_Ab1_FXB_6g_unsplash_46a1453603.jpg',
           },
           {
-            url: 'https://res.cloudinary.com/ddwnioveu/image/upload/v1651191166/profile/wallhaven-dpo7wm_1366x768_mdztjw.png',
+            url: 'https://res.cloudinary.com/ddwnioveu/image/upload/v1707422678/large_joshua_sortino_71v_Ab1_FXB_6g_unsplash_46a1453603.jpg',
           },
         ],
         site_name: author,
