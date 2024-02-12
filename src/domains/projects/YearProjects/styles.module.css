@@ -1,0 +1,76 @@
+.container {
+  color: var(--text-color);
+  transition: var(--transition-primary);
+  width: 100%;
+  max-width: 60rem;
+  padding-top: 2rem;
+  margin: 0 auto;
+  font-family: var(--font-primary), monospace;
+}
+
+.title {
+  font-weight: 800;
+  padding: 1rem 0;
+  font-family: var(--font-secondary), monospace;
+  color: var(--text-color);
+  transition: var(--transition-primary);
+
+  --fluid-type-min: 1.5rem;
+  --fluid-type-max: 2rem;
+}
+
+.projectItemContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.year {
+  font-weight: 400;
+}
+
+.list {
+  padding-left: 2.5rem;
+}
+
+.listItem {
+  font-weight: 200;
+  padding: 0.4rem 0;
+  position: relative;
+  z-index: 2;
+  background: transparent;
+}
+
+.listItemName {
+  color: var(--text-color);
+  transition: var(--transition-primary);
+  font-family: var(--font-primary);
+  font-weight: 300;
+
+  --fluid-type-max: 1rem;
+}
+
+.listItemName strong {
+  font-weight: 800;
+  font-family: var(--font-primary), monospace;
+  color: var(--text-color);
+}
+
+.listItemName span {
+  padding-left: 0.5rem;
+  font-weight: 300;
+  color: var(--text-alt-color);
+  line-height: 1.7;
+}
+
+.hoverBackground {
+  background: var(--sub-alt-color);
+  transition: var(--transition-primary);
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  width: 100%;
+  height: 90%;
+  z-index: -1;
+  border-radius: 0.5rem;
+}

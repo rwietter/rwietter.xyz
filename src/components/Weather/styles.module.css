@@ -1,0 +1,14 @@
+.weather {
+  all: unset;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+  line-height: 1.6;
+  --fluid-type-max: 1rem;
+}
+
+.weather div {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,15 @@
+/* main */
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  transition: var(--transition-primary);
+  padding: 2rem 0;
+}
+
+/* content */
+.content {
+  padding-top: 1rem;
+  width: 100%;
+}

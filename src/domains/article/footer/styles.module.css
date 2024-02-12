@@ -1,0 +1,90 @@
+.articleFooterContainer {
+  padding: 1.4rem 1rem 0.8rem 1rem;
+  color: var(--text-alt-color);
+  max-width: 60rem;
+  margin: 0 auto;
+  font-family: var(--font-primary), monospace;
+}
+
+.navHeader {
+  display: flex;
+  padding: 0.8rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
+  line-height: 2;
+}
+
+.navHeader a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: var(--transition-primary);
+  display: flex;
+  align-items: center;
+
+  --fluid-type-max: 1.2rem;
+}
+
+.navHeader a:hover {
+  color: var(--main-color);
+}
+
+.navHeader span {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--transition-primary);
+}
+
+.navHeader span:hover {
+  color: var(--main-color);
+}
+
+@media (min-width: 48rem) {
+  .navHeader {
+    flex-direction: row;
+  }
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background: var(--sub-color);
+  transition: var(--transition-primary);
+}
+
+.socialContainer {
+  padding: 2rem 0 5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.socialContainer .author {
+  font-weight: 400;
+}
+
+.socialContainer .author strong {
+  font-weight: 600;
+}
+
+.socialContainer .author {
+  --fluid-type-min: 1.2rem;
+  --fluid-type-max: 1.2rem;
+  --fluid-type-target: 2vw;
+}
+
+.license {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: var(--transition-primary);
+  padding-right: 1rem;
+
+  --fluid-type-max: 1.2rem;
+}
+
+.license:hover {
+  color: var(--main-color);
+  text-decoration: underline;
+}

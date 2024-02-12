@@ -1,8 +1,8 @@
-import { type IArticles } from 'features/blog/ts'
 import { Feed } from 'feed'
 import fs from 'fs'
 import { remark } from 'remark'
 import remarkHtml from 'remark-html'
+import { IArticles } from 'src/domains/blog/ts'
 
 export default async function generateRssFeed(
   posts: IArticles[],

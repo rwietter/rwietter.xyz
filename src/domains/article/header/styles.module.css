@@ -1,0 +1,123 @@
+/* articleHeader */
+.section {
+  margin: 0 auto;
+  max-width: 60rem;
+  padding-bottom: 2rem;
+  color: var(--text-color);
+  transition: var(--transition-primary);
+}
+
+@media (min-width: 720px) {
+  .section {
+    padding: 2rem 1rem;
+  }
+}
+
+/* infoHeader */
+.infoHeader {
+  --fluid-type-max: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-family: var(--font-primary), monospace;
+  width: 100%;
+  transition: var(--transition-primary);
+}
+
+.infoHeader > div {
+  padding-top: 0.8rem;
+}
+
+@media (min-width: 480px) {
+  .infoHeader {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .infoHeader > .infoHeader {
+    padding-top: 0;
+  }
+}
+
+/* backToOverview */
+.backToOverview {
+  display: flex;
+  font-family: var(--font-primary), monospace;
+  width: fit-content;
+  margin: 0;
+  background: none;
+  color: var(--text-gray-color);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: var(--transition-primary);
+}
+
+.backToOverview svg {
+  margin-right: 0.8rem;
+  transition:
+    var(--transition-primary),
+    transform 0.4s ease;
+  will-change: transform;
+}
+
+.backToOverview:hover svg {
+  color: var(--text-color);
+  transform: translateX(-5px);
+}
+
+.backToOverview:hover p {
+  color: var(--text-color);
+  transition: var(--transition-primary);
+}
+
+/* dateTimeRead */
+.dateTimeRead {
+  --fluid-type-max: 1rem;
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-primary), monospace;
+  color: var(--text-gray-color);
+  transition: var(--transition-primary);
+}
+
+.dateTimeRead svg {
+  margin-right: 0.4rem;
+}
+
+/* articleTitle */
+.articleTitle {
+  --fluid-type-max: 3.6rem;
+  --fluid-type-min: 1.3rem;
+  --fluid-type-target: 6vw;
+  font-family: var(--font-secondary);
+  padding: 0;
+  padding-top: 0.8rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.2;
+  color: var(--text-color);
+  transition: var(--transition-primary);
+}
+
+@supports (text-wrap: balance) {
+  .articleTitle {
+    max-inline-size: 50ch;
+    text-wrap: balance;
+  }
+}
+
+/* articleDescription */
+.articleDescription {
+  --fluid-type-max: 1.3rem;
+  --fluid-type-target: 2vw;
+  font-family: var(--font-primary), monospace;
+  font-weight: 400;
+  line-height: 1.6em;
+  padding: 0.8rem 0;
+  margin-top: 0.5rem;
+  color: var(--text-gray-color);
+  transition: var(--transition-primary);
+}

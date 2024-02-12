@@ -1,0 +1,50 @@
+/* theme */
+.theme {
+  background: none;
+  border-radius: 60rem;
+  color: var(--text-color);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition:
+    var(--transitonTheme),
+    transform 500ms ease,
+    rotate 500ms ease;
+  font-family: var(--font-primary), monospace;
+}
+
+.theme:hover {
+  color: var(--text-gray-color);
+  background: transparent;
+}
+
+.theme[data-active] {
+  animation: rotate 500ms ease;
+}
+
+@keyframes rotate {
+  from {
+    scale: 0;
+    transform: rotate(0deg);
+  }
+  to {
+    scale: 1;
+    transform: rotate(360deg);
+  }
+}
+
+/* theme variants */
+.theme[data-visible="header"] {
+  padding: 10px;
+}
+
+@media (min-width: 30em) {
+  .theme[data-visible="header"] {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.theme[data-visible="sticky"] {
+  display: flex;
+}

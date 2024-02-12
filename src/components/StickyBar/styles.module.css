@@ -1,0 +1,82 @@
+.manuBar {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  bottom: 20px;
+  height: 3.5rem;
+  padding: 0 0.3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+  border-radius: 0.5rem;
+  width: 90%;
+  transition:
+    var(--transition-primary),
+    border-color 300ms ease;
+  background: var(--cb-box-alt-color);
+  backdrop-filter: blur(5px);
+  z-index: 10;
+}
+
+@media screen and (min-width: 1100px) {
+  .manuBar {
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    padding: 0.8rem 0;
+    position: fixed;
+    border-left: 2px solid var(--bg-color);
+    right: 0;
+    top: 0;
+    width: 3.5rem;
+    transform: translateX(0);
+    left: unset;
+    bottom: unset;
+    border-radius: 0;
+    border: none;
+    background: var(--sub-alt-color);
+  }
+}
+
+.menuBarGroup {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (min-width: 1100px) {
+  .menuBarGroup {
+    flex-direction: column;
+  }
+}
+
+.menuBarLink {
+  display: block;
+  color: var(--text-color);
+  transition: var(--transition-primary);
+}
+
+.menuBarItem {
+  background: none;
+  border: none;
+  outline: none;
+  margin: 0;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 1.1rem;
+  position: relative;
+  transition: var(--transition-primary);
+  display: flex;
+  align-items: center;
+}
+
+.menuBarItem:hover {
+  color: var(--main-color);
+}
+
+@media screen and (min-width: 1100px) {
+  .menuBarItem {
+    padding: 0.9rem;
+    position: relative;
+  }
+}

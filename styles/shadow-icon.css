@@ -8,11 +8,11 @@
 }
 
 .social a svg:hover:not(:active) {
-  --shadow-size: 20px;
+  --shadow-size: 40px;
 }
 
 .social a svg:active {
-  --shadow-size: 20px;
+  --shadow-size: 40px;
 }
 
 .social a:nth-child(1) svg {

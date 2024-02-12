@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@apollo/react-hooks": "^4.0.0",
+    "@next/bundle-analyzer": "^14.1.0",
     "@plaiceholder/next": "^2.5.0",
     "@radix-ui/colors": "^0.1.8",
     "@stitches/react": "^1.2.8",
@@ -37,7 +38,7 @@
     "kbar": "0.1.0-beta.45",
     "markdown-to-jsx": "^7.4.1",
     "next": "^14.1.0",
-    "next-images": "^1.8.4",
+    "next-images": "^1.8.5",
     "next-pwa": "5.6.0",
     "next-seo": "^5.15.0",
     "next-sitemap": "^3.1.55",

@@ -1,0 +1,36 @@
+/* KbarContainer */
+.kbarContainer {
+  padding-top: 2rem;
+}
+
+/* KbarButton */
+.kbarButton {
+  cursor: pointer;
+  color: var(--text-alt-color);
+  font-family: var(--font-secondary);
+  padding: 2px 8px 4px 8px;
+  border-radius: 1em;
+  outline: none;
+  transition: var(--transition-primary);
+  text-align: center;
+  background: transparent;
+  display: block;
+  align-items: center;
+  border: none;
+
+  --fluid-type-max: 1rem;
+}
+
+.kbarButton:hover {
+  background: var(--sub-alt-color);
+}
+
+.kbarButton code {
+  text-align: center;
+  color: var(--text-alt-color);
+  font-family: var(--font-code);
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 1px dotted var(--text-alt-color);
+  font-weight: 600;
+}

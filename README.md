@@ -18,9 +18,9 @@
 - [x] Feed RSS (XML, JSON, ATOM)
 - [x] Sitemap
 - [x] Robots.txt
-- [x] Vercel Analytics  
+- [x] Vercel Analytics
 - [ ] About
-- [ ] i18n
+- [ ] [i18n](https://i18nexus.com/tutorials/nextjs/react-i18next)
 - [x] Loading
 - [ ] Pagination
 - [x] Code splitting

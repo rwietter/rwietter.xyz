@@ -1,0 +1,23 @@
+.date {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: var(--font-secondary), monospace;
+  line-height: 1.5;
+}
+
+.date:first-child {
+  padding-bottom: 0.4rem;
+}
+
+.date svg {
+  margin-right: 0.4rem;
+}
+
+.dateTime {
+  all: unset;
+}
+
+.current {
+  --fluid-type-max: 1rem;
+}
