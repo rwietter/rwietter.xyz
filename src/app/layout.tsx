@@ -151,12 +151,6 @@ function DocumentStuff() {
         name='msapplication-square310x310logo'
         content='/icons/mstile-310x310.png'
       />
-      <Script
-        async
-        strategy='afterInteractive'
-        src='/umami.js'
-        data-website-id='99c64e87-1dbd-4e1c-b45b-ada2e802dcc1'
-      />
     </>
   )
 }
