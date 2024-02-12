@@ -13,11 +13,13 @@ const updateTheme = () => {
   const html = document.querySelector('html')
   if (!html) return
   html.classList.value = theme
+  return
 }
 
 const storeTheme = () => {
   const theme = document.querySelector('html')?.classList?.value || ''
   localStorage.setItem('theme', theme)
+  return
 }
 
 const SwitchTheme: FC<Props> = ({ visible }) => {
@@ -36,6 +38,7 @@ const SwitchTheme: FC<Props> = ({ visible }) => {
       buttonRef.current?.removeAttribute('data-active')
       clearTimeout(timeout)
     }, 500)
+    return
   }
 
   return (

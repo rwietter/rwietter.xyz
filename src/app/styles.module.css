@@ -19,7 +19,7 @@
   width: 100%;
   max-width: 60rem;
   margin: 0 auto;
-  padding: 1rem 1.5rem 8rem 1.5rem;
+  padding: 1rem 0rem 8rem 0rem;
 }
 
 .layout[layout="small"] {
