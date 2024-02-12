@@ -17,9 +17,7 @@ const Terminal: FC<TerminalProps> = ({ text }) => (
     >
       <CopyIcon />
     </button>
-    <code className={styles.code} lang='bash'>
-      {text}
-    </code>
+    <code className={styles.code}>{text}</code>
   </code>
 )
 
