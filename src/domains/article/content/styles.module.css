@@ -8,6 +8,6 @@
   --fluid-type-min: 1rem;
   --fluid-type-max: 1.15rem;
   line-height: 1.7 !important;
-  padding: 2rem 1.4rem;
+  padding: 2rem 1rem;
   color: var(--text-color);
 }
