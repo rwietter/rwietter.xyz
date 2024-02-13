@@ -8,6 +8,13 @@
   --fluid-type-min: 1rem;
   --fluid-type-max: 1.15rem;
   line-height: 1.7 !important;
-  padding: 2rem 1rem;
+  padding: 2rem 0;
+  text-align: justify;
   color: var(--text-color);
+}
+
+@media (min-width: 720px) {
+  .articleMarkdown {
+    padding: 2rem 1rem;
+  }
 }

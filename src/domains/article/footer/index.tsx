@@ -40,7 +40,7 @@ const ArticleFooter: FC<ArticleFooterProps> = ({ author, category, name }) => {
         {category && (
           <Link href={`/blog/category/${category}`}>
             <FiCoffee size={14} />
-            &nbsp;{t('article.moreIn')} {category}
+            &nbsp;{t('article.moreIn')} &nbsp;<strong>{category}</strong>
           </Link>
         )}
       </nav>

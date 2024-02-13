@@ -74,7 +74,7 @@ export const makeSeo = ({
           url: image,
           width: 1200,
           height: 630,
-          alt: ogText.replace('*', '').replace('/n', ''),
+          alt: ogText,
         },
       ],
     },

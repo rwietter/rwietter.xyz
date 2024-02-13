@@ -7,7 +7,7 @@
   height: 100%;
   min-height: 100vh;
   background: var(--bg-color);
-  padding: 0 1.5rem;
+  padding: 0 0.8rem;
   transition: var(--transition-primary);
 }
 

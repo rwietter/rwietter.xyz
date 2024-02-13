@@ -1,5 +1,5 @@
 .articleFooterContainer {
-  padding: 1.4rem 1rem 0.8rem 1rem;
+  padding: 1.4rem 0 0.8rem 0;
   color: var(--text-alt-color);
   max-width: 60rem;
   margin: 0 auto;
@@ -8,7 +8,7 @@
 
 .navHeader {
   display: flex;
-  padding: 0.8rem;
+  padding: 0.8rem 0;
   flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: column;
@@ -80,6 +80,7 @@
   text-decoration: none;
   transition: var(--transition-primary);
   padding-right: 1rem;
+  line-height: 2;
 
   --fluid-type-max: 1.2rem;
 }
