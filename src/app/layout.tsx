@@ -2,11 +2,11 @@ import Header from 'src/components/Header'
 import { StickyBar } from 'src/components/StickyBar'
 
 import { Analytics } from '@vercel/analytics/react'
-import Script from 'next/script'
 
 import Providers from './providers'
 
 import '../../styles/shadow-icon.css'
+import '../../styles/fonts.css'
 import '../../styles/styles.css'
 import '../../styles/theme.css'
 
