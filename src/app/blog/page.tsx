@@ -1,7 +1,5 @@
 import { Metadata } from 'next'
 import { ARTICLES_QUERY } from 'queries/articles/articles'
-import JSONLD from 'src/components/JSON-LD'
-import { NextSEO } from 'src/components/SEO'
 import { makeSeo } from 'src/components/SEO/makeSeo'
 import { BlogPosts } from 'src/domains/blog'
 import { IArticles } from 'src/domains/blog/ts'
