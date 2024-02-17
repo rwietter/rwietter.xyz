@@ -12,6 +12,7 @@ export const revalidate = 60 // 1 minute
 const getData = async () => {
   const { data } = await apolloClient.query({
     query: ARTICLES_QUERY,
+    fetchPolicy: 'no-cache',
   })
 
   // biome-ignore lint/suspicious/noExplicitAny: <explanation>
