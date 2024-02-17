@@ -13,6 +13,7 @@ const apolloClient: ApolloClient<NormalizedCacheObject> = new ApolloClient({
       fetchPolicy: 'cache-first',
     },
   },
+  ssrMode: true,
   cache,
 })
 
